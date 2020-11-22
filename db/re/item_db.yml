@@ -88,6 +88,6 @@ Header:
 
 Footer:
   Imports:
-  - Path: db/re/item_db_usable.yml
-  - Path: db/re/item_db_equip.yml
-  - Path: db/re/item_db_etc.yml
+  - Path: db/re/item_db_usable_jpn.yml
+  - Path: db/re/item_db_equip_jpn.yml
+  - Path: db/re/item_db_etc_jpn.yml

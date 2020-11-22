@@ -13,3 +13,6 @@ Makefile text eol=lf
 Makefile.in text eol=lf
 *.sh text eol=lf
 *.sql text eol=lf
+
+db/* text=auto eol=crlf encoding=cp932
+conf/* text=auto eol=crlf encoding=cp932

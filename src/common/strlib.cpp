@@ -176,35 +176,23 @@ char *trim2(char *str,char flag) {
 char* normalize_name(char* str,const char* delims)
 {
 	char* in = str;
-	char* out = str;
-	int put_space = 0;
 
 	if( str == NULL || delims == NULL )
 		return str;
-
 	// trim start of string
-	while( *in && strchr(delims,*in) )
-		++in;
-	while( *in )
-	{
-		if( put_space )
-		{// replace trim characters with a single space
-			*out = ' ';
-			++out;
+	while (*in) {
+		unsigned char tmp_letter = (unsigned char)*in;
+		if (((0x80 <= tmp_letter) && (tmp_letter <= 0x9F))
+		|| ((0xE0 <= tmp_letter) && (tmp_letter <= 0xFF)) ){
+			in += 2;
 		}
-		// copy non trim characters
-		while( *in && !strchr(delims,*in) )
-		{
-			*out = *in;
-			++out;
-			++in;
+		else {
+			if (strchr(delims, *in)) {
+				*in = ' ';
+			}
+			in++;
 		}
-		// skip trim characters
-		while( *in && strchr(delims,*in) )
-			++in;
-		put_space = 1;
 	}
-	*out = '\0';
 	return str;
 }
 

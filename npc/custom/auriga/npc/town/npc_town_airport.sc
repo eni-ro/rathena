@@ -881,30 +881,30 @@ L_Attack:
 	announce "案内放送：甲板にいらっしゃる方々は、至急、中へ非難してください。",9,0x00FF00;
 	hideonnpc "飛行船案内員#AirEvent";
 	sleep 10000;
-	monster "airplane_01",245,57,"グレムリン",1632,1,"Airplane#AirEvent1";
-	monster "airplane_01",247,59,"グレムリン",1632,1,"Airplane#AirEvent1";
-	monster "airplane_01",249,52,"グレムリン",1632,1,"Airplane#AirEvent1";
-	monster "airplane_01",243,62,"グレムリン",1632,1,"Airplane#AirEvent1";
-	monster "airplane_01",239,52,"ビホルダー",1633,1,"Airplane#AirEvent1";
-	monster "airplane_01",234,56,"ビホルダー",1633,1,"Airplane#AirEvent1";
-	monster "airplane_01",227,49,"ビホルダー",1633,1,"Airplane#AirEvent1";
-	monster "airplane_01",233,41,"ビホルダー",1633,1,"Airplane#AirEvent1";
+	monster "airplane_01",245,57,"グレムリン",1632,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",247,59,"グレムリン",1632,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",249,52,"グレムリン",1632,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",243,62,"グレムリン",1632,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",239,52,"ビホルダー",1633,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",234,56,"ビホルダー",1633,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",227,49,"ビホルダー",1633,1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",233,41,"ビホルダー",1633,1,"Airplane#AirEvent1" + "::OnEvent";;
 	setarray .@mobid,1111,1392,1005,1049,1042;
-	monster "airplane_01",251,47,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",245,53,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",234,46,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",233,58,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",243,60,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",228,54,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",232,41,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1";
-	monster "airplane_01",238,56,"グレムリン",1632,1,"Airplane#AirEvent2";
-	monster "airplane_01",239,56,"グレムリン",1632,1,"Airplane#AirEvent2";
-	monster "airplane_01",240,50,"グレムリン",1632,1,"Airplane#AirEvent2";
-	monster "airplane_01",241,56,"グレムリン",1632,1,"Airplane#AirEvent2";
-	monster "airplane_01",247,51,"グレムリン",1632,1,"Airplane#AirEvent2";
-	monster "airplane_01",237,44,"ビホルダー",1633,1,"Airplane#AirEvent2";
-	monster "airplane_01",233,54,"ビホルダー",1633,1,"Airplane#AirEvent2";
-	monster "airplane_01",237,62,"ビホルダー",1633,1,"Airplane#AirEvent2";
+	monster "airplane_01",251,47,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",245,53,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",234,46,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",233,58,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",243,60,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",228,54,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",232,41,"--ja--",.@mobid[rand(5)],1,"Airplane#AirEvent1" + "::OnEvent";;
+	monster "airplane_01",238,56,"グレムリン",1632,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",239,56,"グレムリン",1632,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",240,50,"グレムリン",1632,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",241,56,"グレムリン",1632,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",247,51,"グレムリン",1632,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",237,44,"ビホルダー",1633,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",233,54,"ビホルダー",1633,1,"Airplane#AirEvent2" + "::OnEvent";;
+	monster "airplane_01",237,62,"ビホルダー",1633,1,"Airplane#AirEvent2" + "::OnEvent";;
 	sleep 5000;
 	announce "乗務員：ペルロック船長、大変です！　グレムリンどもがプロペラに……!!",9,0x00FF00;
 	sleep 5000;
@@ -1073,6 +1073,8 @@ L_Attack:
 	setnpctimer 46000;
 	startnpctimer;
 	return;
+OnEvent:
+	end;
 }
 
 airplane_01,243,29	warp	airplanewarp#yuno1_	1,1,yuno,12,261
@@ -1109,9 +1111,6 @@ airplane_01,252,41,0	script	Effect#AirEvent7	139,{}
 airplane_01,252,63,0	script	Effect#AirEvent8	139,{}
 airplane_01,234,65,0	script	Effect#AirEvent9	139,{}
 airplane_01,227,67,0	script	Effect#AirEvent10	139,{}
-
-airplane_01,0,0,0	script	Airplane#AirEvent1	-1,{}	//ダミーイベント
-airplane_01,0,0,0	script	Airplane#AirEvent2	-1,{}	//ダミーイベント
 
 //============================================================
 // 船内施設

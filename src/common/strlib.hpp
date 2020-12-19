@@ -110,7 +110,7 @@ int sv_parse_next(struct s_svstate* sv);
 /// out_pos[0] and out_pos[1] are the start and end of line.
 /// Other position pairs are the start and end of fields.
 /// Returns the number of fields found or -1 if an error occurs.
-int sv_parse(const char* str, int len, int startoff, char delim, int* out_pos, int npos, enum e_svopt opt);
+int sv_parse(const char* str, int len, int startoff, char delim, int* out_pos, int npos, enum e_svopt opt, bool allow_empty = true);
 
 /// Splits a delim-separated string.
 /// WARNING: this function modifies the input string

@@ -626,7 +626,7 @@ int sv_parse_next(struct s_svstate* sv)
 /// @param npos Size of the pos array
 /// @param opt Options that determine the parsing behaviour
 /// @return Number of fields found in the string or -1 if an error occured
-int sv_parse(const char* str, int len, int startoff, char delim, int* out_pos, int npos, enum e_svopt opt)
+int sv_parse(const char* str, int len, int startoff, char delim, int* out_pos, int npos, enum e_svopt opt, bool allow_empty)
 {
 	struct s_svstate sv;
 	int count;
@@ -650,6 +650,12 @@ int sv_parse(const char* str, int len, int startoff, char delim, int* out_pos, i
 		++count;
 		if( sv_parse_next(&sv) <= 0 )
 			return -1;// error
+		if (!allow_empty &&
+			sv.start == sv.end
+			) {
+			--count;
+			continue;
+		}
 		if( npos > count*2 ) out_pos[count*2] = sv.start;
 		if( npos > count*2+1 ) out_pos[count*2+1] = sv.end;
 	}

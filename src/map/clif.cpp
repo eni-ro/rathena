@@ -9477,7 +9477,7 @@ void clif_playBGM(struct map_session_data* sd, const char* name)
 /// npc id:
 ///     The accustic direction of the sound is determined by the
 ///     relative position of the NPC to the player (3D sound).
-void clif_soundeffect(struct map_session_data* sd, struct block_list* bl, const char* name, int type)
+void clif_soundeffect(struct map_session_data* sd, struct block_list* bl, const char* name, int type, int interval)
 {
 	int fd;
 
@@ -9489,7 +9489,7 @@ void clif_soundeffect(struct map_session_data* sd, struct block_list* bl, const 
 	WFIFOW(fd,0) = 0x1d3;
 	safestrncpy(WFIFOCP(fd,2), name, NAME_LENGTH);
 	WFIFOB(fd,26) = type;
-	WFIFOL(fd,27) = 0;
+	WFIFOL(fd,27) = interval;
 	WFIFOL(fd,31) = bl->id;
 	WFIFOSET(fd,packet_len(0x1d3));
 }

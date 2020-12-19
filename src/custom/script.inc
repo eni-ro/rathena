@@ -17,3 +17,6 @@
 //	script_pushint(st,1);
 //	return 0;
 //}
+
+//Auriga互換用スクリプト
+#include "./script_auriga.cpp"

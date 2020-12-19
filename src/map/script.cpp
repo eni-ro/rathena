@@ -5570,6 +5570,25 @@ BUILDIN_FUNC(warp)
 	const char* str;
 	struct map_session_data* sd;
 
+	// Aurigaスクリプトとの互換性のために、
+	// モンスターをワープできるようにする。
+	block_list* bl = map_id2bl(st->rid);
+	if (bl &&
+		bl->type == BL_MOB
+	) {
+		int m = -1;
+		int x2 = -1;
+		int y2 = -1;
+		const char* str2 = script_getstr(st, 2);
+		if (strcmp(str2, "Random")) {
+			m = map_mapindex2mapid(mapindex_name2id(str2));
+			x2 = script_getnum(st, 3);
+			y2 = script_getnum(st, 4);
+		}
+		unit_warp(bl, m, x2, y2, CLR_TELEPORT);
+		return SCRIPT_CMD_SUCCESS;
+	}
+
 	if(!script_charid2sd(5, sd))
 		return SCRIPT_CMD_SUCCESS;
 
@@ -5631,6 +5650,27 @@ static int buildin_areawarp_sub(struct block_list *bl,va_list ap)
 	return 0;
 }
 
+// マップ名からマップIDを取得する。
+// thisを考慮する。
+static int // 取得したマップID。
+script_mapname2mapid(
+	script_state* st,   // スクリプト状態。
+	const char* mapname // マップ名。
+) {
+	int m = -1;
+	if (!std::strcmp(mapname, "this")) {
+		npc_data* nd = map_id2nd(st->oid);
+		if(nd &&
+			nd->bl.id != fake_nd->bl.id
+		) m = nd->bl.m;
+		else {
+			map_session_data* sd;
+			if (script_rid2sd(sd)) m = sd->bl.m;
+		}
+	} else m = map_mapname2mapid(mapname);
+	return m;
+}
+
 BUILDIN_FUNC(areawarp)
 {
 	int16 m, x0,y0,x1,y1, x2,y2,x3=0,y3=0;
@@ -5658,8 +5698,8 @@ BUILDIN_FUNC(areawarp)
 		}
 	}
 
-	if( (m = map_mapname2mapid(mapname)) < 0 )
-		return SCRIPT_CMD_FAILURE;
+	m = script_mapname2mapid(st, mapname);
+	if (m < 0) return SCRIPT_CMD_FAILURE;
 
 	if( strcmp(str,"Random") == 0 )
 		index = 0;
@@ -5696,8 +5736,8 @@ BUILDIN_FUNC(areapercentheal)
 	hp=script_getnum(st,7);
 	sp=script_getnum(st,8);
 
-	if( (m=map_mapname2mapid(mapname))< 0)
-		return SCRIPT_CMD_FAILURE;
+	m = script_mapname2mapid(st, mapname);
+	if (m < 0) return SCRIPT_CMD_FAILURE;
 
 	map_foreachinallarea(buildin_areapercentheal_sub,m,x0,y0,x1,y1,BL_PC,hp,sp);
 	return SCRIPT_CMD_SUCCESS;
@@ -6783,7 +6823,9 @@ BUILDIN_FUNC(cutin)
 	if( !script_rid2sd(sd) )
 		return SCRIPT_CMD_SUCCESS;
 
-	clif_cutin(sd,script_getstr(st,2),script_getnum(st,3));
+	// Aurigaスクリプトとの互換性のため、
+	// ファイル名は数値型を許容する。
+	clif_cutin(sd, conv_str(st, script_getdata(st, 2)),script_getnum(st,3));
 	return SCRIPT_CMD_SUCCESS;
 }
 
@@ -8287,9 +8329,9 @@ BUILDIN_FUNC(delitem)
 
 		if( id == NULL )
 		{
-			ShowError("buildin_%s: unknown item \"%s\".\n", command, item_name);
-			st->state = END;
-			return SCRIPT_CMD_FAILURE;
+			// Aurigaスクリプトとの互換性のために、
+			// アイテムが存在しなくてもスクリプトの実行を継続する。
+			return SCRIPT_CMD_SUCCESS;
 		}
 		it.nameid = id->nameid;// "<item name>"
 	}
@@ -8298,9 +8340,9 @@ BUILDIN_FUNC(delitem)
 		it.nameid = script_getnum(st, 2);// <item id>
 		if( !itemdb_exists( it.nameid ) )
 		{
-			ShowError("buildin_%s: unknown item \"%u\".\n", command, it.nameid);
-			st->state = END;
-			return SCRIPT_CMD_FAILURE;
+			// Aurigaスクリプトとの互換性のために、
+			// アイテムが存在しなくてもスクリプトの実行を継続する。
+			return SCRIPT_CMD_SUCCESS;
 		}
 	}
 
@@ -8313,12 +8355,9 @@ BUILDIN_FUNC(delitem)
 	{// success
 		return SCRIPT_CMD_SUCCESS;
 	}
-
-	ShowError("buildin_%s: failed to delete %d items (AID=%d item_id=%u).\n", command, it.amount, sd->status.account_id, it.nameid);
-	st->state = END;
-	st->mes_active = 0;
-	clif_scriptclose(sd, st->oid);
-	return SCRIPT_CMD_FAILURE;
+	// Aurigaスクリプトとの互換性のために、
+	// 削除できなくてもスクリプトの実行を継続する。
+	return SCRIPT_CMD_SUCCESS;
 }
 
 /// Deletes items from the target/attached player.
@@ -11598,7 +11637,14 @@ BUILDIN_FUNC(getareadropitem)
  *------------------------------------------*/
 BUILDIN_FUNC(enablenpc)
 {
-	const char *str = script_getstr(st,2);
+	const char *str;
+	// Aurigaスクリプトとの互換性のために、NPC名を省略できるようにする。
+	if (script_hasdata(st, 2)) str = script_getstr(st, 2);
+	else {
+		npc_data* nd = map_id2nd(st->oid);
+		if (!nd) return SCRIPT_CMD_FAILURE;
+		str = nd->exname;
+	}
 	if (npc_enable(str,1))
 		return SCRIPT_CMD_SUCCESS;
 
@@ -11609,7 +11655,14 @@ BUILDIN_FUNC(enablenpc)
  *------------------------------------------*/
 BUILDIN_FUNC(disablenpc)
 {
-	const char *str = script_getstr(st,2);
+	const char *str;
+	// Aurigaスクリプトとの互換性のために、NPC名を省略できるようにする。
+	if (script_hasdata(st, 2)) str = script_getstr(st, 2);
+	else {
+		npc_data* nd = map_id2nd(st->oid);
+		if (!nd) return SCRIPT_CMD_FAILURE;
+		str = nd->exname;
+	}
 	if (npc_enable(str,0))
 		return SCRIPT_CMD_SUCCESS;
 
@@ -11620,7 +11673,14 @@ BUILDIN_FUNC(disablenpc)
  *------------------------------------------*/
 BUILDIN_FUNC(hideoffnpc)
 {
-	const char *str = script_getstr(st,2);
+	const char *str;
+	// Aurigaスクリプトとの互換性のために、NPC名を省略できるようにする。
+	if (script_hasdata(st, 2)) str = script_getstr(st, 2);
+	else {
+		npc_data* nd = map_id2nd(st->oid);
+		if (!nd) return SCRIPT_CMD_FAILURE;
+		str = nd->exname;
+	}
 	if (npc_enable(str,2))
 		return SCRIPT_CMD_SUCCESS;
 
@@ -11630,7 +11690,14 @@ BUILDIN_FUNC(hideoffnpc)
  *------------------------------------------*/
 BUILDIN_FUNC(hideonnpc)
 {
-	const char *str = script_getstr(st,2);
+	const char *str;
+	// Aurigaスクリプトとの互換性のために、NPC名を省略できるようにする。
+	if (script_hasdata(st, 2)) str = script_getstr(st, 2);
+	else {
+		npc_data* nd = map_id2nd(st->oid);
+		if (!nd) return SCRIPT_CMD_FAILURE;
+		str = nd->exname;
+	}
 	if (npc_enable(str,4))
 		return SCRIPT_CMD_SUCCESS;
 
@@ -13007,9 +13074,16 @@ BUILDIN_FUNC(emotion)
 		return SCRIPT_CMD_FAILURE;
 	}
 
-	if (script_hasdata(st, 3) && !script_rid2bl(3, bl)) {
-		ShowWarning("buildin_emotion: Unknown game ID supplied %d.\n", script_getnum(st, 3));
-		return SCRIPT_CMD_FAILURE;
+	// Aurigaスクリプトとの互換性のため、第二引数が文字列の場合はNPC名とする。
+	if (script_hasdata(st, 3)) {
+		script_data* tar = script_getdata(st, 3);
+		if (data_isstring(tar)) {
+			npc_data* nd = npc_name2id(conv_str(st, tar));
+			if (nd) bl = &nd->bl;
+		} else if (!script_rid2bl(3, bl)) {
+			ShowWarning("buildin_emotion: Unknown game ID supplied %d.\n", script_getnum(st, 3));
+			return SCRIPT_CMD_FAILURE;
+		}
 	}
 	if (!bl)
 		bl = map_id2bl(st->oid);
@@ -14367,9 +14441,17 @@ BUILDIN_FUNC(misceffect)
 		return SCRIPT_CMD_FAILURE;
 	}
 
+	// Aurigaスクリプトとの互換性のために、NPC名を引数に取る。
+	int id = st->oid;
+	if (script_hasdata(st, 3)) {
+		npc_data* nd = npc_name2id(script_getstr(st,3));
+		if (nd) id = nd->bl.id;
+	}
+	if(id &&
+		id != fake_nd->bl.id
+	) {
+		block_list* bl = map_id2bl(id);
 
-	if(st->oid && st->oid != fake_nd->bl.id) {
-		struct block_list *bl = map_id2bl(st->oid);
 		if (bl)
 			clif_specialeffect(bl,type,AREA);
 	} else{
@@ -14445,7 +14527,10 @@ BUILDIN_FUNC(soundeffect)
 		const char* name = script_getstr(st,2);
 		int type = script_getnum(st,3);
 
-		clif_soundeffect(sd,&sd->bl,name,type);
+		// Aurigaスクリプトとの互換性のために、間隔時間を指定できるようにする。
+		int interval = 0;
+		if (script_hasdata(st, 4)) interval = script_getnum(st, 4);
+		clif_soundeffect(sd, &sd->bl, name, type, interval);
 	}
 	return SCRIPT_CMD_SUCCESS;
 }
@@ -21674,7 +21759,9 @@ BUILDIN_FUNC(checkre)
 {
 	int num;
 
-	num=script_getnum(st,2);
+	// Aurigaスクリプトとの互換性のために、条件を省略できるようにする。
+	num = 0;
+	if (script_hasdata(st, 2)) num = script_getnum(st,2);
 	switch(num){
 		case 0:
 			#ifdef RENEWAL
@@ -25112,10 +25199,12 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF2(getunits, "getmapunits", "is?"),
 	BUILDIN_DEF2(getunits, "getareaunits", "isiiii?"),
 	BUILDIN_DEF(getareadropitem,"siiiiv"),
-	BUILDIN_DEF(enablenpc,"s"),
-	BUILDIN_DEF(disablenpc,"s"),
-	BUILDIN_DEF(hideoffnpc,"s"),
-	BUILDIN_DEF(hideonnpc,"s"),
+
+	// Aurigaスクリプトとの互換性のために、NPC名を省略できるようにする。
+	BUILDIN_DEF(enablenpc,"?"),
+	BUILDIN_DEF(disablenpc,"?"),
+	BUILDIN_DEF(hideoffnpc,"?"),
+	BUILDIN_DEF(hideonnpc,"?"),
 	BUILDIN_DEF(sc_start,"iii???"),
 	BUILDIN_DEF2(sc_start,"sc_start2","iiii???"),
 	BUILDIN_DEF2(sc_start,"sc_start4","iiiiii???"),
@@ -25190,10 +25279,12 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(getskilllist,"?"),
 	BUILDIN_DEF(clearitem,"?"),
 	BUILDIN_DEF(classchange,"i??"),
-	BUILDIN_DEF(misceffect,"i"),
+	// Aurigaスクリプトとの互換性のために、NPC名を引数に取る。
+	BUILDIN_DEF(misceffect,"i?"),
 	BUILDIN_DEF(playBGM,"s"),
 	BUILDIN_DEF(playBGMall,"s?????"),
-	BUILDIN_DEF(soundeffect,"si"),
+	// Aurigaスクリプトとの互換性のために、間隔時間を指定できるようにする。
+	BUILDIN_DEF(soundeffect,"si?"),
 	BUILDIN_DEF(soundeffectall,"si?????"),	// SoundEffectAll [Codemaster]
 	BUILDIN_DEF(strmobinfo,"ii"),	// display mob data [Valaris]
 	BUILDIN_DEF(guardian,"siisi??"),	// summon guardians
@@ -25431,7 +25522,8 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(setdragon,"??"),//[Ind]
 	BUILDIN_DEF(ismounting,"?"),//[Ind]
 	BUILDIN_DEF(setmounting,"?"),//[Ind]
-	BUILDIN_DEF(checkre,"i"),
+	// Aurigaスクリプトとの互換性のために、条件を省略できるようにする。
+	BUILDIN_DEF(checkre,"?"),
 	/**
 	 * rAthena and beyond!
 	 **/

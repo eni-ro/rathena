@@ -52,7 +52,8 @@ Thumbs.db
 /3rdparty/yaml-cpp/Makefile
 
 # /db/
-/db/import
+/db/import/*
+!/db/import/map_cache.dat
 
 # /conf/
 /conf/import
@@ -76,7 +77,9 @@ Thumbs.db
 /src/common/version.hpp
 
 # /src/custom/
-/src/custom
+/src/custom/*
+!/src/custom/script_def_auriga.cpp
+!/src/custom/script_auriga.cpp
 
 # /src/login/
 /src/login/Makefile

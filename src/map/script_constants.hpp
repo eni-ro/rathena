@@ -762,6 +762,7 @@
 	export_constant2("bMagicSubSize",SP_MAGIC_SUBSIZE);
 	export_constant2("bCritDefRate",SP_CRIT_DEF_RATE);
 	export_constant2("bMagicSubDefEle", SP_MAGIC_SUBDEF_ELE);
+	export_constant2("bReduceDamageReturn",SP_REDUCE_DAMAGE_RETURN);
 
 	/* equip indices */
 	export_constant(EQI_COMPOUND_ON);
@@ -1608,6 +1609,7 @@
 	export_constant(SC_EP16_2_BUFF_SS);
 	export_constant(SC_EP16_2_BUFF_SC);
 	export_constant(SC_EP16_2_BUFF_AC);
+	export_constant(SC_EMERGENCY_MOVE);
 #ifdef RENEWAL
 	export_constant(SC_EXTREMITYFIST2);
 #endif
@@ -3774,6 +3776,7 @@
 	export_constant(AI_ZANZOU);
 	export_constant(AI_LEGION);
 	export_constant(AI_FAW);
+	export_constant(AI_GUILD);
 
 	/* battle flags */
 	export_constant(BF_NONE);
@@ -7979,6 +7982,8 @@
 	export_constant(DROPEFFECT_YELLOW_PILLAR);
 	export_constant(DROPEFFECT_PURPLE_PILLAR);
 	export_constant(DROPEFFECT_ORANGE_PILLAR);
+	export_constant(DROPEFFECT_GREEN_PILLAR);
+	export_constant(DROPEFFECT_RED_PILLAR);
 	export_constant(DROPEFFECT_MAX);
 
 	/* penalty types */

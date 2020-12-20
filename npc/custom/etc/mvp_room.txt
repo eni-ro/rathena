@@ -15,11 +15,11 @@
 
 prontera,148,174,5	script	Private MVP Room	100,{
 	mes "[Private MVP Room]";
-	mes "Please select a private MVP room.";
+	mes "ご利用になるMVP部屋を選択してください";
 	if ( getvariableofnpc( .rentcost, "MVP Summoner" ) )
-		mes "The cost to rent a room for "+ getvariableofnpc( .timeout, "MVP Summoner" ) +" minutes is "+ callfunc("F_InsertComma", getvariableofnpc( .rentcost, "MVP Summoner" ) ) +" zeny.";
+		mes "部屋のレンタル料は "+ getvariableofnpc( .timeout, "MVP Summoner" ) +" 分間で "+ callfunc("F_InsertComma", getvariableofnpc( .rentcost, "MVP Summoner" ) ) +" ゼニーになります。";
 	else
-		mes "You can only use the room for only "+ getvariableofnpc( .timeout, "MVP Summoner" ) +" minutes.";
+		mes "部屋は "+ getvariableofnpc( .timeout, "MVP Summoner" ) +" 分間ご利用になれます。.";
 	mes " ";
 	for ( .@i = 1; .@i <= 8; .@i++ )
 		if ( getvariableofnpc( .renttime[.@i], "MVP Summoner" ) )
@@ -47,27 +47,27 @@ prontera,148,174,5	script	Private MVP Room	100,{
 		}
 	}
 	mes "[Private MVP Room]";
-	mes "Reserve this room for...";
+	mes "部屋をご利用になる方はどなたになりますか?";
 	next;
-	set .@type, select( "For my party members", "For my guild members", "For personal account use" );
+	set .@type, select( "パーティメンバー", "ギルドメンバー", "個人" );
 	if ( !getcharid(.@type) ) {
 		mes "[Private MVP Room]";
-		mes "You do not own a "+( ( .@type == 1 )? "Party" : "Guild" )+".";
+		mes "あなたは "+( ( .@type == 1 )? "パーティ" : "ギルド" )+"に所属していません。";
 		close;
 	}
 	else if ( Zeny < getvariableofnpc( .rentcost, "MVP Summoner" ) ) {
-		mes "You don't have enough zeny to rent a room.";
+		mes "レンタル料がたりません。";
 		close;
 	}
 	else if ( getvariableofnpc( .renttime[.@room], "MVP Summoner" ) ) {
 		mes "[Private MVP Room]";
-		mes "I'm sorry, somebody else has already registered this room faster than you.";
+		mes "申し訳ありません、この部屋は別の方が既にご利用になっています。";
 		close;
 	}
 	for ( .@i = 1; .@i <= 8; .@i++ ) {
 		if ( ( getvariableofnpc( .renttime[.@i], "MVP Summoner" ) ) && .@type == .type[.@i] && getcharid(.@type) == .inuseid[.@i] ) {
 			mes "[Private MVP Room]";
-			mes "You already rented Room#"+ .@i +". Use that room instead.";
+			mes "あなたは既に Room#"+ .@i +"をレンタル中です。この部屋をご使用下さい。";
 			close;
 		}
 	}
@@ -88,14 +88,14 @@ OnInit:
 
 -	script	MVP Summoner	-1,{
 	mes "[MVP Summoner]";
-	mes "Time left: " + callfunc( "Time2Str", .renttime[ atoi( strnpcinfo(2) ) ] + .timeout * 60 );
-	mes "Hi, what can I do for you?";
+	mes "残り時間: " + callfunc( "Time2Str", .renttime[ atoi( strnpcinfo(2) ) ] + .timeout * 60 );
+	mes "こんにちは、いかがなさいますか?";
 	next;
 	switch ( select(.menu$) ) {
 	case 1:
 		mes "[MVP Summoner]";
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
-			mes "I cannot offer heal service when there are monsters around.";
+			mes "この部屋にモンスターがいる状態では回復はご利用戴けません。";
 			close;
 		}
 		sc_end SC_STONE;
@@ -122,28 +122,28 @@ OnInit:
 		sc_end SC_SKA;
 		percentheal 100,100;
 		specialeffect2 EF_HEAL;
-		mes "You are completely healed.";
+		mes "回復しました。";
 		close;
 	case 2:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "[MVP Summoner]";
-			mes "I cannot summon another MVP when there are monsters around.";
+			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
 			close;
 		} else if ( .mvpcost ) {
 			mes "[MVP Summoner]";
-			mes "The cost to summon an MVP is "+ callfunc( "F_InsertComma", .mvpcost ) +" zeny.";
+			mes "MVPの召喚料金は "+ callfunc( "F_InsertComma", .mvpcost ) +" ゼニーになります。";
 			next;
 			set .@menu, select(.mvpid_menu$) -1;
 			mes "[MVP Summoner]";
 			if ( Zeny < .mvpcost ) {
-				mes "You don't have enough zeny to summon an MVP.";
+				mes "MVPの召喚に必要なゼニーが足りません。";
 				close;
 			}
 		} else {
 			set .@menu, select(.mvpid_menu$) -1;
 			mes "[MVP Summoner]";
 		}
-		mes "Please get ready.";
+		mes "準備はよろしいですか?";
 		close2;
 		if ( Zeny < .mvpcost ) end;
 		Zeny -= .mvpcost;
@@ -152,23 +152,23 @@ OnInit:
 	case 3:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "[MVP Summoner]";
-			mes "I cannot summon another mini-boss when there are monsters around.";
+			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
 			close;
 		} else if ( .bosscost ) {
 			mes "[MVP Summoner]";
-			mes "The cost to summon a mini-boss is "+ callfunc( "F_InsertComma", .bosscost ) +" zeny.";
+			mes "中ボスの召喚料金は "+ callfunc( "F_InsertComma", .bosscost ) +" ゼニーになります。";
 			next;
 			set .@menu, select(.bossid_menu$) -1;
 			mes "[MVP Summoner]";
 			if ( Zeny < .bosscost ) {
-				mes "You doesn't have enough zeny to summon a mini-boss.";
+				mes "中ボスの召喚に必要なゼニーが足りません。";
 				close;
 			}
 		} else {
 			set .@menu, select(.bossid_menu$) -1;
 			mes "[MVP Summoner]";
 		}
-		mes "Please get ready.";
+		mes "準備はよろしいですか?";
 		close2;
 		if ( Zeny < .bosscost ) end;
 		Zeny -= .bosscost;
@@ -177,7 +177,7 @@ OnInit:
 	case 4:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) > 0 ) {
 			mes "[MVP Summoner]";
-			mes "I cannot offer this service when there are monsters around.";
+			mes "この部屋にモンスターがいる状態ではサービスはご利用できません。";
 			close;
 		}
 		close2;
@@ -185,22 +185,22 @@ OnInit:
 		end;
 	case 5:
 		mes "[MVP Summoner]";
-		mes "Are you sure you want to leave this room?";
+		mes "この部屋から退出しますか?";
 		next;
-		if ( select( "Yes:No") == 1 )
+		if ( select( "はい:いいえ") == 1 )
 			warp .respawnmap$, .respawnx, .respawny;
 		close;
 	case 6:
 		mes "[MVP Summoner]";
 		if ( getmapusers( strcharinfo(3) ) > 1 ) {
-			mes "There are still some players in this room. Make sure you are the last member in this room to use this option.";
+			mes "この部屋にはまだ別のプレイヤーが残っています。 他のプレイヤーが退出したのをご確認してからこのオプションをご利用下さい。";
 			close;
 		}
-		mes "Are you sure you want to give up this room?";
+		mes "本当に使用を止めてよろしいですか?";
 		if ( .rentcost )
-			mes "You will need to pay again to enter this room.";
+			mes "再度この部屋をご利用になるにはレンタル料の支払いが必要になります。";
 		next;
-		if ( select( "Yes", "No" ) == 2 ) close;
+		if ( select( "はい", "いいえ" ) == 2 ) close;
 		awake strnpcinfo(0);
 		end;
 	}
@@ -325,11 +325,11 @@ OnInit:
 //	Config Ends ------------------------------------------------------------------------
 
 		if ( !.timeout ) set .timeout, 60;
-		.menu$ = ( .@menu[1] ? "Heal" : "" ) +":" ;
-		.menu$ = .menu$ + ( .@menu[2] ? "Summon MVP" : "" ) +":";
-		.menu$ = .menu$ + ( .@menu[3] ? "Summon Mini-boss" : "" ) +":";
-		.menu$ = .menu$ + ( .@menu[4] ? "Buy branches" : "" ) +":";
-		.menu$ = .menu$ + "Leave this room:Give up this room";
+		.menu$ = ( .@menu[1] ? "回復する" : "" ) +":" ;
+		.menu$ = .menu$ + ( .@menu[2] ? "MVPを召喚する" : "" ) +":";
+		.menu$ = .menu$ + ( .@menu[3] ? "中ボスを召喚する" : "" ) +":";
+		.menu$ = .menu$ + ( .@menu[4] ? "枝を購入する" : "" ) +":";
+		.menu$ = .menu$ + "部屋から退出する:使用を止める";
 		if ( .@menu[2] ) {
 			.@size = getarraysize( .mvpid );
 			for ( .@i = 0; .@i < .@size; .@i++ )
@@ -342,7 +342,7 @@ OnInit:
 		}
 	}
 	else {
-		mapannounce strnpcinfo(4), "An administrator has refreshed the server. Please re-register this room.", bc_map;
+		mapannounce strnpcinfo(4), "管理者がサーバー設定を更新しました。部屋の利用を再登録して下さい。", bc_map;
 		mapwarp strnpcinfo(4), .respawnmap$, .respawnx, .respawny;
 	}
 	end;

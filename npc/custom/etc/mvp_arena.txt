@@ -19,9 +19,8 @@
 // Entrance
 prontera,154,197,3	script	MVP Warper	768,{
 	mes "[ ^0065DFMVP Warper^000000 ]";
-	mes "Would you like to enter";
-	mes "the MVP Arena?";
-	if (select("Yes!","No thanks.") == 2) close;
+	mes "MVPエリアに移動しますか?";
+	if (select("はい","いいえ") == 2) close;
 	warp "quiz_00",50,24;
 	close;
 }
@@ -29,13 +28,14 @@ prontera,154,197,3	script	MVP Warper	768,{
 // Information
 quiz_00,49,31,4	script	MVP Arena Guide	778,{
 	mes "[ ^0065DFMVP Arena Guide^000000 ]";
-	mes "Welcome and behold this sacred place. Here you will find out if you truly have what it takes to call yourself a warrior.";
+	mes "神聖な地へようこそ。";
+	mes "ここではあなたが戦士と呼ばれるに値するか、自分自身を見つめなおすことができます。";
 	next;
-	switch(select("Information","Heal me!","Return to Prontera","Cancel")) {
+	switch(select("詳しく教えて","回復して!","プロンテラに戻る","キャンセル")) {
 	case 1:
 		mes "[ ^0065DFMVP Arena Guide^000000 ]";
-		mes "There are four Keepers, and each can spawn four different MVPs.";
-		mes "There are eight rooms per Keeper, and sixteen MVPs in total.";
+		mes "そこに4人の番人がいます。番人はそれぞれ異なるMVPを生み出すことができます。";
+		mes "それぞれの番人毎に8つの部屋があり、合計16のMVPが存在します。";
 		close;
 	case 2:
 		specialeffect2 EF_HEAL2;
@@ -53,14 +53,13 @@ quiz_00,49,31,4	script	MVP Arena Guide	778,{
 function	script	Keeper	{
 	set .@arg, getarg(0);
 	mes "[ ^0065DF"+strnpcinfo(1)+"^000000 ]";
-	mes "Which arena would you";
-	mes "like to enter?";
+	mes "どの部屋に入場しますか?";
 	for(set .@i,1; .@i<9; set .@i,.@i+1)
 		set .@menu$, .@menu$+"Arena "+.@i+" ["+getmapusers("pvp_n_"+.@i+"-"+.@arg)+"/20]:";
 	set .@i, select(.@menu$);
 	if (getmapusers("pvp_n_"+.@i+"-"+ .@arg)>19) {
 		mes "[ ^0065DF"+strnpcinfo(1)+"^000000 ]";
-		mes "Sorry, this arena is full!";
+		mes "申し訳ありません、その部屋は満員です。";
 		close;
 	}
 	warp "pvp_n_"+.@i+"-"+ .@arg,102,102;
@@ -73,7 +72,7 @@ quiz_00,62,31,4	script	Epsilon MVP	776,{ callfunc "Keeper",5; }
 
 // Protectors
 function	script	Protector	{
-	switch(select(""+((getarg(0)=="")?"":"Harder Monsters")+":Heal:Exit")) {
+	switch(select(""+((getarg(0)=="")?"":"高難易度の部屋へ移動する")+":回復する:プロンテラに戻る")) {
 	case 1:
 		warp getarg(0),102,102;
 		end;

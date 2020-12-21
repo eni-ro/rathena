@@ -8,164 +8,335 @@
 //=     from iRO. [Capuche]
 //============================================================
 
-xmas,237,303,3	script	Catherine Jet Johnson	4_F_SKULL06GIRL,{
+xmas,237,303,3	script	キャサリンゼータ	4_F_SKULL06GIRL,{
 	if (getstatus(SC_MONSTER_TRANSFORM,1) > 0) {
-		mes "[Catherine Jet Johnson]";
+		mes "[キャサリンゼータ]";
 		mes "Aaa.. Are you going to go into there?";
 		next;
-		mes "[Catherine Jet Johnson]";
+		mes "[キャサリンゼータ]";
 		mes "You'd better release your transformation if you'd like to enter. It could be dangerous in some ways.";
 		close;
 	}
 
 	if (BaseLevel < 140) {
-		mes "[Catherine Jet Johnson]";
-		mes "Ah, wait! Please wait. This is not a good place for a promising young "+ ( Sex ? "man" : "woman" ) +" like you!";
+		mes "[キャサリンゼータ]";
+		mes "あ！　あの、待って下さい！";
+		mes "ここはあなたのように";
+		mes "経験が浅い方が挑戦するには";
+		mes "危険な場所なのです。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "If you must, come back later after you become far stronger. Hmmm.. I would say.. Lv.140?";
+		mes "[キャサリンゼータ]";
+		mes "中に入りたいのであれば、";
+		mes "もう少し強くなってからが";
+		mes "良いかと思います……。";
+		mes "そ……そうですね、";
+		mes "だいたい^ff0000BaseLv140^000000くらいあれば";
+		mes "大丈夫かなっと……。";
 		close;
 	}
 
 	mes "^ff0000Be cautious taming or other ways than hunting monsters are not considered as normal killing counts.^000000";
 	next;
-	mes "[Catherine Jet Johnson]";
+	mes "[キャサリンゼータ]";
 	switch( isbegin_quest(12330) ) {
 	case 0:
-		mes "Do.. Don't be afraid of me. Now I look ugly, but I wasn't like this before.";
+		mes "そ……そんなに見ないでください。";
+		mes "今はこんな顔ですけど";
+		mes "元々は違うんです……。";
+		mes "ちゃんと、目とかも";
+		mes "あったんですよ……。";
 		next;
-		mes "^0000ffThe skull-faced girl in front of you is speaking in a tearful voice. Void holes where there should be eyes are staring at you.^000000";
+		mes "^0000ff‐目の前にいる少女は、";
+		mes "　今にも泣きだしそうな声で";
+		mes "　そういいながら、";
+		mes "　本来は瞳があったであろう";
+		mes "　空洞があなたを見つめてる‐^000000";
 		next;
-		select("What's wrong with your face?");
-		mes "[Catherine Jet Johnson]";
-		mes "This is a long story.. Would you mind if I talk to you? If you waste your time on someone like me?";
+		menu "どうしてそんな顔になったんですか？",-;
+		mes "[キャサリンゼータ]";
+		mes "話すと少し長くなりますけど……";
+		mes "大丈夫……でしょうか？";
 		next;
-		if (select( "Quit.", "Please keep talking." ) == 1) {
-			mes "[Catherine Jet Johnson]";
-			mes "Okay, take care of yourself. And don't ever come near that odd entrance.";
-			close;
-		}
-		mes "[Catherine Jet Johnson]";
-		mes "Mmm.. Where should I start.. The story of this town first?...";
+		menu "話を続けて下さい",-;
+		mes "[キャサリンゼータ]";
+		mes "ど……何処から話せばいいのかな。";
+		mes "街の話から始めた方がいいのかな……。";
 		next;
-		mes "^0000ffWith a sigh, the girl begins to speak in a subdued tone like a bard who tells an old story.^000000";
+		mes "^0000ff‐一度ため息を吐き出した少女は";
+		mes "　昔話を話す詩人のような声で話始めた‐^000000";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "There was a toy factory in this town. All of the people in this town work there and I was one of the employees.";
+		mes "[キャサリンゼータ]";
+		mes "この街にはおもちゃ工場が";
+		mes "ありますけど……実はその工場の中に、";
+		mes "作業員しか知らない別の工場が";
+		mes "あるんです。";
+		mes "そして……私もそこに勤める";
+		mes "職員の一人でした。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "We all were happy in the beginning. We used to gather around together and have a friendly chat having gingerbread and hot tea after work.";
+		mes "[キャサリンゼータ]";
+		mes "はじめは幸せでした。";
+		mes "仕事が終われば街にみんな集まって、";
+		mes "お菓子と温かい紅茶を飲みながら";
+		mes "おしゃべりをしたり。";
+		mes "毎日、充実していました。";
 		next;
-		select("I couldn't even imagine, seeing this mood...");
-		mes "[Catherine Jet Johnson]";
-		mes "Yes, because we couldn't earn a living by packaging toys forever. The situations got tough after the villagers left in ones and twos.";
+		menu "今の雰囲気はそうでもないようだけど……",-;
+		mes "[キャサリンゼータ]";
+		mes "はい……。";
+		mes "いつまでもおもちゃを包装するだけで、";
+		mes "生活を維持することはできません。";
+		mes "結局、作業員は少しずつ";
+		mes "工場からいなくなってしまい、";
+		mes "工場の経営は厳しくなっていきました。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "I was the one who worked as an assistant beside the doll craftsman who made dolls to the end.";
+		mes "[キャサリンゼータ]";
+		mes "結局、最後まで残ったのは";
+		mes "人形職人のお爺さんと、";
+		mes "彼のもとで、弟子として";
+		mes "人形作りを手伝いつつ";
+		mes "働いていた、私だけに";
+		mes "なりました……。";
 		next;
-		mes "^0000ffI could feel her slender jawbone is trembling due to the subtle change of her emotion.^000000";
+		mes "^0000ff‐彼女の感情の微妙な震えで";
+		mes "　白い顎が揺れているのが感じられる‐^000000";
 		next;
-		select("Ask her to continue.");
-		mes "[Catherine Jet Johnson]";
-		mes "On the day when the factory is decided to be closed, the doll maker dressed the last doll he made and shed tears.";
+		menu "続けて話を聞く",-;
+		mes "[キャサリンゼータ]";
+		mes "工場の閉鎖が決定した日。";
+		mes "人形職人は最後に作った人形に";
+		mes "服を着せながら涙を流していました。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "Perhaps he thought he wouldn't make dolls anymore.";
+		mes "[キャサリンゼータ]";
+		mes "もうこれで人形を作ることは";
+		mes "永遠にないと思っていたようです。";
+		mes "……いまでも昨日のことみたいに";
+		mes "思い出すことができます……。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "He named the last doll ^0000ffCeline Kimi^000000 and stopped all the lines in the factory.";
+		mes "[キャサリンゼータ]";
+		mes "その最後の人形に^0000ffセリーヌ・キミ^000000という";
+		mes "名前を付けて、人形職人は";
+		mes "工場のすべての作業場を";
+		mes "止めました……。";
 		next;
-		select("Did he give a doll a name?");
-		mes "[Catherine Jet Johnson]";
-		mes "Sometimes so much work goes into a doll as if it were their child to doll makers. Kimi was the one for him.";
+		menu "人形に名前を？",-;
+		mes "[キャサリンゼータ]";
+		mes "人形職人にとって人形は";
+		mes "ある意味、子供のようなもの。";
+		mes "命を吹き込むつもりで真剣に";
+		mes "取り組み、作品を生み出します。";
+		mes "その中でも、最高傑作が";
+		mes "キミです……。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "I guess his earnestness breathed life to Kimi.";
+		mes "[キャサリンゼータ]";
+		mes "あ、すいません。";
+		mes "セリーヌ・キミでは長いので";
+		mes "親しみをこめ、^0000ffキミ^000000と";
+		mes "みんな、呼んでいるんです。";
 		next;
-		select("Do you mean the doll is alive?");
-		mes "[Catherine Jet Johnson]";
-		mes "Yes, ^0000ffShe^000000 became a living creature. I don't know how, but she is striding in the toy factory with heavy sorrow and rage.";
+		mes "[キャサリンゼータ]";
+		mes "人形職人は昔を懐かしみつつ";
+		mes "キミを作りあげていきました。";
+		mes "できれば以前のように、";
+		mes "この工場に人が戻ってほしい……。";
+		mes "人形職人のそんな気持ちが、キミに";
+		mes "生命を吹き込んだのかもしれません。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "When I first saw her, she was standing beside the doll maker who died and collapsed. She stood there with a bare expression.";
+		menu "人形が生きていたんですか？",-;
+		mes "[キャサリンゼータ]";
+		mes "はい。^0000ff彼女^000000は生命がある存在に";
+		mes "なりました。";
+		mes "ところが……。";
+		mes "どうしてなのかは分からないのですが";
+		mes "私がキミを見かけた時、彼女は";
+		mes "怒りと憎悪に囚われており、";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "That's the end. I was outside when I woke up again after I had blacked out. My face has become like this.";
+		mes "[キャサリンゼータ]";
+		mes "とても私の声など聞く耳を";
+		mes "もたないという感じで";
+		mes "無人のおもちゃ工場をただ一人";
+		mes "歩き回っていたのです。";
 		next;
-		select("Did Kimi do that?");
-		mes "[Catherine Jet Johnson]";
-		mes "I don't know.. She would do it, or it could be a different problem. I have no memory of it.";
+		mes "[キャサリンゼータ]";
+		mes "そんなキミを見ておかしいなと";
+		mes "こっそり後をつけたのですが……";
+		mes "その時、人形職人のお爺さんが";
+		mes "座っているのを見つけたのです。";
 		next;
-		select("Do you blame her?");
-		mes "[Catherine Jet Johnson]";
-		mes "Ah, no. I don't blame her! I just want to know what happened to the doll craftsman on that day.";
+		mes "[キャサリンゼータ]";
+		mes "私はお爺さんに駆け寄り、";
+		mes "声をかけましたが反応はなく";
+		mes "体もすっかり冷たくなっていて";
+		mes "事切れていました……。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "I don't think the scene I saw was everything. However, getting into the factory again is.. Re-entering there is...";
+		mes "[キャサリンゼータ]";
+		mes "そして……。";
+		mes "驚いて動けない私の視界に";
+		mes "キミの姿が映りました……。";
+		mes "お爺さんの亡骸の背後に立ち、";
+		mes "その表情はなにも語らず、";
+		mes "ただじっとそこに居ました。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "Yes, I am scared and reluctant to do it. If there's someone who can help me..";
+		mes "[キャサリンゼータ]";
+		mes "私はその姿を見て……";
+		mes "なぜか恐怖を感じてしまい……";
+		mes "そこで私は気を失いました。";
+		mes "どれくらいそうしていたのか、";
+		mes "目が覚めると工場の外にいて、";
+		mes "私の顔はこんな風になっていました。";
 		next;
-		if (select( "I am not very helpful to you.", "Maybe I can help you with it." ) == 1) {
-			mes "[Catherine Jet Johnson]";
-			mes "Thank you for.. for listening to me. Hope you will enjoy your trip..";
-			close;
-		}
-		mes "[Catherine Jet Johnson]";
-		mes "Heh? You would do me a favor?";
+		mes "^0000ff‐目の前にいる少女の顔は、";
+		mes "　明らかに皮膚などがなく";
+		mes "　例えるなら顔だけが白骨化";
+		mes "　してしまったように見える‐^000000";
 		next;
-		select("Let's get into the factory.");
-		mes "[Catherine Jet Johnson]";
-		mes "We.. Well, I cannot help you at all except for providing you with directions. Besides, this can be very dangerous to you.";
+		menu "その顔は、キミという人形が原因？",-;
+		mes "[キャサリンゼータ]";
+		mes "それが……私にも分からないのです。";
+		mes "キミの可能性もありますし、";
+		mes "他に原因があるのかもしれません。";
+		mes "ただハッキリしていることは";
+		mes "気を失ったときに何かがあった。";
+		mes "それだけなのです……。";
 		next;
-		select("You can reunite with Kimi, can't you?");
-		mes "[Catherine Jet Johnson]";
-		mes "Kimi, you mean Kimi..";
+		menu "キミが犯人だと思いますか？",-;
+		mes "[キャサリンゼータ]";
+		mes "……正直に言えば、分からないのです。";
+		mes "キミではない気もしますし、";
+		mes "そうなると他に誰が？と考えると";
+		mes "思い当たる人物はいません……。";
+		mes "かと言って、キミだと決め付けるのは";
+		mes "早計な気もするのです。";
 		next;
-		mes "^0000ffShe is thinking about something intently with gaping eyes.^000000";
+		mes "[キャサリンゼータ]";
+		mes "だから、真実を知りたいと";
+		mes "思ってはいるのですが……。";
+		mes "……。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "I.. I've decided. It won't be a great help to you, but I can simply let you know the directions.";
+		mes "^0000ff‐彼女はそういいながら";
+		mes "　自分の身体を抱きしめた‐^000000";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "Wait, please wait until I am prepared. I can guide you when I am ready.";
+		mes "[キャサリンゼータ]";
+		mes "怖いんです……。";
+		mes "行きたくないんです……。";
+		mes "またあの工場に行けば、";
+		mes "今以上に恐ろしいことが";
+		mes "起きるかもしれない……。";
+		next;
+		mes "[キャサリンゼータ]";
+		mes "でも、真実を知りたい……。";
+		mes "この顔も、可能なら戻したい。";
+		mes "お爺さんの亡骸も、ここではなく";
+		mes "きちんと埋葬してあげたい。";
+		mes "でも一人では怖くて……！";
+		mes "……。";
+		next;
+		mes "[キャサリンゼータ]";
+		mes "……冒険者さん。";
+		mes "無理を承知で、言います……。";
+		mes "私と一緒に、この工場に入って";
+		mes "キミを探していただけませんか!?";
+		next;
+		menu "協力すると申し出る",-;
+		mes "[キャサリンゼータ]";
+		mes "そう……ですよね。";
+		mes "無理に決ま……えっ!?";
+		mes "一緒に行ってくれるのですか!?";
+		mes "ああ……まさかそんな人が";
+		mes "現れてくれるなんて！";
+		next;
+		menu "一緒にあの工場にいきましょう",-;
+		mes "[キャサリンゼータ]";
+		mes "ただ、先ほどもいいましたが";
+		mes "おもちゃ工場は危険な状態です。";
+		mes "私は全く戦えないし……。";
+		mes "道案内程度しか役にたてそうに";
+		mes "ありません……。";
+		next;
+		mes "^0000ff‐彼女は大きく開いたまま";
+		mes "　今は閉じることすら叶わない";
+		mes "　虚空のくぼみがある顔を";
+		mes "　少し伏せたかと思うと";
+		mes "　まっすぐにこちらを見て";
+		mes "　こう告げた‐^000000";
+		next;
+		mes "[キャサリンゼータ]";
+		mes "それでも私は知りたいのです。";
+		mes "本当のことを……。";
+		mes "このままでは何も問題は";
+		mes "解決しませんし……。";
+		mes "なので、宜しくお願いします。";
+		next;
+		mes "[キャサリンゼータ]";
+		mes "そうと決まれば……";
+		mes "準備をするので、少し待って下さい。";
+		mes "冒険者様も準備ができたら";
+		mes "私に声をかけてください。";
 		setquest 12330;// Skull-faced Girl
 		close;
 	case 1:
-		mes "Done. Let me try to open the closed door.";
+		mes "[キャサリンゼータ]";
+		mes "お待たせしました。";
+		mes "準備ができました。";
+		mes "冒険者様もよろしいでしょうか？";
+		mes "今からあの転送装置に";
+		mes "冒険者様の情報を登録し";
+		mes "入場申請を行います。";
 		completequest 12330;
 		break;
 	case 2:
-		mes "Kimi's soul is still staying in this ground. When I can let her rest in peace...";
+		mes "残念ですが、キミの魂はいまだに";
+		mes "苦しんでいるようです。";
+		mes "お爺さんもこのままじゃ";
+		mes "安心できないだろうし……。";
+		mes "お暇なときにまた、お願いします。";
 		break;
 	}
 	next;
 	if (getcharid(1) < 1) {
-		mes "^0000ffYou need to organize a party having more than one member to get into Horror Toy Factory.^000000";
+		mes "[キャサリンゼータ]";
+		mes "この先は危険です。";
+		mes "パーティーを組んでから";
+		mes "きていただけますか。";
 		close;
 	}
 	switch( checkquest(12331,PLAYTIME) ) {
 	case -1:
 		if (is_party_leader() == false) {
-			mes "[Catherine Jet Johnson]";
-			mes "Eh.. Give me a second. I am talking to the person in charge. Please wait a little bit.";
+			mes "[キャサリンゼータ]";
+			mes "ご、ごめんなさい。";
+			mes "あなたのパーティーのリーダーと";
+			mes "話をさせてもらえますか？";
+			mes "一気に声をかけられると";
+			mes "混乱してしまうのです……。";
 			close;
 		}
-		if (select( "Unlock Horror Toy Factory", "Cancel" ) == 1) {
-			mes "Door will be.. opened soon.. Would you wait for a moment?";
+		if (select( "^0000ffおもちゃ工場の鍵を開ける^000000","^ff0000やめる^000000" ) == 1) {
+			mes "[キャサリンゼータ]";
+			mes "まもなく転送装置が動くと思います。";
 			instance_create("Horror Toy Factory");
 		}
 		close;
 	case 0:
 	case 1:
-		mes "[Catherine Jet Johnson]";
-		mes "The smell of preservative from the factory has not gone away. You cannot enter under this state.";
+		mes "[キャサリンゼータ]";
+		mes "せっかく来ていただきましたが";
+		mes "工場がまだ稼働時間では";
+		mes "ないようですね……。";
+		mes "ここで働いているのは";
+		mes "おもちゃばかりなので";
+		mes "時間に融通がきかなくて……。";
 		next;
-		mes "[Catherine Jet Johnson]";
-		mes "I will keep you from entering until the scent of preservative is completely gone.";
+		mes "[キャサリンゼータ]";
+		mes "なのでごめんなさい。";
+		mes "工場が稼働するまで";
+		mes "中に入ることはできません。";
+		mes "せっかく来て頂きましたが";
+		mes "時間をおいてから再度、";
+		mes "声をかけてもらえると嬉しいです。";
 		close;
 	case 2:
-		mes "^0000ffThe smell of preservative has gone away. You can talk to Catherine Jet Johnson.^000000";
+		mes "^0000ff‐おもちゃ工場が";
+		mes "　稼働する時間になりました‐^000000";
 		erasequest 12331;
 		close;
 	}
@@ -178,13 +349,17 @@ xmas,233,305,4	script	Factory Dimension Telep	PORTAL,{
 		close;
 	}
 	if (BaseLevel < 140) {
-		mes "[Factory Dimension Teleporter]";
-		mes "You are not eligible for dimensional shifting. You should be at least Lv.140.";
+		mes "[転送装置]";
+		mes "転送に必要な能力が足りません。";
+		mes "BaseLv140以上にしてください。";
 		close;
 	}
 	if (getcharid(1) < 1) {
-		mes "[Factory Dimension Teleporter]";
-		mes "You don't have any support? Please organize a party and come again if you go in alone.";
+		mes "[転送装置]";
+		mes "この先に行くには";
+		mes "パーティーを組む必要が";
+		mes "あります。";
+		mes "パーティーを結成して下さい。";
 		close;
 	}
 	switch( checkquest(12331,PLAYTIME) ) {
@@ -194,125 +369,143 @@ xmas,233,305,4	script	Factory Dimension Telep	PORTAL,{
 			mes "An unknown error has occurred.";
 			close;
 		case 2:
-			mes "The gateway for dimensional shifting has not been activated.";
+			mes "[転送装置]";
+			mes "工場稼働時間ではないため";
+			mes "移動することができません。";
+			mes "　";
+			mes "‐入場受付が必要なようだ‐";
 			close;
 		case 1:// dummy
-			mes "[Factory Dimension Teleporter]";
-			mes "You don't have any support? Please organize a party and come again if you go in alone.";
+			mes "[転送装置]";
+			mes "パーティーが解体されています。";
+			mes "再度パーティーを組み直してから";
+			mes "入場受付を行ってください。";
 			close;
 		case 0:
-			mapannounce "xmas", getpartyname( getcharid(1) ) +" party's party member "+ strcharinfo(0) +" has entered the Horror Toy Factory.", bc_map, "0x00ff99";
+			mapannounce "xmas", "メモリアルダンジョン[Horror of Toy] に入場しました　：　" +strcharinfo(1)+ " (" +strcharinfo(0)+ ")", bc_map, "0x00ff99";
 			setquest 12331;// Trail of Toy Factory
 			end;
 		}
 	case 0:
 	case 1:
-		mes "You already have a trail of dimensional shifting. Your access has been denied.";
+		mes "[転送装置]";
+		mes "転送を行った痕跡が残っています。";
+		mes "しばらく時間をおいてください。";
 		close;
 	case 2:
-		mes "^0000ffThe trail of dimensional shifting disappeared. You are allowed to use Factory Dimension Teleporter.^000000";
+		mes "[転送装置]";
+		mes "^0000ff転送の痕跡が消えました。";
+		mes "転送装置の利用が";
+		mes "可能になりました。^000000";
 		erasequest 12331;
 		close;
 	}
 }
 
-1@xm_d,112,20,6	script	Catherine Jet Johnson#0	4_F_SKULL06GIRL,{
+1@xm_d,112,20,6	script	キャサリンゼータ#0	4_F_SKULL06GIRL,{
 	if (getstatus(SC_MONSTER_TRANSFORM,1) > 0) {
-		mes "[Catherine Jet Johnson]";
+		mes "[キャサリンゼータ]";
 		mes "You cannot come here if you are under the effect of a monster transformation.";
 		next;
-		mes "[Catherine Jet Johnson]";
+		mes "[キャサリンゼータ]";
 		mes "Please wait until the transformation is finished. You cannot move to another area until you become normal.";
 		close;
 	}
 	if (is_party_leader() == false) {
-		mes "[Catherine Jet Johnson]";
-		mes "Eh.. Give me a second. I am talking to the person in charge. Please wait.";
+		mes "[キャサリンゼータ]";
+		mes "ご、ごめんなさい……。";
+		mes "あまり沢山の人に一気に";
+		mes "話しかけられると私、混乱するんです。";
+		mes "だから申し訳ないのですが";
+		mes "あなたのパーティーのリーダーとのみ";
+		mes "話をさせてください。";
 		close;
 	}
-	mes "[Catherine Jet Johnson]";
-	mes "Everyone is in their mortal corruptible state right?";
-	npctalk "Catherine Jet Johnson: Everyone is in their mortal corruptible state right?";
+	mes "[キャサリンゼータ]";
+	mes "なんとか工場に潜り込めましたね。";
+	mes "ここについて詳しい説明を";
+	mes "私からした方がよいですか？";
+	npctalk "キャサリンゼータ : なんとか工場に潜り込めましたね。ここについて詳しい説明を私からした方がよいですか？";
 	next;
-	switch( select( "Quit the story", "Listen to her story.", "I know your situation. Let's start quickly!" ) ) {
+	switch( select( "話を終える","話を聞く","説明は必要ないので進む" ) ) {
 	case 1:
-		mes "[Catherine Jet Johnson]";
-		mes "Oh, dear. Let me know when you are ready.";
+		mes "[キャサリンゼータ]";
+		mes "心の準備が出来たら声をかけて下さい。";
 		close;
 	case 2:
-		donpcevent instance_npcname("Catherine Jet Johnson#01") + "::OnStart";
+		donpcevent instance_npcname("キャサリンゼータ#01") + "::OnStart";
 		close;
 	case 3:
-		donpcevent instance_npcname("Catherine Jet Johnson#01") + "::OnStart2";
+		donpcevent instance_npcname("キャサリンゼータ#01") + "::OnStart2";
 		close;
 	}
 }
 
-1@xm_d,112,20,1	script	Catherine Jet Johnson#01	4_F_SKULL06GIRL,{
+1@xm_d,112,20,1	script	キャサリンゼータ#01	4_F_SKULL06GIRL,{
 	end;
 OnStart:
 	enablenpc instance_npcname("#bgm01");
-	enablenpc instance_npcname("Catherine Jet Johnson#01");
-	disablenpc instance_npcname("Catherine Jet Johnson#0");
+	enablenpc instance_npcname("キャサリンゼータ#01");
+	disablenpc instance_npcname("キャサリンゼータ#0");
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: This area was Factory No.1. It used to be the place where the toys and dolls were stored before given as presents.";
+	npctalk "キャサリンゼータ : ここは第1工場ですね。主にプレゼントとして渡す前のおもちゃや人形たちを集めておいてあった場所です。";
 	sleep 5000;
-	npctalk "Catherine Jet Johnson: Ah, I remember several things. If someone wasn't in the employee's uniform, the guards used to come and scold them....";
+	npctalk "キャサリンゼータ : ああ、色々と思い出してきました。作業服を着ないでうろうろしていたら、警備兵のおじさんたちが走って来てよく怒られました……。";
 	sleep 5000;
-	npctalk "Catherine Jet Johnson: By the way...";
+	npctalk "キャサリンゼータ : それなのに……あ……。";
 	donpcevent instance_npcname("#fac1ct") + "::OnStart";
 	sleep 3000;
-	mapannounce 'xm_d_map$, "Factory announcement: Wake up, toy factory working time has come...", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : おもちゃ工場の家族のみなさ～ん。起きて下さ～い。楽しい労働時間がやって来ましたよ～。", bc_map, "0x00ff44";
 	sleep 6000;
-	npctalk "Catherine Jet Johnson: Wh.. What happened? Toys and dolls are wandering instead of human workers. As if they are employees...";
+	npctalk "キャサリンゼータ : こ……これはいったい？　人の代わりにおもちゃや人形たちが歩き回っています。まるで作業員のように……。";
 	sleep 5000;
-	npctalk "Catherine Jet Johnson: I think other spirits have inhabited the empty factory for too long.";
+	npctalk "キャサリンゼータ : どうやら長い間、誰もいなかった工場を誰かが、稼動させているようですね……。";
 	sleep 3000;
-	mapannounce 'xm_d_map$, "Factory announcement: Waste and other debris should be kept clear from work areas. This is to keep you safe at all times.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 工場内のゴミや有害なものを片付けて、いつものように安全に作業を行って下さい。", bc_map, "0x00ff44";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: It's just like when humans worked here.";
+	npctalk "キャサリンゼータ: It's just like when humans worked here.";
 	sleep 3000;
-	mapannounce 'xm_d_map$, "Factory announcement: Let's make presents for every child's dream today.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 今日も一所懸命、子供たちの夢と希望の為にプレゼントを作りましょう。", bc_map, "0x00ff44";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: But, it's not the time to be happy. Once we find the last factory area, we will need to halt all production lines.";
+	npctalk "キャサリンゼータ : まるで閉鎖される前に働いていた人たちに似せた……いえ、何もかもが以前と同じようです。すごい……。一体誰が……？";
 	sleep 1000;
-	mapannounce 'xm_d_map$, "Factory announcement: Please start product line No.1. Don't forget to wear a safety helmet! This means you Bob!", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 第1ライン作業をはじめて下さい。安全ヘルメットを着用しましょう。", bc_map, "0x00ff44";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: Ah, maybe we should restore those toys and gift boxes to their original condition.";
+	npctalk "キャサリンゼータ : そのためにも、あの人形たちと動くおもちゃボックスを一時的に、働けなくする必要があると思います。";
 	sleep 5000;
-	npctalk "Catherine Jet Johnson: Eh? I... I mean... To return them as they were.. Yes... We need to fight them? I don't know how exactly.";
+	npctalk "キャサリンゼータ : え？　働けなくする方法ですか？　……そうですね。行動の制御回路を止めてしまえば大丈夫だと思います。";
 	sleep 2000;
-	mapannounce 'xm_d_map$, "Factory announcement: All employees must wear a proper uniform and identification. Please check with security if you do not have yours.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 工場内では作業員証明書や作業服は必ず着用しましょう。そうしないと警備の方たちに怒られますよ～。", bc_map, "0x00ff44";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: Good heavens, I hope the guards are still human. There were boxes of uniforms near here in the past..";
-	enablenpc instance_npcname("Employees' Uniform Box#1");
-	enablenpc instance_npcname("Employees' Uniform Box#2");
-	enablenpc instance_npcname("Employees' Uniform Box#3");
+	npctalk "キャサリンゼータ : あ、警備兵の役もおもちゃたちがやっているのかな……。面倒なことになりそうですから作業服に着替えたほうがよいかもしれませんね。以前はここの何処かに作業服に着替えるボックスがあったのに……。";
+	enablenpc instance_npcname("職員用の衣服ボックス#1");
+	enablenpc instance_npcname("職員用の衣服ボックス#2");
+	enablenpc instance_npcname("職員用の衣服ボックス#3");
 	sleep 5000;
-	npctalk "Catherine Jet Johnson: Ah, they are behind me. You'd better change into the uniform. Fortunately, I still have my employee card.";
+	npctalk "キャサリンゼータ : 私の後ろにありましたね。あの職員用の衣服ボックスがそうです。何かあった時の為に、作業員服に必ず着替えて下さい。私はまだ自分の作業員証明証をもっていますから着替える必要はないので……。";
 	sleep 5000;
-	npctalk "Catherine Jet Johnson: I will find my way around here. Let's meet near the second production line. Cheer up, it's a toy factory. It can't be all that bad!!";
+	npctalk "キャサリンゼータ : 第1工場の仕事が終わらないと、第2工場が動きません。とりあえず作業服に着替えたら、活動している人形たちと動くおもちゃボックスの活動を止めてください。";
 	sleep 6000;
-	disablenpc instance_npcname("Catherine Jet Johnson#01");
+	disablenpc instance_npcname("キャサリンゼータ#01");
 	disablenpc instance_npcname("#bgm01");
 	end;
 
 OnStart2:
 	enablenpc instance_npcname("#bgm01");
-	enablenpc instance_npcname("Catherine Jet Johnson#01");
-	disablenpc instance_npcname("Catherine Jet Johnson#0");
+	enablenpc instance_npcname("キャサリンゼータ#01");
+	disablenpc instance_npcname("キャサリンゼータ#0");
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: Ah.. We have explored here before? Okay, let's meet at the same spot again.";
+	npctalk "キャサリンゼータ : では、第2工場への道が開いたら、向こう側で合流することにしましょう。頑張って下さい。";
 	sleep 6000;
-	disablenpc instance_npcname("Catherine Jet Johnson#01");
-	enablenpc instance_npcname("Employees' Uniform Box#1");
-	enablenpc instance_npcname("Employees' Uniform Box#2");
-	enablenpc instance_npcname("Employees' Uniform Box#3");
-	mapannounce 'xm_d_map$, "Factory announcement: Wake up, toy factory working time has come...", bc_map, "0x00ff44";
+	disablenpc instance_npcname("キャサリンゼータ#01");
+	enablenpc instance_npcname("職員用の衣服ボックス#1");
+	enablenpc instance_npcname("職員用の衣服ボックス#2");
+	enablenpc instance_npcname("職員用の衣服ボックス#3");
+	mapannounce 'xm_d_map$, "工場案内放送 : おもちゃ工場の家族のみなさ～ん。みんな起きて下さい。楽しい労働時間がやって来ましたよ～。", bc_map, "0x00ff44";
 	sleep 6000;
-	mapannounce 'xm_d_map$, "Factory announcement: Waste and other debris should be kept clear from work areas. This is to keep you safe at all times.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 工場内のゴミや有害なものを片付けて、いつものように安全に作業を行って下さい。", bc_map, "0x00ff44";
 	sleep 6000;
-	mapannounce 'xm_d_map$, "Factory announcement: Let's make presents for every child's dream today.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 今日も一所懸命、子供たちの夢と希望の為にプレゼントを作りましょう。", bc_map, "0x00ff44";
 	donpcevent instance_npcname("#fac1ct") + "::OnStart";
 	disablenpc instance_npcname("#bgm01");
 	end;
@@ -325,7 +518,7 @@ OnTouch:
 	end;
 }
 
-1@xm_d,13,105,6	script	Employees' Uniform Box#1	4_NONMYSTCASE,{
+1@xm_d,13,105,6	script	職員用の衣服ボックス#1	4_NONMYSTCASE,{
 	progressbar "ffff00",1;
 	playBGM "52";
 	.@mob_id_transform = getstatus(SC_MONSTER_TRANSFORM,1);
@@ -334,12 +527,13 @@ OnTouch:
 		transform 1246,180000;// COOKIE_XMAS
 		close;
 	}
-	mes "^ff0000You are in transformation.";
-	mes "You cannot use the uniform box when already transformed.^000000";
+	mes "^0000ff‐作業服に着替え終わりました。";
+	mes "　作業中に変身が必要な場合はここで";
+	mes "　いつでも変身することが出来ます‐^000000";
 	close;
 }
-1@xm_d,116,16,6	duplicate(Employees' Uniform Box#1)	Employees' Uniform Box#2	4_NONMYSTCASE
-1@xm_d,10,20,6	duplicate(Employees' Uniform Box#1)	Employees' Uniform Box#3	4_NONMYSTCASE
+1@xm_d,116,16,6	duplicate(職員用の衣服ボックス#1)	職員用の衣服ボックス#2	4_NONMYSTCASE
+1@xm_d,10,20,6	duplicate(職員用の衣服ボックス#1)	職員用の衣服ボックス#3	4_NONMYSTCASE
 
 1@xm_d,1,5,3	script	#fac1ct	CLEAR_NPC,{
 	end;
@@ -358,7 +552,9 @@ OnMyMobDead:
 OnTimer1000:
 	killmonster 'xm_d_map$, instance_npcname("#fac1ct") + "::OnMyMobDead";
 	enablenpc instance_npcname("#fac1bs");
-	mapannounce 'xm_d_map$, "Coordinator's announcement: Huh? Where's everyone! How dare workers be absent from the line!", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "作業班長案内放送 : あれ？　みんなどこに行ってしまったんだ!?", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "作業班長案内放送 : 包装済みのボックスを第2工場へ運ぶのに人手が足りないんだ！", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "作業班長案内放送 : 手が空いているやつは北西にあるレールのところまで来てくれ！", bc_map, "0xff8800";
 	for ( .@i = 61; .@i <= 89; .@i++ )
 		disablenpc instance_npcname( "alert#"+ .@i );
 	stopnpctimer;
@@ -368,19 +564,34 @@ OnTimer1000:
 1@xm_d,71,129,3	script	#fac1bs	4_M_COOKIE,{
 	if (is_party_leader() == true) {
 		.@mob_id_transform = getstatus(SC_MONSTER_TRANSFORM,1);
-		mes "[Coordinator]";
+		mes "[作業班長]";
 		if (.@mob_id_transform == 1246) {
-			mes "I can't find the other workers. We don't have time for dawdling. Children are waiting for presents.";
+			mes "[作業班長]";
+			mes "作業員がいなくなって心配していたぞ。";
+			mes "まったく……他の奴らはどこいったんだ？";
+			mes "ああっと、しまった！";
+			mes "こんなことをしている場合じゃない、";
+			mes "子供達がプレゼントを待ってるんだ。";
 			next;
-			mes "[Coordinator]";
-			mes "Hurry up! Carry ^ff0000the gift box over there^000000 and move to the east.";
+			mes "[作業班長]";
+			mes "急いで^ff0000ここにある";
+			mes "包装済みのボックス^000000";
+			mes "を持ってレールの東にある";
+			mes "第2工場に移動してくれ。";
+			mes "大きいから気をつけて運ぶんだぞ。";
 			enablenpc instance_npcname("#pck1");
-			npctalk "Coordinator: Hurry up! Carry the gift box over there and move to the east.";
+			npctalk "作業班長 : 急いでここにある包装済みのボックスを持ってレールの東にある第2工場に移動してくれ。大きいから気をつけて運ぶんだぞ。";
 		}
-		else if (.@mob_id_transform == 1249)
-			mes "Why are you hanging around! Carry ^ff0000the gift box over here^000000 and move to the east.";
+		else if (.@mob_id_transform == 1249){
+			mes "何をグズグズしているんだ。";
+			mes "ここにある包装済みのボックスを";
+			mes "持ってからそっちに行くんだ！";
+		}
 		else {
-			mes "What!? Humans!!!";
+			mes "なんだ!?　人間じゃないか!!";
+			mes "どうして人間が!?";
+			mes "ここは関係者以外立ち入り禁止だ！";
+			mes "警備兵ー！　人間だー！";
 			donpcevent instance_npcname("#fac1bs") + "::OnAlert";
 		}
 		close;
@@ -391,7 +602,7 @@ OnAlert:
 	.@npc_name$ = instance_npcname("#fac1bs");
 	.@event$ = .@npc_name$ + "::OnMyMobDead";
 	killmonster 'xm_d_map$, .@event$;
-	npctalk "Coordinator: Guard! Where is a guard! Humans are invading!!";
+	npctalk "作業班長 : 警備兵！　警備兵はどこにいるんだ！　ここに人間たちが来ている！";
 	sleep 3000;
 	disablenpc .@npc_name$;
 	for ( .@i = 0; .@i <= 10; .@i++ ) {
@@ -407,7 +618,7 @@ OnTimer60000:
 	.@npc_name$ = instance_npcname("#fac1bs");
 	killmonster 'xm_d_map$, .@npc_name$ + "::OnMyMobDead";
 	enablenpc .@npc_name$;
-	npctalk "Coordinator: This kind of thing happens a lot these days...";
+	npctalk "作業班長 : 人間たちは全部排除されたみたいだな……？　最近こんなことが頻繁に起きている。嫌な世の中になったものだ……。おっと、仕事仕事っと。";
 	stopnpctimer;
 	end;
 }
@@ -416,13 +627,26 @@ OnTimer60000:
 	progressbar "ffff00",1;
 	.@mob_id_transform = getstatus(SC_MONSTER_TRANSFORM,1);
 	if (.@mob_id_transform == 1246) {
-		mes "^0000ffYou are carrying the packaged present.^000000";
+		mes "^0000ff‐包装済みのボックスを";
+		mes "　持ち上げました。";
+		mes "　あまりにも巨大で";
+		mes "　前がちゃんと見えません‐^000000";
 		transform 1249,180000;// MYSTCASE
 	}
-	else if (.@mob_id_transform == 1249)
-		mes "^009900The box is in your hands. You cannot carry more than one box.^000000";
-	else
-		mes "^ff0000You are not in uniform. The Coordinator won't let you pick it up.^000000";
+	else if (.@mob_id_transform == 1249){
+		mes "^009900‐既に包装済みのボックスを";
+		mes "　持ち上げています。";
+		mes "　一度に2個以上は持ち上げることは";
+		mes "　できません‐^000000";
+	}
+	else{
+		mes "^ff0000‐作業員の姿ではないので、";
+		mes "　包装済みのボックスを";
+		mes "　持ち上げることができません。";
+		mes "　着替えた状態で";
+		mes "　作業服に着替えた状態で";
+		mes "　試してみましょう‐^000000";
+	}
 	close;
 }
 
@@ -563,30 +787,55 @@ OnMyMobDead:
 1@xm_d,230,110,0	duplicate(alert#61)	alert#104	-1,10,10
 
 
-1@xm_d,185,100,6	script	Catherine Jet Johnson#2	4_F_SKULL06GIRL,{
+1@xm_d,185,100,6	script	キャサリンゼータ#2	4_F_SKULL06GIRL,{
 	if (is_party_leader() == true) {
-		mes "[Catherine Jet Johnson]";
-		mes "Lucky you got here safely.";
+		mes "[キャサリンゼータ]";
+		mes "無事に合流できましたね、";
+		mes "良かった……。";
+		mes "怪我とか、ありませんか？";
+		mes "休憩をかねて、";
+		mes "少し状況を整理しましょうか？";
+		npctalk "キャサリンゼータ : 無事に合流できましたね、良かった……。怪我とか、ありませんか？　休憩をかねて、少し状況を整理しましょうか？";
 		next;
-		switch( select( "Quit the story", "Listen to her tactics.", "I know what to do. Proceed quickly!" ) ) {
+		switch( select( "話をやめる","第2工場の情報を聞く","説明は不要なので進もうという" ) ) {
 		case 1:
-			mes "[Catherine Jet Johnson]";
-			mes "Oh, dear. Let me know when you are ready.";
+			mes "[キャサリンゼータ]";
+			mes "準備が出来たら声をかけて下さい。";
 			close;
 		case 2:
-			donpcevent instance_npcname("Catherine Jet Johnson#21") + "::OnStart";
+			viewpoint 1,155,98,1,0xFF8000;
+			viewpoint 1,130,72,2,0xFF8000;
+			viewpoint 1,134,34,3,0xFF8000;
+			viewpoint 1,195,28,4,0xFF8000;
+			viewpoint 1,228,30,5,0xFF8000;
+			viewpoint 1,203,55,6,0xFF8000;
+			viewpoint 1,132,52,7,0xFFF8000;
+			viewpoint 1,162,52,8,0xFF8000;
+			viewpoint 1,242,17,9,0xFF8000;
+			viewpoint 1,209,15,10,0xFF8000;
+			donpcevent instance_npcname("キャサリンゼータ#21") + "::OnStart";
 			close;
 		case 3:
-			donpcevent instance_npcname("Catherine Jet Johnson#21") + "::OnStart2";
+			viewpoint 1,155,98,1,0xFF8000;
+			viewpoint 1,130,72,2,0xFF8000;
+			viewpoint 1,134,34,3,0xFF8000;
+			viewpoint 1,195,28,4,0xFF8000;
+			viewpoint 1,228,30,5,0xFF8000;
+			viewpoint 1,203,55,6,0xFF8000;
+			viewpoint 1,132,52,7,0xFF8000;
+			viewpoint 1,162,52,8,0xFF8000;
+			viewpoint 1,242,17,9,0xFF8000;
+			viewpoint 1,209,15,10,0xFF8000;
+			donpcevent instance_npcname("キャサリンゼータ#21") + "::OnStart2";
 			close;
 		}
 	}
-	mes "[Catherine Jet Johnson]";
+	mes "[キャサリンゼータ]";
 	mes "Hold on~ I am talking to your manager, so please wait.";
 	close;
 }
 
-1@xm_d,185,100,6	script	Catherine Jet Johnson#21	4_F_SKULL06GIRL,{
+1@xm_d,185,100,6	script	キャサリンゼータ#21	4_F_SKULL06GIRL,{
 	end;
 OnStart:
 	callsub S_Skip,0;
@@ -594,33 +843,33 @@ OnStart2:
 	callsub S_Skip,1;
 S_Skip:
 	enablenpc instance_npcname("#bgm06");
-	enablenpc instance_npcname("Catherine Jet Johnson#21");
-	disablenpc instance_npcname("Catherine Jet Johnson#2");
+	enablenpc instance_npcname("キャサリンゼータ#21");
+	disablenpc instance_npcname("キャサリンゼータ#2");
 	sleep 3000;
 	if (getarg(0) == 1)
-		npctalk "Catherine Jet Johnson: If you find all clues, search other places. I will look for the spot where I met the doll maker last time I was here.";
+		npctalk "キャサリンゼータ: If you find all clues, search other places. I will look for the spot where I met the doll maker last time I was here.";
 	else {
-		npctalk "Catherine Jet Johnson: This place was Factory No.2.";
+		npctalk "キャサリンゼータ : ここは作業員たちがプレゼントを包装して集める第2工場でした。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: It used to be filled with people, but now it isn't.";
+		npctalk "キャサリンゼータ : 以前は工場のあらゆる場所が人々で賑わっていたのに、今はそうでもないようですね……。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: Ah, I realized something while coming here. Some...Children...";
+		npctalk "キャサリンゼータ : あ、そうだ！　来る途中に分かったことですけど、ここにはおもちゃではない子供たちも徘徊しています。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: How can I say.. There were lots of very scary, but awfully sad, looking souls.";
+		npctalk "キャサリンゼータ : なんというか……とても怖い姿で。とても悲しそうな感じの霊魂たちが多かったんです。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: How pitiful they are, but please make them rest if they attack you. Fortunately, they won't come at me.";
+		npctalk "キャサリンゼータ : その子たちが襲ってきたら……残念ですが冒険者様の手で休ませてあげて下さい……。それしか、あの子達をここから救う手段はないのです……。なぜか私には襲いかかってきませんでしたが……。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: If you see a worker toy on duty while searching here, would you ask it about the doll maker?";
+		npctalk "キャサリンゼータ : あとは、探索している途中に作業中のおもちゃを見かけたら、人形職人の話を聞いてもらってもいいですか？　どうも人形職人の記憶がすっかり消えているようなのです……。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: He might be sent to Heaven if they recall the memory of doll maker. That's the best hope.";
+		npctalk "キャサリンゼータ : もし人形職人への記憶を思い出したら、彼らも旅立つことができるかもしれません。それが唯一の希望のような気がします……。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: If you find all clues, search other places. I will look for the spot where I met the doll maker last time I was here.";
+		npctalk "キャサリンゼータ : 何かあったら、ご連絡します。それでは、私は何か手がかりがないか、ほかの場所をあたってみますね。";
 		sleep 5000;
-		npctalk "Catherine Jet Johnson: Sorry that I can't be a big help to you. See you in a minute.";
+		npctalk "キャサリンゼータ : あ、あと……包装済みのボックスはもう必要ないはずです。そのままでは怪しまれるので、この後忘れずに作業服に着替えておいてください。";
 	}
 	sleep 6000;
-	disablenpc instance_npcname("Catherine Jet Johnson#21");
-	enablenpc instance_npcname("Employees' Uniform Box#4");
+	disablenpc instance_npcname("キャサリンゼータ#21");
+	enablenpc instance_npcname("職員用の衣服ボックス#4");
 	donpcevent instance_npcname("#fac2ct") + "::OnStart";
 
 	for ( .@i = 1; .@i <= 10; .@i++ )
@@ -636,7 +885,7 @@ OnTouch:
 	end;
 }
 
-1@xm_d,185,94,6	script	Employees' Uniform Box#4	4_NONMYSTCASE,{
+1@xm_d,185,94,6	script	職員用の衣服ボックス#4	4_NONMYSTCASE,{
 	progressbar "ffff00",1;
 	playBGM "128";
 	.@mob_id_transform = getstatus(SC_MONSTER_TRANSFORM,1);
@@ -645,8 +894,9 @@ OnTouch:
 		transform 1246,300000;// COOKIE_XMAS
 		close;
 	}
-	mes "^ff0000You transformed into a different form.";
-	mes "You can't seem to put on the uniform over your fangs.^000000";
+	mes "^0000ff‐作業服に着替え終わりました。";
+	mes "　作業中に変身が必要な場合はここで";
+	mes "　いつでも変身することが出来ます‐^000000";
 	close;
 }
 
@@ -676,80 +926,236 @@ OnStart:
 		enablenpc instance_npcname("#fac3wp");
 		enablenpc instance_npcname("#fac3wp2");
 		donpcevent instance_npcname("#fac2ct") + "::OnEnd";
-		mapannounce 'xm_d_map$, "Factory announcement: Everyone has gone home. The line is shut down and the employee's lounge is open.", bc_map, "0x00ff44";
+		mapannounce 'xm_d_map$, "工場案内放送 : 配送分類作業場の作業員全員が家に戻りました。作業場の電源を遮断して作業員休憩室の扉を開きます。", bc_map, "0x00ff44";
 		for ( .@i = 90; .@i <= 104; .@i++ )
 			disablenpc instance_npcname( "alert#"+ .@i );
 	}
 	else
-		mapannounce 'xm_d_map$, "Factory announcement: Now there are " + (10 - .@fac_open) + " people on the packaging line. Take care of yourself.", bc_map, "0x00ff44";
+		mapannounce 'xm_d_map$, "工場案内放送 : 勤務人数を確認中です。今現在包装ラインにて" + (10 - .@fac_open) + "名が作業中です。ミスのないよう、頑張って下さい。", bc_map, "0x00ff44";
 	end;
 }
 
 1@xm_d,155,98,3	script	Worker#1	4_M_COOKIE,{
 	if (getstatus(SC_MONSTER_TRANSFORM,1) == 1246) {
 		.@num = atoi(strnpcinfo(2));
-		mes "[Worker]";
-		mes "Huh? What happened?";
-		next;
-		if (select( "No, nothing special", "Do you know about the doll maker?" ) == 1) {
-			mes "[Worker]";
-			if (.@num == 8)
-				mes "I'm working now! I'm very busy!";
-			else
-				mes "I'm very busy with working, so could you stop chatting?";
-			close;
-		}
-		close2;
-		setpcblock PCBLOCK_NPC, true;
 		switch(.@num) {
 		case 1:
-			npctalk "Worker: Ah! Grandpa? He's a real good man. He oiled us everyday and cleaned the dust very often.";
+			mes "[作業員]";
+			mes "ふむ？　新入りかい？";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "仕事で忙しいんだ。";
+				mes "雑談はあとにしてくれ。";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,1,0xFFFFFF;
+			npctalk "作業員 : 人形職人……？　あ！　あの爺さんか！　この工場の創業者で人形職人だったな。";
 			sleep2 3000;
-			npctalk "Worker: I wish he wouldn't pass away. Ah... Ahah... I feel better.";
+			npctalk "作業員 : ここにいるおもちゃはみんな、あの爺さんの手で生み出されたといっても過言じゃない。無論、俺もね。";
+			sleep2 3000;
+			npctalk "作業員 : 中でも、キミちゃんはあの人の最高傑作ともいえるできらしい。爺さんがそう手紙に書いてたのみたよ。";
+			sleep2 3000;
+			npctalk "作業員 : というかあの爺さんのこと忘れてた……？　あれ……？";
 			break;
 		case 2:
-			npctalk "Worker: Did Kimi kill the craftsman grandpa? Who said that? That's not true. Kimi was going to save him!";
+			mes "[作業員]";
+			mes "ふえ？";
+			mes "あなた見かけない顔ね。";
+			mes "最近、稼働開始したの？";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "仕事は今日もいっぱいいっぱい。";
+				mes "わたしは今日も明日も、仕事よ。";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,2,0xFFFFFF;
+			npctalk "作業員 : 職人のお爺ちゃんをキミちゃんが殺したって噂があるの？　それについてはまったくの出鱈目よ。";
 			sleep2 3000;
-			npctalk "Worker: Ah... B.. By the way, why my does my body become...";
+			npctalk "作業員 : 職人のお爺ちゃんは、わたし達の生みの親だもの。殺すなんてありえないわ。";
+			sleep2 3000;
+			npctalk "作業員 : ……キミちゃん、もしかしたらその嘘を真にうけたりしてないかな。あの子、純粋だから……。";
+			sleep2 3000;
+			npctalk "作業員 : あ、こうしちゃいられない。私も職人のお爺ちゃんに会いに行こう。";
 			break;
 		case 3:
-			npctalk "Worker: He had a chronic cardiac disease, but it was so sudden when it started and he died. Kimi found him and gave him first aid, but..";
+			mes "[作業員]";
+			mes "おい！　いま忙しいんだ。";
+			mes "用事があるなら、手短にしてくれ。";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "そっちは仕事ないのか？";
+				mes "雑談する暇があるなら働けよ……。";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,3,0xFFFFFF;
+			npctalk "作業員 : 人形職人の爺さんは、この工場の創業者でもあり、腕利きの人形職人でねえ。";
 			sleep2 3000;
-			npctalk "Worker: Ah.. Did you do something to me? I feel strange...";
+			npctalk "作業員 : 中でも作品のうちの一つである、動く球体関節人形は大人気だった。";
+			sleep2 3000;
+			npctalk "作業員 : そういやあ、自分も稼働するのやめたはずなのに。ボケたかなあ……。";
 			break;
 		case 4:
-			npctalk "Worker: Kimi didn't move at all for sometime and sat down like ordinary dolls.";
+			mes "[作業員]";
+			mes "……。";
+			mes "あら、何か用なのかな？";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "今日も仕事。明日も仕事。";
+				mes "仕事しない悪い人形は怒られるよ？";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,4,0xFFFFFF;
+			npctalk "作業員 : キミと人形職人のお爺さんを私が最後に見たのは、休憩室だったかな。";
 			sleep2 3000;
-			npctalk "Worker: She was about to fly her soul forever... Like me now... Oh, my... What happened to me?";
+			npctalk "作業員 : そういえば最近、休憩室から誰かと誰かの話し声が聞こえるのよね。";
+			sleep2 3000;
+			npctalk "作業員 : 人形職人のお爺さんはいないのに、誰なんだか。";
+			sleep2 3000;
+			npctalk "作業員 : ……あれ？　人形職人のお爺さんのこと忘れてた！　いけない！";
 			break;
 		case 5:
-			npctalk "Worker: Oh, Kimi.. My dear.. She thought the doll maker passed away because she startled him.";
+			mes "[作業員]";
+			mes "うーん。";
+			mes "うーん。";
+			mes "……なんだかメモリの調子が悪い。";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "働けど働けど。";
+				mes "我の暮らし、楽にならず……。";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,5,0xFFFFFF;
+			npctalk "作業員 : うーん、記憶が定かじゃないんだけど……。";
 			sleep2 3000;
-			npctalk "Worker: Grandpa was just very pleased that Kimi was moving..";
+			npctalk "作業員 : 誰かにお爺さんについて、記憶のメモリーを改竄された可能性があるんだ。";
+			sleep2 3000;
+			npctalk "作業員 : 人間……なんだろうか？　変な笑い声が印象に残ってるけど、よくおぼえてないや。";
+			sleep2 3000;
+			npctalk "作業員 : でもおかげで、あのお爺さんを思い出せてよかった。ありがとう。";
 			break;
 		case 6:
-			npctalk "Worker: He could see a living doll for a while. That's what Kimi first did.";
+			mes "[作業員]";
+			mes "あ～調子悪い。";
+			mes "動力源の不調なのかね。";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "仕事でへとへとでね……。";
+				mes "雑談したい気分じゃないんだよ。";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,6,0xFFFFFF;
+			npctalk "作業員 : 以前は、観光客が大勢訪れる街だったんだ。爺さんも、嬉しそうだったな。";
 			sleep2 3000;
-			npctalk "Worker: And what she first saw was his death. What a misery.";
+			npctalk "作業員 : ところがある日を境に、詳しい理由はわからないんだけど、観光客も少なくなっていき、この有様だよ。";
+			sleep2 3000;
+			npctalk "作業員 : さて、爺さんもいないし、このままだと寂しいから、いくとしようかな。";
 			break;
 		case 7:
-			npctalk "Worker: Kimi was able to hear the Grandpa's voice and feel before she was indwelled.";
+			mes "[作業員]";
+			mes "やあ。";
+			mes "僕になにか用かな。";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "仕事で忙しいんだ。";
+				mes "雑談はやめてくれる？";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,7,0xFFFFFF;
+			npctalk "作業員 : 爺ちゃんが生きてたころ、たまに赤い服の人間を見かけたなあ。";
 			sleep2 3000;
-			npctalk "Worker: Perhaps Grandpa's affection made her move and become alive. Ahah.. I'm sleepy..";
+			npctalk "作業員 : 爺ちゃんの知り合いなのか、詳細までは知らないんだけどね。";
+			sleep2 3000;
+			npctalk "作業員 : 後はよく手紙を書いてたよ。誰に書いてたかは知らないけど。";
+			sleep2 3000;
+			npctalk "作業員 : 手紙かあ。……僕も爺ちゃんに、手紙を書こうかな。";
 			break;
 		case 8:
-			npctalk "Worker: Grandpa was a good man! Pity on Kimi! Kimi loved Grandpa! But Grandpa died. I'm sad!";
+			mes "[作業員]";
+			mes "何？";
+			mes "私に用ある？";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "私忙しい！　私仕事する!!";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,8,0xFFFFFF;
+			npctalk "作業員 : キミ、見なくなった。あの変な人間、キミと話してるのみたの最後。";
 			sleep2 3000;
+			npctalk "作業員 : おもちゃもいた。でもおもちゃの様子変だった。なにかあった？　おじいさん、なんでいない？";
+			sleep2 3000;
+			npctalk "作業員 : 私、おじいさん探してくる。いってくる。";
 			break;
 		case 9:
-			npctalk "Worker: He was so amazed to see Kimi's opening eyes and his heart... It became like that.";
+			mes "[作業員]";
+			mes "ららら～♪";
+			mes "！？";
+			mes "今の、き、きいてました!?";
+			mes "歌いながら仕事すると効率いいの。";
+			mes "でも、今のは忘れてください！";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "……あら、なにもないなら";
+				mes "仕事に集中させてほしいわ。";
+				mes "仕事してればなにも考えないで";
+				mes "すむから……。";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,9,0xFFFFFF;
+			npctalk "作業員 : お爺様のことですか……？　キミが完成し、目を開けた瞬間、心臓病によって天に召されたようです。";
 			sleep2 3000;
-			npctalk "Worker: Anyhow, why my is my body... It's likely to float in the air.... Something strange.";
+			npctalk "作業員 : キミはどうも、自分の顔を見てお爺様は亡くなったものと思っているようですが……。";
+			sleep2 3000;
+			npctalk "作業員 : ただ、どういう結果であれ、キミは最後にお爺様と会えたのですから。";
+			sleep2 3000;
+			npctalk "作業員 : え？　今からでも遅くない……ですか。……会えるでしょうか。私も……。";
 			break;
 		case 10:
-			npctalk "Worker: Kimi didn't hurt Grandpa! Kimi's wanted to save Grandpa! People are scared of Kimi, but Kimi is kind! Kimi is a good girl!";
+			mes "[作業員]";
+			mes "ふぁーあ……。";
+			mes "むにゃ、なにか用？";
+			mes "眠いんだけど……。";
+			next;
+			if(select("人形職人について尋ねる","何でもない") == 2) {
+				mes "[作業員]";
+				mes "仕事中の私語は控えろって";
+				mes "いわれなかったのー？";
+				close;
+			}
+			close2;
+			setpcblock PCBLOCK_NPC, true;
+			viewpoint 2,1,1,1,0xFFFFFF;
+			npctalk "作業員 : 人間はキミのことを怖がるけれど、キミちゃんは私たちの面倒をよくみてくれるよー。まるで生前のお爺さんみたいに。";
 			sleep2 3000;
-			npctalk "Worker: Grandpa... I miss him. Grandpa, Grandpa...";
+			npctalk "作業員 : よくキミちゃんに、お爺さんに作ってもらったってアクセサリーのリボンや傘を見せてもらったよー。";
+			sleep2 3000;
+			npctalk "作業員 : ところでお爺さん、どこにいるのかなー……。";
 			break;
 		}
 		sleep2 3000;
@@ -761,7 +1167,7 @@ OnStart:
 		setpcblock PCBLOCK_NPC, false;
 		end;
 	}
-	mes "[Worker]";
+	mes "[作業員]";
 	mes "What!? You are not one of us!!";
 	donpcevent instance_npcname( strnpcinfo(0) ) + "::OnAlert";
 	close;
@@ -771,9 +1177,9 @@ OnAlert:
 	killmonster 'xm_d_map$, .@npc_name$ + "::OnMyMobDead";
 	.@num = atoi(strnpcinfo(2));
 	if (.@num == 8)
-		npctalk "Worker: Guard! Guard!!";
+		npctalk "作業班長 : 警備兵！　警備兵！";
 	else
-		npctalk "Worker: Guard, Guard! Where are you?! Humans are here!!";
+		npctalk "作業班長 : 警備兵！　警備兵はどこにいるんだ！　ここに人間たちが来ている！";
 	sleep 3000;
 	switch(.@num) {
 	case 9:
@@ -814,64 +1220,83 @@ OnMyMobDead:
 
 
 // Note : aegis script have OnClick part
-1@xm_d,131,208,0	script	Captured Santa#2	4_M_SANTA,10,10,{
+1@xm_d,131,208,0	script	囚われたサンタ#2	4_M_SANTA,10,10,{
 	end;
 OnTouch_:
-	disablenpc instance_npcname("Captured Santa#2");
-	enablenpc instance_npcname("Captured Santa#3");
-	donpcevent instance_npcname("Antonio#1") + "::OnStart";
+	disablenpc instance_npcname("囚われたサンタ#2");
+	enablenpc instance_npcname("囚われたサンタ#3");
+	donpcevent instance_npcname("アンソニ#1") + "::OnStart";
 	enablenpc instance_npcname("#bgm04");
 	end;
 }
 
-1@xm_d,131,208,8	script	Captured Santa#3	4_M_SANTA,{
-	mes "[Captured Santa]";
-	mes "Even if no one owns it, its not right to steal it from everyone.";
+1@xm_d,131,208,8	script	囚われたサンタ#3	4_M_SANTA,{
+	mes "[囚われたサンタ]";
+	mes "いくら今はこの工場に";
+	mes "主がいないからといって";
+	mes "こんな風にこの場所を荒らし";
+	mes "好き勝手に物を盗んで";
+	mes "許されるわけがない！";
 	close;
 }
 
-1@xm_d,131,213,4	script	Antonio#1	4_M_ANTONIO,{
-	mes "[Antonio]";
-	mes "Hey, Santa. Stop being stuffy, you old man. Fair is fair after all, kekeke.";
+1@xm_d,131,213,4	script	アンソニ#1	4_M_ANTONIO,{
+	mes "[アンソニ]";
+	mes "おいおい。";
+	mes "それじゃあまるで俺様が";
+	mes "全部悪いみたいじゃないか。";
+	mes "使われなくなった工場をせっかく";
+	mes "有効利用してるだけなのに。";
+	mes "ククク……。";
 	close;
 
 OnStart:
-	.@antonio$ = instance_npcname("Antonio#1");
-	.@santa$ = instance_npcname("Captured Santa#3");
+	.@antonio$ = instance_npcname("アンソニ#1");
+	.@santa$ = instance_npcname("囚われたサンタ#3");
 	sleep 3000;
-	npctalk "Antonio: Listen to me, Santa~ I mean, I like this factory.", .@antonio$;
+	npctalk "アンソニ : よく聞けよ爺さん。俺はこの工場が気に入っているんだ。", .@antonio$;
 	sleep 3000;
-	npctalk "Antonio: No one owns it~ And there are a number of things I can use.", .@antonio$;
+	npctalk "アンソニ : この工場の主はもうとっくにくたばっているし、俺様のために働いてくれるようにお願いしてもいいんじゃね～？。", .@antonio$;
 	sleep 3000;
-	npctalk "Captured Santa: You silly! Just to be sure, I followed you. Now you steal from everyones factory!", .@santa$;
+	npctalk "囚われたサンタ : 主にプレゼントの配給を断られた腹いせとはいえ、おかしいと思わないのか？　主がいない状態で、なぜこの工場が動いているのか！。", .@santa$;
 	sleep 4000;
-	npctalk "Antonio: Hey, is this a big deal if I have surplus presents? I don't know about that~", .@antonio$;
+	npctalk "アンソニ : よくいうぜ。主がいないってことは誰のものでもないってことだろ？　大体、主がいないのになんで稼動してるのかなんて俺様は知らないし、興味もねーよ。", .@antonio$;
 	sleep 4000;
-	npctalk "Captured Santa: Whew... Okay, but think about that how children feel when they got them.", .@santa$;
+	npctalk "アンソニ : 要は中を覗いたら、この工場が稼動してた。だからそれを俺様が有効に利用しているだけで、爺さんにとやかく言う権利はないはずだぜ？", .@antonio$;
 	sleep 4000;
-	npctalk "Captured Santa: How they feel if they know you distributed the masterless things to them?", .@santa$;
+	npctalk "囚われたサンタ : それはお前の都合だろう！　それに子供たちがそんなプレゼントを受け取った時の気持ちを考えてみろ！", .@santa$;
 	sleep 4000;
-	npctalk "Antonio: Hmm...", .@antonio$;
+	npctalk "囚われたサンタ : 正規の依頼で作られなかったおもちゃを配られたと知れば、子供たちの気持ちはどうなる!?", .@santa$;
+	sleep 4000;
+	npctalk "アンソニ : へ……？　子供たちの気持ちだって？", .@antonio$;
 	sleep 2000;
-	npctalk "Antonio: Maybe... I will be happy?! Anyway, that's a present, kekekeke.", .@antonio$;
+	npctalk "アンソニ : 別にいいんじゃない？　結果的にはプレゼントじゃないか。ほれ、タンの盛り合わせもバッタの炒め物も、腹に入れば同じだろ？　ククク……。", .@antonio$;
 	sleep 5000;
-	npctalk "Captured Santa: Who said the present itself is the problem! You'd better stop this theft, Antonio!", .@santa$;
+	npctalk "囚われたサンタ : お前のへりくつは聞いていない！　今すぐにでもこの工場から出て行くんだ！　アンソニ！", .@santa$;
 	sleep 5000;
-	mapannounce 'xm_d_map$, "Factory announcement: The sending preparations have finished in Factory No.3.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 第3工場にて発送準備が終わりました。", bc_map, "0x00ff44";
 	sleep 5000;
-	mapannounce 'xm_d_map$, "Factory announcement: Delivery employees, please stand by.", bc_map, "0x00ff44";
+	mapannounce 'xm_d_map$, "工場案内放送 : 配送部の職員たちは準備をして下さい。", bc_map, "0x00ff44";
 	sleep 3000;
-	npctalk "Antonio: Oh! Wohuhu! A bunch of presents are delayed. Let's have a party today?!", .@antonio$;
+	npctalk "アンソニ : お？　プレゼントたちが今日もた～くさん溜まっているな。さて、今日はどんなプレゼントが集まってるかな!?", .@antonio$;
 	sleep 4000;
-	npctalk "Antonio: Hey, human. You can follow me if you'd like to help. I'm okay unless you disturb me!", .@antonio$;
+	npctalk "アンソニ : おっと、そこの人間。配送用のおもちゃに手を出さなければ、俺様は人間でも邪険にしないぜ。誰かと違って、心が広いからな。", .@antonio$;
 	sleep 4000;
 	disablenpc .@antonio$;
 	sleep 2000;
-	npctalk "Captured Santa: Tha.. That dude has no ethics!", .@santa$;
+	npctalk "囚われたサンタ : ああ……サンタクロースは……子供たちの未来は……どうなってしまうのだ……。", .@santa$;
 	sleep 4000;
-	npctalk "Captured Santa: Hey, would you go kick that Antonio out? He might run away if you hit several times.", .@santa$;
-	sleep 5000;
-	npctalk "Captured Santa: Its not right to steal from the community!", .@santa$;
+	npctalk "囚われたサンタ : 君がなぜここにいるのかわからないが……あのアンソニという奴を、実力行使で工場から追い出してくれないだろうか。", .@santa$;
+	sleep 4000;
+	npctalk "囚われたサンタ : 私たちはこの工場の人形職人からプレゼントの配送を頼まれていたのだが、あのアンソニは人形職人に嫌われ、仕事を干されたんだ。", .@santa$;
+	sleep 4000;
+	npctalk "囚われたサンタ : それなのにあいつはそれを逆恨みして、なぜか主がいないのに稼動していたこの工場に目を付け、今じゃ我が物顔で闊歩しているんだ。", .@santa$;
+	sleep 4000;
+	npctalk "囚われたサンタ : しかもあいつを止めにきた私を縛ったあげく、人形職人の娘ともいえる人形も得意の舌先三寸で東の部屋から出てこないように仕向けたようだ。", .@santa$;
+	sleep 4000;
+	npctalk "囚われたサンタ : 私がなんとかできれば良いのだが、サンタクロース同士は契約の関係上、手を出せないんだ……。", .@santa$;
+	sleep 4000;
+	npctalk "囚われたサンタ : アンソニは第3工場のどこかにいると思う。すまないが、子供たちやこの工場の未来を頼む……！", .@santa$;
 
 	disablenpc instance_npcname("#bgm04");
 	enablenpc instance_npcname("#fac4wp");
@@ -936,9 +1361,9 @@ OnMyMobDead:
 	end;
 OnStart:
 	if (rand(1,10) > 3)
-		areamonster 'xm_d_map$,13,144,121,248 ,"Antonio",2988,1, instance_npcname("#fac3ct3")+"::OnMyMobDead";// ANTONIO
+		areamonster 'xm_d_map$,13,144,121,248 ,"アンソニ",2988,1, instance_npcname("#fac3ct3")+"::OnMyMobDead";// ANTONIO
 	else
-		areamonster 'xm_d_map$,159,215,241,247, "Antonio",2988,1, instance_npcname("#fac3ct3")+"::OnMyMobDead";
+		areamonster 'xm_d_map$,159,215,241,247, "アンソニ",2988,1, instance_npcname("#fac3ct3")+"::OnMyMobDead";
 	end;
 
 OnMyMobDead:
@@ -952,7 +1377,7 @@ OnEnd:
 	donpcevent instance_npcname("#fac3ct") + "::OnEnd";
 	donpcevent instance_npcname("#fac3ct2") + "::OnEnd";
 	donpcevent instance_npcname("#finalbs") + "::OnStart";
-	disablenpc instance_npcname("Captured Santa#3");
+	disablenpc instance_npcname("囚われたサンタ#3");
 	mapannounce 'xm_d_map$, "???: I won't harm you if you leave quietly without spoiling it for me.", bc_map, "0xff8800";
 	stopnpctimer;
 	end;
@@ -961,8 +1386,8 @@ OnEnd:
 1@xm_d,1,5,3	script	#finalbs	CLEAR_NPC,{
 	end;
 OnStart:
-	enablenpc instance_npcname("Catherine Jet Johnson#5");
-	enablenpc instance_npcname("Celine Kimi#0");
+	enablenpc instance_npcname("キャサリンゼータ#5");
+	enablenpc instance_npcname("セリーヌ・キミ#0");
 	enablenpc instance_npcname("#fac5wp");
 	// enablenpc instance_npcname("#fac5wp2");// never enabled
 	enablenpc instance_npcname("#jeton1");
@@ -979,9 +1404,12 @@ OnTouch:
 }
 */
 
-1@xm_d,233,183,3	script	Celine Kimi#0	4_F_KIMI,{
-	mes "[Celine Kimi]";
-	mes "Did you come here as well? Why are all of the humans so anxious to destroy what we built?";
+1@xm_d,233,183,3	script	セリーヌ・キミ#0	4_F_KIMI,{
+	mes "[セリーヌ・キミ]";
+	mes "あなたも以前来た人間のように";
+	mes "ここを荒らしに来たの……？";
+	mes "ねえ、あなたたちはどうして";
+	mes "破壊したがるの？";
 	close;
 }
 
@@ -989,7 +1417,7 @@ OnTouch:
 	end;
 OnTouch_:
 	disablenpc instance_npcname("#jeton1");
-	donpcevent instance_npcname("Catherine Jet Johnson#5") + "::OnStart";
+	donpcevent instance_npcname("キャサリンゼータ#5") + "::OnStart";
 	enablenpc instance_npcname("#bgm02");
 	end;
 }
@@ -1001,59 +1429,71 @@ OnTouch:
 	end;
 }
 
-1@xm_d,222,183,6	script	Catherine Jet Johnson#5	4_F_SKULL06GIRL,{
-	mes "[Catherine Jet Johnson]";
-	mes "Wa.. Watch out! Kimi isn't under the normal status.";
+1@xm_d,222,183,6	script	キャサリンゼータ#5	4_F_SKULL06GIRL,{
+	mes "[キャサリンゼータ]";
+	mes "き……気を付けて下さい！";
+	mes "キミは普通の状態じゃなさそうです。";
+	mes "声をかけているのですが";
+	mes "どうも様子がおかしくて……。";
+	mes "一緒に声をかけてください！";
 	close;
 
 OnStart:
-	.@kimi$ = instance_npcname("Celine Kimi#0");
+	.@kimi$ = instance_npcname("セリーヌ・キミ#0");
 	sleep 2000;
-	npctalk "Catherine Jet Johnson: Kimi! Listen to me. I didn't come here to blame you.";
+	npctalk "キャサリンゼータ : キミ！　私の話を聞いて。私とこの人は、ここを荒らすために来たわけではない！　あなたと話がしたいの。";
 	sleep 3000;
-	npctalk "Celine Kimi: Everyone hates me!... You don't like me as well? This ugly and creepy doll likes me...", .@kimi$;
+	npctalk "セリーヌ・キミ : 話……？　……こんな恐ろしい外見をしているわたしの話なんて、誰も聞きいてくれない！　おじいちゃんも……おもちゃたちも……！", .@kimi$;
 	sleep 4000;
-	npctalk "Catherine Jet Johnson: Kimi, I heard about you from dolls here. The doll maker adored you so much!";
+	npctalk "キャサリンゼータ : 私は……あなたがひどいことをする子じゃないって信じてる。　だから教えて、キミ。何があったの？　私のこの顔はあなたのせいなの？";
 	sleep 4000;
-	mapannounce 'xm_d_map$, "Phantom's yell: Lie!", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "キミの幻影 : 信じる？　……ウソだ！", bc_map, "0xff8800";
 	sleep 1000;
-	npctalk "Celine Kimi: Don't lie. If that's true, why didn't he see me with love in his eyes?", .@kimi$;
+	npctalk "セリーヌ・キミ : ひどいことをする子じゃない……？　じゃあ、おじいちゃんはどうして、もう一度目を開けて、わたしをみてくれなかったの!?", .@kimi$;
 	sleep 4000;
-	npctalk "Celine Kimi: Why didn't he say my name? [Kimi] [Kimi!] I was anxious to hear the Grandpa's voice.", .@kimi$;
+	npctalk "セリーヌ・キミ : おじいちゃん、わたしの顔を見てびっくりしたあと、わたしから遠ざかって動かなくなった……。わたしがいくら体を揺すっても、名前をよんでも答えてくれなかった……。", .@kimi$;
 	sleep 4000;
-	mapannounce 'xm_d_map$, "Phantom's yell: Yes, Kimi~ Father was frightened! He was scared of you~", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "キミの幻影 : ソウダヨ、キミ！　あの人はアナタのことを見て驚いていたヨ！　アナタを恐れていたんダヨ……。カワイソウなキミ……。", bc_map, "0xff8800";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: No, don't listen to it, Kimi! He really cherished you.";
+	npctalk "キャサリンゼータ : !?　一体、誰が喋ってるの……。キミ以外に声が……。";
 	sleep 3000;
-	npctalk "Celine Kimi: Did he... cherish me?", .@kimi$;
+	npctalk "キャサリンゼータ : キミ……！　その声に耳を傾けないで！　お爺さんはあなたの名前を呼ぶ前に、病気のせいで……";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: Yes, when you start to move, he was so plea...";
+	npctalk "セリーヌ・キミ : おじいちゃん……病気……だったの……？", .@kimi$;
+	sleep 3000;
+	npctalk "キャサリンゼータ : そう！　病気だよ！　命を吹き込まれたあなたが動いたその瞬間、お爺さんはあまりの喜びに……。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : キミ……！　その声に耳を傾けないで！　お爺さんはあなたの名前を呼ぶ前に、病気のせいで……";
 	sleep 1000;
-	mapannounce 'xm_d_map$, "Phantom's yell: He was scared of your appearance and his heart stopped, Kimi~ You killed him!", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "キミの幻影 : ソウ！　驚愕ダよ！　命ヲ吹き込まれたアナタが動いたその瞬間、オ爺さんはあまりの醜さニ……驚いて、心臓がトマッテ死んじゃっタの。", bc_map, "0xff8800";
 	sleep 3000;
-	npctalk "Celine Kimi: D.. Did I.. kill him?...", .@kimi$;
+	npctalk "セリーヌ・キミ : わたし……が……わたしの顔がこんなだから……おじいちゃん、びっくりして心臓がとまっちゃったの……？", .@kimi$;
 	sleep 2000;
-	npctalk "Catherine Jet Johnson: No, Kimi! I've realized that. I misunderstood you. He was sick!";
+	npctalk "キャサリンゼータ : キミ、それは違う！　あなたはお爺さんを殺してなんかいない！　お爺さんも、あなたに殺されたなんて思っていない!!";
 	sleep 3000;
-	npctalk "Celine Kimi: D.. Di.. Did I... kill... him?", .@kimi$;
+	npctalk "セリーヌ・キミ : え……？　……わたし、誤解していたの……？　わたしがおじいちゃんを殺したわけじゃないの……？　嫌われたわけじゃないの？", .@kimi$;
 	sleep 2000;
-	mapannounce 'xm_d_map$, "Phantom's yell: See how you look, Kimi~ See the mirror~ How do yo feel? ", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "キミの幻影 : 忘れたノ？　キミ。あの人ガ見せてくれタ自身ノ姿を、再度見てみなさイ。鏡を見テ、ドウ？", bc_map, "0xff8800";
 	sleep 3000;
-	npctalk "Celine Kimi: I... I...", .@kimi$;
+	npctalk "セリーヌ・キミ : わ……わたし……これが……わたし……。醜い……怖い……わたしの醜い心そのまま……！　こんなのじゃ、みんな、みんな……わたしを……", .@kimi$;
 	sleep 1000;
-	mapannounce 'xm_d_map$, "Phantom's yell: Don't you agree you are frightening? No one loves you, Kimi~", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "キミの幻影 : ねエ、キミ。大体お爺さんがキミを愛してたナラ、なんデ、こんな醜い顔にしたの？　お人形は顔が命なのに。クスクス……。", bc_map, "0xff8800";
 	sleep 3000;
-	npctalk "Celine Kimi: Because of me, grandpa is dead...", .@kimi$;
+	npctalk "セリーヌ・キミ : わたしがこの部屋にいる理由……醜いわたしがうろうろしたら、みんな怖がる……逃げるって……言われた……。だからわたし、ここに……。", .@kimi$;
+	sleep 3000;
+	npctalk "セリーヌ・キミ : おじいちゃんも……わたしなんか愛してなかった……！　赤い服のお姉ちゃんも、わたしを騙して……わたしを笑いものにするつもりだったんでしょ……！", .@kimi$;
 	specialeffect EF_MAPPILLAR2, AREA, .@kimi$;
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: It has become serious. Kimi is suffering. It would be dangerous under this condition!";
+	npctalk "キャサリンゼータ : ち、違う！　……駄目だわ。キミの自我が分裂しています！　このままにしておくと危険です……！　仕方ありません……あの子を、止めてください！";
+	sleep 3000;
+	npctalk "キャサリンゼータ : 力づくで構いません。キミが壊れたら……私が……私がなんとかしてみせます。なので、冒険者様は自分の安全を優先してください！";
 	specialeffect EF_MAPPILLAR2, AREA, .@kimi$;
 	sleep 1000;
-	mapannounce 'xm_d_map$, "Phantom's yell: Rage~ Sorrow~ No one cries for you, Kimi~", bc_map, "0xff8800";
+	mapannounce 'xm_d_map$, "キミの幻影 : 怒りなサイ。悲しみなサイ。ダレもキミの味方なんていないんダヨ。クスクスクスクス……。", bc_map, "0xff8800";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: I will find the emergency exit to escape. Run away, adventurer!";
+	npctalk "キャサリンゼータ : 工場の空気もおかしい……。冒険者様！　私はキミを止めるための手がかりがないか探してきます！";
 	sleep 3000;
-	disablenpc instance_npcname("Catherine Jet Johnson#5");
+	disablenpc instance_npcname("キャサリンゼータ#5");
 	sleep 2000;
 	disablenpc .@kimi$;
 	donpcevent instance_npcname("#finalbs2") + "::OnStart";
@@ -1068,7 +1508,7 @@ OnStart:
 	enablenpc instance_npcname("#bgm03");
 	.@event$ = instance_npcname("#finalbs2") + "::OnMyMobDead";
 	killmonster 'xm_d_map$, .@event$;
-	monster 'xm_d_map$,231,184, "Celine Kimi",2996,1, .@event$;// XM_CELINE_KIMI
+	monster 'xm_d_map$,231,184, "セリーヌ・キミ",2996,1, .@event$;// XM_CELINE_KIMI
 	'celene_id = $@mobid[0];
 	monster 'xm_d_map$,226,190, "Kimi's Phantom",2997,1, .@event$;// G_XM_CELINE_KIMI
 	'phantom_id = $@mobid[0];
@@ -1094,26 +1534,26 @@ OnEnd:
 OnTalk:
 	.@chat_r = rand(1,10);
 	if (.@chat_r == 1)
-		unittalk 'celene_id, "I will burn you with hell's inferno.";
+		unittalk 'celene_id, "セリーヌ・キミ : わたしにとっての居場所はここしかないのに……なぜ、放っておいてくれないの……。"; 
 	else if (.@chat_r == 2)
-		unittalk 'celene_id, "Will you bear this flame?!";
+		unittalk 'celene_id, "セリーヌ・キミ : 愛なんていらない……必要ない……。わたしには必要ない……。";
 	else if (.@chat_r == 3)
-		unittalk 'celene_id, "I shouldn't have, but...";
+		unittalk 'celene_id, "セリーヌ・キミ : わたしは1人でいなきゃいけない……。可愛くないお人形は、誰にも必要とされない……。";
 	else if (.@chat_r == 4)
-		unittalk 'celene_id, "It's boiling!... Bear it if you can.";
+		unittalk 'celene_id, "セリーヌ・キミ : わたしと同じ、醜い顔になろうよ……。……仲間になろうよ。";
 	else if (.@chat_r == 5)
-		unittalk 'celene_id, "Breathe as much as you can. It'll be the last breath you take.";
+		unittalk 'celene_id, "セリーヌ・キミ : 死んじゃえ……。";
 	else if (.@chat_r == 6)
-		unittalk 'celene_id, "Frankly, I don't like fire.";
+		unittalk 'celene_id, "セリーヌ・キミ : やだよ……怖いよ……おじいちゃん……。なんで、ここに居てくれないの……！";
 	else
-		unittalk 'celene_id, "Everyone is afraid of me! What have I done so wrong?!";
+		unittalk 'celene_id, "セリーヌ・キミ : 嫌い。嫌い……！　あっちにいって！";;
 	end;
 
 OnTimer1000:
 	if (unitexists('celene_id) == true) {
 		getunitdata 'celene_id, .@data;
 		if ((.@data[UMOB_X] < 211 || .@data[UMOB_X] > 241 || .@data[UMOB_Y] < 166 || .@data[UMOB_Y] > 201) && (.@data[UMOB_X] > 0 || .@data[UMOB_Y] > 0)) {
-			mapannounce 'xm_d_map$, "Celine Kimi: No! I should keep my place!",bc_map,"0xff6666",FW_NORMAL,15;
+			mapannounce 'xm_d_map$, "セリーヌ・キミ : ダメ！　この場所から離れちゃダメッ！",bc_map,"0xff6666",FW_NORMAL,15;
 			donpcevent instance_npcname("#finalbs2") + "::Onfail";
 		}
 	}
@@ -1122,7 +1562,7 @@ OnTimer1000:
 Onfail:
 	stopnpctimer;
 	killmonster 'xm_d_map$, instance_npcname( strnpcinfo(0) ) + "::OnMyMobDead";
-	enablenpc instance_npcname("Celine Kimi#2");
+	enablenpc instance_npcname("セリーヌ・キミ#2");
 	disablenpc instance_npcname("#bgm03");
 	enablenpc instance_npcname("#kimion1");
 	end;
@@ -1140,15 +1580,15 @@ OnTimer10000:
 		if (.@MOB_HP1[UMOB_HP] > .@MOB_HP2[UMOB_HP]) {
 			setarray .@mob_hp[0], .@MOB_HP1[UMOB_HP], .@MOB_HP2[UMOB_HP];
 			setarray .@string$[0],
-				"You and I are the one! I will recover you!",
-				"Celine Kimi recovers herself and her phantom ";
+				"セリーヌ・キミ : わたしとあなたは表裏一体。わたしがあなたを回復するの……。",
+				"キャサリンゼータ : セリーヌ・キミとキミの幻影の体力が治癒によって";
 			.@talk = 'celene_id;
 		}
 		else if (.@MOB_HP2[UMOB_HP] > .@MOB_HP1[UMOB_HP]) {
 			setarray .@mob_hp[0], .@MOB_HP2[UMOB_HP], .@MOB_HP1[UMOB_HP];
 			setarray .@string$[0],
-				"I will restore you!!",
-				"Celine Kimi's phantom recovers herself and her master ";
+				"キミの幻影 : ワタシがキミを回復させル……。",
+				"キャサリンゼータ : セリーヌ・キミとキミの幻影の体力が治癒によって";
 			.@talk = 'phantom_id;
 		}
 		.@diff_hp = .@mob_hp[0] - .@mob_hp[1];
@@ -1162,7 +1602,7 @@ OnTimer10000:
 			donpcevent instance_npcname("#eff_f01") + "::OnStart";
 			unittalk .@talk, .@string$[0];
 			sleep 1000;
-			mapannounce 'xm_d_map$,  .@string$[1] + .@set_bs_hp +" HP has been recovered.", bc_map, "0xff6666";
+			mapannounce 'xm_d_map$,  .@string$[1] + .@set_bs_hp +" になりました！　気をつけてください！", bc_map, "0xff6666";
 			donpcevent instance_npcname("#heal_c") + "::OnStart";
 		}
 		initnpctimer;
@@ -1264,20 +1704,24 @@ OnMyMobDead:
 	end;
 OnTouch_:
 	disablenpc instance_npcname("#kimion1");
-	donpcevent instance_npcname("Celine Kimi#2") + "::OnStart";
+	donpcevent instance_npcname("セリーヌ・キミ#2") + "::OnStart";
 	end;
 }
 
-1@xm_d,233,183,3	script	Celine Kimi#2	4_F_KIMI,{
-	mes "[Celine Kimi]";
-	mes "You also... came here to kill me?";
+1@xm_d,233,183,3	script	セリーヌ・キミ#2	4_F_KIMI,{
+	mes "[セリーヌ・キミ]";
+	mes "……わたしは醜い。";
+	mes "……わたしは怖い。";
+	mes "……みんな本当はわたしを嫌ってる。";
+	mes "……おじいちゃんも、おもちゃも。";
+	mes "……あなたも、そうでしょ？";
 	close;
 
 OnStart:
-	npctalk "Celine Kimi: You also... came here to kill me?";
+	npctalk "セリーヌ・キミ :  あなたも……わたしを殺しに来たの？　あなたも……わたしを笑いに来たの？　あなたも……わたしを醜いって思うの？あなたも……わたしを嫌いって言うの？";
 	specialeffect EF_MAPPILLAR2;
 	sleep 5000;
-	disablenpc instance_npcname("Celine Kimi#2");
+	disablenpc instance_npcname("セリーヌ・キミ#2");
 	donpcevent instance_npcname("#finalbs2") + "::OnStart";
 	end;
 }
@@ -1296,7 +1740,7 @@ OnStart:
 		initnpctimer;
 	end;
 OnTimer3000:
-	mapannounce 'xm_d_map$, "Celine Kimi and her phantom have shared their strength. They will be stronger than ever!",bc_map,"0xff6666";
+	mapannounce 'xm_d_map$, "セリーヌ・キミ and her phantom have shared their strength. They will be stronger than ever!",bc_map,"0xff6666";
 	stopnpctimer;
 	end;
 }
@@ -1304,14 +1748,14 @@ OnTimer3000:
 1@xm_d,1,5,3	script	#finalbs_e	CLEAR_NPC,{
 	end;
 OnStart:
-	mapannounce 'xm_d_map$, "Celine Kimi: It is no use to defeat me! My body will be restored.",bc_map,"0xff6666",FW_NORMAL,15;
+	mapannounce 'xm_d_map$, "セリーヌ・キミ : わたしを倒しても無駄だよ……。またわたしはこの工場にもどってくるんだから……。",bc_map,"0xff6666",FW_NORMAL,15;
 	enablenpc instance_npcname("#fac6wp");
 	enablenpc instance_npcname("#jeton2");
-	enablenpc instance_npcname("Catherine Jet Johnson#6");
+	enablenpc instance_npcname("キャサリンゼータ#6");
 	for ( .@i = 1; .@i <= 10; .@i++ )
 		enablenpc instance_npcname("Packaged Present#"+ .@i);
 	sleep 6000;
-	mapannounce 'xm_d_map$, "Catherine Jet Johnson's yell: Are you okay? Flee to the south emergency exit!",bc_map,"0xffff00";
+	mapannounce 'xm_d_map$, "キャサリンゼータ : !?　キミを退けたんですか!?　凄い……。とりあえず、その部屋の南西にある通路から、私がいる場所へきてください！",bc_map,"0xffff00";
 	end;
 }
 
@@ -1319,38 +1763,51 @@ OnStart:
 	end;
 OnTouch_:
 	disablenpc instance_npcname("#jeton2");
-	donpcevent instance_npcname("Catherine Jet Johnson#6") + "::OnStart";
+	donpcevent instance_npcname("キャサリンゼータ#6") + "::OnStart";
 	end;
 }
 
-1@xm_d,218,145,5	script	Catherine Jet Johnson#6	4_F_SKULL06GIRL,{
+1@xm_d,218,145,5	script	キャサリンゼータ#6	4_F_SKULL06GIRL,{
 	end;
 OnStart:
 	sleep 1000;
-	npctalk "Catherine Jet Johnson: Unfortunately, I have failed to persuade Kimi.";
+	npctalk "キャサリンゼータ : ……ここまでくれば大丈夫なはずです。";
 	sleep 3000;
-	npctalk "Catherine Jet Johnson: What was the voice of that phantom? Why does it torment Kimi so harshly...";
-	sleep 4000;
-	npctalk "Catherine Jet Johnson: I guess that the curse of my face was from the unidentified voice.";
-	sleep 4000;
-	npctalk "Catherine Jet Johnson: Anyway, even Kimi hates everyone and has collected her recollections here a lot.";
-	sleep 6000;
-	npctalk "Catherine Jet Johnson: I will end this thing safely even if her soul will return and she won't be disappointed.";
-	sleep 5000;
-	npctalk "Catherine Jet Johnson: Thanks to you, everything that I have wondered is completely resolved. Please call me again if you are going to send her to Heaven next time.";
-	sleep 5000;
-	npctalk "Catherine Jet Johnson: I will open the exit way out. I will go outside first, so just follow me.";
+	npctalk "キャサリンゼータ : 結局、手がかりも見つからず、危険な目にあわせてすいません……。";
 	sleep 3000;
-	disablenpc instance_npcname("Catherine Jet Johnson#6");
+	npctalk "キャサリンゼータ : でも、最後に少しは私の人形職人見習いとしての目が役にたったみたいで、良かったです。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : それにしても、幻影の声というものの正体は何だったんですかね？　どうしてキミにあんな酷いことを……。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : きっと私の顔の呪いもその正体不明の声が犯人ではないかと思っています。確証はないのですが……。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : 結局、お爺さんの気持ちはきちんとキミに届いていなかったのですね……。残念です……。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : 何にしろ、キミの魂がまた戻って来てもいいように、ここはしっかり管理しておいた方が良さそうです。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : でも私はまだ、あきらめていません。真実もまだはっきりしていないし。だからまた良ければ、力を貸してください。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : 外に出る出口は開けておきます。私が先に行くのでついてきてください。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : ……いつかキミにも、お爺さんやみんなの気持ちをちゃんと届けられたらいいな。";
+	sleep 3000;
+	npctalk "キャサリンゼータ : 非常口を開放しました。お礼も置いておきましたので、非常口から外に出て下さいね。";
+	sleep 3000;
+	disablenpc instance_npcname("キャサリンゼータ#6");
 	enablenpc instance_npcname("#exwp1");
 	end;
 }
 
 1@xm_d,218,150,5	script	#exwp1	PORTAL,{
-	mes "Will you exit?";
+	mes "‐どうやら緊急用の脱出口が";
+	mes "　何かの拍子で作動したようです。";
+	mes "　この脱出口から";
+	mes "　街に戻れるようですが";
+	mes "　まだ工場に用事があるなら";
+	mes "　出ない方が良いでしょう‐";
 	next;
-	if (select( "Take a look around", "Go outside" ) == 1) {
-		mes "Stop the machine.";
+	if(select("まだ出ない","外に出る") == 1) {
+		mes "‐あなたはその場を離れた‐";
 		close;
 	}
 	close2;
@@ -1569,25 +2026,25 @@ OnInstanceInit:
 	disablenpc instance_npcname("#bgm06");
 
 	// Step 1
-	disablenpc instance_npcname("Catherine Jet Johnson#01");
-	disablenpc instance_npcname("Employees' Uniform Box#1");
-	disablenpc instance_npcname("Employees' Uniform Box#2");
-	disablenpc instance_npcname("Employees' Uniform Box#3");
+	disablenpc instance_npcname("キャサリンゼータ#01");
+	disablenpc instance_npcname("職員用の衣服ボックス#1");
+	disablenpc instance_npcname("職員用の衣服ボックス#2");
+	disablenpc instance_npcname("職員用の衣服ボックス#3");
 	hideonnpc instance_npcname("#fac1ct");
 	disablenpc instance_npcname("#fac1bs");
 	disablenpc instance_npcname("#pck1");
 	disablenpc instance_npcname("#alert1");
 
 	// Step 2
-	disablenpc instance_npcname("Catherine Jet Johnson#21");
-	disablenpc instance_npcname("Employees' Uniform Box#4");
+	disablenpc instance_npcname("キャサリンゼータ#21");
+	disablenpc instance_npcname("職員用の衣服ボックス#4");
 	hideonnpc instance_npcname("#fac2ct");
 	disablenpc instance_npcname("#fac2wpc");
 	for ( .@i = 1; .@i < 11; ++.@i )
 		disablenpc instance_npcname("Worker#" + .@i);
 
 	// Step 3
-	disablenpc instance_npcname("Captured Santa#3");
+	disablenpc instance_npcname("囚われたサンタ#3");
 	hideonnpc instance_npcname("#fac3ct");
 	hideonnpc instance_npcname("#fac3ct2");
 	hideonnpc instance_npcname("#fac3ct3");
@@ -1595,9 +2052,9 @@ OnInstanceInit:
 	// Boss
 	disablenpc instance_npcname("#finalbs");
 	hideonnpc instance_npcname("#finalbs2");
-	disablenpc instance_npcname("Celine Kimi#0");
+	disablenpc instance_npcname("セリーヌ・キミ#0");
 	disablenpc instance_npcname("#jeton1");
-	disablenpc instance_npcname("Catherine Jet Johnson#5");
+	disablenpc instance_npcname("キャサリンゼータ#5");
 	for ( .@i = 1; .@i < 10; ++.@i )
 		hideonnpc instance_npcname("#eff_f0" + .@i);
 	disablenpc instance_npcname("#bssk01");
@@ -1605,13 +2062,13 @@ OnInstanceInit:
 	for ( .@i = 1; .@i < 5; ++.@i )
 		hideonnpc instance_npcname("#crssk" + .@i);
 	disablenpc instance_npcname("#kimion1");
-	disablenpc instance_npcname("Celine Kimi#2");
+	disablenpc instance_npcname("セリーヌ・キミ#2");
 	disablenpc instance_npcname("#heal_c");
 
 	// Exit
 	disablenpc instance_npcname("#finalbs_e");
 	disablenpc instance_npcname("#jeton2");
-	disablenpc instance_npcname("Catherine Jet Johnson#6");
+	disablenpc instance_npcname("キャサリンゼータ#6");
 	disablenpc instance_npcname("#exwp1");
 	for ( .@i = 1; .@i < 11; ++.@i )
 		disablenpc instance_npcname("Packaged Present#" + .@i);

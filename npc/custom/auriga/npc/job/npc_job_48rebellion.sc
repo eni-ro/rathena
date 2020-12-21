@@ -822,7 +822,7 @@ job_gun,117,46,3	script	ルウィーニ#2	10063,{
 	if(checkquest2(12341))
 		chgquest 12341,12342;
 	if(checkquest2(12342)) {
-		if(sc_onparam(SC_MONSTER_TRANSFORM,1) == 2431) {
+		if(getstatus(SC_MONSTER_TRANSFORM,1) == 2431) {
 			mes "^0000ff‐すでに変身中です。";
 			mes "　試験課題をすべて完了したら";
 			mes "　組み立て室に行き、";
@@ -918,7 +918,7 @@ job_gun,117,46,3	script	ルウィーニ#2	10063,{
 
 job_gun,198,39,3	script	ルウィーニ#3	10063,{
 	if(checkquest2(12342)) {
-		if(sc_onparam(SC_MONSTER_TRANSFORM,1) != 2431) {
+		if(getstatus(SC_MONSTER_TRANSFORM,1) != 2431) {
 			mes "[ルウィーニ]";
 			mes "時間を過ぎている。失格だ。";
 			mes "余った材料はすべて回収する。";
@@ -1120,7 +1120,7 @@ job_gun,115,160,10,10	monster	射撃標的	3169,10,180000,0,0
 job_gun,120,138,3	script	シドレン#1	10062,{
 	if(CHANGE_RB == 3) {
 		if(checkquest2(12343)) {
-			if(checkquest2(12343)&4 && checkquest2(12344)&4 == 0 && sc_onparam(SC_MONSTER_TRANSFORM,1) == 2431) {
+			if(checkquest2(12343)&4 && checkquest2(12344)&4 == 0 && getstatus(SC_MONSTER_TRANSFORM,1) == 2431) {
 				mes "[シドレン]";
 				mes "ふむ、素晴らしいな！";
 				mes "こうも簡単にクリアされるとは";

@@ -4856,7 +4856,7 @@ ac_cl_room,37,32,4	script	マスター・スヌス	51,{
 	else
 		mes "やぁ、こんばんは。";
 	next;
-	if(Upper == UPPER_HIGH || getbaseclass(Class) > CLASS_DC || Job >= Job_RuneKnight) {
+	if(Upper == UPPER_HIGH || getbaseclass(Class) > CLASS_DC || Job >= Job_Rune_Knight) {
 		mes "[マスター・スヌス]";
 		mes "冒険者として十分に";
 		mes "成長している君には";

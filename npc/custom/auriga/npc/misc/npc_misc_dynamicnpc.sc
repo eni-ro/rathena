@@ -677,8 +677,8 @@ function	script	CallDynamicNPC	{
 						case 4: set .@map$,"glast_01";		set .@x,67;		set .@y,192;	break;
 						case 5: set .@map$,"gl_sew02";		set .@x,293;	set .@y,295;	break;
 						case 6: set .@map$,"gl_dun01";		set .@x,222;	set .@y,24;		break;
-						case 7: set .@map$,"gl_chyard_";	set .@x,148;	set .@y,144;	if(Job >= Job_RuneKnight) set .@flag,1;	break;
-						case 8: set .@map$,"gl_cas02_";		set .@x,105;	set .@y,190;	if(Job < Job_RuneKnight || (Job == Job_Summoner && BaseLevel < 90)) set .@flag,1;	break;
+						case 7: set .@map$,"gl_chyard_";	set .@x,148;	set .@y,144;	if(Job >= Job_Rune_Knight) set .@flag,1;	break;
+						case 8: set .@map$,"gl_cas02_";		set .@x,105;	set .@y,190;	if(Job < Job_Rune_Knight || (Job == Job_Summoner && BaseLevel < 90)) set .@flag,1;	break;
 						default:
 							continue;
 						}

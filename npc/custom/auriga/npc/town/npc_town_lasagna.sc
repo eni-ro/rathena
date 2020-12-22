@@ -705,12 +705,12 @@ lasagna,289,287,5	script	鍛冶職人#lasagna	561,{
 // 看板
 //============================================================
 lasagna,321,242,4	script	看板#1lasagna	835,7,7,{
-	unittalk getcharid(3), "北西側：道具商人　／　東側：髪型変更・スペシャルアイテム販売員",1;
+	npctalk  "北西側：道具商人　／　東側：髪型変更・スペシャルアイテム販売員",1;
 	end;
 }
 
 lasagna,312,251,4	script	看板#2lasagna	835,7,7,{
-	unittalk getcharid(3), "北西側：精錬・修理・ドラム武具販売・アップグレード",1;
+	npctalk  "北西側：精錬・修理・ドラム武具販売・アップグレード",1;
 	end;
 }
 
@@ -1573,28 +1573,28 @@ lasagna,232,181,5	script	リンギュイーネ	559,{
 }
 
 lasagna,190,239,5	script	幼いニャンコ#lasagna_01	559,{
-	unittalk getcharid(3), "幼いニャンコ : 私はこの遊び場の隊長だにゃ～。";
+	npctalk  "幼いニャンコ : 私はこの遊び場の隊長だにゃ～。";
 	end;
 }
 
 lasagna,180,230,7	script	幼いニャンコ#lasagna_02	560,{
-	unittalk getcharid(3), "幼いニャンコ : ハァ……こんな幼稚なやつらとは一緒に遊べないにゃ～。";
+	npctalk  "幼いニャンコ : ハァ……こんな幼稚なやつらとは一緒に遊べないにゃ～。";
 	end;
 }
 
 lasagna,192,245,7	script	幼いニャンコ#lasagna_03	554,{
-	unittalk getcharid(3), "幼いニャンコ : 毛糸の塊がひとつ、ななつ、ふたつ、むっつ……多いにゃ!!";
+	npctalk  "幼いニャンコ : 毛糸の塊がひとつ、ななつ、ふたつ、むっつ……多いにゃ!!";
 	end;
 }
 
 lasagna,184,234,5	script	幼いニャンコ#lasagna_04	422,{
-	unittalk getcharid(3), "幼いニャンコ : これどうして転がらないにゃ～？転がるようにしてにゃ～。";
+	npctalk  "幼いニャンコ : これどうして転がらないにゃ～？転がるようにしてにゃ～。";
 	end;
 }
 
 lasagna,186,231,3	script	幼いニャンコ#lasagna_05	10167,{
 	emotion 28;
-	unittalk getcharid(3), "幼いニャンコ : シーソーに乗りながら一緒に遊びたいやつは集まれ～。";
+	npctalk  "幼いニャンコ : シーソーに乗りながら一緒に遊びたいやつは集まれ～。";
 	end;
 }
 

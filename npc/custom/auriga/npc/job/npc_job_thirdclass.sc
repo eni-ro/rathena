@@ -22,19 +22,19 @@ function	script	jobchenge3rd_func	{
 		case Job_Alchemist:		return "クリエイター";
 		case Job_Bard:			return "クラウン";
 		case Job_Dancer:		return "ジプシー";
-		case Job_RuneKnight:	return "ルーンナイト";
+		case Job_Rune_Knight:	return "ルーンナイト";
 		case Job_Warlock:		return "ウォーロック";
 		case Job_Ranger:		return "レンジャー";
-		case Job_ArchBishop:	return "アークビショップ";
+		case Job_Arch_Bishop:	return "アークビショップ";
 		case Job_Mechanic:		return "メカニック";
-		case Job_Guillotine:	return "ギロチンクロス";
-		case Job_RoyalGuard:	return "ロイヤルガード";
+		case Job_Guillotine_Cross:	return "ギロチンクロス";
+		case Job_Royal_Guard:	return "ロイヤルガード";
 		case Job_Sorcerer:		return "ソーサラー";
 		case Job_Minstrel:		return "ミンストレル";
 		case Job_Wanderer:		return "ワンダラー";
-		case Job_Shura:			return "修羅";
+		case Job_Sura:			return "修羅";
 		case Job_Genetic:		return "ジェネティック";
-		case Job_ShadowChaser:	return "シャドウチェイサー";
+		case Job_Shadow_Chaser:	return "シャドウチェイサー";
 		}
 	}
 
@@ -108,7 +108,7 @@ function	script	jobchenge3rd_func	{
 		mes "お越しください。";
 		close;
 	}
-	if(.@job == Job_RuneKnight) {
+	if(.@job == Job_Rune_Knight) {
 		mes "[転職代行係]";
 		mes "転職する為の準備は万全のようですね。";
 		mes "それでは、転職する前に、";
@@ -238,12 +238,12 @@ function	script	jobchenge3rd_func	{
 	setoption 0;
 	jobchange .@job;
 	switch(Job) {
-	case Job_RuneKnight:
+	case Job_Rune_Knight:
 		setquest 201180;
 		getitem 5746,1;	//ルーンサークレット
 		getitem .@gain,1;	//選択装備
 		break;
-	case Job_ArchBishop:
+	case Job_Arch_Bishop:
 		setquest 201195;
 		getitem 5747,1;	//ミトラ
 		break;
@@ -263,16 +263,16 @@ function	script	jobchenge3rd_func	{
 		getitem 6124,1;	//狼の笛
 		getitem 5748,1;	//スナイパーゴーグル
 		break;
-	case Job_Guillotine:
+	case Job_Guillotine_Cross:
 		setquest 201200;
 		getitem 5755,1;	//沈黙の執行者
 		getitem 12106,1;	//宝石箱
 		break;
-	case Job_RoyalGuard:
+	case Job_Royal_Guard:
 		setquest 201210;
 		getitem 5757,1;	//シュミッツのヘルム
 		break;
-	case Job_Shura:
+	case Job_Sura:
 		setquest 201230;
 		getitem 5754,1;	//ブレイジングソウル
 		break;
@@ -280,7 +280,7 @@ function	script	jobchenge3rd_func	{
 		setquest 201215;
 		getitem 5756,1;	//風のささやき
 		break;
-	case Job_ShadowChaser:
+	case Job_Shadow_Chaser:
 		setquest 201235;
 		getitem 6121,1;	//フェイスペイントブラシ
 		getitem 6122,1;	//ペイントブラシ
@@ -318,19 +318,19 @@ function	script	jobchenge3rd_func	{
 	close;
 }
 
-prt_in,162,24,3	script	転職代行係#runeknight	888,{ callfunc "jobchenge3rd_func",Job_RuneKnight,Job_Knight; }
+prt_in,162,24,3	script	転職代行係#runeknight	888,{ callfunc "jobchenge3rd_func",Job_Rune_Knight,Job_Knight; }
 morocc,103,144,3	script	転職代行係#warlock	888,{ callfunc "jobchenge3rd_func",Job_Warlock,Job_Wizard; }
 alberta,223,111,5	script	転職代行係#ranger	888,{ callfunc "jobchenge3rd_func",Job_Ranger,Job_Hunter; }
-prt_church,103,88,3	script	転職代行係#arch	888,{ callfunc "jobchenge3rd_func",Job_ArchBishop,Job_Priest; }
+prt_church,103,88,3	script	転職代行係#arch	888,{ callfunc "jobchenge3rd_func",Job_Arch_Bishop,Job_Priest; }
 yuno,129,156,3	script	転職代行係#mechanic	888,{ callfunc "jobchenge3rd_func",Job_Mechanic,Job_Blacksmith; }
-que_job01,75,96,3	script	転職代行係#guillotine	888,{ callfunc "jobchenge3rd_func",Job_Guillotine,Job_Assassin; }
-prt_castle,48,161,3	script	転職代行係#roya	888,{ callfunc "jobchenge3rd_func",Job_RoyalGuard,Job_Crusader; }
+que_job01,75,96,3	script	転職代行係#guillotine	888,{ callfunc "jobchenge3rd_func",Job_Guillotine_Cross,Job_Assassin; }
+prt_castle,48,161,3	script	転職代行係#roya	888,{ callfunc "jobchenge3rd_func",Job_Royal_Guard,Job_Crusader; }
 gef_tower,102,34,3	script	転職代行係#sorc	888,{ callfunc "jobchenge3rd_func",Job_Sorcerer,Job_Sage; }
 alberta,196,133,3	script	転職代行係#mins	888,{ callfunc "jobchenge3rd_func",Job_Minstrel,Job_Bard; }
 xmas,162,209,3	script	転職代行係#wand	888,{ callfunc "jobchenge3rd_func",Job_Wanderer,Job_Dancer; }
-ve_in,237,125,3	script	転職代行係#sura	888,{ callfunc "jobchenge3rd_func",Job_Shura,Job_Monk; }
+ve_in,237,125,3	script	転職代行係#sura	888,{ callfunc "jobchenge3rd_func",Job_Sura,Job_Monk; }
 alde_alche,35,186,3	script	転職代行係#gene	888,{ callfunc "jobchenge3rd_func",Job_Genetic,Job_Alchemist; }
-morocc,156,70,3	script	転職代行係#shad	888,{ callfunc "jobchenge3rd_func",Job_ShadowChaser,Job_Rogue; }
+morocc,156,70,3	script	転職代行係#shad	888,{ callfunc "jobchenge3rd_func",Job_Shadow_Chaser,Job_Rogue; }
 
 
 //==========================================
@@ -338,7 +338,7 @@ morocc,156,70,3	script	転職代行係#shad	888,{ callfunc "jobchenge3rd_func",Job_Sh
 //------------------------------------------
 
 prontera,129,212,5	script	ドラゴン管理兵	105,{
-	if(Job != Job_RuneKnight) {
+	if(Job != Job_Rune_Knight) {
 		mes "[ドラゴン管理兵]";
 		mes "何の御用ですか？";
 		mes "ドラゴンは、ルーンナイト様専用";
@@ -371,7 +371,7 @@ prontera,129,212,5	script	ドラゴン管理兵	105,{
 //------------------------------------------
 
 prontera,125,208,5	script	グリフォン管理兵	105,{
-	if(Job != Job_RoyalGuard) {
+	if(Job != Job_Royal_Guard) {
 		mes "[グリフォン管理兵]";
 		mes "何の御用ですか？";
 		mes "グリフォンは、ロイヤルガード様専用";

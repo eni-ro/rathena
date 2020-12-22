@@ -197,7 +197,7 @@ dali,130,107,5	script	探検家レーン#sara	945,{
 		}
 		delquest 15003;
 		set SARA_1QUE,1;
-		if(Job >= Job_RuneKnight && Job <= Job_Summoner) {
+		if(Job >= Job_Rune_Knight && Job <= Job_Summoner) {
 			getexp 500000,0;
 			getexp 500000,0;
 			getexp 0,500000;
@@ -348,29 +348,29 @@ OnTouch:
 		cutin "sara_beholder",2;
 		mes "[？？？？？]";
 		mes "かつて……";
-		unittalk getcharid(3), "？？？？？ : かつて……";
+		npctalk  "？？？？？ : かつて……";
 		next;
 		mes "‐どこからともなく響く声が";
 		mes "　こちらに語りかけてくる……‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐どこからともなく響く声がこちらに語りかけてくる……‐";
+		npctalk strcharinfo(0)+" : ‐どこからともなく響く声がこちらに語りかけてくる……‐";
 		next;
 		mes "[？？？？？]";
 		mes "かつて存在したという";
 		mes "強大な力を持つヴァルキリー、サラ。";
 		mes "彼女が世界に与えた影響は、";
 		mes "少なくありません。";
-		unittalk getcharid(3), "？？？？？ : かつて存在したという強大な力を持つヴァルキリー、サラ。彼女が世界に与えた影響は、少なくありません。";
+		npctalk  "？？？？？ : かつて存在したという強大な力を持つヴァルキリー、サラ。彼女が世界に与えた影響は、少なくありません。";
 		next;
 		mes "[？？？？？]";
 		mes "彼女は闇の道を進みました。";
 		mes "ではなぜ、彼女は闇の道を";
 		mes "選んだのか……。";
-		unittalk getcharid(3), "？？？？？ : 彼女は闇の道を進みました。ではなぜ、彼女は闇の道を選んだのか……。";
+		npctalk  "？？？？？ : 彼女は闇の道を進みました。ではなぜ、彼女は闇の道を選んだのか……。";
 		next;
 		mes "[？？？？？]";
 		mes "サラの幼き頃、その身に起きた出来事を";
 		mes "見てみましょう。";
-		unittalk getcharid(3), "？？？？？ : サラの幼き頃、その身に起きた出来事を見てみましょう。";
+		npctalk  "？？？？？ : サラの幼き頃、その身に起きた出来事を見てみましょう。";
 		close2;
 		cutin "sara_beholder",255;
 		hideonnpc getmdnpcname("#hugin_sara1");
@@ -449,14 +449,14 @@ OnInit:
 		mes "‐花を抱えた少女がいる。";
 		mes "　褐色がかった肌の色をした少女は、";
 		mes "　少しすねたような表情をしている‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐花を抱えた少女がいる。褐色がかった肌の色をした少女は、少しすねたような表情をしている‐";
+		npctalk strcharinfo(0)+" : ‐花を抱えた少女がいる。褐色がかった肌の色をした少女は、少しすねたような表情をしている‐";
 		next;
 		if(SARA_1QUE > 0) {
 			if(select("急ぐ","会話をする") == 1) {
 				mes "‐サラの身に何か";
 				mes "　悪いことが起きそうだ。";
 				mes "　急いでサラを探そう‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐サラの身に何か悪いことが起きそうだ。急いでサラを探そう‐";
+				npctalk strcharinfo(0)+" : ‐サラの身に何か悪いことが起きそうだ。急いでサラを探そう‐";
 				hideonnpc getmdnpcname("少女#sara0");
 				hideoffnpc getmdnpcname("warp01#sara0");
 				hideoffnpc getmdnpcname("navi#sara0");
@@ -466,45 +466,45 @@ OnInit:
 		mes "‐少女にここが何処なのかを訪ねると、";
 		mes "　にっこりと、ひとなつっこい笑顔で";
 		mes "　こちらを見た‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐少女にここが何処なのかを訪ねると、にっこりと、ひとなつっこい笑顔でこちらを見た‐";
+		npctalk strcharinfo(0)+" : ‐少女にここが何処なのかを訪ねると、にっこりと、ひとなつっこい笑顔でこちらを見た‐";
 		next;
 		cutin "sara_9sara1",2;
 		mes "[少女]";
 		mes "ここはフェイヨンだよ！";
 		mes ((Sex)? "お兄さん": "お姉さん")+ "はこの町の人では";
 		mes "ないみたいだね？";
-		unittalk getcharid(3), "少女 : ここはフェイヨンだよ！　" +((Sex)? "お兄さん": "お姉さん")+ "はこの町の人ではないみたいだね？";
+		npctalk  "少女 : ここはフェイヨンだよ！　" +((Sex)? "お兄さん": "お姉さん")+ "はこの町の人ではないみたいだね？";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "君はこの町の人？";
 		mes "肌の色が少し違うけど……";
-		unittalk getcharid(3),strcharinfo(0)+" : 君はこの町の人？　肌の色が少し違うけど……";
+		npctalk strcharinfo(0)+" : 君はこの町の人？　肌の色が少し違うけど……";
 		next;
 		mes "[サラ]";
 		mes "うん、そうだよ！";
 		mes "私はフェイヨンで生まれたの。";
 		mes "名前はサラ、サラ・アイリンなの！";
-		unittalk getcharid(3), "サラ : うん、そうだよ！　私はフェイヨンで生まれたの。名前はサラ、サラ・アイリンなの！";
+		npctalk  "サラ : うん、そうだよ！　私はフェイヨンで生まれたの。名前はサラ、サラ・アイリンなの！";
 		next;
 		mes "[サラ]";
 		mes "私の肌の色はね、えへへ！";
 		mes "ママと同じなんだぁ！";
-		unittalk getcharid(3), "サラ : 私の肌の色はね、えへへ！　ママと同じなんだぁ！";
+		npctalk  "サラ : 私の肌の色はね、えへへ！　ママと同じなんだぁ！";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "そうなんだ。";
 		mes "それで、ここで何をしていたの？";
-		unittalk getcharid(3),strcharinfo(0)+" : そうなんだ。それで、ここで何をしていたの？";
+		npctalk strcharinfo(0)+" : そうなんだ。それで、ここで何をしていたの？";
 		next;
 		mes "[サラ]";
 		mes "パパを待ってるの。";
 		mes "パパはこの町の大長老なんだよ！";
-		unittalk getcharid(3), "サラ : パパを待ってるの。パパはこの町の大長老なんだよ！";
+		npctalk  "サラ : パパを待ってるの。パパはこの町の大長老なんだよ！";
 		next;
 		mes "[サラ]";
 		mes "パパ、遅いなぁ……";
 		mes "すぐ来るって言っていたのに……";
-		unittalk getcharid(3), "サラ : パパ遅いなぁ……すぐ来るって言っていたのに……";
+		npctalk  "サラ : パパ遅いなぁ……すぐ来るって言っていたのに……";
 		next;
 		hideoffnpc getmdnpcname("大長老アイリン#sara");
 		mes "[大長老アイリン]";
@@ -513,7 +513,7 @@ OnInit:
 		next;
 		mes "[サラ]";
 		mes "パパ！";
-		unittalk getcharid(3), "サラ : パパ！";
+		npctalk  "サラ : パパ！";
 		next;
 		cutin "sara_elder_irine1",2;
 		mes "[大長老アイリン]";
@@ -526,7 +526,7 @@ OnInit:
 		mes "も～！";
 		mes "すぐ来るって言ったのに！";
 		mes "パパの嘘つき！";
-		unittalk getcharid(3), "サラ : も～！　すぐ来るって言ったのに！　パパの嘘つき！";
+		npctalk  "サラ : も～！　すぐ来るって言ったのに！　パパの嘘つき！";
 		next;
 		cutin "sara_elder_irine1",2;
 		mes "[大長老アイリン]";
@@ -539,7 +539,7 @@ OnInit:
 		cutin "sara_9sara1",0;
 		mes "[サラ]";
 		mes "……私、あのお爺さん達キライ！";
-		unittalk getcharid(3), "サラ : ……私、あのお爺さん達キライ！";
+		npctalk  "サラ : ……私、あのお爺さん達キライ！";
 		next;
 		cutin "sara_elder_irine1",2;
 		mes "[大長老アイリン]";
@@ -550,22 +550,22 @@ OnInit:
 		mes "‐大長老アイリンは";
 		mes "　ジロリとこちらを観察した後、";
 		mes "　目で挨拶してきた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐大長老アイリンはジロリとこちらを観察した後、目で挨拶してきた‐";
+		npctalk strcharinfo(0)+" : ‐大長老アイリンはジロリとこちらを観察した後、目で挨拶してきた‐";
 		next;
 		cutin "sara_elder_irine2",2;
 		mes "‐一瞬敵意が含まれているように";
 		mes "　感じたのは、気のせいだろうか……‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐一瞬敵意が含まれているように感じたのは、気のせいだろうか……‐";
+		npctalk strcharinfo(0)+" : ‐一瞬敵意が含まれているように感じたのは、気のせいだろうか……‐";
 		next;
 		mes "‐サラは満面の笑顔で、";
 		mes "　手に持った花の束を";
 		mes "　大長老アイリンに差し出した‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラは満面の笑顔で、手に持った花の束を大長老アイリンに差し出した‐";
+		npctalk strcharinfo(0)+" : ‐サラは満面の笑顔で、手に持った花の束を大長老アイリンに差し出した‐";
 		next;
 		cutin "sara_9sara1",0;
 		mes "[サラ]";
 		mes "はい、これ！";
-		unittalk getcharid(3), "サラ : はい、これ！";
+		npctalk  "サラ : はい、これ！";
 		next;
 		cutin "sara_elder_irine1",2;
 		mes "[大長老アイリン]";
@@ -579,12 +579,12 @@ OnInit:
 		mes "うん、いいよ！";
 		mes "えへへ……";
 		mes "パパのために集めたんだぁ。";
-		unittalk getcharid(3), "サラ : いいよ！　えへへ……パパのために集めたんだぁ。";
+		npctalk  "サラ : いいよ！　えへへ……パパのために集めたんだぁ。";
 		next;
 		mes "‐サラから花を貰った大長老は";
 		mes "　サラの体を持ち上げて";
 		mes "　肩車に乗せた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラから花を貰った大長老は、サラの体を持ち上げて肩車に乗せた‐";
+		npctalk strcharinfo(0)+" : ‐サラから花を貰った大長老は、サラの体を持ち上げて肩車に乗せた‐";
 		next;
 		cutin "sara_elder_irine1",2;
 		mes "[大長老アイリン]";
@@ -596,7 +596,7 @@ OnInit:
 		mes "[サラ]";
 		mes "あそこ！";
 		mes "あそこの丘まで!!";
-		unittalk getcharid(3), "サラ : あそこ！　あそこの丘まで!!";
+		npctalk  "サラ : あそこ！　あそこの丘まで!!";
 		next;
 		cutin "sara_elder_irine1",2;
 		mes "[大長老アイリン]";
@@ -612,7 +612,7 @@ OnInit:
 		mes "‐二人が丘の方に消えた頃、";
 		mes "　近くから怪しい声が";
 		mes "　聞こえてきた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐二人が丘の方に消えた頃、近くから怪しい声が聞こえてきた‐";
+		npctalk strcharinfo(0)+" : ‐二人が丘の方に消えた頃、近くから怪しい声が聞こえてきた‐";
 		next;
 		mes "[怪しい老人A]";
 		mes "サラの力が大きくなって行くのを";
@@ -648,12 +648,12 @@ OnInit:
 		next;
 		mes "‐対話を終えた二人の老人は";
 		mes "　いつの間にかいなくなっていた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐対話を終えた二人の老人はいつの間にかいなくなっていた‐";
+		npctalk strcharinfo(0)+" : ‐対話を終えた二人の老人はいつの間にかいなくなっていた‐";
 		next;
 		mes "‐サラの身に何か";
 		mes "　悪いことが起きそうだ。";
 		mes "　急いでサラを探そう‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラの身に何か悪いことが起きそうだ。急いでサラを探そう‐";
+		npctalk strcharinfo(0)+" : ‐サラの身に何か悪いことが起きそうだ。急いでサラを探そう‐";
 		close2;
 		hideonnpc getmdnpcname("#oldman_a_sara1");
 		hideonnpc getmdnpcname("#oldman_b_sara1");
@@ -687,48 +687,48 @@ OnTouch:
 	cutin "sara_elder_irine1",255;
 	end;
 OnTalk1:
-	unittalk getcharid(3), "大長老アイリン : サラ、待たせてしまったね。";
+	npctalk  "大長老アイリン : サラ、待たせてしまったね。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "大長老アイリン : おやおや、私のお姫様、ずいぶんご機嫌だな。";
+	npctalk  "大長老アイリン : おやおや、私のお姫様、ずいぶんご機嫌だな。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "大長老アイリン : ああ、ごめんよ。長老たちとの会議が思ったより長引いてしまったんだ。パパを許しておくれ。";
+	npctalk  "大長老アイリン : ああ、ごめんよ。長老たちとの会議が思ったより長引いてしまったんだ。パパを許しておくれ。";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "大長老アイリン : そんなことを言っちゃダメだぞ。ん？　この方は……";
+	npctalk  "大長老アイリン : そんなことを言っちゃダメだぞ。ん？　この方は……";
 	end;
 OnTalk5:
-	unittalk getcharid(3), "大長老アイリン : これは……こんな綺麗な花をお父さんが貰ってもいいのかな？";
+	npctalk  "大長老アイリン : これは……こんな綺麗な花をお父さんが貰ってもいいのかな？";
 	end;
 OnTalk6:
-	unittalk getcharid(3), "大長老アイリン : さあ、私の小さなお姫様。今度はどこに行こうか？";
+	npctalk  "大長老アイリン : さあ、私の小さなお姫様。今度はどこに行こうか？";
 	end;
 OnTalk7:
-	unittalk getcharid(3), "大長老アイリン : よ～し！　では行くぞ～！";
+	npctalk  "大長老アイリン : よ～し！　では行くぞ～！";
 	end;
 }
 
 1@sara,255,158,3	script	#oldman_a_sara1	111,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "怪しい老人A : サラの力が大きくなって行くのを感じる。これ以上、成長するのを見過ごす事はできない！";
+	npctalk  "怪しい老人A : サラの力が大きくなって行くのを感じる。これ以上、成長するのを見過ごす事はできない！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "怪しい老人A : 四聖獣がサラを選択する前に、先に手を打たなければならない。あの者に頼んであるから、今晩やってくれるはずだ。";
+	npctalk  "怪しい老人A : 四聖獣がサラを選択する前に、先に手を打たなければならない。あの者に頼んであるから、今晩やってくれるはずだ。";
 	end;
 }
 
 1@sara,260,161,3	script	#oldman_b_sara1	111,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "怪しい老人B : フェイヨンの正統な継承者でもない、異邦人の血筋……それも凶星の年に生まれた子だとは！";
+	npctalk  "怪しい老人B : フェイヨンの正統な継承者でもない、異邦人の血筋……それも凶星の年に生まれた子だとは！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "怪しい老人B : いつかこの町に血の嵐が吹き荒れるだろう。";
+	npctalk  "怪しい老人B : いつかこの町に血の嵐が吹き荒れるだろう。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "怪しい老人B : 君がすでに手を打ってあると言うのなら信じて見守ることにしよう。……もうすぐ日が落ちる。よい報告を待っているぞ。";
+	npctalk  "怪しい老人B : 君がすでに手を打ってあると言うのなら信じて見守ることにしよう。……もうすぐ日が落ちる。よい報告を待っているぞ。";
 	end;
 }
 
@@ -739,7 +739,7 @@ OnTalk3:
 		mes "あっ！";
 		mes "さっきの" +((Sex)? "お兄さん": "お姉さん")+ "だぁ！";
 		mes "なにかご用？";
-		unittalk getcharid(3), "サラ : あっ！　さっきの" +((Sex)? "お兄さん": "お姉さん")+ "だぁ！　なにかご用？";
+		npctalk  "サラ : あっ！　さっきの" +((Sex)? "お兄さん": "お姉さん")+ "だぁ！　なにかご用？";
 		next;
 		if(SARA_1QUE > 0) {
 			if(select("急ぐ","会話をする") == 1) {
@@ -748,7 +748,7 @@ OnTalk3:
 				mes "　駆け出した。";
 				mes "　その間に警備兵がこちらを";
 				mes "　取り囲む‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐突然サラは叫びながら駆け出した。その間に警備兵がこちらを取り囲む‐";
+				npctalk strcharinfo(0)+" : ‐突然サラは叫びながら駆け出した。その間に警備兵がこちらを取り囲む‐";
 				hideonnpc getmdnpcname("サラ・アイリン#sa1");
 				announce "南の方角に逃げたサラを追いかけよう！",0x9,0xffff00;
 				donpcevent getmdnpcname("サラ・アイリン#sa1")+"::OnStart";
@@ -762,17 +762,17 @@ OnTalk3:
 		mes "ママにお花を渡すの！";
 		mes "うふふ、これはママの、";
 		mes "これはパパの!!";
-		unittalk getcharid(3), "サラ : あ、ちょっと待ってね、ママにお花を渡すの！　うふふ、これはママの、これはパパの!!";
+		npctalk  "サラ : あ、ちょっと待ってね、ママにお花を渡すの！　うふふ、これはママの、これはパパの!!";
 		next;
 		mes "‐サラは両親の為に持って来た";
 		mes "　花を一時でも早く渡そうとして";
 		mes "　急いで家の扉を開けた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラは両親の為に持って来た花を一時でも早く渡そうとして、急いで家の扉を開けた‐";
+		npctalk strcharinfo(0)+" : ‐サラは両親の為に持って来た花を一時でも早く渡そうとして、急いで家の扉を開けた‐";
 		next;
 		mes "[サラ]";
 		mes "ママ、パパ！　これ見て！";
 		mes "私がね……！";
-		unittalk getcharid(3), "サラ : ママ、パパ！　これ見て！　私がね……！";
+		npctalk  "サラ : ママ、パパ！　これ見て！　私がね……！";
 		next;
 		playBGM "37";
 		cutin "sara_momdie",4;
@@ -780,11 +780,11 @@ OnTalk3:
 		mes "　血を流して倒しているサラの母親と、";
 		mes "　刀を持ち、全身に血を浴びた";
 		mes "　大長老アイリンがいた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐そこには刃物で刺されたのか、血を流して倒しているサラの母親と、刀を持ち、全身に血を浴びた大長老アイリンがいた‐";
+		npctalk strcharinfo(0)+" : ‐そこには刃物で刺されたのか、血を流して倒しているサラの母親と、刀を持ち、全身に血を浴びた大長老アイリンがいた‐";
 		next;
 		mes "[サラ]";
 		mes "え…………";
-		unittalk getcharid(3), "サラ : え…………";
+		npctalk  "サラ : え…………";
 		next;
 		mes "[サラの母親]";
 		mes "……サラ…………";
@@ -794,20 +794,20 @@ OnTalk3:
 		next;
 		mes "[サラ]";
 		mes "！！！！！！！！！！！";
-		unittalk getcharid(3), "サラ : ！！！！！！！！！！！";
+		npctalk  "サラ : ！！！！！！！！！！！";
 		next;
 		mes "‐サラの母親が握っていた玉が";
 		mes "　サラの足元まで落ちて転がった。";
 		mes "　サラは目の前で起きている光景を";
 		mes "　理解できないまま、無意識で";
 		mes "　玉を拾う‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラの母親が握っていた玉がサラの足元まで落ちて転がった。サラは目の前で起きている光景を理解できないまま、無意識で玉を拾う‐";
+		npctalk strcharinfo(0)+" : ‐サラの母親が握っていた玉がサラの足元まで落ちて転がった。サラは目の前で起きている光景を理解できないまま、無意識で玉を拾う‐";
 		next;
 		mes "‐その瞬間、刀を握った";
 		mes "　大長老アイリンが";
 		mes "　サラの存在に気が付き、";
 		mes "　振り返った‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐その瞬間、刀を握った大長老アイリンがサラの存在に気が付き、振り返った‐";
+		npctalk strcharinfo(0)+" : ‐その瞬間、刀を握った大長老アイリンがサラの存在に気が付き、振り返った‐";
 		next;
 		cutin "sara_elder_irine4",2;
 		mes "[大長老アイリン]";
@@ -818,13 +818,13 @@ OnTalk3:
 		cutin "sara_9sara2",2;
 		mes "[サラ]";
 		mes "………";
-		unittalk getcharid(3), "サラ : ………";
+		npctalk  "サラ : ………";
 		next;
 		menu "サラを連れて脱出する",-;
 		mes "‐危機を直感し、茫然と立っている";
 		mes "　サラを連れてここから";
 		mes "　出ようとした‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐危機を直感し、茫然と立っているサラを連れてここから出ようとした‐";
+		npctalk strcharinfo(0)+" : ‐危機を直感し、茫然と立っているサラを連れてここから出ようとした‐";
 		next;
 		cutin "sara_elder_irine3",2;
 		mes "[大長老アイリン]";
@@ -836,19 +836,19 @@ OnTalk3:
 		mes "‐大長老が指示を出すと、";
 		mes "　警備兵達が集まって来る音が";
 		mes "　聞こえてきた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐大長老が指示を出すと、警備兵達が集まって来る音が聞こえてきた‐";
+		npctalk strcharinfo(0)+" : ‐大長老が指示を出すと、警備兵達が集まって来る音が聞こえてきた‐";
 		next;
 		cutin "sara_9sara3",2;
 		mes "[サラ]";
 		mes "うわあああ！！！！！";
-		unittalk getcharid(3), "サラ : うわあああ！！！！！";
+		npctalk  "サラ : うわあああ！！！！！";
 		next;
 		cutin "sara_9sara3",255;
 		mes "‐突然サラは叫びながら";
 		mes "　駆け出した。";
 		mes "　その間に警備兵がこちらを";
 		mes "　取り囲む‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐突然サラは叫びながら駆け出した。その間に警備兵がこちらを取り囲む‐";
+		npctalk strcharinfo(0)+" : ‐突然サラは叫びながら駆け出した。その間に警備兵がこちらを取り囲む‐";
 		hideonnpc getmdnpcname("サラ・アイリン#sa1");
 		hideonnpc getmdnpcname("#papa_mama_sara1");
 		announce "南の方角に逃げたサラを追いかけよう！",0x9,0xffff00;
@@ -892,20 +892,20 @@ OnTimer1000:
 1@sara,109,327,3	script	#papa_mama_sara1	111,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "サラの母親 : ……サラ…………こ……ここは……危ないわ……早く……逃げなさい……。";
+	npctalk  "サラの母親 : ……サラ…………こ……ここは……危ないわ……早く……逃げなさい……。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "大長老アイリン : サラ……ちょうどお前を探していたんだ……。";
+	npctalk  "大長老アイリン : サラ……ちょうどお前を探していたんだ……。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "大長老アイリン : 警備兵!!　ここに妻を殺害した奴がいる！　こいつを捕まえろ！";
+	npctalk  "大長老アイリン : 警備兵!!　ここに妻を殺害した奴がいる！　こいつを捕まえろ！";
 	end;
 }
 
 1@sara,110,300,5	script	サラ・アイリン#sa1a	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : わあああ！！！！！！";
+	npctalk  "サラ : わあああ！！！！！！";
 	hideonnpc getmdnpcname("サラ・アイリン#sa1a");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa1b");
 	announce "サラは南の方角に逃げていった。",0x9,0xffff00;
@@ -915,7 +915,7 @@ OnTouch:
 1@sara,107,231,5	script	サラ・アイリン#sa1b	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : わあああっ！！！！！！";
+	npctalk  "サラ : わあああっ！！！！！！";
 	hideonnpc getmdnpcname("サラ・アイリン#sa1b");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa1c");
 	announce "サラは東の方角に逃げていった。",0x9,0xffff00;
@@ -925,7 +925,7 @@ OnTouch:
 1@sara,142,229,5	script	サラ・アイリン#sa1c	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : ぐすっ……ママ……ママぁ……。";
+	npctalk  "サラ : ぐすっ……ママ……ママぁ……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa1c");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa1d");
 	announce "サラは東の方角に逃げていった。",0x9,0xffff00;
@@ -935,7 +935,7 @@ OnTouch:
 1@sara,171,228,5	script	サラ・アイリン#sa1d	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : ママ……痛そうなママ……ぐすっ……。";
+	npctalk  "サラ : ママ……痛そうなママ……ぐすっ……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa1d");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa1e");
 	announce "サラは北の方角に逃げていった。",0x9,0xffff00;
@@ -945,7 +945,7 @@ OnTouch:
 1@sara,185,249,5	script	サラ・アイリン#sa1e	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : ママ……死んじゃやだあ……っ。";
+	npctalk  "サラ : ママ……死んじゃやだあ……っ。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa1e");
 	announce "サラはこの先に逃げていってしまった。",0x9,0xffff00;
 	viewpoint 1,208,250,1,0x00FF00;
@@ -1065,7 +1065,7 @@ OnKilled:
 1@sara,225,301,5	script	サラ・アイリン#sa2a	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : ……はあ……はあ……。……えっう……ぐすっ……。";
+	npctalk  "サラ : ……はあ……はあ……。……えっう……ぐすっ……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa2a");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa2b");
 	announce "サラは南の方角に逃げていった。",0x9,0xffff00;
@@ -1075,7 +1075,7 @@ OnTouch:
 1@sara,236,274,5	script	サラ・アイリン#sa2b	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : サラ、いい子にしてたのに……。";
+	npctalk  "サラ : サラ、いい子にしてたのに……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa2b");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa2c");
 	announce "サラは南の方角に逃げていった。",0x9,0xffff00;
@@ -1085,7 +1085,7 @@ OnTouch:
 1@sara,231,234,5	script	サラ・アイリン#sa2c	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : ……どうして？　ママ、どうして痛そうな顔してたの？";
+	npctalk  "サラ : ……どうして？　ママ、どうして痛そうな顔してたの？";
 	hideonnpc getmdnpcname("サラ・アイリン#sa2c");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa2d");
 	announce "サラは南の方角に逃げていった。",0x9,0xffff00;
@@ -1095,7 +1095,7 @@ OnTouch:
 1@sara,217,200,5	script	サラ・アイリン#sa2d	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : パパがママに悪いことしたの？　痛いことしたの？　……ひぐっ。";
+	npctalk  "サラ : パパがママに悪いことしたの？　痛いことしたの？　……ひぐっ。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa2d");
 	announce "サラはこの先に逃げていってしまった。",0x9,0xffff00;
 	viewpoint 1,226,190,1,0x00FF00;
@@ -1127,7 +1127,7 @@ OnTouch:
 1@sara,232,90,5	script	サラ・アイリン#sa3a	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : サラがあのお爺さんたちの悪口いった悪い子だから……？";
+	npctalk  "サラ : サラがあのお爺さんたちの悪口いった悪い子だから……？";
 	hideonnpc getmdnpcname("サラ・アイリン#sa3a");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa3b");
 	announce "サラは南西の方角に逃げていった。",0x9,0xffff00;
@@ -1137,7 +1137,7 @@ OnTouch:
 1@sara,211,76,5	script	サラ・アイリン#sa3b	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : パパはいい子じゃないサラ、いらないんだね……。";
+	npctalk  "サラ : パパはいい子じゃないサラ、いらないんだね……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa3b");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa3c");
 	announce "サラは西の方角に逃げていった。",0x9,0xffff00;
@@ -1147,7 +1147,7 @@ OnTouch:
 1@sara,175,64,5	script	サラ・アイリン#sa3c	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : でも、ママを傷つけたパパは……？　あのパパは、悪いパパなの？";
+	npctalk  "サラ : でも、ママを傷つけたパパは……？　あのパパは、悪いパパなの？";
 	hideonnpc getmdnpcname("サラ・アイリン#sa3c");
 	announce "サラはこの先に逃げていってしまった。",0x9,0xffff00;
 	viewpoint 1,166,67,1,0x00FF00;
@@ -1216,7 +1216,7 @@ OnTouch:
 1@sara,165,97,5	script	サラ・アイリン#sa4a	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : パパの顔、怖かった……ぐす……っ。あれはきっと悪いパパなんだ……。";
+	npctalk  "サラ : パパの顔、怖かった……ぐす……っ。あれはきっと悪いパパなんだ……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa4a");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa4b");
 	announce "サラは北の方角に逃げていった。",0x9,0xffff00;
@@ -1226,7 +1226,7 @@ OnTouch:
 1@sara,172,126,5	script	サラ・アイリン#sa4b	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : 悪いパパ、きらい……悪いパパ、いらない……でも……サラは……サラは……うぅ……。";
+	npctalk  "サラ : 悪いパパ、きらい……悪いパパ、いらない……でも……サラは……サラは……うぅ……。";
 	hideonnpc getmdnpcname("サラ・アイリン#sa4b");
 	hideoffnpc getmdnpcname("サラ・アイリン#sa4c");
 	announce "サラは北の方角に逃げていった。",0x9,0xffff00;
@@ -1236,7 +1236,7 @@ OnTouch:
 1@sara,162,166,5	script	サラ・アイリン#sa4c	668,7,7,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "サラ : ……ひっく。わかんないよぉ……。サラ、どうしたらいいの、ママ……ママ！";
+	npctalk  "サラ : ……ひっく。わかんないよぉ……。サラ、どうしたらいいの、ママ……ママ！";
 	hideonnpc getmdnpcname("サラ・アイリン#sa4c");
 	announce "サラはこの先に逃げていってしまった。",0x9,0xffff00;
 	viewpoint 1,155,180,1,0x00FF00;
@@ -1364,7 +1364,7 @@ OnKilled:
 		mes "[サラ]";
 		mes "……わからない……サラは……";
 		mes "サラは……ひぐっ。";
-		unittalk getcharid(3), "サラ : ……わからない……サラは……サラは……ひぐっ。";
+		npctalk  "サラ : ……わからない……サラは……サラは……ひぐっ。";
 		next;
 		if(SARA_1QUE > 0) {
 			if(select("急ぐ","会話をする") == 1) {
@@ -1372,7 +1372,7 @@ OnKilled:
 				mes "‐サラは再び叫びながら、";
 				mes "　南西の方角へ逃げていった。";
 				mes "　大長老アイリンに話しかけよう‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐サラは再び叫びながら、南西の方角へ逃げていった‐";
+				npctalk strcharinfo(0)+" : ‐サラは再び叫びながら、南西の方角へ逃げていった‐";
 				hideoffnpc getmdnpcname("大長老アイリン#sa5a");
 				hideonnpc getmdnpcname("サラ・アイリン#sa5");
 				close;
@@ -1387,7 +1387,7 @@ OnKilled:
 		cutin "sara_9sara2",2;
 		mes "[サラ]";
 		mes "……パパ。";
-		unittalk getcharid(3), "サラ : ……パパ。";
+		npctalk  "サラ : ……パパ。";
 		next;
 		cutin "sara_elder_irine4",2;
 		mes "[大長老アイリン]";
@@ -1404,7 +1404,7 @@ OnKilled:
 		mes "ママ……パパ……好き……。";
 		mes "どうしたら……いい……の……。";
 		mes "もう……もう、いやぁぁぁっ!!";
-		unittalk getcharid(3), "サラ : 血……ママの血……。悪いパパ、サラ……嫌い……。でもサラ……パパ……好き……。ママ……パパ……好き……。どうしたら……いい……の……。もう……もう、いやぁぁぁっ!!";
+		npctalk  "サラ : 血……ママの血……。悪いパパ、サラ……嫌い……。でもサラ……パパ……好き……。ママ……パパ……好き……。どうしたら……いい……の……。もう……もう、いやぁぁぁっ!!";
 		next;
 		cutin "sara_elder_irine4",2;
 		mes "[大長老アイリン]";
@@ -1416,7 +1416,7 @@ OnKilled:
 		mes "‐サラは再び叫びながら、";
 		mes "　南西の方角へ逃げていった。";
 		mes "　大長老アイリンに話しかけよう‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラは再び叫びながら、南西の方角へ逃げていった‐";
+		npctalk strcharinfo(0)+" : ‐サラは再び叫びながら、南西の方角へ逃げていった‐";
 		close2;
 		cutin "sara_elder_irine4",255;
 		end;
@@ -1439,7 +1439,7 @@ OnKilled:
 		mes "[大長老アイリン]";
 		mes "貴様は……";
 		mes "この殺人犯め！　まだ生きていたのか！";
-		unittalk getcharid(3), "大長老アイリン : 貴様は……この殺人犯め！　まだ生きていたのか！";
+		npctalk  "大長老アイリン : 貴様は……この殺人犯め！　まだ生きていたのか！";
 		while(1) {
 			next;
 			switch(select("どうするか考える","^0000ff自分は殺人犯ではないと説明する（戦闘なし）^000000","^ff0000大長老を力でねじ伏せる（戦闘あり）^000000")) {
@@ -1447,18 +1447,18 @@ OnKilled:
 				mes "[大長老アイリン]";
 				mes "どうした！";
 				mes "何か言ったらどうだ！";
-				unittalk getcharid(3), "大長老アイリン : どうした！　何か言ったらどうだ！";
+				npctalk  "大長老アイリン : どうした！　何か言ったらどうだ！";
 				continue;
 			case 2:
 				cutin "sara_elder_irine3",255;
 				mes "‐自分は殺人犯ではないことを";
 				mes "　大長老アイリンに説明した‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐自分は殺人犯ではないことを大長老アイリンに説明した‐";
+				npctalk strcharinfo(0)+" : ‐自分は殺人犯ではないことを大長老アイリンに説明した‐";
 				next;
 				cutin "sara_elder_irine3",2;
 				mes "[大長老アイリン]";
 				mes "……とぼけるつもりか？";
-				unittalk getcharid(3), "大長老アイリン : ……とぼけるつもりか？";
+				npctalk  "大長老アイリン : ……とぼけるつもりか？";
 				next;
 				cutin "sara_elder_irine3",255;
 				hideoffnpc getmdnpcname("#paydef_sara1");
@@ -1471,7 +1471,7 @@ OnKilled:
 				mes "守護兵！";
 				mes "殺人犯はここだ！";
 				mes "あいつを包囲しろ!!";
-				unittalk getcharid(3), "大長老アイリン : 守護兵！　殺人犯はここだ！　あいつを包囲しろ!!";
+				npctalk  "大長老アイリン : 守護兵！　殺人犯はここだ！　あいつを包囲しろ!!";
 				next;
 				cutin "sara_elder_irine3",255;
 				mes "[フェイヨン守護兵]";
@@ -1482,7 +1482,7 @@ OnKilled:
 				mes "[大長老アイリン]";
 				mes "どうした？";
 				mes "この緊急事態に！";
-				unittalk getcharid(3), "大長老アイリン : どうした？　この緊急事態に！";
+				npctalk  "大長老アイリン : どうした？　この緊急事態に！";
 				next;
 				cutin "sara_elder_irine3",255;
 				mes "‐大長老アイリンは、駆け付けた";
@@ -1490,7 +1490,7 @@ OnKilled:
 				mes "　話し始めた。";
 				mes "　もう一度、大長老アイリンに";
 				mes "　話しかけてみよう‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐大長老アイリンは、駆け付けたフェイヨン守護兵と何やら話し始めた‐";
+				npctalk strcharinfo(0)+" : ‐大長老アイリンは、駆け付けたフェイヨン守護兵と何やら話し始めた‐";
 				close2;
 				hideonnpc getmdnpcname("大長老アイリン#sa5a");
 				hideonnpc getmdnpcname("#paydef_sara1");
@@ -1502,13 +1502,13 @@ OnKilled:
 				mes "‐サラを追うのをはばむため、";
 				mes "　大長老アイリンの前に";
 				mes "　立ちはだかった‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐サラを追うのをはばむため、大長老アイリンの前に立ちはだかった‐";
+				npctalk strcharinfo(0)+" : ‐サラを追うのをはばむため、大長老アイリンの前に立ちはだかった‐";
 				next;
 				cutin "sara_elder_irine3",2;
 				mes "[大長老アイリン]";
 				mes "おい！";
 				mes "あいつを包囲しろ!!";
-				unittalk getcharid(3), "大長老アイリン : おい！　あいつを包囲しろ!!";
+				npctalk  "大長老アイリン : おい！　あいつを包囲しろ!!";
 				close2;
 				cutin "sara_9sara2",255;
 				hideonnpc getmdnpcname("大長老アイリン#sa5a");
@@ -1530,13 +1530,13 @@ OnKilled:
 		close;
 	}
 OnTalk1:
-	unittalk getcharid(3), "大長老アイリン : ……サラ……";
+	npctalk  "大長老アイリン : ……サラ……";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "大長老アイリン : おまえを……探していたよ、サラ……ここはとても危険なんだ。 早く……こっちにいらっしゃい……。";
+	npctalk  "大長老アイリン : おまえを……探していたよ、サラ……ここはとても危険なんだ。 早く……こっちにいらっしゃい……。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "大長老アイリン : サラ!!";
+	npctalk  "大長老アイリン : サラ!!";
 	end;
 }
 
@@ -1548,19 +1548,19 @@ OnTalk3:
 			mes "事件があった時、";
 			mes "君を事件の現場とは離れた場所で";
 			mes "見た兵がいるらしい……。";
-			unittalk getcharid(3), "大長老アイリン : 事件があった時、君を事件の現場とは離れた場所で見た兵がいるらしい……。";
+			npctalk  "大長老アイリン : 事件があった時、君を事件の現場とは離れた場所で見た兵がいるらしい……。";
 		}
 		else if(.flag == 2) {
 			cutin "sara_elder_irine4",2;
 			mes "[大長老アイリン]";
 			mes "くうう……";
 			mes "これほど強いやつだったとは。";
-			unittalk getcharid(3), "大長老アイリン : くうう……これほど強いやつだったとは。";
+			npctalk  "大長老アイリン : くうう……これほど強いやつだったとは。";
 			next;
 			mes "[大長老アイリン]";
 			mes "誰の指示を受けてこんな事を！";
 			mes "妻だけでなく、サラまで狙うとは!!";
-			unittalk getcharid(3), "大長老アイリン : 誰の指示を受けてこんな事を！　妻だけでなく、サラまで狙うとは!!";
+			npctalk  "大長老アイリン : 誰の指示を受けてこんな事を！　妻だけでなく、サラまで狙うとは!!";
 		}
 		next;
 		if(SARA_1QUE > 0) {
@@ -1570,7 +1570,7 @@ OnTalk3:
 				mes "君もサラを見つけたら私の所に";
 				mes "連れて来てくれ。";
 				mes "私からサラにすべてを説明する……。";
-				unittalk getcharid(3), "大長老アイリン : 総力を出してサラを探し出そう。君もサラを見つけたら私の所に連れて来てくれ。私からサラにすべてを説明する……。";
+				npctalk  "大長老アイリン : 総力を出してサラを探し出そう。君もサラを見つけたら私の所に連れて来てくれ。私からサラにすべてを説明する……。";
 				announce strcharinfo(0) + " : サラが逃げて行った南西の方向に行ってみよう。",0x9,0xffff00;
 				cutin "sara_elder_irine4",255;
 				hideonnpc getmdnpcname("大長老アイリン#sa5b");
@@ -1583,82 +1583,82 @@ OnTalk3:
 		mes "[" + strcharinfo(0) + "]";
 		mes "こちらからはあなたがサラの母親を";
 		mes "殺したように見えました。";
-		unittalk getcharid(3),strcharinfo(0)+" : こちらからはあなたがサラの母親を殺したように見えました。";
+		npctalk strcharinfo(0)+" : こちらからはあなたがサラの母親を殺したように見えました。";
 		next;
 		cutin "sara_elder_irine4",2;
 		mes "[大長老アイリン]";
 		mes "私が妻を殺しただと!?";
-		unittalk getcharid(3), "大長老アイリン : 私が妻を殺しただと!?";
+		npctalk  "大長老アイリン : 私が妻を殺しただと!?";
 		next;
 		mes "[大長老アイリン]";
 		mes "私が妻の部屋に入った時には、";
 		mes "妻はすでに刺客たちによって……。";
 		mes "サラが入ってきたのは、";
 		mes "私がその刺客たちを倒した直後だ！";
-		unittalk getcharid(3), "大長老アイリン : 私が妻の部屋に入った時には、妻はすでに刺客たちによって……。サラが入ってきたのは、私がその刺客たちを倒した直後だ！";
+		npctalk  "大長老アイリン : 私が妻の部屋に入った時には、妻はすでに刺客たちによって……。サラが入ってきたのは、私がその刺客たちを倒した直後だ！";
 		next;
 		cutin "sara_momdie",4;
 		mes "‐大長老アイリンの話を聞き、当時の";
 		mes "　状況をもう一度思い出してみた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐大長老アイリンの話を聞き、当時の状況をもう一度思い出してみた‐";
+		npctalk strcharinfo(0)+" : ‐大長老アイリンの話を聞き、当時の状況をもう一度思い出してみた‐";
 		next;
 		mes "‐確かに、大長老アイリンの周辺には";
 		mes "　サラの母親のほかに、黒い服を着た";
 		mes "　誰かが倒れていたような……‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐確かに、大長老アイリンの周辺にはサラの母親のほかに、黒い服を着た誰かが倒れていたような……‐";
+		npctalk strcharinfo(0)+" : ‐確かに、大長老アイリンの周辺にはサラの母親のほかに、黒い服を着た誰かが倒れていたような……‐";
 		next;
 		cutin "sara_elder_irine4",2;
 		mes "[大長老アイリン]";
 		mes "刺客ではないなら、君はいったい誰だ？";
 		mes "どうしてサラと一緒にここまで来た？";
-		unittalk getcharid(3), "大長老アイリン : 刺客ではないなら、君はいったい誰だ？　どうしてサラと一緒にここまで来た？";
+		npctalk  "大長老アイリン : 刺客ではないなら、君はいったい誰だ？　どうしてサラと一緒にここまで来た？";
 		next;
 		mes "‐偶然怪しい老人の会話を聞き、";
 		mes "　サラの身が心配になったため、";
 		mes "　追いかけてきたことを伝えた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐偶然怪しい老人の会話を聞き、サラの身が心配になったため、追いかけてきたことを伝えた‐";
+		npctalk strcharinfo(0)+" : ‐偶然怪しい老人の会話を聞き、サラの身が心配になったため、追いかけてきたことを伝えた‐";
 		next;
 		mes "[大長老アイリン]";
 		mes "怪しい老人……？";
 		mes "君の話が本当なら、";
 		mes "大きな間違いを犯してしまったようだ。";
 		mes "私も、そして君も……";
-		unittalk getcharid(3), "大長老アイリン : 怪しい老人……？　君の話が本当なら、大きな間違いを犯してしまったようだ。私も、そして君も……";
+		npctalk  "大長老アイリン : 怪しい老人……？　君の話が本当なら、大きな間違いを犯してしまったようだ。私も、そして君も……";
 		next;
 		mes "[大長老アイリン]";
 		mes "私は君が妻を殺した刺客の仲間だと";
 		mes "誤解をし、君は私が妻を殺したと";
 		mes "誤解をしていたのか。";
-		unittalk getcharid(3), "大長老アイリン : 私は君が妻を殺した刺客の仲間だと誤解をし、君は私が妻を殺したと誤解をしていたのか。";
+		npctalk  "大長老アイリン : 私は君が妻を殺した刺客の仲間だと誤解をし、君は私が妻を殺したと誤解をしていたのか。";
 		next;
 		mes "[大長老アイリン]";
 		mes "正体不明の老人たち……";
 		mes "やはり長老たちの仕業なのか……。";
-		unittalk getcharid(3), "大長老アイリン : 正体不明の老人たち……やはり長老たちの仕業なのか……。";
+		npctalk  "大長老アイリン : 正体不明の老人たち……やはり長老たちの仕業なのか……。";
 		next;
 		mes "[大長老アイリン]";
 		mes "！";
 		mes "まさかサラも、私が妻を";
 		mes "殺したと考えているのか?!";
-		unittalk getcharid(3), "大長老アイリン : ！　まさかサラも、私が妻を殺したと考えているのか?!";
+		npctalk  "大長老アイリン : ！　まさかサラも、私が妻を殺したと考えているのか?!";
 		next;
 		mes "[大長老アイリン]";
 		mes "それでサラは私を見て";
 		mes "泣いていたのか？";
 		mes "父が母を殺したと思って……";
-		unittalk getcharid(3), "大長老アイリン : それでサラは私を見て泣いていたのか？　父が母を殺したと思って……";
+		npctalk  "大長老アイリン : それでサラは私を見て泣いていたのか？　父が母を殺したと思って……";
 		next;
 		mes "[大長老アイリン]";
 		mes "おお、サラ！";
 		mes "お前の絶望はどれほどだろう……。";
-		unittalk getcharid(3), "大長老アイリン : おお、サラ！　お前の絶望はどれほどだろう……。";
+		npctalk  "大長老アイリン : おお、サラ！　お前の絶望はどれほどだろう……。";
 		next;
 		mes "[大長老アイリン]";
 		mes "総力を出してサラを探し出そう。";
 		mes "君もサラを見つけたら私の所に";
 		mes "連れて来てくれ。";
 		mes "私からサラにすべてを説明する……。";
-		unittalk getcharid(3), "大長老アイリン : 総力を出してサラを探し出そう。君もサラを見つけたら私の所に連れて来てくれ。私からサラにすべてを説明する……。";
+		npctalk  "大長老アイリン : 総力を出してサラを探し出そう。君もサラを見つけたら私の所に連れて来てくれ。私からサラにすべてを説明する……。";
 		close2;
 		announce strcharinfo(0) + " : サラが逃げて行った南西の方向に行ってみよう。",0x9,0xffff00;
 		cutin "sara_elder_irine4",255;
@@ -1676,10 +1676,10 @@ OnTalk3:
 1@sara,162,233,1	script	#paydef_sara1	2544,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "フェイヨン守護兵 : 大長老様！";
+	npctalk  "フェイヨン守護兵 : 大長老様！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "フェイヨン守護兵 : 大長老様、それが……";
+	npctalk  "フェイヨン守護兵 : 大長老様、それが……";
 	end;
 }
 
@@ -1696,7 +1696,7 @@ OnTalk2:
 				mes "　風景が歪み始めた。";
 				mes "　探検家のレーンが話していたように、";
 				mes "　狭間から出なければならないようだ‐";
-				unittalk getcharid(3),strcharinfo(0)+" : ‐サラが消えたのと同時に周辺の風景が歪み始めた。探検家のレーンが話していたように、狭間から出なければならないようだ‐";
+				npctalk strcharinfo(0)+" : ‐サラが消えたのと同時に周辺の風景が歪み始めた。探検家のレーンが話していたように、狭間から出なければならないようだ‐";
 				close2;
 				hideonnpc getmdnpcname("サラ・アイリン#sa6");
 				hideoffnpc getmdnpcname("#warp_end_sara6");
@@ -1707,7 +1707,7 @@ OnTalk2:
 		mes "‐サラに声をかけようとした";
 		mes "　瞬間、背後から強い襲撃を受け";
 		mes "　崩れ落ちた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラに声をかけようとした瞬間、背後から強い襲撃を受け崩れ落ちた‐";
+		npctalk strcharinfo(0)+" : ‐サラに声をかけようとした瞬間、背後から強い襲撃を受け崩れ落ちた‐";
 		next;
 		cutin "sara_beholder",2;
 		mes "[？？？？？]";
@@ -1730,7 +1730,7 @@ OnTalk2:
 		next;
 		mes "‐正体不明の男女が倒れた私を";
 		mes "　置いたままサラに近寄った‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐正体不明の男女が倒れた私を置いたままサラに近寄った‐";
+		npctalk strcharinfo(0)+" : ‐正体不明の男女が倒れた私を置いたままサラに近寄った‐";
 		next;
 		mes "[？？？？？]";
 		mes "裏切りと絶望、";
@@ -1741,7 +1741,7 @@ OnTalk2:
 		cutin "sara_9sara2",2;
 		mes "[サラ]";
 		mes "…………。";
-		unittalk getcharid(3), "サラ : …………。";
+		npctalk  "サラ : …………。";
 		next;
 		cutin "sara_beholder",2;
 		mes "[？？？？？]";
@@ -1754,14 +1754,14 @@ OnTalk2:
 		mes "　サラを覆い被せた瞬間、サラを含んだ";
 		mes "　三人の姿が痕跡も残さずに";
 		mes "　消えた‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐正体不明の男が自身のマントでサラを覆い被せた瞬間、サラを含んだ三人の姿が痕跡も残さずに消えた‐";
+		npctalk strcharinfo(0)+" : ‐正体不明の男が自身のマントでサラを覆い被せた瞬間、サラを含んだ三人の姿が痕跡も残さずに消えた‐";
 		hideonnpc getmdnpcname("サラ・アイリン#sa6");
 		next;
 		mes "‐サラが消えたのと同時に周辺の";
 		mes "　風景が歪み始めた。";
 		mes "　探検家のレーンが話していたように、";
 		mes "　狭間から出なければならないようだ‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐サラが消えたのと同時に周辺の風景が歪み始めた。探検家のレーンが話していたように、狭間から出なければならないようだ‐";
+		npctalk strcharinfo(0)+" : ‐サラが消えたのと同時に周辺の風景が歪み始めた。探検家のレーンが話していたように、狭間から出なければならないようだ‐";
 		close2;
 		hideoffnpc getmdnpcname("#warp_end_sara6");
 		hideoffnpc getmdnpcname("warp67#sara6");
@@ -1781,19 +1781,19 @@ OnTalk2:
 1@sara,36,144,3	script	#hugin_sara2	111,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "？？？？？ : 時間の旅人の干渉はここまでです。あなたは私達が彼女を迎え入れるために準備した歯車の中のひとつでしかありません。";
+	npctalk  "？？？？？ : 時間の旅人の干渉はここまでです。あなたは私達が彼女を迎え入れるために準備した歯車の中のひとつでしかありません。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "？？？？？ : そろそろあなたが住んでいた時間に戻った方がいいでしょう。";
+	npctalk  "？？？？？ : そろそろあなたが住んでいた時間に戻った方がいいでしょう。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "？？？？？ : それからあなたの記憶は消させてもらいます。元の時間に帰る頃にはここで起こったことは何も覚えていないでしょう。";
+	npctalk  "？？？？？ : それからあなたの記憶は消させてもらいます。元の時間に帰る頃にはここで起こったことは何も覚えていないでしょう。";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "？？？？？ : 裏切りと絶望、憎悪に震えている少女よ……君がいるべき場所に導いてやる……。";
+	npctalk  "？？？？？ : 裏切りと絶望、憎悪に震えている少女よ……君がいるべき場所に導いてやる……。";
 	end;
 OnTalk5:
-	unittalk getcharid(3), "？？？？？ : サラ・アイリン、私について来なさい。あの方がお前が望む未来を与えてくれるだろう。";
+	npctalk  "？？？？？ : サラ・アイリン、私について来なさい。あの方がお前が望む未来を与えてくれるだろう。";
 	end;
 }
 

@@ -95,10 +95,10 @@ prontera,161,192,5	script	転職カプラ	114,{
 			setarray .@job_id,Job_DeathKnight,Job_DarkCollector;
 			break;
 		case Job_Knight:
-			set .@job_id,Job_RuneKnight;
+			set .@job_id,Job_Rune_Knight;
 			break;
 		case Job_Priest:
-			set .@job_id,Job_ArchBishop;
+			set .@job_id,Job_Arch_Bishop;
 			break;
 		case Job_Wizard:
 			set .@job_id,Job_Warlock;
@@ -110,19 +110,19 @@ prontera,161,192,5	script	転職カプラ	114,{
 			set .@job_id,Job_Ranger;
 			break;
 		case Job_Assassin:
-			set .@job_id,Job_Guillotine;
+			set .@job_id,Job_Guillotine_Cross;
 			break;
 		case Job_Crusader:
-			set .@job_id,Job_RoyalGuard;
+			set .@job_id,Job_Royal_Guard;
 			break;
 		case Job_Monk:
-			set .@job_id,Job_Shura;
+			set .@job_id,Job_Sura;
 			break;
 		case Job_Sage:
 			set .@job_id,Job_Sorcerer;
 			break;
 		case Job_Rogue:
-			set .@job_id,Job_ShadowChaser;
+			set .@job_id,Job_Shadow_Chaser;
 			break;
 		case Job_Alchemist:
 			set .@job_id,Job_Genetic;
@@ -318,7 +318,7 @@ prontera,161,192,5	script	転職カプラ	114,{
 			case Job_DarkCollector:
 				set .@job_name$[.@i],"ダークコレクター";
 				break;
-			case Job_RuneKnight:
+			case Job_Rune_Knight:
 				set .@job_name$[.@i],"ルーンナイト";
 				break;
 			case Job_Warlock:
@@ -327,16 +327,16 @@ prontera,161,192,5	script	転職カプラ	114,{
 			case Job_Ranger:
 				set .@job_name$[.@i],"レンジャー";
 				break;
-			case Job_ArchBishop:
+			case Job_Arch_Bishop:
 				set .@job_name$[.@i],"アークビショップ";
 				break;
 			case Job_Mechanic:
 				set .@job_name$[.@i],"メカニック";
 				break;
-			case Job_Guillotine:
+			case Job_Guillotine_Cross:
 				set .@job_name$[.@i],"ギロチンクロス";
 				break;
-			case Job_RoyalGuard:
+			case Job_Royal_Guard:
 				set .@job_name$[.@i],"ロイヤルガード";
 				break;
 			case Job_Sorcerer:
@@ -348,13 +348,13 @@ prontera,161,192,5	script	転職カプラ	114,{
 			case Job_Wanderer:
 				set .@job_name$[.@i],"ワンダラー";
 				break;
-			case Job_Shura:
+			case Job_Sura:
 				set .@job_name$[.@i],"修羅";
 				break;
 			case Job_Genetic:
 				set .@job_name$[.@i],"ジェネティック";
 				break;
-			case Job_ShadowChaser:
+			case Job_Shadow_Chaser:
 				set .@job_name$[.@i],"シャドウチェイサー";
 				break;
 			case Job_Super_Novice_E:
@@ -480,19 +480,19 @@ prontera,161,192,5	script	転職カプラ	114,{
 				end;
 			}
 			break;
-		case Job_RuneKnight:
+		case Job_Rune_Knight:
 		case Job_Warlock:
 		case Job_Ranger:
-		case Job_ArchBishop:
+		case Job_Arch_Bishop:
 		case Job_Mechanic:
-		case Job_Guillotine:
-		case Job_RoyalGuard:
+		case Job_Guillotine_Cross:
+		case Job_Royal_Guard:
 		case Job_Sorcerer:
 		case Job_Minstrel:
 		case Job_Wanderer:
-		case Job_Shura:
+		case Job_Sura:
 		case Job_Genetic:
-		case Job_ShadowChaser:
+		case Job_Shadow_Chaser:
 // 国内仕様
 //			if(Upper != UPPER_HIGH) {
 //				mes "[転職カプラ]";

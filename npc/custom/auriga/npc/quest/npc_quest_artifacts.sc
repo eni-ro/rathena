@@ -6134,7 +6134,7 @@ prt_fild08,175,374,3	script	吟遊詩人	51,{
 					mes "[ネリュオッド]";
 					mes "砂嵐の中に隠れているという";
 					mes "噂のアサシンギルド!!";
-					if(Job == Job_Assassin || Job == Job_Guillotine) {
+					if(Job == Job_Assassin || Job == Job_Guillotine_Cross) {
 						mes "なんだ～。君って";
 						mes "アサシンギルド出身なんだね。";
 						mes "今度、僕を連れてってくれないかい？";
@@ -6736,7 +6736,7 @@ prt_fild08,175,374,3	script	吟遊詩人	51,{
 			mes "[ネリュオッド]";
 			mes "砂嵐の中に隠れているという";
 			mes "噂のアサシンギルド!!";
-			if(Job == Job_Assassin || Job == Job_Guillotine) {
+			if(Job == Job_Assassin || Job == Job_Guillotine_Cross) {
 				mes "なんだ～。君って";
 				mes "アサシンギルド出身なんだね。";
 				mes "今度、僕を連れてってくれないかい？";

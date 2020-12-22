@@ -439,15 +439,15 @@ OnKilled:
 	close;
 OnStart:
 	initnpctimer;
-	unittalk getcharid(3), "イグリド : ふぅ。間に合ったようだな。";
+	npctalk  "イグリド : ふぅ。間に合ったようだな。";
 	end;
 OnTimer3000:
 	donpcevent getmdnpcname("#モルス入口スタート")+ "::OnStart";
-	unittalk getcharid(3), "イグリド : 兄……いや、司令官に許可はもらってきた。一緒に俺も行かせてくれ。";
+	npctalk  "イグリド : 兄……いや、司令官に許可はもらってきた。一緒に俺も行かせてくれ。";
 	end;
 OnTimer6000:
 	stopnpctimer;
-	unittalk getcharid(3), "イグリド : 気を付けろ！　さっそく敵が来たようだぞ！";
+	npctalk  "イグリド : 気を付けろ！　さっそく敵が来たようだぞ！";
 	end;
 }
 
@@ -457,15 +457,15 @@ OnTimer6000:
 	close;
 OnStart:
 	initnpctimer;
-	unittalk getcharid(3), "キド : 間に合ったか。";
+	npctalk  "キド : 間に合ったか。";
 	end;
 OnTimer3000:
 	donpcevent getmdnpcname("#モルス入口スタート")+ "::OnStart";
-	unittalk getcharid(3), "キド : リーンには伝えてきた。決戦の時が近づいている。俺も一緒に行かせてくれ。";
+	npctalk  "キド : リーンには伝えてきた。決戦の時が近づいている。俺も一緒に行かせてくれ。";
 	end;
 OnTimer6000:
 	stopnpctimer;
-	unittalk getcharid(3), "キド : さっそく敵さんのお出ましか。気を付けろ！";
+	npctalk  "キド : さっそく敵さんのお出ましか。気を付けろ！";
 	end;
 }
 
@@ -476,15 +476,15 @@ OnTimer6000:
 	close;
 OnStart:
 	initnpctimer;
-	unittalk getcharid(3), "ヒシエ : 間に合ったか。";
+	npctalk  "ヒシエ : 間に合ったか。";
 	end;
 OnTimer3000:
 	donpcevent getmdnpcname("#モルス入口スタート")+ "::OnStart";
-	unittalk getcharid(3), "ヒシエ : そろそろカルの魔力が心配なんだ。急ぐ必要がある。俺も一緒に行かせてくれ。";
+	npctalk  "ヒシエ : そろそろカルの魔力が心配なんだ。急ぐ必要がある。俺も一緒に行かせてくれ。";
 	end;
 OnTimer6000:
 	stopnpctimer;
-	unittalk getcharid(3), "ヒシエ : 敵が来ているな。油断するなよ！";
+	npctalk  "ヒシエ : 敵が来ているな。油断するなよ！";
 	end;
 }
 
@@ -558,11 +558,11 @@ OnStart:
 	end;
 OnStart:
 	hideoffnpc getmdnpcname("死神アンク#RZイベント_3");
-	unittalk getcharid(3), "死神アンク : ……こんなものですかあなた方の力は？";
+	npctalk  "死神アンク : ……こんなものですかあなた方の力は？";
 	sleep 3000;
-	unittalk getcharid(3), "死神アンク : 失望しましたよ。モロク様の回復に必要なエネルギー源としては到底力不足ですね。";
+	npctalk  "死神アンク : 失望しましたよ。モロク様の回復に必要なエネルギー源としては到底力不足ですね。";
 	sleep 3000;
-	unittalk getcharid(3), "死神アンク : ここから立ち去りなさい!!　もうあなた方に興味は無い。";
+	npctalk  "死神アンク : ここから立ち去りなさい!!　もうあなた方に興味は無い。";
 	sleep 3000;
 	hideonnpc getmdnpcname("死神アンク#RZイベント_3");
 	sleep 5000;
@@ -577,11 +577,11 @@ OnStart:
 	end;
 OnStart:
 	hideoffnpc getmdnpcname("死神アンク#RZイベント_5");
-	unittalk getcharid(3), "死神アンク : ……こんなものですかあなた方の力は？";
+	npctalk  "死神アンク : ……こんなものですかあなた方の力は？";
 	sleep 3000;
-	unittalk getcharid(3), "死神アンク : 失望しましたよ。モロク様の回復に必要なエネルギー源としては到底力不足ですね。";
+	npctalk  "死神アンク : 失望しましたよ。モロク様の回復に必要なエネルギー源としては到底力不足ですね。";
 	sleep 3000;
-	unittalk getcharid(3), "死神アンク : ここから立ち去りなさい!!　もうあなた方に興味は無い。";
+	npctalk  "死神アンク : ここから立ち去りなさい!!　もうあなた方に興味は無い。";
 	sleep 3000;
 	hideonnpc getmdnpcname("死神アンク#RZイベント_5");
 	sleep 5000;
@@ -609,7 +609,7 @@ OnTouch:
 	else if(.menu==3)
 		hideoffnpc getmdnpcname("ヒシエ#RZ3");
 	hideoffnpc getmdnpcname("モロク??#RZ1");
-	unittalk getcharid(3),strcharinfo(0)+ " : モロク!?";
+	npctalk strcharinfo(0)+ " : モロク!?";
 	switch(.menu) {
 	case 0:	set .unit_id,getcharid(3); set .unit_name$,strcharinfo(0); break;
 	case 1:	set .unit_id,getnpcid(0,getmdnpcname("教官長イグリド#RZ3"));	set .unit_name$,"イグリド"; break;
@@ -654,16 +654,16 @@ OnTouch:
 	end;
 OnStart:
 	sleep 500;
-	unittalk getcharid(3), "モロク?? : 良くここまで来たな、人間よ。";
+	npctalk  "モロク?? : 良くここまで来たな、人間よ。";
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : だが、本当に私を阻止できると思っているのか？";
+	npctalk  "モロク?? : だが、本当に私を阻止できると思っているのか？";
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : いいだろう。褒美にここまで来た事を後悔させてやろう。";
+	npctalk  "モロク?? : いいだろう。褒美にここまで来た事を後悔させてやろう。";
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : たとえ完全に力を回復していない私だとしても何の問題もない。";
+	npctalk  "モロク?? : たとえ完全に力を回復していない私だとしても何の問題もない。";
 	misceffect 169, getmdnpcname("モロク??#RZ1");
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : 死の恐怖を与えてやる!!";
+	npctalk  "モロク?? : 死の恐怖を与えてやる!!";
 	misceffect 225, getmdnpcname("モロク??#RZ1");
 	sleep 3000;
 	initnpctimer;
@@ -683,13 +683,13 @@ OnTimer4000:
 OnStart2:
 	set .menu,getvariableofnpc(.menu, getmdnpcname("#RZイベント_1-2"));
 	hideoffnpc getmdnpcname("モロク??#RZ1");
-	unittalk getcharid(3), "モロク?? : ふむ。回復していない状態ではこの程度の力しか出せぬか。";
+	npctalk  "モロク?? : ふむ。回復していない状態ではこの程度の力しか出せぬか。";
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : まぁいいだろう。もう少し傷を癒すとしよう。";
+	npctalk  "モロク?? : まぁいいだろう。もう少し傷を癒すとしよう。";
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : おい人間共、喜べ。お前らはモロク様を倒したんだ。";
+	npctalk  "モロク?? : おい人間共、喜べ。お前らはモロク様を倒したんだ。";
 	sleep 3000;
-	unittalk getcharid(3), "モロク?? : 戻って他の人間共と勝利の喜びでも分かち合ってきたらどうだ？　ククク。";
+	npctalk  "モロク?? : 戻って他の人間共と勝利の喜びでも分かち合ってきたらどうだ？　ククク。";
 	hideonnpc getmdnpcname("モロク??#RZ1");
 	sleep 3000;
 	if(.menu==0) {

@@ -101,21 +101,21 @@ prontera,123,62,5	script	服装染色師	97,{
 		case Job_Linker:		return "excolor_soullinker.bmp";
 		case Job_Gunslinger:	return "excolor_gunslinger.bmp";
 		case Job_Ninja:			return "excolor_ninja.bmp";
-		case Job_RuneKnight:	return "excolor_runeknight.bmp";
+		case Job_Rune_Knight:	return "excolor_runeknight.bmp";
 		case Job_Warlock:		return "excolor_warlock.bmp";
 		case Job_Ranger:		return "excolor_ranger.bmp";
-		case Job_ArchBishop:	return "excolor_archbishop.bmp";
+		case Job_Arch_Bishop:	return "excolor_archbishop.bmp";
 		case Job_Mechanic:
 			if(getlook(13) == 0)
 				return "excolor_mechanic.bmp";
 			else
 				return "excolor_mechanic2.bmp";
-		case Job_Guillotine:
+		case Job_Guillotine_Cross:
 			if(getlook(13) == 0)
 				return "excolor_guillotinecross.bmp";
 			else
 				return "excolor_guillotinecross2.bmp";
-		case Job_RoyalGuard:
+		case Job_Royal_Guard:
 			if(getlook(13) == 0)
 				return "excolor_royalguard.bmp";
 			else
@@ -123,13 +123,13 @@ prontera,123,62,5	script	服装染色師	97,{
 		case Job_Sorcerer:		return "excolor_sorcerer.bmp";
 		case Job_Minstrel:
 		case Job_Wanderer:		return "excolor_minstrel_wanderer.bmp";
-		case Job_Shura:			return "excolor_sura.bmp";
+		case Job_Sura:			return "excolor_sura.bmp";
 		case Job_Genetic:
 			if(getlook(13) == 0)
 				return "excolor_genetic.bmp";
 			else
 				return "excolor_genetic2.bmp";
-		case Job_ShadowChaser:	return "excolor_shadowchaser.bmp";
+		case Job_Shadow_Chaser:	return "excolor_shadowchaser.bmp";
 		case Job_Kagerou:
 		case Job_Oboro:			return "excolor_kagerou_oboro.bmp";
 		case Job_Summoner:		return "excolor_do_summoner.bmp";
@@ -457,19 +457,19 @@ prontera,125,62,4	script	騎乗協会広報員	832,{
 	case Job_Linker:		set .@name$,"riding_soullinker.bmp"; break;
 	case Job_Gunslinger:	set .@name$,"riding_gunslinger.bmp"; break;
 	case Job_Ninja:			set .@name$,"riding_ninja.bmp"; break;
-	case Job_RuneKnight:	set .@name$,"riding_runeknight.bmp"; break;
+	case Job_Rune_Knight:	set .@name$,"riding_runeknight.bmp"; break;
 	case Job_Warlock:		set .@name$,"riding_warlock.bmp"; break;
 	case Job_Ranger:		set .@name$,"riding_ranger.bmp"; break;
-	case Job_ArchBishop:	set .@name$,"riding_archbishop.bmp"; break;
+	case Job_Arch_Bishop:	set .@name$,"riding_archbishop.bmp"; break;
 	case Job_Mechanic:		set .@name$,"riding_mechanic.bmp"; break;
-	case Job_Guillotine:	set .@name$,"riding_guillotinecross.bmp"; break;
-	case Job_RoyalGuard:	set .@name$,"riding_royalguard.bmp"; break;
+	case Job_Guillotine_Cross:	set .@name$,"riding_guillotinecross.bmp"; break;
+	case Job_Royal_Guard:	set .@name$,"riding_royalguard.bmp"; break;
 	case Job_Sorcerer:		set .@name$,"riding_sorcerer.bmp"; break;
 	case Job_Minstrel:
 	case Job_Wanderer:		set .@name$,"riding_minstrel_wanderer.bmp"; break;
-	case Job_Shura:			set .@name$,"riding_sura.bmp"; break;
+	case Job_Sura:			set .@name$,"riding_sura.bmp"; break;
 	case Job_Genetic:		set .@name$,"riding_genetic.bmp"; break;
-	case Job_ShadowChaser:	set .@name$,"riding_shadowchaser.bmp"; break;
+	case Job_Shadow_Chaser:	set .@name$,"riding_shadowchaser.bmp"; break;
 	case Job_Kagerou:
 	case Job_Oboro:			set .@name$,"riding_kagerou_oboro.bmp"; break;
 	case Job_Summoner:		set .@name$,"riding_doram.bmp"; break;
@@ -503,7 +503,7 @@ prontera,127,62,4	script	ファッションデザイナー	573,{
 		mes "申し訳ない。";
 		close;
 	}
-	if(Job < Job_RuneKnight || Job > Job_ShadowChaser) {
+	if(Job < Job_Rune_Knight || Job > Job_Shadow_Chaser) {
 		mes "[ファッションデザイナー]";
 		mes "幾度となく試行錯誤を重ね、";
 		mes "新しい服……そう、";

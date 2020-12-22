@@ -20,18 +20,18 @@ har_in01,16,86,4	script	防具屋#rockridge02	50,{
 -	shop	rockridge_callshop	-1,580
 
 harboro1,314,211,4	script	パン屋の主#dy	886,5,5,{
-	unittalk getcharid(3), "パン屋の主 : いらっしゃ～い。";
+	npctalk "パン屋の主 : いらっしゃ～い。";
 	callshop "rockridge_callshop",1;
 	end;
 OnTouch:
 	switch(rand(7)) {
-	case 0: unittalk getcharid(3), "パン屋の主 : 今朝焼いたパンです。"; end;
-	case 1: unittalk getcharid(3), "パン屋の主 : そこの君。パンを買わないかい？"; end;
-	case 2: unittalk getcharid(3), "パン屋の主 : びっくりするほど美味しいパンを売っていますよ。"; end;
-	case 3: unittalk getcharid(3), "パン屋の主 : 美味しいパン食べてみませんか？"; end;
-	case 4: unittalk getcharid(3), "パン屋の主 : 美味しいパンはいかがですか？　パン～温かいパンがあります～"; end;
-	case 5: unittalk getcharid(3), "パン屋の主 : パン！　パンパン！　パンパンパン！"; end;
-	default: unittalk getcharid(3), "パン屋の主 : パンはいりませんか～？"; end;
+	case 0: npctalk "パン屋の主 : 今朝焼いたパンです。"; end;
+	case 1: npctalk "パン屋の主 : そこの君。パンを買わないかい？"; end;
+	case 2: npctalk "パン屋の主 : びっくりするほど美味しいパンを売っていますよ。"; end;
+	case 3: npctalk "パン屋の主 : 美味しいパン食べてみませんか？"; end;
+	case 4: npctalk "パン屋の主 : 美味しいパンはいかがですか？　パン～温かいパンがあります～"; end;
+	case 5: npctalk "パン屋の主 : パン！　パンパン！　パンパンパン！"; end;
+	default: npctalk "パン屋の主 : パンはいりませんか～？"; end;
 	}
 }
 
@@ -55,7 +55,7 @@ harboro1,360,209,3	script	自警団員#harboro1	10220,{
 	mes "お通ししています。";
 	close;
 OnTalk:
-	unittalk getcharid(3), "自警団員 : この先は危険です。BaseLv130以上の方のみお通ししています。";
+	npctalk "自警団員 : この先は危険です。BaseLv130以上の方のみお通ししています。";
 	end;
 }
 
@@ -131,7 +131,7 @@ rockrdg2,301,349,3	script	自警団員#rockrdg2	10220,{
 	mes "お通ししています。";
 	close;
 OnTalk:
-	unittalk getcharid(3), "自警団員 : この先は危険です。BaseLv160以上の方のみお通ししています。";
+	npctalk "自警団員 : この先は危険です。BaseLv160以上の方のみお通ししています。";
 	end;
 }
 
@@ -414,7 +414,7 @@ harboro1,91,211,3	script	#rockno01	111,{
 	mes "キワワ砂漠が広がっています。";
 	close;
 OnTouch:
-	unittalk getcharid(3), "中央通り",1;
+	npctalk "中央通り",1;
 	end;
 }
 
@@ -427,35 +427,35 @@ harboro1,299,211,3	script	#rockno02	111,{
 	mes "旅館と港があります。";
 	close;
 OnTouch:
-	unittalk getcharid(3), "ロックリッジ広場",1;
+	npctalk "ロックリッジ広場",1;
 	end;
 }
 
 harboro1,260,211,3	script	#rockno03	111,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "保安官事務室",1;
+	npctalk "保安官事務室",1;
 	end;
 }
 
 harboro1,215,212,3	script	#rockno04	111,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "西側：旅館　／　東側：保安官事務室",1;
+	npctalk "西側：旅館　／　東側：保安官事務室",1;
 	end;
 }
 
 harboro1,134,211,3	script	#rockno05	111,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "東側：旅館",1;
+	npctalk "東側：旅館",1;
 	end;
 }
 
 harboro1,310,201,3	script	#rockno06	111,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "道具屋　武器屋　防具屋",1;
+	npctalk "道具屋　武器屋　防具屋",1;
 	end;
 }
 
@@ -480,14 +480,14 @@ harboro1,228,170,3	script	風来の猫#rkrgtwn	553,5,5,{
 	emotion 28,"風来の猫#rkrgtwn";
 	close;
 OnTouch:
-	unittalk getcharid(3), "風来の猫 : 東側というのはどっちだ！！";
+	npctalk "風来の猫 : 東側というのはどっちだ！！";
 	end;
 }
 
 harboro1,210,219,5	script	司祭#srdg01	110,{
-	unittalk getcharid(3), "司祭 : 辛かったり、悲しいことがあったらいつでも私の所に来てください。";
+	npctalk "司祭 : 辛かったり、悲しいことがあったらいつでも私の所に来てください。";
 	sleep 1000;
-	unittalk getcharid(3), "司祭 : みなさんは愛されるために生まれた大事な存在なんです。";
+	npctalk "司祭 : みなさんは愛されるために生まれた大事な存在なんです。";
 	end;
 }
 
@@ -536,7 +536,7 @@ harboro1,184,123,5	script	旅人#srdg02	567,{
 }
 
 harboro1,174,125,3	script	住民#srdg01	53,{
-	unittalk getcharid(3), "住民 : 今日はいつもより風があるね。扉と窓を確り閉めないと。";
+	npctalk "住民 : 今日はいつもより風があるね。扉と窓を確り閉めないと。";
 	end;
 }
 
@@ -698,7 +698,7 @@ harboro1,301,175,7	script	羊飼い#srdg01	726,{
 
 harboro1,302,175,7	script	犬#srdg01	81,{
 	emotion 3;
-	unittalk getcharid(3), "ワンワン！　ワン？　ワンワン！";
+	npctalk "ワンワン！　ワン？　ワンワン！";
 	end;
 }
 
@@ -711,7 +711,7 @@ harboro1,102,133,7	script	素早い子２号#srdg01	955,{}
 harboro1,96,130,3	script	雷#srdg01	955,{}
 
 harboro1,99,127,7	script	子ども#srdg02	82,{
-	unittalk getcharid(3), "子ども : おい、お前ら喧嘩した？";
+	npctalk "子ども : おい、お前ら喧嘩した？";
 	end;
 }
 
@@ -769,13 +769,13 @@ harboro1,182,236,5	script	訪問客#srdg02	688,{
 
 harboro1,183,241,5	script	彷徨う犬#srdg01	81,{
 	emotion 43;
-	unittalk getcharid(3), "（残すかな……残すよね？）";
+	npctalk "（残すかな……残すよね？）";
 	end;
 }
 
 harboro1,182,241,5	script	彷徨う犬#srdg02	81,{
 	emotion 43;
-	unittalk getcharid(3), "（お肉くれないかな。）";
+	npctalk "（お肉くれないかな。）";
 	end;
 }
 
@@ -817,7 +817,7 @@ harboro1,88,217,3	script	イディス・リッチー#rock	703,{
 	mes "本当にかっこいいです！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "イディス・リッチー : うるさいなあ……。";
+	npctalk "イディス・リッチー : うるさいなあ……。";
 	end;
 }
 
@@ -838,14 +838,14 @@ OnTouch:
 		end;
 	}
 	initnpctimer;
-	unittalk getcharid(3), "リレンド・ウェンキンス : ロックリッジの為に！";
+	npctalk "リレンド・ウェンキンス : ロックリッジの為に！";
 	end;
 OnTimer3000:
 	donpcevent "カルメン・オニール#rock::OnTalk1";
 	donpcevent "酔った猫#rockwn11::OnTalk1";
 	end;
 OnTimer12000:
-	unittalk getcharid(3), "リレンド・ウェンキンス : わははは！　やはり清涼な麦飲料が最高だ！";
+	npctalk "リレンド・ウェンキンス : わははは！　やはり清涼な麦飲料が最高だ！";
 	end;
 OnTimer13000:
 	donpcevent "カルメン・オニール#rock::OnTalk2";
@@ -854,7 +854,7 @@ OnTimer14000:
 	donpcevent "酔った猫#rockwn11::OnTalk2";
 	end;
 OnTimer23000:
-	unittalk getcharid(3), "リレンド・ウェンキンス : 私たちは！";
+	npctalk "リレンド・ウェンキンス : 私たちは！";
 	end;
 OnTimer24000:
 	donpcevent "カルメン・オニール#rock::OnTalk3";
@@ -864,7 +864,7 @@ OnTimer25000:
 	end;
 OnTimer28000:
 	stopnpctimer;
-	unittalk getcharid(3), "リレンド・ウェンキンス : ロックリッジの開拓民！";
+	npctalk "リレンド・ウェンキンス : ロックリッジの開拓民！";
 	donpcevent "カルメン・オニール#rock::OnTalk3";
 	donpcevent "酔った猫#rockwn11::OnTalk4";
 	end;
@@ -893,7 +893,7 @@ harboro1,84,200,5	script	デルバート・レイク#rock	848,{
 	mes "早くつるはしをしまってください！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "デルバート・レイク : うははは、全部掘り出してやるぞ！";
+	npctalk "デルバート・レイク : うははは、全部掘り出してやるぞ！";
 	end;
 }
 
@@ -931,13 +931,13 @@ harboro1,86,210,4	script	カルメン・オニール#rock	102,{
 	mes "チキンが足りないにゃん！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "カルメン・オニール : 為に！";
+	npctalk "カルメン・オニール : 為に！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "カルメン・オニール : 昼間から飲むともっと格別だ！";
+	npctalk "カルメン・オニール : 昼間から飲むともっと格別だ！";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "カルメン・オニール : ロックリッジの開拓民！";
+	npctalk "カルメン・オニール : ロックリッジの開拓民！";
 	end;
 }
 
@@ -959,10 +959,10 @@ harboro1,81,205,1	script	モティマー#rockwn07	828,5,5,{
 	mes "なんとたったの500万zenyだよ！";
 	close;
 OnTouch:
-	unittalk getcharid(3), "モティマー : 記念品売りますよ～記念品～。";
+	npctalk "モティマー : 記念品売りますよ～記念品～。";
 	end;
 OnTalk1:
-	unittalk getcharid(3), "モティマー : あの人たちは毎日ああなんだよね。ハハハ！";
+	npctalk "モティマー : あの人たちは毎日ああなんだよね。ハハハ！";
 	end;
 }
 
@@ -1013,7 +1013,7 @@ harboro1,98,211,3	script	ロレッター#rockwn08	641,5,5,{
 	mes "主神様はみなさんと共にあります！";
 	close;
 OnTouch:
-	unittalk getcharid(3), "ロレッター : オーディン様が～";
+	npctalk "ロレッター : オーディン様が～";
 	donpcevent "ドロレス#rockwn09::OnTalk2";
 	donpcevent "モリス#rockwn10::OnTalk2";
 	end;
@@ -1043,10 +1043,10 @@ harboro1,100,211,3	script	ドロレス#rockwn09	79,{
 	mes "ないんですよ！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "ドロレス : 信じます～";
+	npctalk "ドロレス : 信じます～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "ドロレス : 冒険者様と～";
+	npctalk "ドロレス : 冒険者様と～";
 	end;
 }
 
@@ -1068,10 +1068,10 @@ harboro1,101,210,3	script	モリス#rockwn10	60,{
 	mes "主神様のお言葉を伝えます！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "モリス : 信じます～";
+	npctalk "モリス : 信じます～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "モリス : 共にいます～";
+	npctalk "モリス : 共にいます～";
 	end;
 }
 
@@ -1094,16 +1094,16 @@ harboro1,87,207,1	script	酔った猫#rockwn11	561,{
 	mes "にゃんにゃんにゃ！！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "酔った猫 : 為にゃん～！";
+	npctalk "酔った猫 : 為にゃん～！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "酔った猫 : チキンは正義！　くぅ～チキンだにゃ！";
+	npctalk "酔った猫 : チキンは正義！　くぅ～チキンだにゃ！";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "酔った猫 : 勇敢で～たくましいにゃん！";
+	npctalk "酔った猫 : 勇敢で～たくましいにゃん！";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "酔った猫 : にゃんにゃんにゃ！　にゃんにゃんにゃにゃ～！！";
+	npctalk "酔った猫 : にゃんにゃんにゃ！　にゃんにゃんにゃにゃ～！！";
 	end;
 }
 
@@ -1134,7 +1134,7 @@ harboro1,75,211,1	script	ゼヴァーディー#rockwn13	82,5,5,{
 	mes "素晴らしい時間を過ごしてください！";
 	close;
 OnTouch:
-	unittalk getcharid(3), "ゼヴァーディー : ロックリッジにようこそ！";
+	npctalk "ゼヴァーディー : ロックリッジにようこそ！";
 	misceffect 72,"ゼヴァーディー#rockwn13";
 	emotion 14,"ゼヴァーディー#rockwn13";
 	end;
@@ -1149,7 +1149,7 @@ harboro1,75,219,3	script	エイリーン#rockwn14	96,5,5,{
 	mes "なりますように。";
 	close;
 OnTouch:
-	unittalk getcharid(3), "エイリーン : 冒険者様を歓迎しますよ～！";
+	npctalk "エイリーン : 冒険者様を歓迎しますよ～！";
 	misceffect 72,"エイリーン#rockwn14";
 	emotion 14,"エイリーン#rockwn14";
 	end;
@@ -1255,7 +1255,7 @@ harboro1,85,195,1	script	コンスタンス#rockwn18	850,5,5,{
 	close;
 OnTouch:
 	donpcevent "デルバート・レイク#rock::OnTalk1";
-	unittalk getcharid(3), "コンスタンス : ちょっとあんた！　やめなさい！";
+	npctalk "コンスタンス : ちょっとあんた！　やめなさい！";
 	end;
 }
 
@@ -1436,7 +1436,7 @@ harboro1,280,195,3	script	ルーカス・リーチ#rockn0	828,{
 	mes "地下に一度降りてみない？";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "ルーカス・リーチ : わ！";
+	npctalk "ルーカス・リーチ : わ！";
 	end;
 }
 
@@ -1496,7 +1496,7 @@ harboro1,126,236,7	script	ジェイダー#rockn11	881,{
 	mes "いつも誠実に努力しています！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "ジェイダー : 給料を上げてくれたらもっと頑張れそうですけど……。";
+	npctalk "ジェイダー : 給料を上げてくれたらもっと頑張れそうですけど……。";
 	end;
 }
 
@@ -1515,7 +1515,7 @@ harboro1,128,233,7	script	ロコスリチー#rockn12	642,{
 	mes "うおおおおおおおおおおおおおおお！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "ロコスリチー : イディス！　お父さん頑張るぞ！";
+	npctalk "ロコスリチー : イディス！　お父さん頑張るぞ！";
 	end;
 }
 
@@ -1537,7 +1537,7 @@ harboro1,130,232,7	script	ポトニャス#rockn13	545,{
 	mes "高くつきそうだにゃん……。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "ポトニャス : 私はどうしてここにいるんだ……？";
+	npctalk "ポトニャス : 私はどうしてここにいるんだ……？";
 	end;
 }
 
@@ -1736,7 +1736,7 @@ harboro1,274,214,5	script	白い木の枝#rockn19	10228,5,5,{
 	mes "人混みの中ではぐれてしまって……。";
 	close;
 OnTouch:
-	unittalk getcharid(3), "白い木の枝 : アクハちゃん～ナハリちゃん～！　どこにいるの～！";
+	npctalk "白い木の枝 : アクハちゃん～ナハリちゃん～！　どこにいるの～！";
 	end;
 }
 
@@ -1751,9 +1751,9 @@ har_in01,24,69,3	script	穏やかな夫人#rockridge0	74,{
 }
 
 har_in01,100,14,3	script	自警団員#srdg01	10220,{
-	unittalk getcharid(3), "自警団員 : 余計なことはしない方がいいですよ。";
+	npctalk "自警団員 : 余計なことはしない方がいいですよ。";
 	sleep 2000;
-	unittalk getcharid(3), "自警団員 : 私のこの鋭い目が見ていますよ。";
+	npctalk "自警団員 : 私のこの鋭い目が見ていますよ。";
 	end;
 }
 
@@ -1995,7 +1995,7 @@ OnTouch:
 	donpcevent "無愛想な蛇#rockc05::OnTalk";
 	end;
 OnTalk:
-	unittalk getcharid(3), "フアニタス : それじゃ私は200匹！";
+	npctalk "フアニタス : それじゃ私は200匹！";
 	end;
 }
 
@@ -2022,7 +2022,7 @@ rockrdg1,327,109,5	script	素早いサソリ#rockc03	10226,{
 	mes "コヨーテを滅ぼしたいわけではない。";
 	close;
 OnTalk:
-	unittalk getcharid(3), "素早いサソリ : 私はコヨーテを狩る冒険者だ！";
+	npctalk "素早いサソリ : 私はコヨーテを狩る冒険者だ！";
 	end;
 }
 
@@ -2054,7 +2054,7 @@ rockrdg1,328,112,5	script	カリンタス#rockc04	10226,{
 	mes "狩りを教えてくれると思うよ。";
 	close;
 OnTalk:
-	unittalk getcharid(3), "カリンタス : 僕は冒険者の隊長だ！　コヨーテを100匹捕まえてやる！";
+	npctalk "カリンタス : 僕は冒険者の隊長だ！　コヨーテを100匹捕まえてやる！";
 	end;
 }
 
@@ -2080,7 +2080,7 @@ rockrdg1,330,104,3	script	無愛想な蛇#rockc05	10218,{
 	mes "教えることが大きな宿題だな。";
 	close;
 OnTalk:
-	unittalk getcharid(3), "無愛想な蛇 : お前たち！　冒険者ごっこはするなと言ったでしょう！";
+	npctalk "無愛想な蛇 : お前たち！　冒険者ごっこはするなと言ったでしょう！";
 	end;
 }
 
@@ -2118,7 +2118,7 @@ rockrdg1,299,82,3	script	タリアテル#rockc07	10222,{
 	mes "インスピレーションを";
 	mes "得ることができます。";
 	next;
-	unittalk getcharid(3), "タリアテル : ちょっと！　タネスカ！　それは叩いちゃダメ！！";
+	npctalk "タリアテル : ちょっと！　タネスカ！　それは叩いちゃダメ！！";
 	mes "[タネスカ]";
 	mes "新しい楽器も大歓迎！";
 	close;
@@ -2314,7 +2314,7 @@ alberta,240,103,5	script	カラムプッチ#alberta	709,3,3,{
 	end;
 OnTouch:
 	if(ROCKRIDGE_1QUE == 0 && BaseLevel >= 70)
-		unittalk getcharid(3), "カラムプッチ : お、そこの前途有望な冒険者さん！　ちょっと私の話を聞いてくれないか？",1;
+		npctalk "カラムプッチ : お、そこの前途有望な冒険者さん！　ちょっと私の話を聞いてくれないか？",1;
 	end;
 }
 
@@ -2339,7 +2339,7 @@ harboro1,60,215,5	script	カラムプッチ#harboro1	709,{
 harboro1,80,218,5	script	コステル#harboro1	10210,{
 	switch(ROCKRIDGE_1QUE) {
 	case 0:
-		unittalk getcharid(3), "コステル : 困ったなぁ……。ちゃんとアルベルタで冒険者が見つかるかな……。",1;
+		npctalk "コステル : 困ったなぁ……。ちゃんとアルベルタで冒険者が見つかるかな……。",1;
 		end;
 	case 1:
 		mes "[コステル]";
@@ -2501,7 +2501,7 @@ harboro1,80,218,5	script	コステル#harboro1	10210,{
 		mes "私は次の定期船が来たら";
 		mes "ロックリッジを離れることにします！";
 		next;
-		unittalk getcharid(3),strcharinfo(0)+" : ……",1;
+		npctalk strcharinfo(0)+" : ……",1;
 		mes "[コステル]";
 		mes "そんな顔で見ないでください。";
 		mes "会社の利益はもちろん重要だけど、";
@@ -2532,7 +2532,7 @@ harboro1,80,218,5	script	コステル#harboro1	10210,{
 		mes "待ってくれると思います。";
 		mes "うん……それから……。";
 		next;
-		unittalk getcharid(3),strcharinfo(0)+" : ……",1;
+		npctalk strcharinfo(0)+" : ……",1;
 		mes "[コステル]";
 		mes "またそんな顔をして……。";
 		mes "とにかく、アイアットと一緒に";
@@ -2849,19 +2849,19 @@ har_in01,20,30,5	script	アイアット・ワープ#har_	10211,{
 		end;
 	case 6:
 		cutin "rock_worp",0;
-		unittalk getcharid(3), "……どう思う？",1;
+		npctalk "……どう思う？",1;
 		if(!sleep2(4000)) end;
 		cutin "rock_iboka_all",2;
 		unittalk getnpcid(0,"イヴォカ#rock01"),"イヴォカ・スクーディー : やつらの仲を裂いた方が良いと思います。",1;
 		if(!sleep2(4000)) end;
 		cutin "rock_worp",0;
-		unittalk getcharid(3), "アイアット・ワープ : 普通の拷問や脅迫では効果は薄いか……。",1;
+		npctalk "アイアット・ワープ : 普通の拷問や脅迫では効果は薄いか……。",1;
 		if(!sleep2(3000)) end;
 		cutin "rock_iboka_all",2;
 		unittalk getnpcid(0,"イヴォカ#rock01"),"イヴォカ・スクーディー : ジョニーがいなくなったとしても、次に相手をしなければならないのは……",1;
 		if(!sleep2(3000)) end;
 		cutin "rock_worp",0;
-		unittalk getcharid(3), "アイアット・ワープ : アルバートだろうな。",1;
+		npctalk "アイアット・ワープ : アルバートだろうな。",1;
 		if(!sleep2(2000)) end;
 		set ROCKRIDGE_1QUE,7;
 		mes "[アイアット・ワープ]";
@@ -3447,7 +3447,7 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 		warp "har_in01",18,18;
 		end;
 	}
-	unittalk getcharid(3), "アイアット・ワープ : ここが約束の場所だ。そろそろ時間のはずだが……。",1;
+	npctalk "アイアット・ワープ : ここが約束の場所だ。そろそろ時間のはずだが……。",1;
 	if(!sleep2(3000)) end;
 	cloakoffnpc "ジョニー・ジェイムス#re";
 	if(!sleep2(1000)) end;
@@ -3463,13 +3463,13 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 	if(!sleep2(4000)) end;
 	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい、俺は市長のコステルに用があるんだ。関係ない奴は失せな！",1;
 	if(!sleep2(4000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : おいおいジョニー、うちの先生に対して口のきき方がなってないぞ？",1;
+	npctalk "アイアット・ワープ : おいおいジョニー、うちの先生に対して口のきき方がなってないぞ？",1;
 	if(!sleep2(4000)) end;
 	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい、保安官。あいつは誰なんだ？　市長と一緒に来いと言ったはずだぞ！",1;
 	if(!sleep2(6000)) end;
 	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 鉱石と鉱山を返して欲しくないのか？　ああん？",1;
 	if(!sleep2(4000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : 今回の交渉役はコステルではない。次期市長である先生がすることになった！",1;
+	npctalk "アイアット・ワープ : 今回の交渉役はコステルではない。次期市長である先生がすることになった！",1;
 	if(!sleep2(6000)) end;
 	emotion 5,"ジョニー・ジェイムス#re";
 	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 次期市長だと？　コステルめ、いつも逃げようとばかりしているとは聞いたが、ついに逃げ出したのか？　ははははは！",1;
@@ -3477,13 +3477,13 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 	emotion 9,"アルバート・フォード#re";
 	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : そいつらの言ってることは本当でしょうか？",1;
 	if(!sleep2(4000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : こんな嘘をついて何の得がある？　良いからさっさとそっちの要求を言いな。",1;
+	npctalk "アイアット・ワープ : こんな嘘をついて何の得がある？　良いからさっさとそっちの要求を言いな。",1;
 	if(!sleep2(6000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : 要求を本社で検討しなきゃならんのだ。ちんたらしてるといつになるかわからんぞ！",1;
+	npctalk "アイアット・ワープ : 要求を本社で検討しなきゃならんのだ。ちんたらしてるといつになるかわからんぞ！",1;
 	if(!sleep2(6000)) end;
 	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : くくく、敵だが俺はお前のその性格は気に入ってるぜ。いいか、俺たちの要求は……",1;
 	if(!sleep2(5000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : 今だ！",1;
+	npctalk "アイアット・ワープ : 今だ！",1;
 	if(!sleep2(500)) end;
 	misceffect 563,"ジョニー・ジェイムス#re";
 	cloakoffnpc "ガンマン#rock01";
@@ -3505,7 +3505,7 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 動くな！",1;
 	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 動くな！",1;
 	if(!sleep2(2000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : くっくっく……",1;
+	npctalk "アイアット・ワープ : くっくっく……",1;
 	if(!sleep2(1000)) end;
 	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 計画通り！",1;
 	if(!sleep2(2000)) end;
@@ -3520,11 +3520,11 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 	if(!sleep2(1000)) end;
 	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい！　アルバート!!　ちょっ、待てよ！",1;
 	if(!sleep2(3000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : おいおいジョニー。　お前の部下が逃げていくぞ？",1;
+	npctalk "アイアット・ワープ : おいおいジョニー。　お前の部下が逃げていくぞ？",1;
 	//if(!sleep2(100)) end;
 	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 完全に見捨てられたようだな。",1;
 	if(!sleep2(3000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : みんな！　よくやってくれた！　さあ、連行だ！",1;
+	npctalk "アイアット・ワープ : みんな！　よくやってくれた！　さあ、連行だ！",1;
 	if(!sleep2(1000)) end;
 	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 連行だ！",1;
 	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 捕まえたぞ！",1;
@@ -3548,7 +3548,7 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 	cloakonnpc "イヴォカ#rock02";
 	cloakonnpc "ジョニー・ジェイムス#re";
 	if(!sleep2(2000)) end;
-	unittalk getcharid(3), "アイアット・ワープ : 作戦は成功だ。私たちも戻ろうか。",1;
+	npctalk "アイアット・ワープ : 作戦は成功だ。私たちも戻ろうか。",1;
 	delquest 7795;
 	setquest 7796;
 	set ROCKRIDGE_1QUE,6;
@@ -5132,7 +5132,7 @@ harboro1,235,255,6	script	巨商のラクダ#16	938,{
 
 harboro1,229,256,7	script	シャルロット	938,{
 	initnpctimer;
-	unittalk getcharid(3), "シャルロット : ぶるるるる～～～！";
+	npctalk "シャルロット : ぶるるるる～～～！";
 	end;
 OnTimer1000:
 	stopnpctimer;
@@ -5320,10 +5320,10 @@ harboro1,231,254,3	script	アブラハム・フーディン	58,{
 	mes "フーディンとても気に入りました！";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "アブラハム・フーディン : 宝箱に勝手に触っちゃダメだよ！";
+	npctalk "アブラハム・フーディン : 宝箱に勝手に触っちゃダメだよ！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "アブラハム・フーディン : 何の用だ、シャルロット～！";
+	npctalk "アブラハム・フーディン : 何の用だ、シャルロット～！";
 	end;
 }
 
@@ -5333,7 +5333,7 @@ OnTalk2:
 harboro1,352,199,5	script	空腹の労働者#1	99,5,5,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "空腹の労働者 : うう、お腹すいた。どうして列がまったく減らないんだ。";
+	npctalk "空腹の労働者 : うう、お腹すいた。どうして列がまったく減らないんだ。";
 	end;
 }
 
@@ -5344,7 +5344,7 @@ harboro1,352,190,5	script	空腹の労働者#4	100,{}
 harboro1,352,187,5	script	ただ並んでみただけの人#	870,5,5,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "ただ並んでみただけの人 : これは何の列なんだ？　何かくれるのか？";
+	npctalk "ただ並んでみただけの人 : これは何の列なんだ？　何かくれるのか？";
 	end;
 }
 
@@ -5354,7 +5354,7 @@ harboro1,352,181,5	script	空腹の労働者#7	846,{}
 harboro1,352,178,5	script	空腹の労働者#8	100,5,5,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "空腹の労働者 : ご飯を食べる為に3時間も並ばないといけないとは。これは酷くない？";
+	npctalk "空腹の労働者 : ご飯を食べる為に3時間も並ばないといけないとは。これは酷くない？";
 	end;
 }
 
@@ -5364,7 +5364,7 @@ harboro1,352,172,5	script	空腹の労働者#10	98,{}
 harboro1,352,169,5	script	空腹の労働者#11	855,5,5,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "空腹の労働者 : 後もう少しで私の番だ！";
+	npctalk "空腹の労働者 : 後もう少しで私の番だ！";
 	end;
 }
 
@@ -5373,7 +5373,7 @@ harboro1,353,166,5	script	空腹の労働者#12	99,{}
 harboro1,355,164,5	script	空腹の労働者#13	100,5,5,{
 	end;
 OnTouch:
-	unittalk getcharid(3), "空腹の労働者 : おい！　みんな並んでいるのが見えないのか？　列の後ろに並べよ！";
+	npctalk "空腹の労働者 : おい！　みんな並んでいるのが見えないのか？　列の後ろに並べよ！";
 	end;
 }
 
@@ -7902,7 +7902,7 @@ OnTouch:
 	mes "　なんと叫びますか？‐";
 	next;
 	input .@str$;
-	unittalk getcharid(3),strcharinfo(0)+" : " +.@str$+ "!";
+	npctalk strcharinfo(0)+" : " +.@str$+ "!";
 	mes "[" +strcharinfo(0)+ "]";
 	mes .@str$+ "!";
 	next;

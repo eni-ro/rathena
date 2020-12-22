@@ -849,7 +849,7 @@ glast_01,195,273,5	script	フギンの従者#1	123,{
 	next;
 	switch(select("悪夢のグラストヘイムカタコンベ-5,000Zeny","悪夢のグラストヘイム古城2F-10,000Zeny","やめる")) {
 	case 1:
-		if(Job >= Job_RuneKnight) {
+		if(Job >= Job_Rune_Knight) {
 			mes "[フギンの従者]";
 			mes "おや、あなたはもう十分強いようですね。";
 			mes "申し訳ありませんが";
@@ -877,7 +877,7 @@ glast_01,195,273,5	script	フギンの従者#1	123,{
 		warp "gl_chyard_",148,144;
 		end;
 	case 2:
-		if(Job < Job_RuneKnight || (Job == Job_Summoner && BaseLevel < 90)) {
+		if(Job < Job_Rune_Knight || (Job == Job_Summoner && BaseLevel < 90)) {
 			mes "[フギンの従者]";
 			mes "おや、あなたがこの道を通るのは";
 			mes "まだ危険みたいですね。";

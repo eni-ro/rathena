@@ -52,12 +52,14 @@ Thumbs.db
 /3rdparty/yaml-cpp/Makefile
 
 # /db/
-/db/import/*
+#/db/import/*
 !/db/import/map_cache.dat
 
 # /conf/
-/conf/import
-/conf/msg_conf/import
+#/conf/import
+#/conf/msg_conf/import
+conf/import/inter_conf_sql.txt
+conf/import/map_conf_user.txt
 
 # /lib
 /lib
@@ -77,7 +79,7 @@ Thumbs.db
 /src/common/version.hpp
 
 # /src/custom/
-/src/custom/*
+#/src/custom/*
 !/src/custom/script_def_auriga.cpp
 !/src/custom/script_auriga.cpp
 
@@ -105,6 +107,7 @@ Thumbs.db
 .vs
 *.VC.db
 *.VC.opendb
+.vscode/*
 
 /.idea/.name
 /.idea/misc.xml

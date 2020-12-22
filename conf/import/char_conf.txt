@@ -1,0 +1,50 @@
+import: conf/import/map_conf_user.txt
+login_ip: 127.0.0.1
+
+// Manage possible letters/symbol in the name of charater. Control character (0x00-0x1f) are never accepted. Possible values are:
+// NOTE: Applies to character, party and guild names.
+// 0: no restriction (default)
+// 1: only letters/symbols in 'char_name_letters' option.
+// 2: Letters/symbols in 'char_name_letters' option are forbidden. All others are possibles.
+char_name_option: 0
+
+// Amount of time in seconds by which the character deletion is delayed.
+// Default: 86400 (24 hours)
+// NOTE: Requires client 2010-08-03aragexeRE or newer.
+char_del_delay: 0
+
+// Restrict character deletion by email address or birthdate.
+// This restricts players from changing the langtype and deleting characters.
+// Defaults based on client date.
+// 1: Email address
+// 2: Birthdate
+// 3: Email address or Birthdate
+// IMPORTANT!
+// - This config only works for clients that send 0x0068 or 0x01fb for delete request.
+// - Use langtype 1 for newer clients (2013+), to use 0x01fb.
+// - Clients that are not using 0x0068 or 0x01fb, only use birthdate (YYMMDD) as default.
+char_del_option: 1
+
+// Restrict character deletion as long as he is still in a party or guild
+// 0: No restriction is applied
+// 1: Character cannot be deleted as long as he remains in a party
+// 2: Character cannot be deleted as long as he remains in a guild
+// 3: Character cannot be deleted as long as he remains in a party or guild(default)
+char_del_restriction: 0
+
+//===================================
+// Pincode system
+//===================================
+// NOTE: Requires client 2011-03-09aragexeRE or newer.
+// A window is opened before you can select your character and you will have to enter a pincode by using only your mouse.
+// Default: yes
+pincode_enabled: no
+
+//===================================
+// Addon system
+//===================================
+// After how many days should inactive clan members be removed from their clan?
+// 0: never remove them
+// X: remove clan members if they did not log in for X days
+// Default: 14
+clan_remove_inactive_days: 0

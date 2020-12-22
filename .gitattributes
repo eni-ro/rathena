@@ -16,3 +16,5 @@ Makefile.in text eol=lf
 
 db/* text=auto eol=crlf encoding=cp932
 conf/* text=auto eol=crlf encoding=cp932
+*.cpp text=auto eol=crlf encoding=cp932
+*.hpp text=auto eol=crlf encoding=cp932

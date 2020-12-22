@@ -1,0 +1,209 @@
+//===================================
+// client.conf
+//===================================
+// Valid range of dyes and styles on the client.
+max_hair_style: 99
+max_hair_color: 251
+max_cloth_color: 553
+
+//===================================
+// battle.conf
+//===================================
+// Are arrows/ammo consumed when used on a bow/gun?
+// 0 = No
+// 1 = Yes
+// 2 = Yes even for skills that do not specify arrow consumption when said 
+//     skill is weapon-based and used with ranged weapons (auto-guesses which 
+//     skills should consume ammo when it's acquired via a card or plagiarize)
+arrow_decrement: 0
+// Should ammo be unequipped when unequipping a weapon?
+// Official behavior is "yes".
+ammo_unequip: no
+
+// Should a suitable weapon be equipped when equipping ammo?
+// Official behavior is "yes".
+ammo_check_weapon: no
+
+//===================================
+// drops.conf
+//===================================
+// The rate the common items are dropped (Items that are in the ETC tab, besides card)
+item_rate_common: 30000
+item_rate_common_boss: 30000
+item_rate_common_mvp: 30000
+
+// The rate healing items are dropped (items that restore HP or SP)
+item_rate_heal: 30000
+item_rate_heal_boss: 30000
+item_rate_heal_mvp: 30000
+
+// The rate at which usable items (in the item tab) other then healing items are dropped.
+item_rate_use: 30000
+item_rate_use_boss: 30000
+item_rate_use_mvp: 30000
+
+// The rate at which equipment is dropped.
+item_rate_equip: 30000
+item_rate_equip_boss: 30000
+item_rate_equip_mvp: 30000
+
+// The rate at which cards are dropped
+item_rate_card: 30000
+item_rate_card_boss: 30000
+item_rate_card_mvp: 30000
+
+// The rate adjustment for the MVP items that the MVP gets directly in their inventory
+// Mode: 0 - official order, 1 - random order, 2 - all items
+item_rate_mvp: 30000
+item_drop_mvp_mode: 0
+
+// The rate adjustment for card-granted item drops.
+item_rate_adddrop: 30000
+
+// Rate adjustment for Treasure Box drops (these override all other modifiers)
+item_rate_treasure: 30000
+
+//===================================
+// exp.conf
+//===================================
+// Rate at which exp. is given. (Note 2)
+base_exp_rate: 7500
+
+// Rate at which job exp. is given. (Note 2)
+job_exp_rate: 7500
+
+// Turn this on to allow a player to level up more than once from a kill. (Note 1)
+multi_level_up: yes
+
+// When a player dies, how should we penalize them?
+// 0 = No penalty.
+// 1 = Lose % of current level when killed.
+// 2 = Lose % of total experience when killed.
+death_penalty_type: 0
+
+// EXP cost for cast PR_REDEMPTIO (Note 2)
+exp_cost_redemptio: 0
+
+//===================================
+// feature.conf
+//===================================
+// Achievement (Note 1)
+// Requires: 2015-05-13aRagexe or later
+feature.achievement: off
+
+//===================================
+// monster.conf
+//===================================
+// Should the mob_db names override the mob names specified in the spawn files?
+// 0: No
+// 1: always use the mob_db Name column (english mob name)
+// 2: always use the mob_db JName column (original Kro mob name)
+override_mob_names: 2
+
+// Rate of monsters on a map, 200 would be twice as many as normal. (Note 2)
+mob_count_rate: 200
+
+// Respawn rate of monsters on a map. 50 would make mobs respawn twice as fast (half delay time) (Note 2)
+//Note: This does not affects mobs with immediate respawn (most normal mobs)
+mob_spawn_delay: 0
+plant_spawn_delay: 0
+boss_spawn_delay: 0
+
+// Should mobs not spawn within the viewing range of players?
+// 0 is disabled, otherwise it is the number of retries before giving up 
+// and spawning the mob within player-view anyway, unless the max (100) is used,
+// in which case the mob will not be spawned, and it'll be retried again in
+// 5 seconds.
+// NOTE: This has no effect on mobs that always spawn on the very same cell
+// (like ant eggs) except if you set it to the max.
+no_spawn_on_player: 5
+
+// Whether or not to spawn the mvp tomb.
+// See http://irowiki.org/wiki/MVP#Gravestone
+mvp_tomb_enabled: no
+
+//===================================
+// player.conf
+//===================================
+// Can a normal player by-pass the skill tree? (Note 1)
+player_skillfree: yes
+
+// When set to yes, forces skill points gained from 1st class to be put into 1st class
+// skills, and forces novice skill points to be put into the basic skill. (Note 1)
+player_skillup_limit: no
+
+// The maximum weight for a character to carry when the character stops healing naturally. (in %)
+// For renewal: Requires client 20171025 or newer to display properly
+natural_heal_weight_rate: 50
+natural_heal_weight_rate_renewal: 90
+
+// Maximum atk speed. (Default 190, Highest allowed 199)
+max_aspd: 198
+
+// Same as max_aspd, but for 3rd classes. (Default 193, Highest allowed 199)
+max_third_aspd: 198
+
+// Max ASPD for extended class (Kagerou/Oboro and Rebellion). (Default 193, Highest allowed 199)
+max_extended_aspd: 198
+
+// Max ASPD for Summoner Class (Doram). (Default 193, Highest allowed 199)
+max_summoner_aspd: 198
+
+// Maximum walk speed rate (200 would be capped to twice the normal speed)
+max_walk_speed: 400
+
+// Maximum HPs depending on base level. Default values are:
+// Lv 99:  330000
+// Lv150:  660000
+// Lv175: 1100000
+max_hp_lv99: 4000000
+max_hp_lv150: 4000000
+max_hp: 4000000
+
+// Maximum SP. (Default is 1000000)
+max_sp: 10000000
+
+// Maximum params/stats for each class. (str, agi, vit, int, dex, and luk)
+// 'max_parameter' for novice, non-trans, non-baby, and non-3rd classes
+// 'max_trans_parameter' for trans classes (non-3rd trans classes)
+// 'max_third_parameter' for 3rd classes (regular/non-trans) except baby 3rd clasess
+// 'max_third_trans_parameter' for 3rd trans classes
+// 'max_baby_parameter' for baby classes except baby 3rd classes
+// 'max_baby_third_parameter' for baby 3rd classes only
+// 'max_extended_parameter' for extended 2nd class (Kagerou/Oboro and Rebellion)
+// For mor specific/advanced option, see 'db/[pre-]re/job_params_db.txt'
+max_parameter: 250
+max_trans_parameter: 250
+max_third_parameter: 250
+max_third_trans_parameter: 250
+max_baby_parameter: 250
+max_baby_third_parameter: 250
+max_extended_parameter: 250
+max_summoner_parameter: 250
+
+//===================================
+// skill.conf
+//===================================
+// Minimum allowed delay for ANY skills after castbegin (in milliseconds) (Note 1)
+// Note: Setting this to anything above 0 can stop speedhacks.
+min_skill_delay_limit: 10
+
+// At what dex does the cast time become zero (instacast)?
+castrate_dex_scale: 150
+
+// How much (dex*2+int) does variable cast turns zero?
+vcast_stat_scale: 530
+
+// Can't place unlimited land skills at the same time (Note 3)
+land_skill_limit: 20
+
+// Miracle of the Sun, Moon and Stars skill ratio (100% = 10000)
+sg_miracle_skill_ratio: 10000
+
+// Angel of the Sun, Moon and Stars skill ratio (100% = 10000)
+sg_angel_skill_ratio: 10000
+
+// Dancing Weapon Switch
+// On official servers, a fix is in place that prevents the switching of weapons to cancel songs.
+// Default: yes
+dancing_weaponswitch_fix: no

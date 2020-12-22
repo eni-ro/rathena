@@ -1,0 +1,4 @@
+import: conf/import/inter_conf_sql.txt
+
+// Level range for sharing within a party
+party_share_level: 255

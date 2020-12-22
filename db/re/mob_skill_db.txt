@@ -8273,7 +8273,6 @@
 2408,Dummy 10@AL_HEAL,idle,28,11,10000,0,10000,no,self,myhpltmaxrate,50,,,,,,,
 2409,Dummy 50@AL_HEAL,idle,28,11,10000,0,10000,no,self,myhpltmaxrate,50,,,,,,,
 2410,Dummy 100@AL_HEAL,idle,28,11,10000,0,10000,no,self,myhpltmaxrate,50,,,,,,,
-2411,Dummy 150@AL_HEAL,idle,28,11,10000,0,10000,no,self,myhpltmaxrate,50,,,,,,,
 
 2415,Knight Seyren@KN_SPEARBOOMERANG,idle,59,5,10000,0,0,yes,randomtarget,always,0,,,,,,6,
 2415,Knight Seyren@KN_SPEARBOOMERANG,chase,59,5,10000,0,0,yes,target,skillused,18,,,,,,6,

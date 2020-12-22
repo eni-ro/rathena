@@ -1,0 +1,127 @@
+//===== rAthena Script =============================================
+//= サンドバッグ NPC
+//===== By: ========================================================
+//= Secretdataz
+//===== Current Version: ===========================================
+//= 0.2
+//===== Changelog: =================================================
+//= 0.1 Initial commit
+//= 0.2 Add MD_KNOCKBACK_IMMUNE
+//===== Compatible With: ===========================================
+//= rAthena Project
+//===== Additional Comments: =======================================
+//= When duplicating this NPC. Only use NUMBER after the # [secret]
+//==================================================================
+prontera,148,204,0	script	DPSメーター#0	10359,{	//JP_E_MONSTER_73
+	.@name$ = "[" +strnpcinfo(1)+ "]";
+	.@dupid = atoi(strnpcinfo(2));
+	.@uid = .gid[.@dupid];
+	getunitdata(.@uid, .@d);
+	mes .@name$;
+	mes "現在の設定は";
+	mes "Def : " + .@d[UMOB_DEF] + " / Mdef : " + .@d[UMOB_MDEF];
+	mes "属性 : " + .elestr$[.@d[UMOB_ELETYPE]] + " Lv" + .@d[UMOB_ELELEVEL];
+	next;
+	switch (select("設定をリセットする","Def/Mdefを変更する","属性を変更する","何もしない")){
+		case 1:
+			setunitdata .@uid,UMOB_DEF,120;
+			setunitdata .@uid,UMOB_MDEF,120;
+			setunitdata .@uid,UMOB_ELETYPE,ELE_NEUTRAL;
+			setunitdata .@uid,UMOB_ELELEVEL,1;
+			mes .@name$;
+			mes "設定完了しました";
+			break;
+			break;
+		case 2:
+			mes .@name$;
+			mes "Defを入力してください";
+			input .@def,0,65535;
+			next;
+			mes .@name$;
+			mes "Mdefを入力してください";
+			input .@mdef,0,65535;
+			next;
+			mes .@name$;
+			setunitdata .@uid,UMOB_DEF,.@def;
+			setunitdata .@uid,UMOB_MDEF,.@mdef;
+			mes "設定完了しました";
+			break;
+		case 3:
+			mes .@name$;
+			mes "属性を選択してください";
+			next;
+			.@menu$ = "";
+			for( .@i = 0; .@i < getarraysize(.elestr$); .@i++ ){
+				.@menu$ = .@menu$ + ( .@i == 0 ? "" : ":" ) + .elestr$[.@i];
+			}
+			.@el = select(.@menu$) - 1;
+			mes .@name$;
+			mes "属性Lvを選択してください";
+			next;
+			.@menu$ = "";
+			for( .@i = 1; .@i <= 4; .@i++ ){
+				.@menu$ = .@menu$ + ( .@i == 0 ? "Lv" : ":Lv" ) + .@i;
+			}
+			.@elv = select(.@menu$) - 1;
+			setunitdata .@uid,UMOB_ELETYPE,.@el;
+			setunitdata .@uid,UMOB_ELELEVEL,.@elv;
+			mes .@name$;
+			mes "設定完了しました";
+			break;
+		default:
+			break;
+	}
+	close;
+/*
+//UMOB_DEF
+//UMOB_MDEF
+//UMOB_ELETYPE
+//UMOB_ELELEVEL
+
+	ELE_NEUTRAL=0,
+	ELE_WATER,
+	ELE_EARTH,
+	ELE_FIRE,
+	ELE_WIND,
+	ELE_POISON,
+	ELE_HOLY,
+	ELE_DARK,
+	ELE_GHOST,
+	ELE_UNDEAD,
+	
+#define MAX_ELE_LEVEL 4 /// Maximum Element level
+*/
+	end;
+
+OnInterIfInitOnce:
+	setarray .elestr$[0],"無","水","地","火","風","毒","聖","闇","念","死";
+	set .elemaxlv,4;
+OnMyMobDead:
+OnInit:
+	getunitdata(getnpcid(0), .@d);
+	monster strnpcinfo(4),.@d[UNPC_X]-5,.@d[UNPC_Y],"サンドバッグ",2411,1,strnpcinfo(0)+"::OnMyMobDead";
+	.@dupid = atoi(strnpcinfo(2));
+	.gid[.@dupid] = $@mobid[0];
+	.mhp[.@dupid] = strmobinfo(4,2411);
+	setunitdata .gid[.@dupid],UMOB_MODE,.@d[UMOB_MODE]|0x4000000|0x0200000; // Set MD_STATUS_IMMUNE (0x4000000) because EDP/burn/%MHP based status can skew the DPS counter so much.
+	initnpctimer;
+	end;
+	
+OnTimer5000:
+	.@dupid = atoi(strnpcinfo(2));
+	if(unitexists(.gid[.@dupid])){
+		getunitdata(.gid[.@dupid],.@d);
+		.@diff = (.mhp[.@dupid] - .@d[UMOB_HP]);
+		if(.@diff > 0){
+			npctalk "DPSメーター : 平均DPSは " + (.@diff/5) + " です。";
+			setunitdata .gid[.@dupid],UMOB_HP,.mhp[.@dupid];
+			//specialeffect EF_HEAL;
+		}
+	}
+	initnpctimer;
+}
+
+//prontera,216,79,0	duplicate(DPSメーター#0)	DPSメーター#1	10359
+//prontera,224,70,0	duplicate(DPSメーター#0)	DPSメーター#2	10359
+//prontera,216,58,0	duplicate(DPSメーター#0)	DPSメーター#3	10359
+//prontera,224,58,0	duplicate(DPSメーター#0)	DPSメーター#4	10359

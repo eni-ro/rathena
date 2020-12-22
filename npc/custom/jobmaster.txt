@@ -465,7 +465,7 @@ OnInit:
 	.BabyExpanded = true;			// Enable Baby Expanded classes: Ex. Baby Ninja, Baby Taekwon, etc.
 	.BabySummoner = true;			// Enable Baby Summoner?
 	.LastJob = true;				// Enforce linear class changes?
-	.SkillPointCheck = true;		// Force player to use up all skill points?
+	.SkillPointCheck = false;		// Force player to use up all skill points?
 	.Platinum = true;				// Get platinum skills automatically?
 	.GetJobEquip = false;			// Get job equipment (mostly weapons) on job change?
 

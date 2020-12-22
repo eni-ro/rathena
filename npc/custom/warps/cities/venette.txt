@@ -1,0 +1,59 @@
+//==============================================================================
+// ベネットWarp　-- venette - ven_in01 - 
+//==============================================================================
+venette,89,117,0	warp	ven_warp1001	2,2,ven_in01,183,42
+venette,108,111,0	warp	ven_warp1002	2,2,ven_in01,161,181
+venette,117,92,0	warp	ven_warp1003	2,2,ven_in01,99,87
+venette,137,92,0	warp	ven_warp1004	2,2,ven_in01,256,56
+venette,149,110,0	warp	ven_warp1005	2,2,ven_in01,188,109
+venette,166,119,0	warp	ven_warp1006	2,2,ven_in01,269,181
+
+// in01  -> town
+ven_in01,183,45,0	warp	ven_warp2001	2,2,venette,89,121
+ven_in01,161,185,0	warp	ven_warp2002	2,2,venette,111,114
+ven_in01,99,83,0	warp	ven_warp2003	2,2,venette,121,92
+ven_in01,252,56,0	warp	ven_warp2004	2,2,venette,133,92
+ven_in01,187,112,0	warp	ven_warp2005	2,2,venette,146,113
+//ven_in01,269,185,0	warp	ven_warp2006	2,2,venette,166,122
+
+// in01 <-> in01
+ven_in01,126,92,0	warp	ven_warp3001	2,2,ven_in01,111,14
+ven_in01,111,11,0	warp	ven_warp3002	2,2,ven_in01,122,92
+ven_in01,81,92,0	warp	ven_warp3003	2,2,ven_in01,29,118
+ven_in01,33,118,0	warp	ven_warp3004	2,2,ven_in01,84,92
+ven_in01,9,112,0	warp	ven_warp3005	2,2,ven_in01,26,40
+ven_in01,29,40,0	warp	ven_warp3006	2,2,ven_in01,13,112
+ven_in01,39,106,0	warp	ven_warp3007	2,2,ven_in01,23,174
+ven_in01,26,174,0	warp	ven_warp3008	2,2,ven_in01,39,102
+ven_in01,161,174,0	warp	ven_warp3009	2,2,ven_in01,91,170
+ven_in01,91,173,0	warp	ven_warp3010	2,2,ven_in01,161,170
+ven_in01,200,112,0	warp	ven_warp3011	2,2,ven_in01,262,113
+ven_in01,261,116,0	warp	ven_warp3012	2,2,ven_in01,198,109
+
+// department
+department,50,41,5	script	ご案内	117,{
+	mes "[ご案内]";
+	mes "デパートのご案内になります。";
+	mes "販売と精錬はこちらで行えます";
+	mes "一部HSEとトレードは";
+	mes "ベネット室内交換所へどうぞ";
+	next;
+	if(select("ありがとう","ベネット室内交換所へ")==2){
+		warp "ven_in01",99,87;
+		end;
+	}
+	close;
+}
+department,37,48,0	warp	depawarp1001	2,2,department,44,102
+department,62,48,0	warp	depawarp1002	2,2,department,131,32
+department,43,99,0	warp	depawarp2001	2,2,department,38,45
+department,60,114,0	warp	depawarp2002	2,2,department,121,115
+department,122,120,0	warp	depawarp3001	2,2,department,57,113
+department,132,29,0	warp	depawarp2003	2,2,department,61,45
+department,105,41,0	warp	depawarp2004	2,2,department,191,23
+department,192,19,0	warp	depawarp2005	2,2,department,108,40
+department,173,48,0	warp	depawarp2006	2,2,department,177,90
+department,180,89,0	warp	depawarp3002	2,2,department,176,47
+
+department,50,32,0	warp	depawarp3002	2,2,venette,128,190
+venette,128,193,0	warp	depawarp3003	2,2,department,49,35

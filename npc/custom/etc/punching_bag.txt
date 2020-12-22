@@ -121,7 +121,7 @@ OnTimer5000:
 	initnpctimer;
 }
 
-//prontera,216,79,0	duplicate(DPSメーター#0)	DPSメーター#1	10359
+venette,93,150,0	duplicate(DPSメーター#0)	DPSメーター#1	10359
 //prontera,224,70,0	duplicate(DPSメーター#0)	DPSメーター#2	10359
 //prontera,216,58,0	duplicate(DPSメーター#0)	DPSメーター#3	10359
 //prontera,224,58,0	duplicate(DPSメーター#0)	DPSメーター#4	10359

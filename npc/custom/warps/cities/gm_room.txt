@@ -1,0 +1,5 @@
+vip,65,43,0	warp	vip0101	2,2,venette,127,125
+vip,84,50,0	warp	vip0102	2,2,vip,78,252
+vip,75,252,0	warp	vip0201	2,2,vip,81,50
+vip,59,266,0	warp	vip0202	2,2,vip,279,256
+vip,282,256,0	warp	vip0203	2,2,vip,62,266

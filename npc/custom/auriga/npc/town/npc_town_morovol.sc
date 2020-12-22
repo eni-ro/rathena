@@ -189,30 +189,30 @@ moro_vol,104,86,3	script	リョースン	748,{
 
 moro_vol,101,87,5	script	ルーンミッドガッツ騎士	468,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "……。"; end;
-	case 1: unittalk getcharid(3), "ここは静かだな。"; end;
-	case 2: unittalk getcharid(3), "……襲撃もないし……。"; end;
-	case 3: unittalk getcharid(3), "……つまらん……。"; end;
+	case 0: npctalk "……。"; end;
+	case 1: npctalk "ここは静かだな。"; end;
+	case 2: npctalk "……襲撃もないし……。"; end;
+	case 3: npctalk "……つまらん……。"; end;
 	}
 }
 
 moro_vol,101,85,5	script	ルーンミッドガッツ騎士	469,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "自分の任務はこちらの要人警備となります！"; end;
-	case 1: unittalk getcharid(3), "あまり怖がらないでください。その恐怖感は全体に広がります。"; end;
-	case 2: unittalk getcharid(3), "任務達成のため、がんばります！"; end;
-	case 3: unittalk getcharid(3), "……はあ……。"; end;
-	case 4: unittalk getcharid(3), "まだ何もありません。"; end;
+	case 0: npctalk "自分の任務はこちらの要人警備となります！"; end;
+	case 1: npctalk "あまり怖がらないでください。その恐怖感は全体に広がります。"; end;
+	case 2: npctalk "任務達成のため、がんばります！"; end;
+	case 3: npctalk "……はあ……。"; end;
+	case 4: npctalk "まだ何もありません。"; end;
 	}
 }
 
 moro_vol,103,83,1	script	ルーンミッドガッツ騎士	470,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "魔王と戦うのは騎士のロマン！　だが現実となると……。"; end;
-	case 1: unittalk getcharid(3), "戦場の緊張感は心地よい。"; end;
-	case 2: unittalk getcharid(3), "リョースン、気負いすぎだって。"; end;
-	case 3: unittalk getcharid(3), "……眠い……。"; end;
-	case 4: unittalk getcharid(3), "……ぐぉ……はっ！"; end;
+	case 0: npctalk "魔王と戦うのは騎士のロマン！　だが現実となると……。"; end;
+	case 1: npctalk "戦場の緊張感は心地よい。"; end;
+	case 2: npctalk "リョースン、気負いすぎだって。"; end;
+	case 3: npctalk "……眠い……。"; end;
+	case 4: npctalk "……ぐぉ……はっ！"; end;
 	}
 }
 
@@ -249,31 +249,31 @@ moro_vol,110,83,3	script	ヒュー	868,{
 
 moro_vol,108,81,7	script	シュバルツバルド精鋭軍	852,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "アインブロックもここも、空気がいいとは、いえませんね。"; end;
-	case 1: unittalk getcharid(3), "……へーくしょい！　鼻がむずむずします……。"; end;
-	case 2: unittalk getcharid(3), "……マスクの1つでも持ってくれば良かった。"; end;
-	case 3: unittalk getcharid(3), "我々は必ず勝ちます！"; end;
-	case 4: unittalk getcharid(3), "シュバルツバルドの栄光のために！"; end;
+	case 0: npctalk "アインブロックもここも、空気がいいとは、いえませんね。"; end;
+	case 1: npctalk "……へーくしょい！　鼻がむずむずします……。"; end;
+	case 2: npctalk "……マスクの1つでも持ってくれば良かった。"; end;
+	case 3: npctalk "我々は必ず勝ちます！"; end;
+	case 4: npctalk "シュバルツバルドの栄光のために！"; end;
 	}
 }
 
 moro_vol,111,80,1	script	シュバルツバルド精鋭軍	852,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "シュバルツバルド産おやつが食べたい……。"; end;
-	case 1: unittalk getcharid(3), "……寝ていない。瞑想していただけだ。"; end;
-	case 2: unittalk getcharid(3), "ミッドガルドのために！"; end;
-	case 3: unittalk getcharid(3), "我々に負けの文字はない！"; end;
-	case 4: unittalk getcharid(3), "シュバルツバルドの栄光のために！"; end;
+	case 0: npctalk "シュバルツバルド産おやつが食べたい……。"; end;
+	case 1: npctalk "……寝ていない。瞑想していただけだ。"; end;
+	case 2: npctalk "ミッドガルドのために！"; end;
+	case 3: npctalk "我々に負けの文字はない！"; end;
+	case 4: npctalk "シュバルツバルドの栄光のために！"; end;
 	}
 }
 
 moro_vol,113,81,3	script	シュバルツバルド精鋭軍	852,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "魔王との戦闘とアインブロックでマスクなしで警備48時間……どっちがきついですかね？"; end;
-	case 1: unittalk getcharid(3), "……勝ちます……勝ちに行きます。"; end;
-	case 2: unittalk getcharid(3), "こんなことならもう少し修練を積むべきだった……。"; end;
-	case 3: unittalk getcharid(3), "……涙が溢れそうです……目が痛くて。"; end;
-	case 4: unittalk getcharid(3), "……はあぁ……。"; end;
+	case 0: npctalk "魔王との戦闘とアインブロックでマスクなしで警備48時間……どっちがきついですかね？"; end;
+	case 1: npctalk "……勝ちます……勝ちに行きます。"; end;
+	case 2: npctalk "こんなことならもう少し修練を積むべきだった……。"; end;
+	case 3: npctalk "……涙が溢れそうです……目が痛くて。"; end;
+	case 4: npctalk "……はあぁ……。"; end;
 	}
 }
 
@@ -294,31 +294,31 @@ moro_vol,118,86,5	script	ヘンジヌ	931,{
 
 moro_vol,116,84,7	script	アルナベルツ聖徒団	935,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "ここには邪悪な者が群れ成していますね……。"; end;
-	case 1: unittalk getcharid(3), "……。"; end;
-	case 2: unittalk getcharid(3), "全ては女神の御心のままに……。"; end;
-	case 3: unittalk getcharid(3), "……異端の者と共にする必要があるとは……。"; end;
-	case 4: unittalk getcharid(3), "あなたに女神様のご加護があらんことを……。"; end;
+	case 0: npctalk "ここには邪悪な者が群れ成していますね……。"; end;
+	case 1: npctalk "……。"; end;
+	case 2: npctalk "全ては女神の御心のままに……。"; end;
+	case 3: npctalk "……異端の者と共にする必要があるとは……。"; end;
+	case 4: npctalk "あなたに女神様のご加護があらんことを……。"; end;
 	}
 }
 
 moro_vol,118,83,7	script	アルナベルツ聖徒団	917,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "終わりなき戦いほど虚しいものはありません……。"; end;
-	case 1: unittalk getcharid(3), "ここの空気には馴染めそうにありません。"; end;
-	case 2: unittalk getcharid(3), "女神様、どうか我々にご加護を……。"; end;
-	case 3: unittalk getcharid(3), "……異端の者であれ、必要であれば……。"; end;
-	case 4: unittalk getcharid(3), "女神様のご加護が、あなたとともにありますように……。"; end;
+	case 0: npctalk "終わりなき戦いほど虚しいものはありません……。"; end;
+	case 1: npctalk "ここの空気には馴染めそうにありません。"; end;
+	case 2: npctalk "女神様、どうか我々にご加護を……。"; end;
+	case 3: npctalk "……異端の者であれ、必要であれば……。"; end;
+	case 4: npctalk "女神様のご加護が、あなたとともにありますように……。"; end;
 	}
 }
 
 moro_vol,121,84,1	script	アルナベルツ聖徒団	920,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "……今は祈ることしか出来ません。"; end;
-	case 1: unittalk getcharid(3), "女神様が見守っていてくれるはず……。"; end;
-	case 2: unittalk getcharid(3), "全ては女神の御心のままに……。"; end;
-	case 3: unittalk getcharid(3), "……異端者と今、争っている時ではございません……。"; end;
-	case 4: unittalk getcharid(3), "本当に何があるか、わからないものですね……。"; end;
+	case 0: npctalk "……今は祈ることしか出来ません。"; end;
+	case 1: npctalk "女神様が見守っていてくれるはず……。"; end;
+	case 2: npctalk "全ては女神の御心のままに……。"; end;
+	case 3: npctalk "……異端者と今、争っている時ではございません……。"; end;
+	case 4: npctalk "本当に何があるか、わからないものですね……。"; end;
 	}
 }
 
@@ -346,13 +346,13 @@ OnTouch:
 		initnpctimer;
 	end;
 OnTimer3000:
-	unittalk getcharid(3), "ジャケン : 諸君！　我ら生まれ育った国は違えど、一つの志のもと！　ここに集まった！";
+	npctalk "ジャケン : 諸君！　我ら生まれ育った国は違えど、一つの志のもと！　ここに集まった！";
 	end;
 OnTimer6000:
-	unittalk getcharid(3), "ジャケン : その志を魔族にも見せつけようぞ！";
+	npctalk "ジャケン : その志を魔族にも見せつけようぞ！";
 	end;
 OnTimer8000:
-	unittalk getcharid(3), "ジャケン : 全軍！　前進せよ！";
+	npctalk "ジャケン : 全軍！　前進せよ！";
 	end;
 OnTimer10000:
 	donpcevent "ミッドガルド連合軍#so01::OnTalk1";
@@ -402,120 +402,120 @@ OnTimer40000:
 moro_vol,117,104,1	script	ミッドガルド連合軍#so01	707,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "曙の太陽の中で～";
+	npctalk "曙の太陽の中で～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "平和と幸せを～";
+	npctalk "平和と幸せを～";
 	end;
 }
 
 moro_vol,117,102,1	script	ミッドガルド連合軍#so02	707,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "守るために～";
+	npctalk "守るために～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "魔王の恐怖を";
+	npctalk "魔王の恐怖を";
 	end;
 }
 
 moro_vol,117,100,1	script	ミッドガルド連合軍#so03	707,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "両手に～";
+	npctalk "両手に～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "魔王の恐怖を";
+	npctalk "魔王の恐怖を";
 	end;
 }
 
 moro_vol,117,98,1	script	ミッドガルド連合軍#so04	707,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "顔を上げ～";
+	npctalk "顔を上げ～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "わああああ!!";
+	npctalk "わああああ!!";
 	end;
 }
 
 moro_vol,119,104,1	script	ミッドガルド連合軍#so05	852,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "夢に見た～";
+	npctalk "夢に見た～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "おびやかす～";
+	npctalk "おびやかす～";
 	end;
 }
 
 moro_vol,119,102,1	script	ミッドガルド連合軍#so06	852,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "兜の緒を締める～";
+	npctalk "兜の緒を締める～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "きっと払うために～";
+	npctalk "きっと払うために～";
 	end;
 }
 
 moro_vol,119,100,1	script	ミッドガルド連合軍#so07	868,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "構えし剣～";
+	npctalk "構えし剣～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "払うために～";
+	npctalk "払うために～";
 	end;
 }
 
 moro_vol,119,98,1	script	ミッドガルド連合軍#so08	868,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "目を開け～";
+	npctalk  "目を開け～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "わああああ!!";
+	npctalk  "わああああ!!";
 	end;
 }
 
 moro_vol,121,104,1	script	ミッドガルド連合軍#so09	934,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "故郷を～";
+	npctalk  "故郷を～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "魔族を倒すため～";
+	npctalk  "魔族を倒すため～";
 	end;
 }
 
 moro_vol,121,102,1	script	ミッドガルド連合軍#so10	934,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "心も熱く～";
+	npctalk  "心も熱く～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "行進だ～";
+	npctalk  "行進だ～";
 	end;
 }
 
 moro_vol,121,100,1	script	ミッドガルド連合軍#so11	939,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "進め前へ～";
+	npctalk  "進め前へ～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "行進だ～！";
+	npctalk  "行進だ～！";
 	end;
 }
 
 moro_vol,121,98,1	script	ミッドガルド連合軍#so12	939,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "まっすぐ前を見て～";
+	npctalk  "まっすぐ前を見て～";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "わああああ!!";
+	npctalk  "わああああ!!";
 	end;
 }
 
@@ -580,90 +580,90 @@ moro_vol,88,102,6	script	魔学者マキア#143vol03	444,{
 moro_vol,104,109,0	script	戦士ラフィネ#sol01	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "我らは!!";
+	npctalk  "我らは!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,106,109,0	script	戦士ラフィネ#sol02	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "我らは!!";
+	npctalk  "我らは!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,108,109,0	script	戦士ラフィネ#sol03	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "我らは!!";
+	npctalk  "我らは!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,104,107,0	script	戦士ラフィネ#sol04	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "誇り高き!!";
+	npctalk  "誇り高き!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,106,107,0	script	戦士ラフィネ#sol05	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "誇り高き!!";
+	npctalk  "誇り高き!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,108,107,0	script	戦士ラフィネ#sol06	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "誇り高き!!";
+	npctalk  "誇り高き!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,104,105,0	script	戦士ラフィネ#sol07	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "ラフィネ族!!";
+	npctalk  "ラフィネ族!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,106,105,0	script	戦士ラフィネ#sol08	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "ラフィネ族!!";
+	npctalk  "ラフィネ族!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
 moro_vol,108,105,0	script	戦士ラフィネ#sol09	447,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "ラフィネ族!!";
+	npctalk  "ラフィネ族!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "処断する!!";
+	npctalk  "処断する!!";
 	end;
 }
 
@@ -678,10 +678,10 @@ OnTouch:
 		initnpctimer;
 	end;
 OnTimer3000:
-	unittalk getcharid(3), "指揮官 : 諸君！　ついに我らの訓練成果を見せるときだ！";
+	npctalk  "指揮官 : 諸君！　ついに我らの訓練成果を見せるときだ！";
 	end;
 OnTimer6000:
-	unittalk getcharid(3), "指揮官 : 我らは!!";
+	npctalk  "指揮官 : 我らは!!";
 	end;
 OnTimer8000:
 	donpcevent "戦士ラフィネ#sol01::OnTalk1";
@@ -699,7 +699,7 @@ OnTimer11000:
 	donpcevent "戦士ラフィネ#sol09::OnTalk1";
 	end;
 OnTimer14000:
-	unittalk getcharid(3), "指揮官 : 悪を処断する!!";
+	npctalk  "指揮官 : 悪を処断する!!";
 	end;
 OnTimer16000:
 	donpcevent "戦士ラフィネ#sol01::OnTalk2";
@@ -719,51 +719,51 @@ OnTimer30000:
 
 moro_vol,101,102,0	script	ラフィネ魔道師#wsol01	611,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "守護者様が見ていらっしゃるんだわ……がんばる……。"; end;
-	case 1: unittalk getcharid(3), "……敵に、慈悲は無用……。"; end;
-	case 2: unittalk getcharid(3), "……エクラージュが恋しい。"; end;
-	case 3: unittalk getcharid(3), "……全部凍らせてやる……凍らせてやる……。"; end;
-	case 4: unittalk getcharid(3), "はぁ……はぁ……。"; end;
+	case 0: npctalk  "守護者様が見ていらっしゃるんだわ……がんばる……。"; end;
+	case 1: npctalk  "……敵に、慈悲は無用……。"; end;
+	case 2: npctalk  "……エクラージュが恋しい。"; end;
+	case 3: npctalk  "……全部凍らせてやる……凍らせてやる……。"; end;
+	case 4: npctalk  "はぁ……はぁ……。"; end;
 	}
 }
 
 moro_vol,103,102,0	script	ラフィネ魔道師#wsol02	520,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "道具のお手入れ、ふんふふーん♪"; end;
-	case 1: unittalk getcharid(3), "……あれ、魔法書どこに置いたかな。"; end;
-	case 2: unittalk getcharid(3), "しっ……静かに……集中力が途切れる。"; end;
-	case 3: unittalk getcharid(3), "……あれをこうして、こうして……。"; end;
-	case 4: unittalk getcharid(3), "……おなか、ぺっこぺこだわあ。"; end;
+	case 0: npctalk  "道具のお手入れ、ふんふふーん♪"; end;
+	case 1: npctalk  "……あれ、魔法書どこに置いたかな。"; end;
+	case 2: npctalk  "しっ……静かに……集中力が途切れる。"; end;
+	case 3: npctalk  "……あれをこうして、こうして……。"; end;
+	case 4: npctalk  "……おなか、ぺっこぺこだわあ。"; end;
 	}
 }
 
 moro_vol,105,102,0	script	ラフィネ魔道師#wsol03	446,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "……俺達はいつまで待機なんだ……。"; end;
-	case 1: unittalk getcharid(3), "…なんで俺はここに来たんだ……俺のヤイで眠りたい……。"; end;
-	case 2: unittalk getcharid(3), "……ハァ……。"; end;
-	case 3: unittalk getcharid(3), "……くっ！　羽根がうずく……。"; end;
-	case 4: unittalk getcharid(3), "背中側の人間……気に触る……。"; end;
+	case 0: npctalk  "……俺達はいつまで待機なんだ……。"; end;
+	case 1: npctalk  "…なんで俺はここに来たんだ……俺のヤイで眠りたい……。"; end;
+	case 2: npctalk  "……ハァ……。"; end;
+	case 3: npctalk  "……くっ！　羽根がうずく……。"; end;
+	case 4: npctalk  "背中側の人間……気に触る……。"; end;
 	}
 }
 
 moro_vol,107,102,0	script	ラフィネ魔道師#wsol04	440,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "一応、ハーブも持っていくかな。"; end;
-	case 1: unittalk getcharid(3), "うまくいくのかなあ、少し心配だわ。"; end;
-	case 2: unittalk getcharid(3), "……緊張するな……。"; end;
-	case 3: unittalk getcharid(3), "……敵を見つけたら……ファイア……。"; end;
-	case 4: unittalk getcharid(3), "サファ族は敵じゃない……サファ族は敵じゃない……いいい！　殴ってやりたい！"; end;
+	case 0: npctalk  "一応、ハーブも持っていくかな。"; end;
+	case 1: npctalk  "うまくいくのかなあ、少し心配だわ。"; end;
+	case 2: npctalk  "……緊張するな……。"; end;
+	case 3: npctalk  "……敵を見つけたら……ファイア……。"; end;
+	case 4: npctalk  "サファ族は敵じゃない……サファ族は敵じゃない……いいい！　殴ってやりたい！"; end;
 	}
 }
 
 moro_vol,109,102,0	script	ラフィネ魔道師#wsol05	446,{
 	switch(rand(5)) {
-	case 0: unittalk getcharid(3), "……緊張するな……。"; end;
-	case 1: unittalk getcharid(3), "こんな緊張感……悪くないな……ふふふ……。"; end;
-	case 2: unittalk getcharid(3), "……敵を見つけたら……あいつとダブルファイア……。"; end;
-	case 3: unittalk getcharid(3), "……火、実は苦手なんだけどな。"; end;
-	case 4: unittalk getcharid(3), "暗いの、もっと苦手なんだけどな。"; end;
+	case 0: npctalk  "……緊張するな……。"; end;
+	case 1: npctalk  "こんな緊張感……悪くないな……ふふふ……。"; end;
+	case 2: npctalk  "……敵を見つけたら……あいつとダブルファイア……。"; end;
+	case 3: npctalk  "……火、実は苦手なんだけどな。"; end;
+	case 4: npctalk  "暗いの、もっと苦手なんだけどな。"; end;
 	}
 }
 
@@ -821,10 +821,10 @@ OnTouch:
 	end;
 OnTouchNPC:
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "前線基地・守護者 : そこまでだ！　ここから先には行かせない！"; break;
-	case 1: unittalk getcharid(3), "前線基地・守護者 : 基地には一歩も入れさせないぞ！"; break;
-	case 2: unittalk getcharid(3), "前線基地・守護者 : ここから離れろ！　ここから先は我々の領域だ！"; break;
-	case 3: unittalk getcharid(3), "前線基地・守護者 : 魔物め！　己のあるべき場所へ還れ！　私たちは戦うぞ！"; break;
+	case 0: npctalk  "前線基地・守護者 : そこまでだ！　ここから先には行かせない！"; break;
+	case 1: npctalk  "前線基地・守護者 : 基地には一歩も入れさせないぞ！"; break;
+	case 2: npctalk  "前線基地・守護者 : ここから離れろ！　ここから先は我々の領域だ！"; break;
+	case 3: npctalk  "前線基地・守護者 : 魔物め！　己のあるべき場所へ還れ！　私たちは戦うぞ！"; break;
 	}
 	switch(rand(4)) {
 	case 0:
@@ -875,14 +875,14 @@ moro_vol,191,81,6	duplicate(前線基地・守護者#1)	前線基地・守護者#20	414,3,3
 
 moro_vol,114,128,1	script	コンチネンタルガード::morovol_con01	997,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "異常ありません。"; end;
-	case 1: unittalk getcharid(3), "お気をつけて。"; end;
-	case 2: unittalk getcharid(3), "ここは危険です。お下がりください。"; end;
+	case 0: npctalk  "異常ありません。"; end;
+	case 1: npctalk  "お気をつけて。"; end;
+	case 2: npctalk  "ここは危険です。お下がりください。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "ここは通さん!!";
+	npctalk  "ここは通さん!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -891,22 +891,22 @@ OnTouchNPC:
 
 moro_vol,119,130,1	script	コンチネンタルガード::morovol_con02	998,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "はい、今のところ異常はありません。"; end;
-	case 1: unittalk getcharid(3), "お気をつけください。"; end;
-	case 2: unittalk getcharid(3), "あまりここに長居は不要かと……危険ですから。"; end;
+	case 0: npctalk  "はい、今のところ異常はありません。"; end;
+	case 1: npctalk  "お気をつけください。"; end;
+	case 2: npctalk  "あまりここに長居は不要かと……危険ですから。"; end;
 	}
 }
 
 moro_vol,122,130,7	script	コンチネンタルガード::morovol_con03	997,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "危険な場所です。あまり前に出ないでください。"; end;
-	case 1: unittalk getcharid(3), "お気をつけて。"; end;
-	case 2: unittalk getcharid(3), "異常ありません。"; end;
+	case 0: npctalk  "危険な場所です。あまり前に出ないでください。"; end;
+	case 1: npctalk  "お気をつけて。"; end;
+	case 2: npctalk  "異常ありません。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "ここは通さんぞ!!";
+	npctalk  "ここは通さんぞ!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -915,30 +915,30 @@ OnTouchNPC:
 
 moro_vol,125,129,7	script	コンチネンタルガード::morovol_con04	997,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "何かあってからでは遅いので、下がってください。"; end;
-	case 1: unittalk getcharid(3), "どうぞお気をつけて。"; end;
-	case 2: unittalk getcharid(3), "異常……ありません。"; end;
+	case 0: npctalk  "何かあってからでは遅いので、下がってください。"; end;
+	case 1: npctalk  "どうぞお気をつけて。"; end;
+	case 2: npctalk  "異常……ありません。"; end;
 	}
 }
 
 moro_vol,127,127,7	script	コンチネンタルガード::morovol_con05	998,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "危険な場所ですから、気を抜かないようにしてください。"; end;
-	case 1: unittalk getcharid(3), "この場所は特に危険です。単独行動はなるべくお控えください"; end;
-	case 2: unittalk getcharid(3), "異常なし。"; end;
+	case 0: npctalk  "危険な場所ですから、気を抜かないようにしてください。"; end;
+	case 1: npctalk  "この場所は特に危険です。単独行動はなるべくお控えください"; end;
+	case 2: npctalk  "異常なし。"; end;
 	}
 }
 
 moro_vol,135,123,1	script	ミッドガルド連合軍::morovol_mid01	753,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "……アルナベルツの連中は前に出ないのか？"; end;
-	case 1: unittalk getcharid(3), "どんな奴だろうと倒してやる！"; end;
-	case 2: unittalk getcharid(3), "コンチネンタルガードって強いな。"; end;
+	case 0: npctalk  "……アルナベルツの連中は前に出ないのか？"; end;
+	case 1: npctalk  "どんな奴だろうと倒してやる！"; end;
+	case 2: npctalk  "コンチネンタルガードって強いな。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "おっと!!";
+	npctalk  "おっと!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -947,30 +947,30 @@ OnTouchNPC:
 
 moro_vol,139,124,1	script	ミッドガルド連合軍::morovol_mid02	745,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "……フン。"; end;
-	case 1: unittalk getcharid(3), "きりが無いな……。"; end;
-	case 2: unittalk getcharid(3), "……お気をつけて。"; end;
+	case 0: npctalk  "……フン。"; end;
+	case 1: npctalk  "きりが無いな……。"; end;
+	case 2: npctalk  "……お気をつけて。"; end;
 	}
 }
 
 moro_vol,143,124,1	script	ミッドガルド連合軍::morovol_mid03	735,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "ふう……。"; end;
-	case 1: unittalk getcharid(3), "……守護者達のおかげで戦いやすいな。"; end;
-	case 2: unittalk getcharid(3), "……下がっていなさい。"; end;
+	case 0: npctalk  "ふう……。"; end;
+	case 1: npctalk  "……守護者達のおかげで戦いやすいな。"; end;
+	case 2: npctalk  "……下がっていなさい。"; end;
 	}
 }
 
 moro_vol,147,124,7	script	ミッドガルド連合軍::morovol_mid04	707,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "どんな相手だろうと、逃げませんよ。"; end;
-	case 1: unittalk getcharid(3), "……いつ、この戦いは終わるのだろうか。"; end;
-	case 2: unittalk getcharid(3), "体調ともに、いまのところ、異常も問題ありません。"; end;
+	case 0: npctalk  "どんな相手だろうと、逃げませんよ。"; end;
+	case 1: npctalk  "……いつ、この戦いは終わるのだろうか。"; end;
+	case 2: npctalk  "体調ともに、いまのところ、異常も問題ありません。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵襲!!";
+	npctalk  "敵襲!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -979,30 +979,30 @@ OnTouchNPC:
 
 moro_vol,150,121,7	script	ミッドガルド連合軍::morovol_mid05	707,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "なんでいつも前衛に配置されるんだろう……。"; end;
-	case 1: unittalk getcharid(3), "……く……来るな！　って、人だったか。"; end;
-	case 2: unittalk getcharid(3), "……こ……交代はいつだ……？"; end;
+	case 0: npctalk  "なんでいつも前衛に配置されるんだろう……。"; end;
+	case 1: npctalk  "……く……来るな！　って、人だったか。"; end;
+	case 2: npctalk  "……こ……交代はいつだ……？"; end;
 	}
 }
 
 moro_vol,151,119,7	script	ミッドガルド連合軍::morovol_mid06	852,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "明日の朝には交代か……。"; end;
-	case 1: unittalk getcharid(3), "……おっと、ここから前には出ない方がいい。"; end;
-	case 2: unittalk getcharid(3), "……どこにいてもお守り係か……。"; end;
+	case 0: npctalk  "明日の朝には交代か……。"; end;
+	case 1: npctalk  "……おっと、ここから前には出ない方がいい。"; end;
+	case 2: npctalk  "……どこにいてもお守り係か……。"; end;
 	}
 }
 
 moro_vol,153,116,7	script	ミッドガルド連合軍::morovol_mid07	852,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "何もないのは良いが、精神的に疲れる……。"; end;
-	case 1: unittalk getcharid(3), "……モロク果実酒が飲みたい。"; end;
-	case 2: unittalk getcharid(3), "いったいどこから沸いてくるのか……。"; end;
+	case 0: npctalk  "何もないのは良いが、精神的に疲れる……。"; end;
+	case 1: npctalk  "……モロク果実酒が飲みたい。"; end;
+	case 2: npctalk  "いったいどこから沸いてくるのか……。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "立ち去れ!!";
+	npctalk  "立ち去れ!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1011,14 +1011,14 @@ OnTouchNPC:
 
 moro_vol,118,115,1	script	ミッドガルド連合軍::morovol_mid08	735,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "あの異端って話いつまで続けるんだ……。"; end;
-	case 1: unittalk getcharid(3), "……あれ？　並ぶ列間違えたか？"; end;
-	case 2: unittalk getcharid(3), "……なんでこんなところに……。"; end;
+	case 0: npctalk  "あの異端って話いつまで続けるんだ……。"; end;
+	case 1: npctalk  "……あれ？　並ぶ列間違えたか？"; end;
+	case 2: npctalk  "……なんでこんなところに……。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "あっちに行け!!";
+	npctalk  "あっちに行け!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1027,22 +1027,22 @@ OnTouchNPC:
 
 moro_vol,121,115,1	script	ミッドガルド連合軍::morovol_mid09	852,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "……前衛は非常に危険です。"; end;
-	case 1: unittalk getcharid(3), "……ここもうるさいな。"; end;
-	case 2: unittalk getcharid(3), "……ふう……正直、帰れるなら帰りたいです。"; end;
+	case 0: npctalk  "……前衛は非常に危険です。"; end;
+	case 1: npctalk  "……ここもうるさいな。"; end;
+	case 2: npctalk  "……ふう……正直、帰れるなら帰りたいです。"; end;
 	}
 }
 
 moro_vol,124,116,1	script	ミッドガルド連合軍::morovol_mid10	852,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "お互い、気をつけましょう。"; end;
-	case 1: unittalk getcharid(3), "異常ありません。"; end;
-	case 2: unittalk getcharid(3), "……ここは守り抜きます。"; end;
+	case 0: npctalk  "お互い、気をつけましょう。"; end;
+	case 1: npctalk  "異常ありません。"; end;
+	case 2: npctalk  "……ここは守り抜きます。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "魔族め！";
+	npctalk  "魔族め！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1051,38 +1051,38 @@ OnTouchNPC:
 
 moro_vol,128,116,1	script	ミッドガルド連合軍::morovol_mid11	852,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "……へぇ、異常ないっす。"; end;
-	case 1: unittalk getcharid(3), "……異常ありやせん……ZZz……。"; end;
-	case 2: unittalk getcharid(3), "……ね……寝てやせん……！"; end;
+	case 0: npctalk  "……へぇ、異常ないっす。"; end;
+	case 1: npctalk  "……異常ありやせん……ZZz……。"; end;
+	case 2: npctalk  "……ね……寝てやせん……！"; end;
 	}
 }
 
 moro_vol,131,115,7	script	ミッドガルド連合軍::morovol_mid12	934,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "異端者共と一緒になるとは……。"; end;
-	case 1: unittalk getcharid(3), "仕方がないとはいえ、やはり気分は良くないです。"; end;
-	case 2: unittalk getcharid(3), "女神よ、ご加護を……。"; end;
+	case 0: npctalk  "異端者共と一緒になるとは……。"; end;
+	case 1: npctalk  "仕方がないとはいえ、やはり気分は良くないです。"; end;
+	case 2: npctalk  "女神よ、ご加護を……。"; end;
 	}
 }
 
 moro_vol,133,113,7	script	ミッドガルド連合軍::morovol_mid13	939,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "おいおい、あまりうろつくと危険だ。"; end;
-	case 1: unittalk getcharid(3), "疲れたな……。"; end;
-	case 2: unittalk getcharid(3), "……交代はいつだ？"; end;
+	case 0: npctalk  "おいおい、あまりうろつくと危険だ。"; end;
+	case 1: npctalk  "疲れたな……。"; end;
+	case 2: npctalk  "……交代はいつだ？"; end;
 	}
 }
 
 moro_vol,136,111,7	script	ミッドガルド連合軍::morovol_mid14	934,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "防衛線には異常ありません。"; end;
-	case 1: unittalk getcharid(3), "お気をつけて。"; end;
-	case 2: unittalk getcharid(3), "お下がりください。"; end;
+	case 0: npctalk  "防衛線には異常ありません。"; end;
+	case 1: npctalk  "お気をつけて。"; end;
+	case 2: npctalk  "お下がりください。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵襲！";
+	npctalk  "敵襲！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1091,23 +1091,23 @@ OnTouchNPC:
 
 moro_vol,138,108,7	script	ミッドガルド連合軍::morovol_mid15	939,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "特に異常はありません。"; end;
-	case 1: unittalk getcharid(3), "前方監視中！　異常な～し！"; end;
-	case 2: unittalk getcharid(3), "……女神様のご加護がありますように……。"; end;
+	case 0: npctalk  "特に異常はありません。"; end;
+	case 1: npctalk  "前方監視中！　異常な～し！"; end;
+	case 2: npctalk  "……女神様のご加護がありますように……。"; end;
 	}
 }
 
 moro_vol,93,128,1	script	戦士ラフィネ#line01	461,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "気をつけてください！"; end;
-	case 1: unittalk getcharid(3), "危険なので後ろに下がってください！"; end;
-	case 2: unittalk getcharid(3), "異常なし！"; end;
-	case 3: unittalk getcharid(3), "はい～はい～。"; end;
+	case 0: npctalk  "気をつけてください！"; end;
+	case 1: npctalk  "危険なので後ろに下がってください！"; end;
+	case 2: npctalk  "異常なし！"; end;
+	case 3: npctalk  "はい～はい～。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵発見!!";
+	npctalk  "敵発見!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1116,24 +1116,24 @@ OnTouchNPC:
 
 moro_vol,96,130,1	script	戦士ラフィネ#line02	461,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "危険なほどに燃えるっすよ！"; end;
-	case 1: unittalk getcharid(3), "うっす、うっす！"; end;
-	case 2: unittalk getcharid(3), "異常は……ありませんっす！"; end;
-	case 3: unittalk getcharid(3), "気合い十分っす！"; end;
+	case 0: npctalk  "危険なほどに燃えるっすよ！"; end;
+	case 1: npctalk  "うっす、うっす！"; end;
+	case 2: npctalk  "異常は……ありませんっす！"; end;
+	case 3: npctalk  "気合い十分っす！"; end;
 	}
 }
 
 moro_vol,99,131,1	script	戦士ラフィネ#line03	461,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "元気があれば、ごはんがうまい。"; end;
-	case 1: unittalk getcharid(3), "……出番きちゃった!?"; end;
-	case 2: unittalk getcharid(3), "異常……なし……多分。"; end;
-	case 3: unittalk getcharid(3), "ふぁい……。"; end;
+	case 0: npctalk  "元気があれば、ごはんがうまい。"; end;
+	case 1: npctalk  "……出番きちゃった!?"; end;
+	case 2: npctalk  "異常……なし……多分。"; end;
+	case 3: npctalk  "ふぁい……。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "く……くるな!!";
+	npctalk  "く……くるな!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1142,24 +1142,24 @@ OnTouchNPC:
 
 moro_vol,102,132,7	script	戦士ラフィネ#line04	447,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "武器の手入れも万全です。"; end;
-	case 1: unittalk getcharid(3), "危ないので、ここはお任せください！"; end;
-	case 2: unittalk getcharid(3), "異常はありません。"; end;
-	case 3: unittalk getcharid(3), "ご苦労様です。"; end;
+	case 0: npctalk  "武器の手入れも万全です。"; end;
+	case 1: npctalk  "危ないので、ここはお任せください！"; end;
+	case 2: npctalk  "異常はありません。"; end;
+	case 3: npctalk  "ご苦労様です。"; end;
 	}
 }
 
 moro_vol,105,132,7	script	戦士ラフィネ#line05	462,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "どうかお下がりください。"; end;
-	case 1: unittalk getcharid(3), "緊張します……。"; end;
-	case 2: unittalk getcharid(3), "お互い、気をつけましょう。"; end;
-	case 3: unittalk getcharid(3), "ご苦労様です。"; end;
+	case 0: npctalk  "どうかお下がりください。"; end;
+	case 1: npctalk  "緊張します……。"; end;
+	case 2: npctalk  "お互い、気をつけましょう。"; end;
+	case 3: npctalk  "ご苦労様です。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "ここは通さない！";
+	npctalk  "ここは通さない！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1168,24 +1168,24 @@ OnTouchNPC:
 
 moro_vol,108,131,7	script	戦士ラフィネ#line06	461,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "命あってこそですから、気をつけてください。"; end;
-	case 1: unittalk getcharid(3), "ふーむ……。"; end;
-	case 2: unittalk getcharid(3), "ここは危険ですよ！"; end;
-	case 3: unittalk getcharid(3), "いつ襲撃がくるんだろうか……。"; end;
+	case 0: npctalk  "命あってこそですから、気をつけてください。"; end;
+	case 1: npctalk  "ふーむ……。"; end;
+	case 2: npctalk  "ここは危険ですよ！"; end;
+	case 3: npctalk  "いつ襲撃がくるんだろうか……。"; end;
 	}
 }
 
 moro_vol,111,129,7	script	戦士ラフィネ#line07	447,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "異常はありません!!"; end;
-	case 1: unittalk getcharid(3), "どうぞ、ここは任せてください！"; end;
-	case 2: unittalk getcharid(3), "……皆、のんきだな。"; end;
-	case 3: unittalk getcharid(3), "ううーん……。"; end;
+	case 0: npctalk  "異常はありません!!"; end;
+	case 1: npctalk  "どうぞ、ここは任せてください！"; end;
+	case 2: npctalk  "……皆、のんきだな。"; end;
+	case 3: npctalk  "ううーん……。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵だ!!";
+	npctalk  "敵だ!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1194,15 +1194,15 @@ OnTouchNPC:
 
 moro_vol,85,117,1	script	戦士ラフィネ#line11	462,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "油断は禁物ですっ！"; end;
-	case 1: unittalk getcharid(3), "前衛に比べればマシなんでしょうけど……。"; end;
-	case 2: unittalk getcharid(3), "世界樹の加護がありますよーに……。"; end;
-	case 3: unittalk getcharid(3), "い、異常ありまっ……!!　ひた、かんじゃいまひた……。"; end;
+	case 0: npctalk  "油断は禁物ですっ！"; end;
+	case 1: npctalk  "前衛に比べればマシなんでしょうけど……。"; end;
+	case 2: npctalk  "世界樹の加護がありますよーに……。"; end;
+	case 3: npctalk  "い、異常ありまっ……!!　ひた、かんじゃいまひた……。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "ここまで来るなんて！";
+	npctalk  "ここまで来るなんて！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1211,24 +1211,24 @@ OnTouchNPC:
 
 moro_vol,89,118,1	script	戦士ラフィネ#line12	447,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "逃げちゃだめだぞ！　逃げちゃ～……！"; end;
-	case 1: unittalk getcharid(3), "敵がこうきたら、こう動いて……。"; end;
-	case 2: unittalk getcharid(3), "前の方は大丈夫ですかね……。"; end;
-	case 3: unittalk getcharid(3), "異常……あ・り・ま・せん！"; end;
+	case 0: npctalk  "逃げちゃだめだぞ！　逃げちゃ～……！"; end;
+	case 1: npctalk  "敵がこうきたら、こう動いて……。"; end;
+	case 2: npctalk  "前の方は大丈夫ですかね……。"; end;
+	case 3: npctalk  "異常……あ・り・ま・せん！"; end;
 	}
 }
 
 moro_vol,92,119,7	script	戦士ラフィネ#line13	447,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "些細なことでも、ご注意ください！"; end;
-	case 1: unittalk getcharid(3), "必ず、やり遂げます！"; end;
-	case 2: unittalk getcharid(3), "前方の皆が心配です……大丈夫でしょうけど。"; end;
-	case 3: unittalk getcharid(3), "異常、今のところありません！"; end;
+	case 0: npctalk  "些細なことでも、ご注意ください！"; end;
+	case 1: npctalk  "必ず、やり遂げます！"; end;
+	case 2: npctalk  "前方の皆が心配です……大丈夫でしょうけど。"; end;
+	case 3: npctalk  "異常、今のところありません！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵襲だぞ!!";
+	npctalk  "敵襲だぞ!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1237,24 +1237,24 @@ OnTouchNPC:
 
 moro_vol,96,119,7	script	戦士ラフィネ#line14	461,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "緊張感を維持するのは、大変です……。"; end;
-	case 1: unittalk getcharid(3), "みんな無事に帰れたら良いな……。"; end;
-	case 2: unittalk getcharid(3), "何か気づいたら即、ご連絡しますね。"; end;
-	case 3: unittalk getcharid(3), "異常は、ありません。"; end;
+	case 0: npctalk  "緊張感を維持するのは、大変です……。"; end;
+	case 1: npctalk  "みんな無事に帰れたら良いな……。"; end;
+	case 2: npctalk  "何か気づいたら即、ご連絡しますね。"; end;
+	case 3: npctalk  "異常は、ありません。"; end;
 	}
 }
 
 moro_vol,100,117,7	script	戦士ラフィネ#line15	447,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "前衛の動向が見えないのが辛いですね……。"; end;
-	case 1: unittalk getcharid(3), "敵の動向が気になりますね……。"; end;
-	case 2: unittalk getcharid(3), "いつ何が起きるか……。"; end;
-	case 3: unittalk getcharid(3), "異常は今のところありません。"; end;
+	case 0: npctalk  "前衛の動向が見えないのが辛いですね……。"; end;
+	case 1: npctalk  "敵の動向が気になりますね……。"; end;
+	case 2: npctalk  "いつ何が起きるか……。"; end;
+	case 3: npctalk  "異常は今のところありません。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "倒してやる!!";
+	npctalk  "倒してやる!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1263,24 +1263,24 @@ OnTouchNPC:
 
 moro_vol,103,118,1	script	戦士ラフィネ#line16	462,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "前方に友人がいるので、前方が気になります。"; end;
-	case 1: unittalk getcharid(3), "とりあえず今のところ、何もありません。"; end;
-	case 2: unittalk getcharid(3), "油断しないで行きましょう、敵陣ですし。"; end;
-	case 3: unittalk getcharid(3), "異常なしっ！"; end;
+	case 0: npctalk  "前方に友人がいるので、前方が気になります。"; end;
+	case 1: npctalk  "とりあえず今のところ、何もありません。"; end;
+	case 2: npctalk  "油断しないで行きましょう、敵陣ですし。"; end;
+	case 3: npctalk  "異常なしっ！"; end;
 	}
 }
 
 moro_vol,107,118,7	script	戦士ラフィネ#line17	462,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "いつ敵襲がきてもいいように、スマイルの練習♪"; end;
-	case 1: unittalk getcharid(3), "はふ～……。"; end;
-	case 2: unittalk getcharid(3), "油断大敵！　あれ……？　油断敵対でしたっけ？"; end;
-	case 3: unittalk getcharid(3), "異常、ありません♪"; end;
+	case 0: npctalk  "いつ敵襲がきてもいいように、スマイルの練習♪"; end;
+	case 1: npctalk  "はふ～……。"; end;
+	case 2: npctalk  "油断大敵！　あれ……？　油断敵対でしたっけ？"; end;
+	case 3: npctalk  "異常、ありません♪"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "いきま～すっ♪";
+	npctalk  "いきま～すっ♪";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1289,24 +1289,24 @@ OnTouchNPC:
 
 moro_vol,110,117,7	script	戦士ラフィネ#line18	461,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "木の橋を飛んで渡るくらい、慎重に行かねば……。"; end;
-	case 1: unittalk getcharid(3), "見えない前のメンバーにも注意しておこう。"; end;
-	case 2: unittalk getcharid(3), "どこに敵が潜んでいるか分からないしな……。"; end;
-	case 3: unittalk getcharid(3), "アレでも仲間だが、サファ族が裏切らない保証がない……。"; end;
+	case 0: npctalk  "木の橋を飛んで渡るくらい、慎重に行かねば……。"; end;
+	case 1: npctalk  "見えない前のメンバーにも注意しておこう。"; end;
+	case 2: npctalk  "どこに敵が潜んでいるか分からないしな……。"; end;
+	case 3: npctalk  "アレでも仲間だが、サファ族が裏切らない保証がない……。"; end;
 	}
 }
 
 moro_vol,114,114,7	script	戦士ラフィネ#line19	461,3,3,{
 	switch(rand(4)) {
-	case 0: unittalk getcharid(3), "サファ族のやつらと一緒だと、多少不安っす……。"; end;
-	case 1: unittalk getcharid(3), "注意を怠らないようにがんばるっす！"; end;
-	case 2: unittalk getcharid(3), "大丈夫っす、問題ないっす。"; end;
-	case 3: unittalk getcharid(3), "異常、ないっす！"; end;
+	case 0: npctalk  "サファ族のやつらと一緒だと、多少不安っす……。"; end;
+	case 1: npctalk  "注意を怠らないようにがんばるっす！"; end;
+	case 2: npctalk  "大丈夫っす、問題ないっす。"; end;
+	case 3: npctalk  "異常、ないっす！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵っす！　敵っすよー！";
+	npctalk  "敵っす！　敵っすよー！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1315,14 +1315,14 @@ OnTouchNPC:
 
 moro_vol,139,104,1	script	マヌク守護隊#line01	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "ふむ！"; end;
-	case 1: unittalk getcharid(3), "異常なし。"; end;
-	case 2: unittalk getcharid(3), "下がれ！　人間！"; end;
+	case 0: npctalk  "ふむ！"; end;
+	case 1: npctalk  "異常なし。"; end;
+	case 2: npctalk  "下がれ！　人間！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "小ざかしい！";
+	npctalk  "小ざかしい！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1331,14 +1331,14 @@ OnTouchNPC:
 
 moro_vol,143,106,1	script	マヌク守護隊#line02	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "俺様の目が黒いうちは、何もさせん！"; end;
-	case 1: unittalk getcharid(3), "うむ！　今日も絶好調だ！"; end;
-	case 2: unittalk getcharid(3), "下がるんだな！　人間！"; end;
+	case 0: npctalk  "俺様の目が黒いうちは、何もさせん！"; end;
+	case 1: npctalk  "うむ！　今日も絶好調だ！"; end;
+	case 2: npctalk  "下がるんだな！　人間！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵だ！";
+	npctalk  "敵だ！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1347,22 +1347,22 @@ OnTouchNPC:
 
 moro_vol,147,108,1	script	マヌク守護隊#line03	492,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "……ふん。"; end;
-	case 1: unittalk getcharid(3), "異常はない。"; end;
-	case 2: unittalk getcharid(3), "どこかで虫の羽音が聞こえるな！　え～んとな！"; end;
+	case 0: npctalk  "……ふん。"; end;
+	case 1: npctalk  "異常はない。"; end;
+	case 2: npctalk  "どこかで虫の羽音が聞こえるな！　え～んとな！"; end;
 	}
 }
 
 moro_vol,152,109,1	script	マヌク守護隊#line04	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "異常なし。"; end;
-	case 1: unittalk getcharid(3), "ここは問題ないぞ！"; end;
-	case 2: unittalk getcharid(3), "下がっておれ！　人間！"; end;
+	case 0: npctalk  "異常なし。"; end;
+	case 1: npctalk  "ここは問題ないぞ！"; end;
+	case 2: npctalk  "下がっておれ！　人間！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "通さぬ!!";
+	npctalk  "通さぬ!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1371,22 +1371,22 @@ OnTouchNPC:
 
 moro_vol,156,110,1	script	マヌク守護隊#line05	492,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "……なぜラフィネ族なんかと……。"; end;
-	case 1: unittalk getcharid(3), "……羽根つきとは違うのだ、羽根つきとは。"; end;
-	case 2: unittalk getcharid(3), "お前は羽根なしのようだな。"; end;
+	case 0: npctalk  "……なぜラフィネ族なんかと……。"; end;
+	case 1: npctalk  "……羽根つきとは違うのだ、羽根つきとは。"; end;
+	case 2: npctalk  "お前は羽根なしのようだな。"; end;
 	}
 }
 
 moro_vol,160,110,7	script	マヌク守護隊#line06	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "異常なーし！"; end;
-	case 1: unittalk getcharid(3), "うぬうぬ！"; end;
-	case 2: unittalk getcharid(3), "そこにいると邪魔だ！　人間！"; end;
+	case 0: npctalk  "異常なーし！"; end;
+	case 1: npctalk  "うぬうぬ！"; end;
+	case 2: npctalk  "そこにいると邪魔だ！　人間！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "笑わせるな！";
+	npctalk  "笑わせるな！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1395,22 +1395,22 @@ OnTouchNPC:
 
 moro_vol,164,109,7	script	マヌク守護隊#line07	492,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "くっくっくっく！"; end;
-	case 1: unittalk getcharid(3), "異常？　ないぞ。"; end;
-	case 2: unittalk getcharid(3), "ラフィネ族なんぞに負けぬ。"; end;
+	case 0: npctalk  "くっくっくっく！"; end;
+	case 1: npctalk  "異常？　ないぞ。"; end;
+	case 2: npctalk  "ラフィネ族なんぞに負けぬ。"; end;
 	}
 }
 
 moro_vol,167,107,7	script	マヌク守護隊#line08	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "ふんっ！　ふんっ！　ふーんっ！"; end;
-	case 1: unittalk getcharid(3), "やることがない時は、鍛錬に限るのだ！"; end;
-	case 2: unittalk getcharid(3), "ふん、わしの屈強な肉体に怖気づいたか。"; end;
+	case 0: npctalk  "ふんっ！　ふんっ！　ふーんっ！"; end;
+	case 1: npctalk  "やることがない時は、鍛錬に限るのだ！"; end;
+	case 2: npctalk  "ふん、わしの屈強な肉体に怖気づいたか。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵か！";
+	npctalk  "敵か！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1419,22 +1419,22 @@ OnTouchNPC:
 
 moro_vol,169,104,7	script	マヌク守護隊#line09	492,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "ううむ、手持ち無沙汰だ。"; end;
-	case 1: unittalk getcharid(3), "……なにか斬るものをくれ。"; end;
-	case 2: unittalk getcharid(3), "武器を振り回すと怒られるだろうしな……。"; end;
+	case 0: npctalk  "ううむ、手持ち無沙汰だ。"; end;
+	case 1: npctalk  "……なにか斬るものをくれ。"; end;
+	case 2: npctalk  "武器を振り回すと怒られるだろうしな……。"; end;
 	}
 }
 
 moro_vol,171,100,5	script	マヌク守護隊#line10	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "こう見えて、手先は器用なのだぞ。"; end;
-	case 1: unittalk getcharid(3), "扱うだけが武器じゃない。手入れも忘れずにな。"; end;
-	case 2: unittalk getcharid(3), "そんなひ弱な体で、よく動けるものだ。"; end;
+	case 0: npctalk  "こう見えて、手先は器用なのだぞ。"; end;
+	case 1: npctalk  "扱うだけが武器じゃない。手入れも忘れずにな。"; end;
+	case 2: npctalk  "そんなひ弱な体で、よく動けるものだ。"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "なめるんじゃねーぞ!!";
+	npctalk  "なめるんじゃねーぞ!!";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1443,22 +1443,22 @@ OnTouchNPC:
 
 moro_vol,172,95,5	script	マヌク守護隊#line11	492,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "今日もハズレのようだな。"; end;
-	case 1: unittalk getcharid(3), "血沸き肉踊る戦いはいつ始まるんだ……。"; end;
-	case 2: unittalk getcharid(3), "勇敢なガルトンは退きはしない！"; end;
+	case 0: npctalk  "今日もハズレのようだな。"; end;
+	case 1: npctalk  "血沸き肉踊る戦いはいつ始まるんだ……。"; end;
+	case 2: npctalk  "勇敢なガルトンは退きはしない！"; end;
 	}
 }
 
 moro_vol,173,89,5	script	マヌク守護隊#line12	492,3,3,{
 	switch(rand(3)) {
-	case 0: unittalk getcharid(3), "体が鈍るな……。"; end;
-	case 1: unittalk getcharid(3), "酒でも飲みたい気分だぜ……。"; end;
-	case 2: unittalk getcharid(3), "このような機会、滅多にないからな！"; end;
+	case 0: npctalk  "体が鈍るな……。"; end;
+	case 1: npctalk  "酒でも飲みたい気分だぜ……。"; end;
+	case 2: npctalk  "このような機会、滅多にないからな！"; end;
 	}
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "うおーっ！";
+	npctalk  "うおーっ！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1474,7 +1474,7 @@ moro_vol,100,183,1	script	駐屯地 番卒#bl0	417,3,3,{
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "あっちへ行け！";
+	npctalk  "あっちへ行け！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1490,7 +1490,7 @@ moro_vol,102,188,1	script	駐屯地 番卒#bl1	417,3,3,{
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "敵襲だ！";
+	npctalk  "敵襲だ！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1506,7 +1506,7 @@ moro_vol,104,193,1	script	駐屯地 番卒#bl2	417,3,3,{
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "くらえ！";
+	npctalk  "くらえ！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1522,7 +1522,7 @@ moro_vol,95,182,1	script	駐屯地 番卒#bl3	417,3,3,{
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "魔物どもめ！";
+	npctalk  "魔物どもめ！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -1538,7 +1538,7 @@ moro_vol,90,181,7	script	駐屯地 番卒#bl4	417,3,3,{
 OnTouch:
 	end;
 OnTouchNPC:
-	unittalk getcharid(3), "通さんぞ！";
+	npctalk  "通さんぞ！";
 	misceffect 92;
 	set .@dummy,sleep2(2000);
 	warp "Random",0,0;
@@ -6767,10 +6767,10 @@ ecl_in01,44,99,1	script	ラフィネ兵士#143_4	461,{
 	mes "……緊張してきましたね。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "おー！";
+	npctalk  "おー！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "……";
+	npctalk  "……";
 	end;
 }
 
@@ -6779,10 +6779,10 @@ ecl_in01,46,99,1	script	ラフィネ兵士#143_5	461,{
 	mes "無事に戻って来られるかな。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "おー！";
+	npctalk  "おー！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "……あ……";
+	npctalk  "……あ……";
 	end;
 }
 
@@ -6791,10 +6791,10 @@ ecl_in01,48,99,1	script	ラフィネ兵士#143_6	461,{
 	mes "ふむ……。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "おー！";
+	npctalk  "おー！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "……";
+	npctalk  "……";
 	end;
 }
 
@@ -6803,10 +6803,10 @@ ecl_in01,44,97,1	script	ラフィネ兵士#143_7	462,{
 	mes "静かに。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "えっ！";
+	npctalk  "えっ！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "えいえいお～";
+	npctalk  "えいえいお～";
 	end;
 }
 
@@ -6816,10 +6816,10 @@ ecl_in01,46,97,1	script	ラフィネ兵士#143_8	462,{
 	mes "お見せするチャンスが来たか。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "おー！";
+	npctalk  "おー！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "……";
+	npctalk  "……";
 	end;
 }
 
@@ -6832,10 +6832,10 @@ ecl_in01,48,97,1	script	ラフィネ兵士#143_9	462,{
 	mes "どうしてあんなに難しいんだ……。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "おー！";
+	npctalk  "おー！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "……";
+	npctalk  "……";
 	end;
 }
 
@@ -6856,7 +6856,7 @@ OnTouch:
 		initnpctimer;
 	end;
 OnTimer3000:
-	unittalk getcharid(3), "指揮官 : 諸君！　いよいよ我々が訓練の成果を見せる時が来た！";
+	npctalk  "指揮官 : 諸君！　いよいよ我々が訓練の成果を見せる時が来た！";
 	end;
 OnTimer5000:
 	donpcevent "ラフィネ兵士#143_4::OnTalk1";
@@ -6867,13 +6867,13 @@ OnTimer5000:
 	donpcevent "ラフィネ兵士#143_9::OnTalk1";
 	end;
 OnTimer8000:
-	unittalk getcharid(3), "指揮官 : なんだ？　途中に変な声が混ざっていたぞ？";
+	npctalk  "指揮官 : なんだ？　途中に変な声が混ざっていたぞ？";
 	end;
 OnTimer11000:
-	unittalk getcharid(3), "指揮官 : 前線基地スプレンディッドの戦友達に引けをとらない姿を見せなければならない。";
+	npctalk  "指揮官 : 前線基地スプレンディッドの戦友達に引けをとらない姿を見せなければならない。";
 	end;
 OnTimer14000:
-	unittalk getcharid(3), "指揮官 : 気をしっかり引き締めろ！　私たちは魔王に会いに行くんだ!!";
+	npctalk  "指揮官 : 気をしっかり引き締めろ！　私たちは魔王に会いに行くんだ!!";
 	end;
 OnTimer16000:
 	donpcevent "ラフィネ兵士#143_7::OnTalk2";
@@ -6886,7 +6886,7 @@ OnTimer18000:
 	//donpcevent "ラフィネ兵士#143_9::OnTalk2";
 	end;
 OnTimer21000:
-	unittalk getcharid(3), "指揮官 : あれ……なぜだ？　どうして急におとなしくなってしまうんだ……？";
+	npctalk  "指揮官 : あれ……なぜだ？　どうして急におとなしくなってしまうんだ……？";
 	end;
 OnTimer24000:
 	stopnpctimer;

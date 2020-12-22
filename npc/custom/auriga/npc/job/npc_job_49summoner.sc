@@ -892,10 +892,10 @@ do_tu01a,35,288,3	script	自警団員アジェニャー#do	10162,{
 		end;
 	}
 OnTalk1:
-	unittalk getcharid(3), "自警団員アジェニャー : おい、そこの新入り！　こっちだ！";
+	npctalk  "自警団員アジェニャー : おい、そこの新入り！　こっちだ！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "自警団員アジェニャー : こっちに来て！　私をクリックするんだ！";
+	npctalk  "自警団員アジェニャー : こっちに来て！　私をクリックするんだ！";
 	end;
 }
 
@@ -2274,7 +2274,7 @@ do_tu01a,52,323,4	script	旅の行商人#do_tu01a	10163,{
 do_tu01a,62,320,3	script	道具屋の末っ子#do_tu01a	10167,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "道具屋の末っ子 : ア……アリオオオ！！！";
+	npctalk  "道具屋の末っ子 : ア……アリオオオ！！！";
 	end;
 OnInit:
 	cloakonnpc strnpcinfo(0);
@@ -2671,10 +2671,10 @@ do_tu02a,224,126,5	script	治療師ハル#do_tu02a	10164,{
 do_tu02a,226,124,3	script	道具屋の末っ子#do_tu02a	10167,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "道具屋の末っ子 : お、おまたせしましたー！";
+	npctalk  "道具屋の末っ子 : お、おまたせしましたー！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "道具屋の末っ子 : ご利用ありがとうございましたー！";
+	npctalk  "道具屋の末っ子 : ご利用ありがとうございましたー！";
 	end;
 OnInit:
 	cloakonnpc strnpcinfo(0);
@@ -2684,7 +2684,7 @@ OnInit:
 do_tu02a,230,127,3	script	自警団員アリオ#do_tu02a	10154,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "自警団員アリオ : ちょうど用事が済んだようだな。";
+	npctalk  "自警団員アリオ : ちょうど用事が済んだようだな。";
 	end;
 OnInit:
 	cloakonnpc strnpcinfo(0);
@@ -4136,7 +4136,7 @@ do_tu05a,24,62,5	script	ステルロー#do_tu05a	10156,{
 		close;
 	}
 OnTalk1:
-	unittalk getcharid(3), "ステルロー : アイアイサー！";
+	npctalk  "ステルロー : アイアイサー！";
 	end;
 }
 
@@ -4155,7 +4155,7 @@ do_tu05a,22,60,5	script	甲板長#do_tu05a_2	421,{
 	mes "早く何とかしてほしいもんだぜ。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "甲板長 : アイアイサー！";
+	npctalk  "甲板長 : アイアイサー！";
 	end;
 OnInit:
 	cloakonnpc strnpcinfo(0);
@@ -4168,7 +4168,7 @@ do_tu05a,21,56,3	script	操舵手#do_tu05a_2	561,{
 	mes "出航できるのかねえ。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "操舵手 : アイアイサー！";
+	npctalk  "操舵手 : アイアイサー！";
 	end;
 OnInit:
 	cloakonnpc strnpcinfo(0);
@@ -4873,28 +4873,28 @@ do_tu02a,232,181,5	script	リンギュイーネ#do_tu02a	559,{
 }
 
 do_tu02a,190,239,5	script	幼いニャンコ#do_tu02a_0	559,{
-	unittalk getcharid(3), "幼いニャンコ : 私はこの遊び場の隊長だにゃ～。";
+	npctalk  "幼いニャンコ : 私はこの遊び場の隊長だにゃ～。";
 	end;
 }
 
 do_tu02a,180,230,7	script	幼いニャンコ#do_tu02a_0	560,{
-	unittalk getcharid(3), "幼いニャンコ : ハァ……こんな幼稚なやつらとは一緒に遊べないにゃ～。";
+	npctalk  "幼いニャンコ : ハァ……こんな幼稚なやつらとは一緒に遊べないにゃ～。";
 	end;
 }
 
 do_tu02a,192,245,7	script	幼いニャンコ#do_tu02a_0	554,{
-	unittalk getcharid(3), "幼いニャンコ : 毛玉の塊がひとつ、ななつ、ふたつ、むっつ……多いにゃ!!";
+	npctalk  "幼いニャンコ : 毛玉の塊がひとつ、ななつ、ふたつ、むっつ……多いにゃ!!";
 	end;
 }
 
 do_tu02a,184,234,5	script	幼いニャンコ#do_tu02a_0	422,{
-	unittalk getcharid(3), "幼いニャンコ : シーソーに乗りながら一緒に遊びたいやつは集まれ～。";
+	npctalk  "幼いニャンコ : シーソーに乗りながら一緒に遊びたいやつは集まれ～。";
 	end;
 }
 
 do_tu02a,186,231,3	script	幼いニャンコ#do_tu02a_0	10167,{
 	emotion 28;
-	unittalk getcharid(3), "幼いニャンコ : これどうして転がらないにゃ～？転がるようにしてにゃ～。";
+	npctalk  "幼いニャンコ : これどうして転がらないにゃ～？転がるようにしてにゃ～。";
 	end;
 }
 

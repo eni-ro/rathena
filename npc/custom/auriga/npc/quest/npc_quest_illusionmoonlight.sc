@@ -174,7 +174,7 @@ payon,167,229,3	script	元老ジャギョム#ilp02	901,{
 
 pay_arche,48,137,3	script	青年学士#ilp03	92,{
 	if(IL_MOON_QUE == 0) {
-		unittalk getcharid(3), "青年学士 : どうして出てこないんだ……",1;
+		npctalk  "青年学士 : どうして出てこないんだ……",1;
 		end;
 	}
 	else if(IL_MOON_QUE == 1) {
@@ -224,7 +224,7 @@ pay_arche,48,137,3	script	青年学士#ilp03	92,{
 		cloakoffnpc "ムヒョン#ilp04";
 		cloakoffnpc "兵士シンジュウヒ#ilp05";
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "青年学士 : 出て来ました！無事みたいです！",1;
+		npctalk  "青年学士 : 出て来ました！無事みたいです！",1;
 		if(!sleep2(2000)) end;
 		unittalk getnpcid(0,"ムヒョン#ilp04"),"ムヒョン : ああ！もうやめる！浄化なんかやめたぁぁぁ!!",1;
 		if(!sleep2(100)) end;
@@ -246,7 +246,7 @@ pay_arche,48,137,3	script	青年学士#ilp03	92,{
 		if(!sleep2(2000)) end;
 		unittalk getnpcid(0,"兵士シンジュウヒ#ilp05"),"兵士シンジュウヒ : 適当にやってろ。",1;
 		if(!sleep2(100)) end;
-		unittalk getcharid(3), "青年学士 : ちょっと、酷くないか。",1;
+		npctalk  "青年学士 : ちょっと、酷くないか。",1;
 		next;
 		mes "[ムヒョン]";
 		mes "あ！私もうこれやめた。";
@@ -379,39 +379,39 @@ payon_in03,33,95,3	script	ムヒョン#ilp07	644,{
 		close;
 	}
 	else if(IL_MOON_QUE == 2) {
-		unittalk getcharid(3), "ムヒョン : だからいくら話しても私はもうやりません！",1;
+		npctalk  "ムヒョン : だからいくら話しても私はもうやりません！",1;
 		if(!sleep2(3000)) end;
-		unittalk getcharid(3), "ムヒョン : これでもう三回目ですよ。もうこの悪夢とは関わりたくないです。",1;
+		npctalk  "ムヒョン : これでもう三回目ですよ。もうこの悪夢とは関わりたくないです。",1;
 		if(!sleep2(100)) end;
 		unittalk getcharid(3),strcharinfo(0)+ " : 悪夢？",1;
 		if(!sleep2(100)) end;
 		unittalk getnpcid(0,"青年学士#ilp08"),"青年学士 : 悪夢？",1;
 		if(!sleep2(3000)) end;
-		unittalk getcharid(3), "ムヒョン : 狐の悪夢だよ。そこに九尾狐と月夜花がいたんだ。",1;
+		npctalk  "ムヒョン : 狐の悪夢だよ。そこに九尾狐と月夜花がいたんだ。",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : とても酷い内容だった。二度とあんな経験をしたくない。",1;
+		npctalk  "ムヒョン : とても酷い内容だった。二度とあんな経験をしたくない。",1;
 		if(!sleep2(3000)) end;
 		unittalk getnpcid(0,"ジャギョム#ilp09"),"ジャギョム : だけど君がやらなければ誰がそれを浄化するんだ？",1;
 		if(!sleep2(2000)) end;
 		unittalk getnpcid(0,"ジャギョム#ilp09"),"ジャギョム : みんな出来ないと辞めていった。それでもムヒョン君は三回もやったじゃないか。",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : それがですね、今回は嫌な夢で終わるだけではなかったんですよ。",1;
+		npctalk  "ムヒョン : それがですね、今回は嫌な夢で終わるだけではなかったんですよ。",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : 今までは狐玉に込められた悪夢の気を浄化すると、嫌な夢を見ていただけだったのに……",1;
+		npctalk  "ムヒョン : 今までは狐玉に込められた悪夢の気を浄化すると、嫌な夢を見ていただけだったのに……",1;
 		if(!sleep2(3000)) end;
 		unittalk getnpcid(0,"青年学士#ilp08"),"青年学士 : 今回は何が違うんですか？",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : ……",1;
+		npctalk  "ムヒョン : ……",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : 夢と現実の境界が崩れるのではと不安を感じた。",1;
+		npctalk  "ムヒョン : 夢と現実の境界が崩れるのではと不安を感じた。",1;
 		if(!sleep2(3000)) end;
 		unittalk getnpcid(0,"ジャギョム#ilp09"),"ジャギョム : ……それは何の話だ！今まではただ九尾狐の怨念を鎮めるだけで良かったじゃないか。",1;
 		if(!sleep2(3000)) end;
 		unittalk getnpcid(0,"ジャギョム#ilp09"),"ジャギョム : いったい洞窟で何を見たんだ？",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : 私が言葉でいくら説明するより、直接見た方が良いと思いますよ。",1;
+		npctalk  "ムヒョン : 私が言葉でいくら説明するより、直接見た方が良いと思いますよ。",1;
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : どうせなら強い方がいいです。今いらっしゃっている冒険者の人くらい。",1;
+		npctalk  "ムヒョン : どうせなら強い方がいいです。今いらっしゃっている冒険者の人くらい。",1;
 		chgquest 7777,7778;
 		set IL_MOON_QUE,3;
 		end;
@@ -539,12 +539,12 @@ payon_in03,33,95,3	script	ムヒョン#ilp07	644,{
 		mes "心の扉を開いて";
 		mes "受け入れなければなりません。";
 		close2;
-		unittalk getcharid(3), "ムヒョン : 見よ、聞きなさい、彷徨う魂よ",1;
+		npctalk  "ムヒョン : 見よ、聞きなさい、彷徨う魂よ",1;
 		if(!sleep2(100)) end;
 		misceffect 389, "ムヒョン#ilp07";
 		misceffect 513, "ムヒョン#ilp07";
 		if(!sleep2(2500)) end;
-		unittalk getcharid(3), "ムヒョン : 三途の川の向こうを見ろ。",1;
+		npctalk  "ムヒョン : 三途の川の向こうを見ろ。",1;
 		if(!sleep2(100)) end;
 		misceffect 402, "ムヒョン#ilp07";
 		misceffect 458, "ムヒョン#ilp07";
@@ -565,7 +565,7 @@ payon_in03,33,95,3	script	ムヒョン#ilp07	644,{
 		misceffect 458, "#狐魂ilp11";
 		misceffect 458, "#狐魂ilp12";
 		misceffect 458, "#狐魂ilp13";
-		unittalk getcharid(3), "ムヒョン : 見るな、聞くな、悔しい魂よ。",1;
+		npctalk  "ムヒョン : 見るな、聞くな、悔しい魂よ。",1;
 		misceffect 475,"";
 		misceffect 458, "#狐魂ilp10";
 		misceffect 458, "#狐魂ilp11";
@@ -579,7 +579,7 @@ payon_in03,33,95,3	script	ムヒョン#ilp07	644,{
 		misceffect 458, "#狐魂ilp12";
 		misceffect 458, "#狐魂ilp13";
 		unittalk getnpcid(0,"#狐魂ilp11"),"狐魂 : 死ね";
-		unittalk getcharid(3), "ムヒョン : この世から背を向け",1;
+		npctalk  "ムヒョン : この世から背を向け",1;
 		if(!sleep2(100)) end;
 		misceffect 484,"";
 		misceffect 458, "#狐魂ilp10";
@@ -592,7 +592,7 @@ payon_in03,33,95,3	script	ムヒョン#ilp07	644,{
 		if(!sleep2(100)) end;
 		unittalk getnpcid(0,"#狐魂ilp13"),"狐魂 : 死ね",1;
 		if(!sleep2(1000)) end;
-		unittalk getcharid(3), "ムヒョン : 重いものはここに置いて",1;
+		npctalk  "ムヒョン : 重いものはここに置いて",1;
 		if(!sleep2(100)) end;
 		misceffect 692, "#狐魂ilp10";
 		misceffect 692, "#狐魂ilp11";
@@ -606,7 +606,7 @@ payon_in03,33,95,3	script	ムヒョン#ilp07	644,{
 		misceffect 899, "ムヒョン#ilp07";
 		misceffect 563, "ムヒョン#ilp07";
 		if(!sleep2(2000)) end;
-		unittalk getcharid(3), "ムヒョン : 川の向こうへと飛んで行け",1;
+		npctalk  "ムヒョン : 川の向こうへと飛んで行け",1;
 		if(!sleep2(100)) end;
 		misceffect 626, "#狐魂ilp10";
 		misceffect 626, "#狐魂ilp11";
@@ -746,11 +746,11 @@ payon_in03,33,93,1	script	青年学士#ilp08	92,{
 		close;
 	}
 	else if(IL_MOON_QUE == 2) {
-		unittalk getcharid(3), "青年学士 : ムヒョンはとても興奮しています。話を聞いてみないといけないのですが……",1;
+		npctalk  "青年学士 : ムヒョンはとても興奮しています。話を聞いてみないといけないのですが……",1;
 		end;
 	}
 	else if(IL_MOON_QUE < 5) {
-		unittalk getcharid(3), "青年学士 : ムヒョンの話から聞いてみた方がよさそうです。",1;
+		npctalk  "青年学士 : ムヒョンの話から聞いてみた方がよさそうです。",1;
 		end;
 	}
 	else if(IL_MOON_QUE == 5) {
@@ -791,11 +791,11 @@ payon_in03,30,96,5	script	ジャギョム#ilp09	901,{
 		close;
 	}
 	else if(IL_MOON_QUE == 2) {
-		unittalk getcharid(3), "ジャギョム : ムヒョン、君がやらないと誰が代わりになってやってくれると言うんだ？",1;
+		npctalk  "ジャギョム : ムヒョン、君がやらないと誰が代わりになってやってくれると言うんだ？",1;
 		end;
 	}
 	else if(IL_MOON_QUE < 5) {
-		unittalk getcharid(3), "ジャギョム : まずはムヒョンの話を聞いてみることにしよう。",1;
+		npctalk  "ジャギョム : まずはムヒョンの話を聞いてみることにしよう。",1;
 		end;
 	}
 	else if(IL_MOON_QUE == 5) {

@@ -348,7 +348,7 @@ OnStart:
 	stopnpctimer;
 	mes "[副隊長ハイム]";
 	mes "現在の戦況はどうなっている？";
-	unittalk getcharid(3), "副隊長ハイム : 現在の戦況はどうなっている？";
+	npctalk  "副隊長ハイム : 現在の戦況はどうなっている？";
 	next;
 	mes "[偵察兵]";
 	mes "次の階さえ突破すれば最上階ですが、";
@@ -364,7 +364,7 @@ OnStart:
 	mes "[副隊長ハイム]";
 	mes "現在残っている戦力は？";
 	mes "援軍はいつになったら到着する！";
-	unittalk getcharid(3), "副隊長ハイム : 現在残っている戦力は？　援軍はいつになったら到着する！";
+	npctalk  "副隊長ハイム : 現在残っている戦力は？　援軍はいつになったら到着する！";
 	emotion 9,getmdnpcname("副隊長ハイム#heim0");
 	next;
 	mes "[補佐官]";
@@ -385,7 +385,7 @@ OnStart:
 	mes "進撃することもできない……";
 	mes "ということか。";
 	mes "魔族たちは何故動かないのだ？";
-	unittalk getcharid(3), "副隊長ハイム : このままここにいるわけにもいかないが、進撃することもできない……ということか。魔族たちは何故動かないのだ？";
+	npctalk  "副隊長ハイム : このままここにいるわけにもいかないが、進撃することもできない……ということか。魔族たちは何故動かないのだ？";
 	next;
 //	mes "[副隊長ハイム]";
 	mes "[偵察兵]";
@@ -429,7 +429,7 @@ OnTimer3000:
 		mes "[副隊長ハイム]";
 		mes "援軍なのか？";
 		mes "ならどうしてそこで突っ立っている！";
-		unittalk getcharid(3), "副隊長ハイム : 援軍なのか？　ならどうしてそこで突っ立っている！";
+		npctalk  "副隊長ハイム : 援軍なのか？　ならどうしてそこで突っ立っている！";
 		next;
 		hideoffnpc getmdnpcname("衛生兵ペイマー#feima");
 		mes "[衛生兵ペイマー]";
@@ -440,13 +440,13 @@ OnTimer3000:
 		next;
 		mes "[副隊長ハイム]";
 		mes "……あの声が聞こえただろう？";
-		unittalk getcharid(3), "副隊長ハイム : ……あの声が聞こえただろう？";
+		npctalk  "副隊長ハイム : ……あの声が聞こえただろう？";
 		next;
 		mes "[副隊長ハイム]";
 		mes "まずは負傷兵の治療を頼む。";
 		mes "ペイマーから治療箱を受け取り、";
 		mes "それを使ってくれ。";
-		unittalk getcharid(3), "副隊長ハイム : まずは負傷兵の治療を頼む。ペイマーから治療箱を受け取り、それを使ってくれ。";
+		npctalk  "副隊長ハイム : まずは負傷兵の治療を頼む。ペイマーから治療箱を受け取り、それを使ってくれ。";
 		next;
 		mes "[衛生兵ペイマー]";
 		mes "お手伝いしてくれる方は、";
@@ -471,7 +471,7 @@ OnTimer3000:
 	}
 OnStart:
 	initnpctimer;
-	unittalk getcharid(3), "副隊長ハイム : そこにいるのは誰だ？";
+	npctalk  "副隊長ハイム : そこにいるのは誰だ？";
 	hideonnpc getmdnpcname("副隊長ハイム#heim0");
 	hideoffnpc getmdnpcname("副隊長ハイム#heim");
 	end;
@@ -480,22 +480,22 @@ OnTimer3000:
 	emotion 9,getmdnpcname("副隊長ハイム#heim");
 	end;
 OnTalk1:
-	unittalk getcharid(3), "副隊長ハイム : アサシンギルドの支援か！　よく来てくれた!!";
+	npctalk  "副隊長ハイム : アサシンギルドの支援か！　よく来てくれた!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "副隊長ハイム : 貴様……私を挑発しているのか？";
+	npctalk  "副隊長ハイム : 貴様……私を挑発しているのか？";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "副隊長ハイム : どうしてその事を……確かに魔族たちは進行を止め、何かを待っている様子だ。";
+	npctalk  "副隊長ハイム : どうしてその事を……確かに魔族たちは進行を止め、何かを待っている様子だ。";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "副隊長ハイム : な……何をするつもりだ！　そんな少人数で乗り込んでも無駄死にするだけだぞ！";
+	npctalk  "副隊長ハイム : な……何をするつもりだ！　そんな少人数で乗り込んでも無駄死にするだけだぞ！";
 	end;
 OnTalk5:
-	unittalk getcharid(3), "副隊長ハイム : 何を考えているんだ彼らは……。何にせよ厳しい状況だ。君も彼らを援護してくれ。";
+	npctalk  "副隊長ハイム : 何を考えているんだ彼らは……。何にせよ厳しい状況だ。君も彼らを援護してくれ。";
 	end;
 OnTalk6:
-	unittalk getcharid(3), "副隊長ハイム : 魔族を迎撃するだけでも、大きな力になるはずだ。頼むぞ。";
+	npctalk  "副隊長ハイム : 魔族を迎撃するだけでも、大きな力になるはずだ。頼むぞ。";
 	end;
 }
 
@@ -506,13 +506,13 @@ OnTalk6:
 	mes "ここまで来てくれてありがとな。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "偵察兵 : 次の階さえ突破すれば最上階ですが、多数の魔族がいます。";
+	npctalk  "偵察兵 : 次の階さえ突破すれば最上階ですが、多数の魔族がいます。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "偵察兵 : この人員での突破は不可能だと思われます。";
+	npctalk  "偵察兵 : この人員での突破は不可能だと思われます。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "偵察兵 : 上の階で何かが起きているようですが……。";
+	npctalk  "偵察兵 : 上の階で何かが起きているようですが……。";
 	end;
 }
 
@@ -523,10 +523,10 @@ OnTalk3:
 	mes "なぜ急に魔族が現れたのか……。";
 	close;
 OnTalk1:
-	unittalk getcharid(3), "補佐官 : ……戦力とは言えない人数です。";
+	npctalk  "補佐官 : ……戦力とは言えない人数です。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "補佐官 : 唯一の救いは、なぜか上の階にいる魔族たちが下に降りてこないということです。";
+	npctalk  "補佐官 : 唯一の救いは、なぜか上の階にいる魔族たちが下に降りてこないということです。";
 	end;
 }
 
@@ -640,13 +640,13 @@ OnTalk2:
 		close;
 	}
 OnTalk1:
-	unittalk getcharid(3), "衛生兵ペイマー : うわ～ん！　副隊長、助けてくださ～い。私一人じゃ手が回りませ～ん！";
+	npctalk  "衛生兵ペイマー : うわ～ん！　副隊長、助けてくださ～い。私一人じゃ手が回りませ～ん！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "衛生兵ペイマー : お手伝いしてくれる方は、こちらに来て治療箱を受け取ってくださ～い！";
+	npctalk  "衛生兵ペイマー : お手伝いしてくれる方は、こちらに来て治療箱を受け取ってくださ～い！";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "衛生兵ペイマー : きゃあ！　ビックリしました！　急に現れないでくださいよ～！";
+	npctalk  "衛生兵ペイマー : きゃあ！　ビックリしました！　急に現れないでくださいよ～！";
 	end;
 }
 
@@ -691,7 +691,7 @@ OnTalk3:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : ……ううう……。";
+	npctalk  "負傷兵 : ……ううう……。";
 	end;
 }
 
@@ -737,7 +737,7 @@ OnTouch:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : うう……。";
+	npctalk  "負傷兵 : うう……。";
 	end;
 }
 
@@ -782,7 +782,7 @@ OnTouch:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : ……ぐぐぐ……ううう……。";
+	npctalk  "負傷兵 : ……ぐぐぐ……ううう……。";
 	end;
 }
 
@@ -827,7 +827,7 @@ OnTouch:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : ……くうう……。";
+	npctalk  "負傷兵 : ……くうう……。";
 	end;
 }
 
@@ -874,7 +874,7 @@ OnTouch:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : ……死ぬのは……いやだ。";
+	npctalk  "負傷兵 : ……死ぬのは……いやだ。";
 	end;
 }
 
@@ -920,7 +920,7 @@ OnTouch:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : ……うううう……。";
+	npctalk  "負傷兵 : ……うううう……。";
 	end;
 }
 
@@ -965,7 +965,7 @@ OnTouch:
 	mes "　治療に成功しました‐";
 	close;
 OnTouch:
-	unittalk getcharid(3), "負傷兵 : うう……。";
+	npctalk  "負傷兵 : うう……。";
 	end;
 }
 
@@ -987,7 +987,7 @@ OnTouch:
 		mes "アサシンギルドのルシルです。";
 		mes "少し遠い所の任務でしたので、";
 		mes "遅れました。";
-		unittalk getcharid(3), "ルシル : アサシンギルドのルシルです。少し遠い所の任務でしたので、遅れました。";
+		npctalk  "ルシル : アサシンギルドのルシルです。少し遠い所の任務でしたので、遅れました。";
 		next;
 		cutin "tnm_loki",2;
 		mes "[タナトス]";
@@ -1004,11 +1004,11 @@ OnTouch:
 		mes "[ルシル]";
 		mes "様子を見る限り、";
 		mes "芳しくないようですね。";
-		unittalk getcharid(3), "ルシル : 様子を見る限り、芳しくないようですね。";
+		npctalk  "ルシル : 様子を見る限り、芳しくないようですね。";
 		next;
 		mes "[ルシル]";
 		mes "あの勇猛なプロンテラ騎士団は何処へ？";
-		unittalk getcharid(3), "ルシル : あの勇猛なプロンテラ騎士団は何処へ？";
+		npctalk  "ルシル : あの勇猛なプロンテラ騎士団は何処へ？";
 		next;
 		cutin "tnm_lucile01",255;
 		mes "[副隊長ハイム]";
@@ -1021,7 +1021,7 @@ OnTouch:
 		mes "まさか、誤解です。";
 		mes "それより上の階で";
 		mes "何か不穏な事が起きていませんか？";
-		unittalk getcharid(3), "ルシル : まさか、誤解です。それより上の階で何か不穏な事が起きていませんか？";
+		npctalk  "ルシル : まさか、誤解です。それより上の階で何か不穏な事が起きていませんか？";
 		next;
 		cutin "tnm_lucile01",255;
 		emotion 0,getmdnpcname("副隊長ハイム#heim");
@@ -1037,7 +1037,7 @@ OnTouch:
 		mes "……ということらしいですよ。";
 		mes "獲物は最上階みたいですが、";
 		mes "どうします？";
-		unittalk getcharid(3), "ルシル : ……ということらしいですよ。獲物は最上階みたいですが、どうします？";
+		npctalk  "ルシル : ……ということらしいですよ。獲物は最上階みたいですが、どうします？";
 		next;
 		cutin "tnm_loki",2;
 		mes "[タナトス]";
@@ -1049,7 +1049,7 @@ OnTouch:
 		mes "[ルシル]";
 		mes "あら、相変わらず";
 		mes "行動が早いのですね。";
-		unittalk getcharid(3), "ルシル : あら、相変わらず行動が早いのですね。";
+		npctalk  "ルシル : あら、相変わらず行動が早いのですね。";
 		hideonnpc getmdnpcname("タナトス#tnm01");
 		next;
 		cutin "tnm_lucile01",255;
@@ -1064,13 +1064,13 @@ OnTouch:
 		mes "少人数だなんて……";
 		mes "ここに動ける兵士が";
 		mes "いるじゃないですか。";
-		unittalk getcharid(3), "ルシル : 少人数だなんて……ここに動ける兵士がいるじゃないですか。";
+		npctalk  "ルシル : 少人数だなんて……ここに動ける兵士がいるじゃないですか。";
 		next;
 		mes "[ルシル]";
 		mes "それでは援護をお願いしますね。";
 		mes "デュー！";
 		mes "後のことは任せます。";
-		unittalk getcharid(3), "ルシル : それでは援護をお願いしますね。デュー！　後のことは任せます。";
+		npctalk  "ルシル : それでは援護をお願いしますね。デュー！　後のことは任せます。";
 		next;
 		cutin "tnm_lucile01",255;
 		mes "[アサシン・デュー]";
@@ -1115,10 +1115,10 @@ OnTimer3000:
 	cutin "tnm_loki",255;
 	end;
 OnTalk1:
-	unittalk getcharid(3), "タナトス : タナトスだ……。";
+	npctalk  "タナトス : タナトスだ……。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "タナトス : そうか……それなら、俺は先に行く。";
+	npctalk  "タナトス : そうか……それなら、俺は先に行く。";
 	end;
 }
 
@@ -1214,36 +1214,36 @@ OnKilled:
 		mes "くっ、魔族に不覚を取り、";
 		mes "ダメージをうけてしまいました。";
 		mes "……動くことができません。";
-		unittalk getcharid(3), "ルシル : くっ、魔族に不覚を取り、ダメージをうけてしまいました。……動くことができません。";
+		npctalk  "ルシル : くっ、魔族に不覚を取り、ダメージをうけてしまいました。……動くことができません。";
 		next;
 		mes "[ルシル]";
 		mes "損傷が激しく、このままでは";
 		mes "あと少しで会話もできなくなります。";
-		unittalk getcharid(3), "ルシル : 損傷が激しく、このままではあと少しで会話もできなくなります。";
+		npctalk  "ルシル : 損傷が激しく、このままではあと少しで会話もできなくなります。";
 		next;
 		mes "[ルシル]";
 		mes "……申し訳ないのですが、";
 		mes "少し力を貸して頂けませんか？";
-		unittalk getcharid(3), "ルシル : ……申し訳ないのですが、少し力を貸して頂けませんか？";
+		npctalk  "ルシル : ……申し訳ないのですが、少し力を貸して頂けませんか？";
 		next;
 		mes "[ルシル]";
 		mes "私はちょっと特殊な体で、";
 		mes "再起動を行うことで、";
 		mes "体を修復する事が";
 		mes "できるのですが……";
-		unittalk getcharid(3), "ルシル : 私はちょっと特殊な体で、再起動を行うことで体を修復する事ができるのですが……";
+		npctalk  "ルシル : 私はちょっと特殊な体で、再起動を行うことで体を修復する事ができるのですが……";
 		next;
 		mes "[ルシル]";
 		mes "その間、私は";
 		mes "完全に動くことができないので、";
 		mes "周りからの攻撃で";
 		mes "簡単に倒れてしまいます。";
-		unittalk getcharid(3), "ルシル : その間、私は完全に動くことができないので、周りからの攻撃で簡単に倒れてしまいます。";
+		npctalk  "ルシル : その間、私は完全に動くことができないので、周りからの攻撃で簡単に倒れてしまいます。";
 		next;
 		mes "[ルシル]";
 		mes "ですので、少しの間だけ";
 		mes "私の傍にいてください……。";
-		unittalk getcharid(3), "ルシル : ですので、少しの間だけ私の傍にいてください……。";
+		npctalk  "ルシル : ですので、少しの間だけ私の傍にいてください……。";
 		next;
 		cutin "tnm_lucile03",2;
 		mes "[ルシル]";
@@ -1251,7 +1251,7 @@ OnKilled:
 		mes "　";
 		mes "‐^ff0000もう一度ルシルに話しかけ";
 		mes "　ルシルの再起動を手伝おう^000000‐";
-		unittalk getcharid(3), "ルシル : お願い……します……。";
+		npctalk  "ルシル : お願い……します……。";
 		close2;
 		cutin "tnm_lucile03",255;
 		set 'TNM1_QUE,11;
@@ -1294,30 +1294,30 @@ OnKilled:
 		mes "普通の人間の体と違って毎回";
 		mes "このように修理をしなければ";
 		mes "ならないんです。";
-		unittalk getcharid(3), "ルシル : ふう……予想より早く治ったようです。驚きましたか？　普通の人間の体と違って毎回このように修理をしなければならないんです。";
+		npctalk  "ルシル : ふう……予想より早く治ったようです。驚きましたか？　普通の人間の体と違って毎回このように修理をしなければならないんです。";
 		next;
 		mes "[ルシル]";
 		mes "天から授かった体ですから";
 		mes "納得するしかありません。";
 		mes "それはそうとして……";
 		mes "中央の扉が見えますか？";
-		unittalk getcharid(3), "ルシル : 天から授かった体ですから納得するしかありません。それはそうとして……中央の扉が見えますか？";
+		npctalk  "ルシル : 天から授かった体ですから納得するしかありません。それはそうとして……中央の扉が見えますか？";
 		cutin "tnm_lucile01",2;
 		next;
 		mes "[ルシル]";
 		mes "早くいかないと";
 		mes "この世界が危険です。";
-		unittalk getcharid(3), "ルシル : 早くいかないとこの世界が危険です。";
+		npctalk  "ルシル : 早くいかないとこの世界が危険です。";
 		close2;
 		cutin "tnm_lucile02",255;
 		set 'TNM1_QUE,13;
 		initnpctimer;
-		unittalk getcharid(3), "ルシル : それでは私はお先に失礼します。世界を救いたいのであれば、一緒に来て下さい。";
+		npctalk  "ルシル : それでは私はお先に失礼します。世界を救いたいのであれば、一緒に来て下さい。";
 		hideonnpc getmdnpcname("ルシル#tnm02");
 		end;
 	}
 OnTalk1:
-	unittalk getcharid(3), "ルシル : ……お待たせしました。私の再起動も完了したようです";
+	npctalk  "ルシル : ……お待たせしました。私の再起動も完了したようです";
 	end;
 OnTimer1000:
 	stopnpctimer;
@@ -1368,17 +1368,17 @@ OnKilled:
 	}
 	end;
 OnTimer1000:
-	unittalk getcharid(3), "アサシン・ヒュー : 魔物の気配が消えました！　この辺にいる魔物たちは全て倒したようです！";
+	npctalk  "アサシン・ヒュー : 魔物の気配が消えました！　この辺にいる魔物たちは全て倒したようです！";
 	end;
 OnTimer3000:
 	stopnpctimer;
 	donpcevent getmdnpcname("ルシル#tnm02")+ "::OnTalk1";
 	end;
 OnTalk1:
-	unittalk getcharid(3), "アサシン・ヒュー : 姉さんっ、気を付けて下さい！　魔族どもが集まってきます！";
+	npctalk  "アサシン・ヒュー : 姉さんっ、気を付けて下さい！　魔族どもが集まってきます！";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "アサシン・ヒュー : ね……姉さん……。";
+	npctalk  "アサシン・ヒュー : ね……姉さん……。";
 	end;
 }
 
@@ -1766,13 +1766,13 @@ OnKilled2940:
 		mes "[ルシル]";
 		mes "ちょうど良いタイミングですね。";
 		mes "あちらを見て頂けますか？";
-		unittalk getcharid(3), "ルシル : ちょうど良いタイミングですね。あちらを見て頂けますか？";
+		npctalk  "ルシル : ちょうど良いタイミングですね。あちらを見て頂けますか？";
 		next;
 		mes "[ルシル]";
 		mes "やはりあのモロク、私達が止めなければ";
 		mes "ならないようですね……。";
 		mes "自信……ありますか？";
-		unittalk getcharid(3), "ルシル : やはりあのモロク、私達が止めなければならないようですね……。自信……ありますか？";
+		npctalk  "ルシル : やはりあのモロク、私達が止めなければならないようですね……。自信……ありますか？";
 		next;
 		cutin "tnm_lucile01",255;
 		mes "[魔王モロク]";
@@ -1795,7 +1795,7 @@ OnKilled2940:
 		mes "[ルシル]";
 		mes "タナトス様、あながち虚勢という";
 		mes "わけでもなさそうですよ？";
-		unittalk getcharid(3), "ルシル : タナトス様、あながち虚勢というわけでもなさそうですよ？";
+		npctalk  "ルシル : タナトス様、あながち虚勢というわけでもなさそうですよ？";
 		next;
 		cutin "tnm_lucile01",255;
 		mes "[魔王モロク]";
@@ -1817,14 +1817,14 @@ OnKilled2940:
 		cutin "tnm_lucile01",2;
 		mes "[ルシル]";
 		mes "了解しました。";
-		unittalk getcharid(3), "ルシル: 了解しました。";
+		npctalk  "ルシル: 了解しました。";
 		next;
 		mes "[ルシル]";
 		mes "さあ、みなさん。";
 		mes "私達のやるべきことが決まりました。";
 		mes "魔神石が入り込まないよう、";
 		mes "ここを死守してください。";
-		unittalk getcharid(3), "ルシル : さあ、みなさん。私達のやるべきことが決まりました。魔神石が入り込まないよう、ここを死守してください。";
+		npctalk  "ルシル : さあ、みなさん。私達のやるべきことが決まりました。魔神石が入り込まないよう、ここを死守してください。";
 		set 'TNM1_QUE,14;
 		setquest 7573;
 		hideonnpc getmdnpcname("ルシル#tnm03");
@@ -1985,38 +1985,38 @@ OnTimer4000:
 	}
 	end;
 OnTalk1:
-	unittalk getcharid(3), "ルシル : 封印に成功……した……？";
+	npctalk  "ルシル : 封印に成功……した……？";
 	end;
 }
 
 1@tnm2,136,139,5	script	魔王モロク#tnm01	1916,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "魔王モロク : 愚かな人間め……!!　このまま俺様を足止めできるとでも思っているのか!!";
+	npctalk  "魔王モロク : 愚かな人間め……!!　このまま俺様を足止めできるとでも思っているのか!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "魔王モロク : 出でよ！　我が影たちよ！　闇の力に逆らうすべての物を切り刻め！";
+	npctalk  "魔王モロク : 出でよ！　我が影たちよ！　闇の力に逆らうすべての物を切り刻め！";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "魔王モロク : もうすぐ来る破滅の瞬間に恐怖するがよい!!";
+	npctalk  "魔王モロク : もうすぐ来る破滅の瞬間に恐怖するがよい!!";
 	end;
 OnEventTalk:
-	unittalk getcharid(3), "魔王モロク : ふははは！　灼熱の炎に焼かれるがよい！";
+	npctalk  "魔王モロク : ふははは！　灼熱の炎に焼かれるがよい！";
 	end;
 OnFail1:
-	unittalk getcharid(3), "魔王モロク : くははははは、俺様の力の欠片たちよ！　ここに集え!!";
+	npctalk  "魔王モロク : くははははは、俺様の力の欠片たちよ！　ここに集え!!";
 	end;
 OnFail2:
-	unittalk getcharid(3), "魔王モロク : まだ懲りずに邪魔をするつもりか！　この虫けらどもが!!";
+	npctalk  "魔王モロク : まだ懲りずに邪魔をするつもりか！　この虫けらどもが!!";
 	end;
 OnFail3:
-	unittalk getcharid(3), "魔王モロク : 望み通りに最後までやってやる！　俺様の力の欠片たちよ！　出て来い!!";
+	npctalk  "魔王モロク : 望み通りに最後までやってやる！　俺様の力の欠片たちよ！　出て来い!!";
 	end;
 OnStart:
 	initnpctimer;
 	end;
 OnTimer3000:
-	unittalk getcharid(3), "魔王モロク : こ……こんなはずが！　いったい貴様は……貴様の正体はなんだ!!";
+	npctalk  "魔王モロク : こ……こんなはずが！　いったい貴様は……貴様の正体はなんだ!!";
 	end;
 OnTimer6000:
 	donpcevent getmdnpcname("タナトス#tnm02")+ "::OnTalk4";
@@ -2040,30 +2040,30 @@ OnTimer10000:
 		end;
 	}
 	if(TNM1_QUE == 14) {
-		unittalk getcharid(3), "タナトス : 悪いな……今は話してる余裕がないんだ。";
+		npctalk  "タナトス : 悪いな……今は話してる余裕がないんだ。";
 		end;
 	}
 	end;
 OnTalk1:
-	unittalk getcharid(3), "タナトス : ふっ、部下に助けを求めるとはな。";
+	npctalk  "タナトス : ふっ、部下に助けを求めるとはな。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "タナトス : うるさい！　もういい加減に諦めたらどうだ！　お前をここから一歩も出させん！";
+	npctalk  "タナトス : うるさい！　もういい加減に諦めたらどうだ！　お前をここから一歩も出させん！";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "タナトス : ルシル！　後を頼んだぞ！　俺がこいつを封印するまで！";
+	npctalk  "タナトス : ルシル！　後を頼んだぞ！　俺がこいつを封印するまで！";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "タナトス : 悪いがここまでだな!!　これで終わりだ!!! ";
+	npctalk  "タナトス : 悪いがここまでだな!!　これで終わりだ!!! ";
 	end;
 OnFail1:
-	unittalk getcharid(3), "タナトス : これ以上、近寄らせるな！　ここで止めろ！";
+	npctalk  "タナトス : これ以上、近寄らせるな！　ここで止めろ！";
 	end;
 OnFail2:
-	unittalk getcharid(3), "タナトス : 何をやっているんだ！　しっかり防げ!!";
+	npctalk  "タナトス : 何をやっているんだ！　しっかり防げ!!";
 	end;
 OnFail3:
-	unittalk getcharid(3), "タナトス : くっ……!!　もう一度だ！　何度でもお前を止めてやる!!　最後まで諦めるな！";
+	npctalk  "タナトス : くっ……!!　もう一度だ！　何度でもお前を止めてやる!!　最後まで諦めるな！";
 	end;
 }
 
@@ -2183,46 +2183,46 @@ OnTimer8000:
 		mes "城に魔族が現れたんだろう……。";
 		mes "警備兵のおじさんたちも";
 		mes "いっぱい怪我をしちゃったし……。";
-		unittalk getcharid(3), "女の子 : いきなりどうして城に魔族が現れたんだろう……。警備兵のおじさんたちもいっぱい怪我をしちゃったし……。";
+		npctalk  "女の子 : いきなりどうして城に魔族が現れたんだろう……。警備兵のおじさんたちもいっぱい怪我をしちゃったし……。";
 		next;
 		menu "ここは何処なの？",-;
-		unittalk getcharid(3),strcharinfo(0)+" : ここは何処なの？";
+		npctalk strcharinfo(0)+" : ここは何処なの？";
 		mes "[女の子]";
 		mes "？";
 		mes "ここはモロクです。";
 		mes "そしてこの城はモロク城ですよ。";
-		unittalk getcharid(3), "女の子 : ？　ここはモロクです。そしてこの城はモロク城ですよ。";
+		npctalk  "女の子 : ？　ここはモロクです。そしてこの城はモロク城ですよ。";
 		next;
 		mes "[" + strcharinfo(0) + "]";
 		mes "モロク城？";
-		unittalk getcharid(3),strcharinfo(0)+" : モロク城？";
+		npctalk strcharinfo(0)+" : モロク城？";
 		next;
 		mes "[女の子]";
 		mes "そうですよ。";
 		mes "私のパパはモロクの領主様なのです。";
-		unittalk getcharid(3), "女の子 : そうですよ。私のパパはモロクの領主様なのです。";
+		npctalk  "女の子 : そうですよ。私のパパはモロクの領主様なのです。";
 		next;
 		mes "‐ルシルがいた時代から";
 		mes "　だいぶ時間が経過しているようだ‐";
-		unittalk getcharid(3),strcharinfo(0)+" : ‐ルシルがいた時代からだいぶ時間が経過しているようだ‐";
+		npctalk strcharinfo(0)+" : ‐ルシルがいた時代からだいぶ時間が経過しているようだ‐";
 		next;
 		mes "[領主の娘]";
 		mes "どうも何かが";
 		mes "起きているようなんです……。";
 		mes "地下室から変な音が";
 		mes "聞こえたって……。";
-		unittalk getcharid(3), "領主の娘 : どうも何かが起きているようなんです……。地下室から変な音が聞こえたって……。";
+		npctalk  "領主の娘 : どうも何かが起きているようなんです……。地下室から変な音が聞こえたって……。";
 		next;
 		mes "[領主の娘]";
 		mes "黒い服を着たお兄さんたちも";
 		mes "中に入ったけど、戻ってきません。";
 		mes "この城で何が起きているんですか？";
-		unittalk getcharid(3), "領主の娘 : 黒い服を着たお兄さんたちも中に入ったけど、戻ってきません。この城で何が起きているんですか？";
+		npctalk  "領主の娘 : 黒い服を着たお兄さんたちも中に入ったけど、戻ってきません。この城で何が起きているんですか？";
 		next;
 		mes "[領主の娘]";
 		mes "パパ……。";
 		mes "パパは無事でいるのかな……。";
-		unittalk getcharid(3), "領主の娘 : パパ……。パパは無事でいるのかな……。";
+		npctalk  "領主の娘 : パパ……。パパは無事でいるのかな……。";
 		next;
 		mes "[領主の娘]";
 		mes "あそこに見える本棚の後ろにある";
@@ -2230,7 +2230,7 @@ OnTimer8000:
 		mes "降りて行くことができます！";
 		mes "私も連れて行って下さい！";
 		mes "お願いします！";
-		unittalk getcharid(3), "領主の娘 : あそこに見える本棚の後ろにある通路からさらに下の方まで降りて行くことができます！　私も連れて行って下さい！　お願いします！";
+		npctalk  "領主の娘 : あそこに見える本棚の後ろにある通路からさらに下の方まで降りて行くことができます！　私も連れて行って下さい！　お願いします！";
 		set 'TNM1_QUE,17;
 		misceffect 35,getmdnpcname("#tnm3gate01");
 		hideoffnpc getmdnpcname("#tnm3gate01");
@@ -2271,7 +2271,7 @@ OnTimer6000:
 OnKilled:
 	set .@count,getmapmobs(getmdmapname("1@tnm3"),getmdnpcname("女の子#tnm01")+ "::OnKilled");
 	if(.flag && .@count <= 0) {
-		unittalk getcharid(3), "女の子 : ありがとうございます……。だけどどうして魔族が……。";
+		npctalk  "女の子 : ありがとうございます……。だけどどうして魔族が……。";
 	}
 	end;
 }
@@ -2292,7 +2292,7 @@ OnKilled:
 	close;
 OnStart:
 	initnpctimer;
-	unittalk getcharid(3), "領主の娘 : あそこを見て下さい！　魔族が現れました！　これじゃ城の中が魔族だらけになりそうです！";
+	npctalk  "領主の娘 : あそこを見て下さい！　魔族が現れました！　これじゃ城の中が魔族だらけになりそうです！";
 	monster getmdmapname("1@tnm3"),97,173,"誘惑の魔神の影",2939,1,getmdnpcname("領主の娘#tnm02")+ "::OnKilled";
 	monster getmdmapname("1@tnm3"),96,170,"誘惑の魔神の影",2939,1,getmdnpcname("領主の娘#tnm02")+ "::OnKilled";
 	monster getmdmapname("1@tnm3"),94,164,"誘惑の魔神の影",2939,1,getmdnpcname("領主の娘#tnm02")+ "::OnKilled";
@@ -2326,7 +2326,7 @@ OnKilled:
 	set .@count,getmapmobs(getmdmapname("1@tnm3"),getmdnpcname("領主の娘#tnm02")+ "::OnKilled");
 	if(.flag && .@count <= 0) {
 		stopnpctimer;	//custom
-		unittalk getcharid(3), "領主の娘 : この廊下を最後まで行くとさらに地下まで行く道があります！";
+		npctalk  "領主の娘 : この廊下を最後まで行くとさらに地下まで行く道があります！";
 		announce "領主の娘 : この廊下を最後まで行くとさらに地下まで行く道があります！",0x9,0x00ff00;
 		hideonnpc getmdnpcname("領主の娘#tnm02");
 		hideoffnpc getmdnpcname("領主の娘#tnm03");
@@ -2357,13 +2357,13 @@ OnTouch:
 	}
 	end;
 OnTimer3000:
-	unittalk getcharid(3), "絶念の魔神の影 : まさか、この城に忍び込む命知らずが居るとはな……。";
+	npctalk  "絶念の魔神の影 : まさか、この城に忍び込む命知らずが居るとはな……。";
 	end;
 OnTimer6000:
-	unittalk getcharid(3), "絶念の魔神の影 : どうやって入って来たのかは知らないが、神聖な儀式は邪魔させんぞ。";
+	npctalk  "絶念の魔神の影 : どうやって入って来たのかは知らないが、神聖な儀式は邪魔させんぞ。";
 	end;
 OnTimer9000:
-	unittalk getcharid(3), "絶念の魔神の影 : 出でよ！　我が兄弟たちよ!!";
+	npctalk  "絶念の魔神の影 : 出でよ！　我が兄弟たちよ!!";
 	hideonnpc getmdnpcname("絶念の魔神の影#tnm3");
 	monster getmdmapname("1@tnm3"),179,172,"絶念の魔神の影",2941,1,getmdnpcname("#tnm3mobdead")+ "::OnKilled";
 	end;
@@ -2403,13 +2403,13 @@ OnTouch:
 	}
 	end;
 OnTimer1000:
-	unittalk getcharid(3), "誘惑の魔神の影 : お前たちがこの騒ぎの原因か？";
+	npctalk  "誘惑の魔神の影 : お前たちがこの騒ぎの原因か？";
 	end;
 OnTimer4000:
-	unittalk getcharid(3), "誘惑の魔神の影 : まあ、何だっていい。お前たちはここで死ぬのだ。";
+	npctalk  "誘惑の魔神の影 : まあ、何だっていい。お前たちはここで死ぬのだ。";
 	end;
 OnTimer7000:
-	unittalk getcharid(3), "誘惑の魔神の影 : お前たちの血を魔神に捧げる事にする!!";
+	npctalk  "誘惑の魔神の影 : お前たちの血を魔神に捧げる事にする!!";
 	hideonnpc getmdnpcname("誘惑の魔神の影#tnm3");
 	monster getmdmapname("1@tnm3"),97,18,"誘惑の魔神の影",2939,1;
 	end;
@@ -2466,7 +2466,7 @@ OnTimer8000:
 	mes "ネズミの正体はアサシンか？";
 	mes "……他にもいるようだな。";
 	mes "生贄になる為に来たのか？";
-	unittalk getcharid(3), "モロクの領主 : ネズミの正体はアサシンか？……他にもいるようだな。生贄になる為に来たのか？";
+	npctalk  "モロクの領主 : ネズミの正体はアサシンか？……他にもいるようだな。生贄になる為に来たのか？";
 	next;
 	mes "[ロキ]";
 	mes "時代遅れの腐った魔神なんかを";
@@ -2484,7 +2484,7 @@ OnTimer8000:
 	mes "アサシンギルドの君たちは、";
 	mes "世界の力の均衡を維持する事が";
 	mes "役目ではないのか？";
-	unittalk getcharid(3), "モロクの領主 : どういうことだ……？　アサシンギルドの君たちは、世界の力の均衡を維持する事が役目ではないのか？";
+	npctalk  "モロクの領主 : どういうことだ……？　アサシンギルドの君たちは、世界の力の均衡を維持する事が役目ではないのか？";
 	cutin "ep14_roki01",255;
 	next;
 	mes "[モロクの領主]";
@@ -2492,18 +2492,18 @@ OnTimer8000:
 	mes "魔神の復活が必要なのだ！、";
 	mes "巨人までも神々のオモチャに";
 	mes "なってしまったこの世界に……。";
-	unittalk getcharid(3), "モロクの領主 : 力の均衡を保つ為には魔神の復活が必要なのだ！　巨人までも神々のオモチャになってしまったこの世界に……。";
+	npctalk  "モロクの領主 : 力の均衡を保つ為には魔神の復活が必要なのだ！　巨人までも神々のオモチャになってしまったこの世界に……。";
 	next;
 	mes "[モロクの領主]";
 	mes "神は……";
 	mes "私たちをどうするつもりなのか、";
 	mes "知っているのか？";
-	unittalk getcharid(3), "モロクの領主 : 神は……私たちをどうするつもりなのか知っているのか？";
+	npctalk  "モロクの領主 : 神は……私たちをどうするつもりなのか知っているのか？";
 	next;
 	mes "[モロクの領主]";
 	mes "奴らは光、秩序、正義という名目の下に";
 	mes "人間を……いや、この世界全体を……。";
-	unittalk getcharid(3), "モロクの領主 : 奴らは……光、秩序、正義という名目の下に人間を……いや、この世界全体を……。";
+	npctalk  "モロクの領主 : 奴らは……光、秩序、正義という名目の下に人間を……いや、この世界全体を……。";
 	next;
 	mes "[ロキ]";
 	mes "黙れ！";
@@ -2523,7 +2523,7 @@ OnTimer8000:
 	mes "[モロクの領主]";
 	mes "それで……そのくだらない任務を";
 	mes "果たしてみせると？";
-	unittalk getcharid(3), "モロクの領主 : それで……そのくだらない任務を果たしてみせると？";
+	npctalk  "モロクの領主 : それで……そのくだらない任務を果たしてみせると？";
 	cutin "ep14_roki01",255;
 	next;
 	mes "[ロキ]";
@@ -2553,7 +2553,7 @@ OnTimer8000:
 	mes "これはこれはフフフ……";
 	mes "よく狙わないとねぇ～、";
 	mes "アサシン先生。";
-	unittalk getcharid(3), "モロクの領主 : これはこれはフフフ……よく狙わないとねぇ～、アサシン先生。";
+	npctalk  "モロクの領主 : これはこれはフフフ……よく狙わないとねぇ～、アサシン先生。";
 	cutin "ep14_roki01",255;
 	next;
 	mes "[領主の娘]";
@@ -2577,7 +2577,7 @@ OnTimer8000:
 	mes "[モロクの領主]";
 	mes "理解不能か……確かにそうだな。";
 	mes "それを人間は犠牲と呼ぶ。";
-	unittalk getcharid(3), "モロクの領主 : 理解不能か……確かにそうだな。それを人間は犠牲と呼ぶ。";
+	npctalk  "モロクの領主 : 理解不能か……確かにそうだな。それを人間は犠牲と呼ぶ。";
 	cutin "ep14_roki01",255;
 	next;
 	mes "[モロクの領主]";
@@ -2585,14 +2585,14 @@ OnTimer8000:
 	mes "そんなものには何の意味も";
 	mes "ないんだよぉ～！";
 	mes "ウハハハハハッッ!!";
-	unittalk getcharid(3), "モロクの領主 : しかし小娘！　そんなものには何の意味もないんだよぉ～！　ウハハハハハッッ!!";
+	npctalk  "モロクの領主 : しかし小娘！　そんなものには何の意味もないんだよぉ～！　ウハハハハハッッ!!";
 	next;
 	mes "[モロクの領主]";
 	mes "愚者どもめっ!!";
 	mes "ここで朽ちるがいい!!";
 	mes "魔神の復活は邪魔させんぞーーーっ!!";
 	mes "クアアアアアッッ!!";
-	unittalk getcharid(3), "モロクの領主 : 愚者どもめっ!!　ここで朽ちるがいい!!　魔神の復活は邪魔させんぞーーーっ!!　クアアアアアッッ!!";
+	npctalk  "モロクの領主 : 愚者どもめっ!!　ここで朽ちるがいい!!　魔神の復活は邪魔させんぞーーーっ!!　クアアアアアッッ!!";
 	misceffect 225,getmdnpcname("モロクの領主#moclord01");
 	next;
 	mes "[ロキ]";
@@ -2611,13 +2611,13 @@ OnTimer8000:
 1@tnm3,95,50,4	script	領主の娘#tnm04	941,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "領主の娘 : やめて下さい！　パパを殺さないで!!";
+	npctalk  "領主の娘 : やめて下さい！　パパを殺さないで!!";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "領主の娘 : 何か……何かの……間違いだわ……。";
+	npctalk  "領主の娘 : 何か……何かの……間違いだわ……。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "領主の娘 : パパは……本当は……こんなことを……するような、人では……ない……の……。";
+	npctalk  "領主の娘 : パパは……本当は……こんなことを……するような、人では……ない……の……。";
 	end;
 }
 
@@ -2632,34 +2632,34 @@ OnTalk3:
 	}
 	end;
 OnTalk1:
-	unittalk getcharid(3), "ロキ : 時代遅れの腐った魔神なんかを呼び起こしてどうするつもりだ？";
+	npctalk  "ロキ : 時代遅れの腐った魔神なんかを呼び起こしてどうするつもりだ？";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "ロキ : おかげで俺がまた来るはめになっちまったじゃねえか。";
+	npctalk  "ロキ : おかげで俺がまた来るはめになっちまったじゃねえか。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "ロキ : 黙れ！";
+	npctalk  "ロキ : 黙れ！";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "ロキ : 神々がどうであれ、魔族がどうであれ……お前はここで死ぬ。";
+	npctalk  "ロキ : 神々がどうであれ、魔族がどうであれ……お前はここで死ぬ。";
 	end;
 OnTalk5:
-	unittalk getcharid(3), "ロキ : それが俺の任務だからな。";
+	npctalk  "ロキ : それが俺の任務だからな。";
 	end;
 OnTalk6:
-	unittalk getcharid(3), "ロキ : 無論!!";
+	npctalk  "ロキ : 無論!!";
 	end;
 OnTalk7:
-	unittalk getcharid(3), "ロキ : マインドブラスター!!";
+	npctalk  "ロキ : マインドブラスター!!";
 	end;
 OnTalk8:
-	unittalk getcharid(3), "ロキ : なっ……!?";
+	npctalk  "ロキ : なっ……!?";
 	end;
 OnTalk9:
-	unittalk getcharid(3), "ロキ : なぜかばった!?　人間は時折、理解不能な行動を起こす。これが心というものなのか？";
+	npctalk  "ロキ : なぜかばった!?　人間は時折、理解不能な行動を起こす。これが心というものなのか？";
 	end;
 OnTalk10:
-	unittalk getcharid(3), "ロキ : ……悪いがお断りだ。";
+	npctalk  "ロキ : ……悪いがお断りだ。";
 	end;
 }
 

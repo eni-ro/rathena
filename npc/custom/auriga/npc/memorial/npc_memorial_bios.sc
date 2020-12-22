@@ -316,31 +316,31 @@ OnKilled:
 1@dth1,74,94,3	script	死神アンク#bios1	3029,{
 	end;
 OnTalk1:
-	unittalk getcharid(3), "？？？？ : クックック。";
+	npctalk  "？？？？ : クックック。";
 	end;
 OnTalk2:
-	unittalk getcharid(3), "？？？？ : ようこそビオスの島へ。";
+	npctalk  "？？？？ : ようこそビオスの島へ。";
 	end;
 OnTalk3:
-	unittalk getcharid(3), "死神アンク : 私は死神アンク。ここは私が作り出した死と生の空間です。";
+	npctalk  "死神アンク : 私は死神アンク。ここは私が作り出した死と生の空間です。";
 	end;
 OnTalk4:
-	unittalk getcharid(3), "死神アンク : これはこれは、みなさん威勢がいいようですね。";
+	npctalk  "死神アンク : これはこれは、みなさん威勢がいいようですね。";
 	end;
 OnTalk5:
-	unittalk getcharid(3), "死神アンク : これからモロク様に捧げる生贄を調達しようとしていたのですが……。";
+	npctalk  "死神アンク : これからモロク様に捧げる生贄を調達しようとしていたのですが……。";
 	end;
 OnTalk6:
-	unittalk getcharid(3), "死神アンク : まさか生贄が自らやって来るとは……ククク。";
+	npctalk  "死神アンク : まさか生贄が自らやって来るとは……ククク。";
 	end;
 OnTalk7:
-	unittalk getcharid(3), "死神アンク : モロク様の力になれる事を光栄に思いなさい。";
+	npctalk  "死神アンク : モロク様の力になれる事を光栄に思いなさい。";
 	end;
 OnTalk8:
-	unittalk getcharid(3), "死神アンク : クク、威勢が良くて結構です。ただ、急ぐ必要はありません。";
+	npctalk  "死神アンク : クク、威勢が良くて結構です。ただ、急ぐ必要はありません。";
 	end;
 OnTalk9:
-	unittalk getcharid(3), "死神アンク : まずは私の世界でゆっくり……くつろぐことです。ククククク。";
+	npctalk  "死神アンク : まずは私の世界でゆっくり……くつろぐことです。ククククク。";
 	end;
 }
 1@dth1,67,97,5	script	ブリド#bios1	468,{
@@ -405,25 +405,25 @@ OnTalk9:
 	initnpctimer;
 	end;
 OnTimer1000:
-	unittalk getcharid(3), "ブリド : おや？　こんなところで冒険者に会うとは……";
+	npctalk  "ブリド : おや？　こんなところで冒険者に会うとは……";
 	end;
 OnTimer4000:
-	unittalk getcharid(3), "ブリド : 君も魔王モロクの復活を阻止しに来たのか？";
+	npctalk  "ブリド : 君も魔王モロクの復活を阻止しに来たのか？";
 	end;
 OnTimer7000:
-	unittalk getcharid(3), "ブリド : 私はプロンテラから来たブリド。こいつは……";
+	npctalk  "ブリド : 私はプロンテラから来たブリド。こいつは……";
 	end;
 OnTimer10000:
 	unittalk getnpcid(0,getmdnpcname("ジェイス#bios1")),"ジェイス : ……ジェイスだ。";
 	end;
 OnTimer13000:
-	unittalk getcharid(3), "ブリド : すまんな。ジェイスは人見知りなんだ。";
+	npctalk  "ブリド : すまんな。ジェイスは人見知りなんだ。";
 	end;
 OnTimer16000:
 	unittalk getnpcid(0,getmdnpcname("ジェイス#bios1")),"ジェイス : ……";
 	end;
 OnTimer19000:
-	unittalk getcharid(3), "ブリド : それより、後ろから誰か追いかけて来ているが、君の知り合いか？";
+	npctalk  "ブリド : それより、後ろから誰か追いかけて来ているが、君の知り合いか？";
 	end;
 OnTimer20000:
 	stopnpctimer;

@@ -20,3 +20,5 @@
 
 //Auriga互換用スクリプト
 #include "./script_auriga.cpp"
+#include "./csv_db.cpp"
+#include "./script_csv_db.cpp"

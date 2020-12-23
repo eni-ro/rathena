@@ -12,3 +12,4 @@
 
 //Auriga互換用スクリプト
 #include "./script_def_auriga.cpp"
+#include "./script_def_csv_db.cpp"

@@ -14290,6 +14290,7 @@ BUILDIN_FUNC(getinventorylist)
 			pc_setreg(sd,reference_uid(add_str("@inventorylist_refine"), j),sd->inventory.u.items_inventory[i].refine);
 			pc_setreg(sd,reference_uid(add_str("@inventorylist_identify"), j),sd->inventory.u.items_inventory[i].identify);
 			pc_setreg(sd,reference_uid(add_str("@inventorylist_attribute"), j),sd->inventory.u.items_inventory[i].attribute);
+			pc_setreg(sd,reference_uid(add_str("@inventorylist_private"), j),sd->inventory.u.items_inventory[i].favorite);
 			for (k = 0; k < MAX_SLOTS; k++)
 			{
 				sprintf(card_var, "@inventorylist_card%d",k+1);

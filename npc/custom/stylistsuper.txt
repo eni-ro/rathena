@@ -17,7 +17,7 @@
 //= [Akira] 
 //= Email: kvictor@protonmail.com
 //============================================================
-prontera,170,180,1	script	Super Stylist#super_stylist	10209,{
+venette,133,119,3	script	Super Stylist#super_stylist	10209,{
 	doevent "super_stylist_main::OnTalk";
 }
 
@@ -82,7 +82,12 @@ prontera,170,180,1	script	Super Stylist#super_stylist	10209,{
 					case 2:
 						next;
 						set .@hairdyemin,getBattleFlag("min_hair_color");
-						set .@hairdyemax,getBattleFlag("max_hair_color");
+						if ((.@eac&EAJ_BASEMASK) != EAJ_SUMMONER) {
+							set .@hairdyemax,getBattleFlag("max_hair_color");
+						}
+						else{
+							set .@hairdyemax,6;
+						}
 						mes "^FF0000[ Super Stylist - Hairdye ]^000000";
 						mes "Insert a hairdye number";
 						mes "Hairdyes: " +.@hairdyemin+ " to " +.@hairdyemax;
@@ -96,7 +101,12 @@ prontera,170,180,1	script	Super Stylist#super_stylist	10209,{
 					case 3:
 						next;
 						set .@clothcolormin,getBattleFlag("min_cloth_color");
-						set .@clothcolormax,getBattleFlag("max_cloth_color");
+						if ((.@eac&EAJ_BASEMASK) != EAJ_SUMMONER) {
+							set .@clothcolormax,getBattleFlag("max_cloth_color");
+						}
+						else{
+							set .@clothcolormax,3;
+						}
 						mes "^FF0000[ Super Stylist - Cloth Color ]^000000";
 						mes "Insert a cloth color number";
 						mes "Cloth Colors: " +.@clothcolormin+ " to " +.@clothcolormax;

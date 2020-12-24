@@ -19,8 +19,8 @@ function	script	highkafra	{
 	mes "いらっしゃいませ";
 	mes "カプラサービスは";
 	mes "いつも皆様のそばにいます。";
-	if(CASHPOINTS)
-		mes "ShopPoint："+callfunc ("Sistem_Digit",CASHPOINTS,0);
+	if(#CASHPOINTS)
+		mes "ShopPoint："+callfunc ("Sistem_Digit",#CASHPOINTS,0);
 	next;
 	switch(select("支援サービス","倉庫を利用する","位置セーブサービス","ギルド倉庫を利用する","終了",.@gm$)){
 		case 1:

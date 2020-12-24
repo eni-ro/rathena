@@ -17,7 +17,7 @@
 //============================================================
 
 // Entrance
-prontera,154,197,3	script	MVP Warper	768,{
+venette,103,140,6	script	MVP Warper	10349,{
 	mes "[ ^0065DFMVP Warper^000000 ]";
 	mes "MVPƒGƒŠƒA‚ÉˆÚ“®‚µ‚Ü‚·‚©?";
 	if (select("‚Í‚¢","‚¢‚¢‚¦") == 2) close;

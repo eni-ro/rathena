@@ -1,6 +1,14 @@
 import: conf/import/map_conf_user.txt
 login_ip: 127.0.0.1
 
+// Starting point for new characters
+// Format: <map_name>,<x>,<y>{:<map_name>,<x>,<y>...}
+// Max number of start points is MAX_STARTPOINT in char.hpp (default 5)
+// Location is randomly picked on character creation.
+// NOTE: For Doram, this requires client 20151001 or newer.
+start_point: venette.gat,127,125
+start_point_doram: venette.gat,127,125
+
 // Manage possible letters/symbol in the name of charater. Control character (0x00-0x1f) are never accepted. Possible values are:
 // NOTE: Applies to character, party and guild names.
 // 0: no restriction (default)

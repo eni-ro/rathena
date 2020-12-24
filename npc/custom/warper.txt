@@ -126,15 +126,16 @@ function Restrict {
 // --------------------------------------------------
 	Towns:
 // --------------------------------------------------
-menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
-    	"Brasilis",T6, "Comodo",T7, "Dewata",T8, "Eclage",T9, "Einbech",T10, 
-    	"Einbroch",T11, "El Dicastes",T12, "Geffen",T13, "Kunlun",T14, "Hugel",T15,
-    	"Izlude",T16, "Jawaii",T17, "Lasagna",T18, "Lighthalzen",T19, "Luoyang",T20,
-		"Lutie",T21, "Malangdo",T22, "Malaya",T23, "Manuk",T24,
-		"Midgarts Expedition Camp",T25, "Mora",T26, "Morocc",T27, "Moscovia",T28,
-		"Nameless Island",T29, "Niflheim",T30, "Payon",T31, "Rachel",T32, "Splendide",T33,
-		"Thor Camp",T34, "Umbala",T35, "Veins",T36, "Juno",T37;
-
+menu	"ベネット",T0,
+		"プロンテラ",T1, "アルベルタ",T2, "アルデバラン",T3, "天津",T4, "アユタヤ",T5,
+    	"ブラジリス",T6, "コモド",T7, "デワタ",T8, "エクラージュ",T9, "アインベフ",T10, 
+    	"アインブロック",T11, "エルディカスティス",T12, "ゲフェン",T13, "崑崙",T14, "フィゲル",T15,
+    	"イズルード",T16, "ジャワイ",T17, "ラザーニャ",T18, "リヒタルゼン",T19, "龍之城",T20,
+		"ルティエ",T21, "マラン島",T22, "ポートマラヤ",T23, "マヌク",T24,
+		"ミッドガルド連合軍駐屯地",T25, "モーラ",T26, "モロク",T27, "モスコビア",T28,
+		"名もなき島",T29, "ニブルヘイム",T30, "フェイヨン",T31, "ラヘル",T32, "スプレンディッド",T33,
+		"トール火山兵站基地",T34, "ウンバラ",T35, "ベインス",T36, "ジュノー",T37,"ウェルス",T38;
+T0: Go("venette",127,125);
 T1: Go("prontera",155,183);
 T2: Go("alberta",28,234);
 T3: Go("aldebaran",140,131);
@@ -180,6 +181,7 @@ T34: Go("thor_camp",246,68);
 T35: Go("umbala",97,153);
 T36: Go("veins",216,123);
 T37: Go("yuno",157,51);
+T38: Go("verus04",115,243);
 
 // --------------------------------------------------
 	Fields:
@@ -584,3 +586,8 @@ lasagna,196,187,4	duplicate(Warper)	Warper#las	811
 malangdo,134,117,6	duplicate(Warper)	Warper#mal	811
 malaya,231,204,4	duplicate(Warper)	Warper#ma	811
 mora,57,152,4	duplicate(Warper)	Warper#mora	811
+
+// --------------------------------------------------
+//	Original :
+// --------------------------------------------------
+venette,132,134,3	duplicate(Warper)	Warper#mora	725

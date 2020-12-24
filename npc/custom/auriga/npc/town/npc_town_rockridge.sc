@@ -414,7 +414,7 @@ harboro1,91,211,3	script	#rockno01	111,{
 	mes "キワワ砂漠が広がっています。";
 	close;
 OnTouch:
-	npctalk "中央通り",1;
+	npctalk "中央通り",bc_self;
 	end;
 }
 
@@ -427,35 +427,35 @@ harboro1,299,211,3	script	#rockno02	111,{
 	mes "旅館と港があります。";
 	close;
 OnTouch:
-	npctalk "ロックリッジ広場",1;
+	npctalk "ロックリッジ広場",bc_self;
 	end;
 }
 
 harboro1,260,211,3	script	#rockno03	111,{
 	end;
 OnTouch:
-	npctalk "保安官事務室",1;
+	npctalk "保安官事務室",bc_self;
 	end;
 }
 
 harboro1,215,212,3	script	#rockno04	111,{
 	end;
 OnTouch:
-	npctalk "西側：旅館　／　東側：保安官事務室",1;
+	npctalk "西側：旅館　／　東側：保安官事務室",bc_self;
 	end;
 }
 
 harboro1,134,211,3	script	#rockno05	111,{
 	end;
 OnTouch:
-	npctalk "東側：旅館",1;
+	npctalk "東側：旅館",bc_self;
 	end;
 }
 
 harboro1,310,201,3	script	#rockno06	111,{
 	end;
 OnTouch:
-	npctalk "道具屋　武器屋　防具屋",1;
+	npctalk "道具屋　武器屋　防具屋",bc_self;
 	end;
 }
 
@@ -2314,7 +2314,7 @@ alberta,240,103,5	script	カラムプッチ#alberta	709,3,3,{
 	end;
 OnTouch:
 	if(ROCKRIDGE_1QUE == 0 && BaseLevel >= 70)
-		npctalk "カラムプッチ : お、そこの前途有望な冒険者さん！　ちょっと私の話を聞いてくれないか？",1;
+		npctalk "カラムプッチ : お、そこの前途有望な冒険者さん！　ちょっと私の話を聞いてくれないか？",bc_self;
 	end;
 }
 
@@ -2339,7 +2339,7 @@ harboro1,60,215,5	script	カラムプッチ#harboro1	709,{
 harboro1,80,218,5	script	コステル#harboro1	10210,{
 	switch(ROCKRIDGE_1QUE) {
 	case 0:
-		npctalk "コステル : 困ったなぁ……。ちゃんとアルベルタで冒険者が見つかるかな……。",1;
+		npctalk "コステル : 困ったなぁ……。ちゃんとアルベルタで冒険者が見つかるかな……。",bc_self;
 		end;
 	case 1:
 		mes "[コステル]";
@@ -2501,7 +2501,7 @@ harboro1,80,218,5	script	コステル#harboro1	10210,{
 		mes "私は次の定期船が来たら";
 		mes "ロックリッジを離れることにします！";
 		next;
-		npctalk strcharinfo(0)+" : ……",1;
+		npctalk strcharinfo(0)+" : ……",bc_self;
 		mes "[コステル]";
 		mes "そんな顔で見ないでください。";
 		mes "会社の利益はもちろん重要だけど、";
@@ -2532,7 +2532,7 @@ harboro1,80,218,5	script	コステル#harboro1	10210,{
 		mes "待ってくれると思います。";
 		mes "うん……それから……。";
 		next;
-		npctalk strcharinfo(0)+" : ……",1;
+		npctalk strcharinfo(0)+" : ……",bc_self;
 		mes "[コステル]";
 		mes "またそんな顔をして……。";
 		mes "とにかく、アイアットと一緒に";
@@ -2849,20 +2849,20 @@ har_in01,20,30,5	script	アイアット・ワープ#har_	10211,{
 		end;
 	case 6:
 		cutin "rock_worp",0;
-		npctalk "……どう思う？",1;
-		if(!sleep2(4000)) end;
+		npctalk "……どう思う？",bc_self;
+		sleep2(4000);
 		cutin "rock_iboka_all",2;
-		unittalk getnpcid(0,"イヴォカ#rock01"),"イヴォカ・スクーディー : やつらの仲を裂いた方が良いと思います。",1;
-		if(!sleep2(4000)) end;
+		unittalk getnpcid(0,"イヴォカ#rock01"),"イヴォカ・スクーディー : やつらの仲を裂いた方が良いと思います。",bc_self;
+		sleep2(4000);
 		cutin "rock_worp",0;
-		npctalk "アイアット・ワープ : 普通の拷問や脅迫では効果は薄いか……。",1;
-		if(!sleep2(3000)) end;
+		npctalk "アイアット・ワープ : 普通の拷問や脅迫では効果は薄いか……。",bc_self;
+		sleep2(3000);
 		cutin "rock_iboka_all",2;
-		unittalk getnpcid(0,"イヴォカ#rock01"),"イヴォカ・スクーディー : ジョニーがいなくなったとしても、次に相手をしなければならないのは……",1;
-		if(!sleep2(3000)) end;
+		unittalk getnpcid(0,"イヴォカ#rock01"),"イヴォカ・スクーディー : ジョニーがいなくなったとしても、次に相手をしなければならないのは……",bc_self;
+		sleep2(3000);
 		cutin "rock_worp",0;
-		npctalk "アイアット・ワープ : アルバートだろうな。",1;
-		if(!sleep2(2000)) end;
+		npctalk "アイアット・ワープ : アルバートだろうな。",bc_self;
+		sleep2(2000);
 		set ROCKRIDGE_1QUE,7;
 		mes "[アイアット・ワープ]";
 		mes "おっと、来たか。";
@@ -3447,108 +3447,108 @@ rockrdg1,153,303,5	script	アイアット・ワープ#revt	10211,{
 		warp "har_in01",18,18;
 		end;
 	}
-	npctalk "アイアット・ワープ : ここが約束の場所だ。そろそろ時間のはずだが……。",1;
-	if(!sleep2(3000)) end;
+	npctalk "アイアット・ワープ : ここが約束の場所だ。そろそろ時間のはずだが……。",bc_self;
+	sleep2(3000);
 	cloakoffnpc "ジョニー・ジェイムス#re";
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : よお、保安官。待たせちまったか？",1;
-	if(!sleep2(4000)) end;
+	sleep2(1000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : よお、保安官。待たせちまったか？",bc_self;
+	sleep2(4000);
 	emotion 1,"ジョニー・ジェイムス#re";
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 誰だこいつは？　知らん奴が来ているようだが？",1;
-	if(!sleep2(4000)) end;
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 誰だこいつは？　知らん奴が来ているようだが？",bc_self;
+	sleep2(4000);
 	cloakoffnpc "アルバート・フォード#re";
-	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : ボス、そんなに前に行ったら危ないよ……。",1;
-	if(!sleep2(4000)) end;
-	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : コステルってあんなやつだったっけ？",1;
-	if(!sleep2(4000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい、俺は市長のコステルに用があるんだ。関係ない奴は失せな！",1;
-	if(!sleep2(4000)) end;
-	npctalk "アイアット・ワープ : おいおいジョニー、うちの先生に対して口のきき方がなってないぞ？",1;
-	if(!sleep2(4000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい、保安官。あいつは誰なんだ？　市長と一緒に来いと言ったはずだぞ！",1;
-	if(!sleep2(6000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 鉱石と鉱山を返して欲しくないのか？　ああん？",1;
-	if(!sleep2(4000)) end;
-	npctalk "アイアット・ワープ : 今回の交渉役はコステルではない。次期市長である先生がすることになった！",1;
-	if(!sleep2(6000)) end;
+	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : ボス、そんなに前に行ったら危ないよ……。",bc_self;
+	sleep2(4000);
+	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : コステルってあんなやつだったっけ？",bc_self;
+	sleep2(4000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい、俺は市長のコステルに用があるんだ。関係ない奴は失せな！",bc_self;
+	sleep2(4000);
+	npctalk "アイアット・ワープ : おいおいジョニー、うちの先生に対して口のきき方がなってないぞ？",bc_self;
+	sleep2(4000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい、保安官。あいつは誰なんだ？　市長と一緒に来いと言ったはずだぞ！",bc_self;
+	sleep2(6000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 鉱石と鉱山を返して欲しくないのか？　ああん？",bc_self;
+	sleep2(4000);
+	npctalk "アイアット・ワープ : 今回の交渉役はコステルではない。次期市長である先生がすることになった！",bc_self;
+	sleep2(6000);
 	emotion 5,"ジョニー・ジェイムス#re";
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 次期市長だと？　コステルめ、いつも逃げようとばかりしているとは聞いたが、ついに逃げ出したのか？　ははははは！",1;
-	if(!sleep2(6000)) end;
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 次期市長だと？　コステルめ、いつも逃げようとばかりしているとは聞いたが、ついに逃げ出したのか？　ははははは！",bc_self;
+	sleep2(6000);
 	emotion 9,"アルバート・フォード#re";
-	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : そいつらの言ってることは本当でしょうか？",1;
-	if(!sleep2(4000)) end;
-	npctalk "アイアット・ワープ : こんな嘘をついて何の得がある？　良いからさっさとそっちの要求を言いな。",1;
-	if(!sleep2(6000)) end;
-	npctalk "アイアット・ワープ : 要求を本社で検討しなきゃならんのだ。ちんたらしてるといつになるかわからんぞ！",1;
-	if(!sleep2(6000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : くくく、敵だが俺はお前のその性格は気に入ってるぜ。いいか、俺たちの要求は……",1;
-	if(!sleep2(5000)) end;
-	npctalk "アイアット・ワープ : 今だ！",1;
-	if(!sleep2(500)) end;
+	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : そいつらの言ってることは本当でしょうか？",bc_self;
+	sleep2(4000);
+	npctalk "アイアット・ワープ : こんな嘘をついて何の得がある？　良いからさっさとそっちの要求を言いな。",bc_self;
+	sleep2(6000);
+	npctalk "アイアット・ワープ : 要求を本社で検討しなきゃならんのだ。ちんたらしてるといつになるかわからんぞ！",bc_self;
+	sleep2(6000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : くくく、敵だが俺はお前のその性格は気に入ってるぜ。いいか、俺たちの要求は……",bc_self;
+	sleep2(5000);
+	npctalk "アイアット・ワープ : 今だ！",bc_self;
+	sleep2(500);
 	misceffect 563,"ジョニー・ジェイムス#re";
 	cloakoffnpc "ガンマン#rock01";
 	cloakoffnpc "ガンマン#rock02";
 	cloakoffnpc "ガンマン#rock03";
 	cloakoffnpc "イヴォカ#rock02";
-	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 動くな！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 動くな！",1;
-	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 君たちは完全に包囲された！",1;
-	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 動くな！",1;
-	if(!sleep2(2000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : な……なんだこれは！",1;
-	if(!sleep2(2000)) end;
-	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : ボ……ボス！",1;
-	if(!sleep2(2000)) end;
+	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 動くな！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 動くな！",bc_self;
+	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 君たちは完全に包囲された！",bc_self;
+	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 動くな！",bc_self;
+	sleep2(2000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : な……なんだこれは！",bc_self;
+	sleep2(2000);
+	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : ボ……ボス！",bc_self;
+	sleep2(2000);
 	misceffect 563,"ジョニー・ジェイムス#re";
-	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 動くな！",1;
-	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 動くな！",1;
-	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 動くな！",1;
-	if(!sleep2(2000)) end;
-	npctalk "アイアット・ワープ : くっくっく……",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 計画通り！",1;
-	if(!sleep2(2000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : キャクター族め！　サボテンに偽装していたのか!!",1;
-	if(!sleep2(3000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : アルバート！　ぼさっと見ていないで何とかしろ！",1;
-	if(!sleep2(3000)) end;
-	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : な、仲間を呼んできます！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 何!?",1;
+	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 動くな！",bc_self;
+	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 動くな！",bc_self;
+	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 動くな！",bc_self;
+	sleep2(2000);
+	npctalk "アイアット・ワープ : くっくっく……",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 計画通り！",bc_self;
+	sleep2(2000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : キャクター族め！　サボテンに偽装していたのか!!",bc_self;
+	sleep2(3000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : アルバート！　ぼさっと見ていないで何とかしろ！",bc_self;
+	sleep2(3000);
+	unittalk getnpcid(0,"アルバート・フォード#re"),"アルバート・フォード : な、仲間を呼んできます！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : 何!?",bc_self;
 	cloakonnpc "アルバート・フォード#re";
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい！　アルバート!!　ちょっ、待てよ！",1;
-	if(!sleep2(3000)) end;
-	npctalk "アイアット・ワープ : おいおいジョニー。　お前の部下が逃げていくぞ？",1;
-	//if(!sleep2(100)) end;
-	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 完全に見捨てられたようだな。",1;
-	if(!sleep2(3000)) end;
-	npctalk "アイアット・ワープ : みんな！　よくやってくれた！　さあ、連行だ！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 連行だ！",1;
-	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 捕まえたぞ！",1;
-	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 大人しくしろ！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : クソ！　このまま鉱石を失ってもいいのか!?",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : そんなことは知らん！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 私たちはただ連行するだけだ！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 静かにしろ！",1;
-	if(!sleep2(2000)) end;
-	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : イテェ！　こら、もっと丁寧に扱え！",1;
-	if(!sleep2(1000)) end;
-	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 行くぞ！　みんな！",1;
-	if(!sleep2(2000)) end;
+	sleep2(1000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : おい！　アルバート!!　ちょっ、待てよ！",bc_self;
+	sleep2(3000);
+	npctalk "アイアット・ワープ : おいおいジョニー。　お前の部下が逃げていくぞ？",bc_self;
+	//sleep2(100);
+	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 完全に見捨てられたようだな。",bc_self;
+	sleep2(3000);
+	npctalk "アイアット・ワープ : みんな！　よくやってくれた！　さあ、連行だ！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : 連行だ！",bc_self;
+	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 捕まえたぞ！",bc_self;
+	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 大人しくしろ！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : クソ！　このまま鉱石を失ってもいいのか!?",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ガンマン#rock01"),"キャクター族のガンマン : そんなことは知らん！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ガンマン#rock02"),"キャクター族のガンマン : 私たちはただ連行するだけだ！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"ガンマン#rock03"),"キャクター族のガンマン : 静かにしろ！",bc_self;
+	sleep2(2000);
+	unittalk getnpcid(0,"ジョニー・ジェイムス#re"),"ジョニー・ジェイムス : イテェ！　こら、もっと丁寧に扱え！",bc_self;
+	sleep2(1000);
+	unittalk getnpcid(0,"イヴォカ#rock02"),"イヴォカ・スクーディー : 行くぞ！　みんな！",bc_self;
+	sleep2(2000);
 	cloakonnpc "ガンマン#rock01";
 	cloakonnpc "ガンマン#rock02";
 	cloakonnpc "ガンマン#rock03";
 	cloakonnpc "イヴォカ#rock02";
 	cloakonnpc "ジョニー・ジェイムス#re";
-	if(!sleep2(2000)) end;
-	npctalk "アイアット・ワープ : 作戦は成功だ。私たちも戻ろうか。",1;
+	sleep2(2000);
+	npctalk "アイアット・ワープ : 作戦は成功だ。私たちも戻ろうか。",bc_self;
 	delquest 7795;
 	setquest 7796;
 	set ROCKRIDGE_1QUE,6;
@@ -4127,7 +4127,7 @@ rockrdg2,279,313,3	script	ポッコリと穴の開いた岩#	10042,{
 			close;
 		}
 		cloakoffnpc "アルバート・フォード#ro";
-		unittalk getnpcid(0,"アルバート・フォード#ro"),"アルバート・フォード : ボス？　戻られたんですか？",1;
+		unittalk getnpcid(0,"アルバート・フォード#ro"),"アルバート・フォード : ボス？　戻られたんですか？",bc_self;
 		close;
 	}
 	mes "‐今はここに用はない‐";
@@ -7472,9 +7472,9 @@ rockrdg1,341,133,3	script	キャクターロン#rrrem01	10220,{
 		mes "アガベ味ジュースを買って来るって";
 		mes "言ったから待ってたのに…";
 		mes "…";
-		if(!sleep2(1000)) end;
+		sleep2(1000);
 		mes "……";
-		if(!sleep2(1000)) end;
+		sleep2(1000);
 		mes "うわああああああん！！";
 		next;
 		cutin "rock_cact03",2;

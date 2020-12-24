@@ -309,14 +309,14 @@ OnTouch:
 	if(getpartyleader(getcharid(1)) != strcharinfo(0))
 		end;
 	pcblockmove 1;
-	set .@dummy,sleep2(3000);
+	sleep2(3000);
 	misceffect 1, getmdnpcname("#RZメモリアルスタート");
 	announce "モロク : 誰だ？　私の休息の邪魔をするのは。", 0x9, 0x00ebff;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	announce "‐どこからともなく声がする。どうやらここがモロクの潜伏先で間違いないようだ‐", 0x9, 0x00ebff;
-	set .@dummy,sleep2(4000);
+	sleep2(4000);
 	announce "？？？ : 待ってくれ！", 0x9, 0x00ebff;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	misceffect 60,""; //self
 	pcblockmove 0;
 	hideonnpc getmdnpcname("#RZイベント_1");
@@ -616,9 +616,9 @@ OnTouch:
 	case 2:	set .unit_id,getnpcid(0,getmdnpcname("キド#RZ3"));			set .unit_name$,"キド"; break;
 	case 3:	set .unit_id,getnpcid(0,getmdnpcname("ヒシエ#RZ3"));		set .unit_name$,"ヒシエ"; break;
 	}
-	set .@dummy,sleep2(2500);
+	sleep2(2500);
 	unittalk .unit_id,.unit_name$+ " : おかしい……あれだけ慎重なモロクがこんなにあっさり見つかるとは。";
-	set .@dummy,sleep2(3000);
+	sleep2(3000);
 	unittalk .unit_id,.unit_name$+ " : ……本当にモロクか!?";
 	misceffect 60,""; //self
 	pcblockmove 0;

@@ -31,7 +31,7 @@ new_do1,90,247,0	script	object01#new_do1	139,30,3,{
 	mes "[シェレ]";
 	mes "そっちじゃないわ。";
 	mes "こっちに来てちょうだい。";
-	set .@dummy,sleep2(1000);
+	sleep2(1000);
 	warp "new_do1",95,260;
 	end;
 }

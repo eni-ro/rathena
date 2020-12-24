@@ -829,26 +829,26 @@ OnTouchNPC:
 	switch(rand(4)) {
 	case 0:
 		misceffect 12;
-		set .@dummy,sleep2(1000);
+		sleep2(1000);
 		misceffect 90;
 		break;
 	case 1:
 		misceffect 12;
-		set .@dummy,sleep2(1000);
+		sleep2(1000);
 		misceffect 89;
 		break;
 	case 2:
 		misceffect 12;
-		set .@dummy,sleep2(1000);
+		sleep2(1000);
 		misceffect 40;
 		break;
 	case 3:
 		misceffect 12;
-		set .@dummy,sleep2(1000);
+		sleep2(1000);
 		misceffect 183;
 		break;
 	}
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -884,7 +884,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç±Ç±ÇÕí Ç≥ÇÒ!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -908,7 +908,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç±Ç±ÇÕí Ç≥ÇÒÇº!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -940,7 +940,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç®Ç¡Ç∆!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -972,7 +972,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGèP!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1004,7 +1004,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "óßÇøãéÇÍ!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1020,7 +1020,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç†Ç¡ÇøÇ…çsÇØ!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1044,7 +1044,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ñÇë∞ÇﬂÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1084,7 +1084,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGèPÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1109,7 +1109,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGî≠å©!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1135,7 +1135,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç≠ÅcÅcÇ≠ÇÈÇ»!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1161,7 +1161,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç±Ç±ÇÕí Ç≥Ç»Ç¢ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1187,7 +1187,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGÇæ!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1204,7 +1204,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç±Ç±Ç‹Ç≈óàÇÈÇ»ÇÒÇƒÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1230,7 +1230,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGèPÇæÇº!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1256,7 +1256,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ì|ÇµÇƒÇ‚ÇÈ!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1282,7 +1282,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç¢Ç´Ç‹Å`Ç∑Ç¡ÅÙ";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1308,7 +1308,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGÇ¡Ç∑ÅIÅ@ìGÇ¡Ç∑ÇÊÅ[ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1324,7 +1324,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "è¨Ç¥Ç©ÇµÇ¢ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1340,7 +1340,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGÇæÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1364,7 +1364,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "í Ç≥Ç !!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1388,7 +1388,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "èŒÇÌÇπÇÈÇ»ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1412,7 +1412,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGÇ©ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1436,7 +1436,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç»ÇﬂÇÈÇÒÇ∂Ç·ÇÀÅ[Çº!!";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1460,7 +1460,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç§Ç®Å[Ç¡ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1476,7 +1476,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç†Ç¡ÇøÇ÷çsÇØÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1492,7 +1492,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ìGèPÇæÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1508,7 +1508,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "Ç≠ÇÁÇ¶ÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1524,7 +1524,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "ñÇï®Ç«Ç‡ÇﬂÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }
@@ -1540,7 +1540,7 @@ OnTouch:
 OnTouchNPC:
 	npctalk  "í Ç≥ÇÒÇºÅI";
 	misceffect 92;
-	set .@dummy,sleep2(2000);
+	sleep2(2000);
 	warp "Random",0,0;
 	end;
 }

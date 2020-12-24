@@ -494,6 +494,9 @@ Header:
 
 Footer:
   Imports:
-#  - Path: db/re/item_db_usable_jpn.yml
+# Override
+  - Path: db/import/item_db_usable.yml
+# Original
+  - Path: db/import/item_db_usable_original.yml
   - Path: db/import/item_db_equip_original.yml
-#  - Path: db/re/item_db_etc_jpn.yml
+#  - Path: db/import/item_db_etc_original.yml

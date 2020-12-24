@@ -1039,6 +1039,7 @@ verus04,163,219,4	script	PLUTO_09#pa0829	4_SCR_AT_ROBOTS,{
 	mes "[PLUTO_09]";
 	mes "" + strcharinfo(0) + ",";
 	mes "Hello. How can I help you?";
+	mes "※A-Tolerance以降の設計図はロックリッジのハワードから入手可能です";
 	next;
 	switch( select( "Note", "Old Fuel and Huge Metal Scrap to exchange for gear.", "Design drawings for the production of Enchantment" ) ) {
 	case 1:
@@ -1161,6 +1162,29 @@ verus04,163,219,4	script	PLUTO_09#pa0829	4_SCR_AT_ROBOTS,{
 	end;
 }
 
+harboro1,275,206,3	script	ハワード	899 ,{
+	mes "[ハワード]";
+	mes "GMの手抜きによって","設計図をロックリッジコインではなくキャッシュポイントで横流ししているんだ。";
+	mes "500ポイントで一つ売るけれどいるかい？";
+	next;
+	if( select("欲しい","要らない") == 2 ){
+		mes "[ハワード]";
+		mes "欲しくなったらまた来な。";
+		close;
+	}
+	if( #CASHPOINTS < 500 ){
+		mes "[ハワード]";
+		mes "おいおい、対価が足りないぜ？";
+		close;
+	}
+	setarray .@list[0],25189,25190,25191,25192,25193,25194,25195,25196,25197,25198,25434,25435,25436,25437,25438,25439,25440;
+	getitem .@list[rand(getarraysize(.@list))],1;
+	#CASHPOINTS -= 500;
+	mes "[ハワード]";
+	mes "また欲しくなったら来な。";
+	close;
+}
+
 verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 	disable_items;
 	if (checkweight(1201,1) == 0 || (MaxWeight - Weight) < 10000) {
@@ -1231,7 +1255,7 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 	mes "" + strcharinfo(0) + ",";
 	mes "Hello! Can I help you?";
 	next;
-	switch( select( "Note", "Enhanced " + getitemname(20773), "Enhanced " + getitemname(15128) ) ) {	// Excelion_Wing, Excelion_Suit
+	switch( select( "Note", "Enhanced " + getitemname(20773), "Enhanced " + getitemname(15128), "Enhanced " + getitemname(22103), "Enhanced " + getitemname(28941) ) ) {	// Excelion_Wing, Excelion_Suit
 	case 1:
 		mes "^0000ffSoon the instructions again.^000000";
 		next;
@@ -1253,34 +1277,57 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 	case 3:
 		.@part = EQI_ARMOR;
 		break;
+	case 4:
+		.@part = EQI_SHOES;
+		break;
+	case 5:
+		.@part = EQI_HAND_L;
+		break;
 	}
-	// <item ID required>, <item enchant ID>, <max number of this enchant on armor>, <max number of this enchant on garment>, <enchant on first slot only>
+	// <item ID required>, <item enchant ID>, <max number of this enchant on armor>, <max number of this enchant on garment>, leg,shield,<enchant group>
 	setarray .@list[0],
-		6965, 4970, 1,0,3,	// Reactor_P_FIRE_		Reactor_P_FIRE
-		6966, 4971, 1,0,3,	// Reactor_P_WATER_		Reactor_P_WATER
-		6967, 4972, 1,0,3,	// Reactor_P_GROUND_	Reactor_P_GROUND
-		6968, 4973, 1,0,3,	// Reactor_P_WIND_		Reactor_P_WIND
-		6969, 4974, 0,3,0,	// Reactor_T_FIRE_		Reactor_T_FIRE
-		6970, 4975, 0,3,0,	// Reactor_T_WATER_		Reactor_T_WATER
-		6971, 4976, 0,3,0,	// Reactor_T_GROUND_	Reactor_T_GROUND
-		6972, 4977, 0,3,0,	// Reactor_T_WIND_		Reactor_T_WIND
-		6973, 4978, 3,3,0,	// Reactor_Cure_101_	Reactor_Cure_101
-		6974, 4979, 3,3,0,	// Reactor_Cure_102_	Reactor_Cure_102
-		6975, 4980, 3,3,0,	// Reactor_Cure_201_	Reactor_Cure_201
-		6976, 4981, 3,3,0,	// Reactor_Cure_202_	Reactor_Cure_202
-		6977, 4982, 1,0,0,	// Reactor_A_STR_		Reactor_A_STR
-		6978, 4983, 1,0,0,	// Reactor_A_INT_		Reactor_A_INT
-		6979, 4984, 3,3,0,	// Reactor_A_DEF_		Reactor_A_DEF
-		6980, 4985, 1,1,0,	// Reactor_A_AVOI_		Reactor_A_AVOI
-		6981, 4986, 3,3,0,	// Reactor_A_ATK_		Reactor_A_ATK
-		6982, 4987, 3,3,0,	// Reactor_A_MATK_		Reactor_A_MATK
-		6983, 4988, 3,3,0,	// Reactor_A_MHP_		Reactor_A_MHP
-		6984, 4989, 3,3,0,	// Reactor_A_MSP_		Reactor_A_MSP
-		6985, 4990, 1,0,0,	// Reactor_A_FROZ_		Reactor_A_FROZ
-		6986, 4991, 1,1,0;	// Reactor_A_ASPD_		Reactor_A_ASPD
+		6965, 4970, 1,0,0,0,1,	// Reactor_P_FIRE_		Reactor_P_FIRE
+		6966, 4971, 1,0,0,0,1,	// Reactor_P_WATER_		Reactor_P_WATER
+		6967, 4972, 1,0,0,0,1,	// Reactor_P_GROUND_	Reactor_P_GROUND
+		6968, 4973, 1,0,0,0,1,	// Reactor_P_WIND_		Reactor_P_WIND
+		6969, 4974, 0,3,0,1,0,	// Reactor_T_FIRE_		Reactor_T_FIRE
+		6970, 4975, 0,3,0,1,0,	// Reactor_T_WATER_		Reactor_T_WATER
+		6971, 4976, 0,3,0,1,0,	// Reactor_T_GROUND_	Reactor_T_GROUND
+		6972, 4977, 0,3,0,1,0,	// Reactor_T_WIND_		Reactor_T_WIND
+		6973, 4978, 3,3,3,3,0,	// Reactor_Cure_101_	Reactor_Cure_101
+		6974, 4979, 3,3,3,3,0,	// Reactor_Cure_102_	Reactor_Cure_102
+		6975, 4980, 3,3,3,3,0,	// Reactor_Cure_201_	Reactor_Cure_201
+		6976, 4981, 3,3,3,3,0,	// Reactor_Cure_202_	Reactor_Cure_202
+		6977, 4982, 1,0,0,0,0,	// Reactor_A_STR_		Reactor_A_STR
+		6978, 4983, 1,0,0,0,0,	// Reactor_A_INT_		Reactor_A_INT
+		6979, 4984, 3,3,0,0,0,	// Reactor_A_DEF_		Reactor_A_DEF
+		6980, 4985, 1,1,0,0,0,	// Reactor_A_AVOI_		Reactor_A_AVOI
+		6981, 4986, 3,3,3,3,0,	// Reactor_A_ATK_		Reactor_A_ATK
+		6982, 4987, 3,3,3,3,0,	// Reactor_A_MATK_		Reactor_A_MATK
+		6983, 4988, 3,3,3,3,0,	// Reactor_A_MHP_		Reactor_A_MHP
+		6984, 4989, 3,3,3,3,0,	// Reactor_A_MSP_		Reactor_A_MSP
+		6985, 4990, 1,0,0,0,0,	// Reactor_A_FROZ_		Reactor_A_FROZ	<A-Frozen>
+		6986, 4991, 1,1,1,0,0,	// Reactor_A_ASPD_		Reactor_A_ASPD	A-ASPD
+		25189, 29166, 1,1,1,0,0,	//＜A-Tolerance＞
+		25190, 29167, 0,0,1,1,0,	//＜A-Hit＞
+		25191, 29168, 0,0,1,1,0,	//＜A-Flee＞
+		25192, 29169, 1,1,1,0,0,	//＜A-Mdef＞
+		25193, 29170, 0,0,1,0,2,	//＜S-Atk＞
+		25194, 29171, 0,0,1,0,2,	//＜S-Matk＞
+		25195, 29172, 0,0,1,0,2,	//＜S-Avoid＞
+		25196, 29173, 0,0,1,0,2,	//＜S-MaxHP＞
+		25197, 29174, 0,0,1,0,2,	//＜S-Quick＞
+		25198, 29175, 0,0,1,0,2,	//＜S-Cri＞
+		25434, 29438, 1,1,1,0,3,	//＜Z-Knockback＞
+		25435, 29439, 1,0,0,0,3,	//＜Z-Immortal＞
+		25436, 29440, 1,1,1,1,3,	//＜Z-Killgain＞
+		25437, 29441, 0,0,1,0,3,	//＜Z-Reincarnation＞
+		25438, 29442, 1,1,1,0,3,	//＜Z-NoDispell＞
+		25439, 29443, 0,0,1,0,3,	//＜Z-Clairvoyance＞
+		25440, 29444, 1,1,1,1,3;	//＜Z-CastFixed＞
 	.@size = getarraysize(.@list);
 
-	for ( .@i = 0; .@i < .@size; .@i += 5 ) {
+	for ( .@i = 0; .@i < .@size; .@i += 7 ) {
 		if (countitem(.@list[.@i]) < 1)
 			.@menu$ += sprintf( "^aaaaaa%s (Missing)^000000:", getitemname(.@list[.@i]) );
 		else
@@ -1296,10 +1343,10 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 		mes "So far.";
 		close;
 	}
-	.@s *= 5;
+	.@s *= 7;
 	.@item_req = .@list[.@s];
 	.@item_enchant_id = .@list[.@s+1];
-	.@first_slot_only = .@list[.@s+4];
+	.@item_enchant_ig = .@list[.@s+6];
 
 	.@equip_id = getequipid(.@part);
 	.@equip_refine = getequiprefinerycnt(.@part);
@@ -1314,6 +1361,10 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 		.@max_num_enchant = .@list[.@s+2];
 	else if (.@part == EQI_GARMENT)
 		.@max_num_enchant = .@list[.@s+3];
+	else if (.@part == EQI_SHOES)
+		.@max_num_enchant = .@list[.@s+4];
+	else if (.@part == EQI_HAND_L)
+		.@max_num_enchant = .@list[.@s+5];
 	else {
 		mes "[MARS_01]";
 		mes "Please contact the administrator.";
@@ -1337,10 +1388,19 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 		mes "The design you choose is incompatible with the equipment.";
 		close;
 	}
-	if (.@first_slot_only > 0 && .@card[3] != 0) {
-		mes "[MARS_01]";
-		mes "This design is only for the first time to strengthen the use, but the equipment has other performance, please use other design to strengthen it!";
-		close;
+	if (.@item_enchant_ig > 0 ) {
+		.@num_ig_enchanted = 0;
+		for ( .@i = 0; .@i < .@size; .@i += 7 ) {
+			if( .@item_enchant_ig == .@list[.@i+6] ){
+				.@check_item_id = .@list[.@i+1];
+				.@num_ig_enchanted = .@num_ig_enchanted + countinarray(.@card[0],.@check_item_id);
+			}
+		}
+		if( .@num_ig_enchanted > 0){
+			mes "[MARS_01]";
+			mes "This design is only for the first time to strengthen the use, but the equipment has other performance, please use other design to strengthen it!";
+			close;
+		}
 	}
 	if (.@slot_sum >= .@max_num_enchant) {
 		mes "[MARS_01]";
@@ -1363,6 +1423,8 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 	switch( .@equip_id ) {
 	case 20773:	// Excelion_Wing
 	case 15128:	// Excelion_Suit
+	case 22103:	// Excelion_Leg
+	case 28941:	//Excelion_Shield
 		break;
 	default:
 		mes "[MARS_01]";

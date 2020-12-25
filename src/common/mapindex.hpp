@@ -51,6 +51,9 @@
 #define MAP_ECLAGE "eclage"
 #define MAP_ECLAGE_IN "ecl_in01"
 #define MAP_LASAGNA "lasagna"
+#define MAP_VENETTE "venette"
+#define MAP_VENIN "ven_in01"
+#define MAP_DEPA "department"
 
 const char* mapindex_getmapname(const char* string, char* output);
 const char* mapindex_getmapname_ext(const char* string, char* output);

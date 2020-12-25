@@ -91,3 +91,4 @@ Footer:
   - Path: db/re/item_db_usable_jpn.yml
   - Path: db/re/item_db_equip_jpn.yml
   - Path: db/re/item_db_etc_jpn.yml
+  - Path: db/import/item_db.yml

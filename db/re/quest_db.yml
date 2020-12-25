@@ -4353,6 +4353,43 @@ Body:
   - Id: 7762
     Title: Make Chimeras rest in peace (Standby)
     TimeLimit: 4h
+  - Id: 7776
+    Title: Saving the energy crystals
+  - Id: 7777
+    Title: What Happened?
+  - Id: 7778
+    Title: What Muyeon Saw
+  - Id: 7779
+    Title: Distressing Ritual
+  - Id: 7780
+    Title: Nightmare in the Ruined Village
+  - Id: 7781
+    Title: Nightmare in the Ruined Village
+  - Id: 7782
+    Title: Stop the Wizard!
+    Targets:
+      - Mob: ILL_HIGHWIZARD
+        Count: 1
+  - Id: 7783
+    Title: Stop the Wizard!
+    TimeLimit: +4min
+  - Id: 7784
+    Title: No Mercy for Illusions
+    Targets:
+      - Mob: ILL_NINE_TAIL
+        Count: 20
+  - Id: 7785
+    Title: No Mercy for Illusions - Cooldown
+    TimeLimit: +4min
+  - Id: 7786
+    Title: Remembering my ancestors
+    Targets:
+      - Mob: ILL_ARCHER_SKELETON
+        Count: 20
+  - Id: 7787
+    Title: No Mercy for Illusions - Cooldown
+  - Id: 7788
+    Title: Back to Muyeon
   - Id: 7790
     Title: Rock Ridge, Land of Opportunities
   - Id: 7791
@@ -9892,3 +9929,7 @@ Body:
   - Id: 62238
     Title: Midgardian Mercenary timer
     TimeLimit: +1h
+
+Footer:
+  Imports:
+  - Path: db/import/quest_db.yml

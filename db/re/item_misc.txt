@@ -1836,3 +1836,260 @@ IG_Enchant_Stone_Box15,25496,37	// MechanicStone_Lower
 IG_Enchant_Stone_Box15,25498,37	// WanderMinstrelStone_Top
 IG_Enchant_Stone_Box15,25499,37	// WanderMinstrelStone_Middle
 IG_Enchant_Stone_Box15,25500,37	// WanderMinstrelStone_Lower
+
+IG_SHADOW_CUBE_WEAPON,24019,1	//Physical Weapon (Shadow)
+IG_SHADOW_CUBE_WEAPON,24022,1	//Magical Weapon (Shadow)
+IG_SHADOW_CUBE_WEAPON,24031,1	//Kingbird's Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24032,1	//Critical Hit Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24033,1	//Healing Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24034,1	//Lucky Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24043,1	//Dexterous Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24075,1	//Large Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24076,1	//Medium Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24077,1	//Small Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24078,1	//Spiritual Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24087,1	//Gemstone Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24099,1	//Unfrozen Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24104,1	//Neutral Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24110,1	//Caster Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24117,1	//Greed Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24123,1	//Heal Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24129,1	//Hiding Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24135,1	//Cloaking Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24141,1	//Teleport Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24147,1	//Steal Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24152,1	//Solid Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24156,1	//Demi-Human Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24157,1	//Exorcist Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24158,1	//Hunting Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24159,1	//Insect Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24160,1	//Fishing Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24161,1	//Dragon Killer Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24162,1	//Angelus Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24163,1	//Formless Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24164,1	//Holy Water Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24165,1	//Plant Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24170,1	//Magic Demi-Human Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24171,1	//Magic Exorcist Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24172,1	//Magic Hunting Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24173,1	//Magic Insect Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24174,1	//Magic Fishing Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24175,1	//Magic Dragon Killer Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24176,1	//Magic Angelus Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24177,1	//Magic Formless Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24178,1	//Magic Holy Water Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24179,1	//Magic Caesars Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24183,1	//Bearer's Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24223,1	//Enhanced Force Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24224,1	//Force Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24227,1	//Enhanced Spirit Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24228,1	//Spirit Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24233,1	//Exceed Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24343,1	//Blitz Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24360,1	//Tension Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24363,1	//Elegant Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24370,1	//Mortal Blow Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24380,1	//Sentimental Shadow Weapon
+IG_SHADOW_CUBE_WEAPON,24383,1	//Enchanting Shadow Weapon
+
+IG_SHADOW_CUBE_ARMOR,24024,1	//Breeze Armor (Shadow)
+IG_SHADOW_CUBE_ARMOR,24027,1	//Immune Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24028,1	//Hard Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24029,1	//Ancient Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24030,1	//Critical Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24037,1	//Dexterous Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24040,1	//Lucky Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24072,1	//Large Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24073,1	//Medium Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24074,1	//Small Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24081,1	//Malicious Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24084,1	//Gemstone Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24091,1	//Plasterer's Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24093,1	//Insomniac Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24095,1	//Peerless Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24097,1	//Adurate Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24112,1	//Spellflow Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24114,1	//Greed Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24120,1	//Heal Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24126,1	//Hiding Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24132,1	//Cloaking Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24138,1	//Teleport Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24144,1	//Steal Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24154,1	//Immortal Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24180,1	//Bearer's Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24186,1	//Basis Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24187,1	//Hallowed Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24188,1	//Underneith Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24189,1	//Underneath Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24190,1	//Flame Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24191,1	//Windy Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24192,1	//Envenom Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24193,1	//Damned Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24194,1	//Exorcism Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24195,1	//Divine Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24197,1	//Hasty Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24216,1	//Attack Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24219,1	//Cold Bolt Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24220,1	//Fire Bolt Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24221,1	//Lightning Bolt Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24222,1	//Earth Spike Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24242,1	//Caster Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24245,1	//Reload Shadow Armor
+IG_SHADOW_CUBE_ARMOR,24344,1	//Blitz Shadow Armor
+
+IG_SHADOW_CUBE_SHIELD,24026,1	//Athena Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24039,1	//Athletic Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24044,1	//Vital Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24052,1	//Cranial Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24053,1	//Safeguard Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24054,1	//Brutal Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24055,1	//Gargantua Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24056,1	//Homers Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24057,1	//Dragoon Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24058,1	//Satanic Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24059,1	//Flameguard Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24060,1	//Requiem Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24061,1	//Cadi Shield (Shadow)
+IG_SHADOW_CUBE_SHIELD,24083,1	//Malicious Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24086,1	//Gemstone Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24090,1	//Stability Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24113,1	//Spellflow Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24116,1	//Greed Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24122,1	//Heal Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24128,1	//Hiding Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24134,1	//Cloaking Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24140,1	//Teleport Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24146,1	//Steal Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24182,1	//Bearer's Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24198,1	//Basis Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24199,1	//Hallowed Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24200,1	//Saharic Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24201,1	//Underneath Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24202,1	//Flammable Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24203,1	//Windy Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24204,1	//Envenom Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24205,1	//Damned Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24206,1	//Exorcism Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24207,1	//Divine Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24209,1	//Expert Shield Shadow
+IG_SHADOW_CUBE_SHIELD,24211,1	//Beginner Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24213,1	//Rookie Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24215,1	//Advanced Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24232,1	//Blitz Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24241,1	//Caster Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24244,1	//Reload Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24332,1	//Critical Shadow Shield
+IG_SHADOW_CUBE_SHIELD,24366,1	//Healing Shadow Shield
+
+IG_SHADOW_CUBE_SHOES,24025,1	//Champion Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24038,1	//Vital Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24045,1	//Athletic Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24062,1	//Bloody Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24063,1	//Liberation Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24064,1	//Chemical Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24065,1	//Clamorous Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24066,1	//Insecticide Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24067,1	//Fisher Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24068,1	//Seraphim Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24069,1	//Beholder Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24070,1	//Divine Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24071,1	//Dragoon Shoes (Shadow)
+IG_SHADOW_CUBE_SHOES,24082,1	//Malicious Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24085,1	//Gemstone Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24092,1	//Plasterer's Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24094,1	//Insomniac Shadow Armor
+IG_SHADOW_CUBE_SHOES,24096,1	//Peerless Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24098,1	//Adurate Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24111,1	//Spellflow Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24115,1	//Greed Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24121,1	//Heal Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24127,1	//Hiding Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24133,1	//Cloaking Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24139,1	//Teleport Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24145,1	//Steal Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24181,1	//Bearer's Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24196,1	//Hasty Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24208,1	//Expert Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24210,1	//Beginner Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24212,1	//Rookie Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24214,1	//Advanced Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24231,1	//Blitz Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24240,1	//Caster Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24243,1	//Reload Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24333,1	//Critical Shadow Shoes
+IG_SHADOW_CUBE_SHOES,24367,1	//Healing Shadow Shoes
+
+IG_SHADOW_CUBE_PENDANT,24020,1	//Physical Pendant (Shadow)
+IG_SHADOW_CUBE_PENDANT,24023,1	//Magical Pendant (Shadow)
+IG_SHADOW_CUBE_PENDANT,24036,1	//Intelligent Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24041,1	//Power Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24046,1	//Resist Spell Power Pendant (Shadow)
+IG_SHADOW_CUBE_PENDANT,24047,1	//Rapid Pendant (Shadow)
+IG_SHADOW_CUBE_PENDANT,24048,1	//Caster Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24080,1	//Spiritual Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24089,1	//Gemstone Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24101,1	//Unfrozen Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24103,1	//Vitality Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24106,1	//Neutral Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24108,1	//Curse Lift Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24119,1	//Greed Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24125,1	//Heal Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24131,1	//Hiding Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24137,1	//Cloaking Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24143,1	//Teleport Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24149,1	//Steal Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24151,1	//Infinity Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24155,1	//Immortal Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24167,1	//Penetration Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24169,1	//Tempest Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24185,1	//Bearer's Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24218,1	//Blitz Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24226,1	//Force Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24230,1	//Spirit Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24235,1	//Titan Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24237,1	//Boned Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24239,1	//Gigantic Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24362,1	//Tension Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24365,1	//Elegant Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24369,1	//Restore Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24372,1	//Mortal Blow Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24382,1	//Sentimental Shadow Pendant
+IG_SHADOW_CUBE_PENDANT,24385,1	//Enchanting Shadow Pendant
+
+IG_SHADOW_CUBE_EARRING,24018,1	//Physical Earring (Shadow)
+IG_SHADOW_CUBE_EARRING,24021,1	//Magical Earring (Shadow)
+IG_SHADOW_CUBE_EARRING,24035,1	//Power Shadow Earring
+IG_SHADOW_CUBE_EARRING,24042,1	//Intelligent Shadow Earring
+IG_SHADOW_CUBE_EARRING,24049,1	//Hard Earring (Shadow)
+IG_SHADOW_CUBE_EARRING,24050,1	//Wise Earring (Shadow)
+IG_SHADOW_CUBE_EARRING,24051,1	//Athena Earring (Shadow)
+IG_SHADOW_CUBE_EARRING,24079,1	//Spiritual Shadow Earring
+IG_SHADOW_CUBE_EARRING,24088,1	//Gemstone Shadow Earring
+IG_SHADOW_CUBE_EARRING,24100,1	//Unfrozen Shadow Earring
+IG_SHADOW_CUBE_EARRING,24102,1	//Vitality Shadow Earring
+IG_SHADOW_CUBE_EARRING,24105,1	//Neutral Shadow Earring
+IG_SHADOW_CUBE_EARRING,24107,1	//Curse Lift Shadow Earring
+IG_SHADOW_CUBE_EARRING,24109,1	//Caster Shadow Earring
+IG_SHADOW_CUBE_EARRING,24118,1	//Greed Shadow Earring
+IG_SHADOW_CUBE_EARRING,24124,1	//Heal Shadow Earring
+IG_SHADOW_CUBE_EARRING,24130,1	//Hiding Shadow Earring
+IG_SHADOW_CUBE_EARRING,24136,1	//Cloaking Shadow Earring
+IG_SHADOW_CUBE_EARRING,24142,1	//Teleport Shadow Earring
+IG_SHADOW_CUBE_EARRING,24148,1	//Steal Shadow Earring
+IG_SHADOW_CUBE_EARRING,24150,1	//Infinity Shadow Earring
+IG_SHADOW_CUBE_EARRING,24153,1	//Solid Shadow Earring
+IG_SHADOW_CUBE_EARRING,24166,1	//Penetration Shadow Earring
+IG_SHADOW_CUBE_EARRING,24168,1	//Tempest Shadow Earring
+IG_SHADOW_CUBE_EARRING,24184,1	//Bearer's Shadow Earring
+IG_SHADOW_CUBE_EARRING,24217,1	//Blitz Shadow Earring
+IG_SHADOW_CUBE_EARRING,24225,1	//Force Shadow Earring
+IG_SHADOW_CUBE_EARRING,24229,1	//Spirit Shadow Earring
+IG_SHADOW_CUBE_EARRING,24234,1	//Titan Shadow Earring
+IG_SHADOW_CUBE_EARRING,24236,1	//Boned Shadow Earring
+IG_SHADOW_CUBE_EARRING,24238,1	//Gigantic Shadow Earring
+IG_SHADOW_CUBE_EARRING,24361,1	//Tension Shadow Earring
+IG_SHADOW_CUBE_EARRING,24364,1	//Elegant Shadow Earring
+IG_SHADOW_CUBE_EARRING,24368,1	//Restore Shadow Earring
+IG_SHADOW_CUBE_EARRING,24371,1	//Mortal Blow Shadow Earring
+IG_SHADOW_CUBE_EARRING,24381,1	//Sentimental Shadow Earring
+IG_SHADOW_CUBE_EARRING,24384,1	//Enchanting Shadow Earring

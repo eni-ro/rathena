@@ -59,4 +59,3 @@ Footer:
     Mode: Prerenewal
   - Path: db/re/quest_db.yml
     Mode: Renewal
-  - Path: db/import/quest_db.yml

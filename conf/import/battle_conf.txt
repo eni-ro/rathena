@@ -28,24 +28,24 @@ ammo_check_weapon: no
 // drops.conf
 //===================================
 // The rate the common items are dropped (Items that are in the ETC tab, besides card)
-item_rate_common: 30000
-item_rate_common_boss: 30000
-item_rate_common_mvp: 30000
+item_rate_common: 5000
+item_rate_common_boss: 5000
+item_rate_common_mvp: 5000
 
 // The rate healing items are dropped (items that restore HP or SP)
-item_rate_heal: 30000
-item_rate_heal_boss: 30000
-item_rate_heal_mvp: 30000
+item_rate_heal: 10000
+item_rate_heal_boss: 10000
+item_rate_heal_mvp: 10000
 
 // The rate at which usable items (in the item tab) other then healing items are dropped.
-item_rate_use: 30000
-item_rate_use_boss: 30000
-item_rate_use_mvp: 30000
+item_rate_use: 10000
+item_rate_use_boss: 10000
+item_rate_use_mvp: 10000
 
 // The rate at which equipment is dropped.
-item_rate_equip: 30000
-item_rate_equip_boss: 30000
-item_rate_equip_mvp: 30000
+item_rate_equip: 5000
+item_rate_equip_boss: 5000
+item_rate_equip_mvp: 5000
 
 // The rate at which cards are dropped
 item_rate_card: 30000
@@ -54,26 +54,29 @@ item_rate_card_mvp: 30000
 
 // The rate adjustment for the MVP items that the MVP gets directly in their inventory
 // Mode: 0 - official order, 1 - random order, 2 - all items
-item_rate_mvp: 30000
+item_rate_mvp: 5000
 item_drop_mvp_mode: 0
 
 // The rate adjustment for card-granted item drops.
-item_rate_adddrop: 30000
+item_rate_adddrop: 5000
 
 // Rate adjustment for Treasure Box drops (these override all other modifiers)
-item_rate_treasure: 30000
+item_rate_treasure: 5000
 
 //===================================
 // exp.conf
 //===================================
 // Rate at which exp. is given. (Note 2)
-base_exp_rate: 7500
+base_exp_rate: 2500
 
 // Rate at which job exp. is given. (Note 2)
-job_exp_rate: 7500
+job_exp_rate: 2500
 
 // Turn this on to allow a player to level up more than once from a kill. (Note 1)
 multi_level_up: yes
+
+// Rate of base/job exp given by NPCs. (Note 2)
+quest_exp_rate: 7500
 
 // When a player dies, how should we penalize them?
 // 0 = No penalty.
@@ -101,22 +104,13 @@ feature.achievement: off
 override_mob_names: 2
 
 // Rate of monsters on a map, 200 would be twice as many as normal. (Note 2)
-mob_count_rate: 200
+mob_count_rate: 125
 
 // Respawn rate of monsters on a map. 50 would make mobs respawn twice as fast (half delay time) (Note 2)
 //Note: This does not affects mobs with immediate respawn (most normal mobs)
 mob_spawn_delay: 0
 plant_spawn_delay: 0
 boss_spawn_delay: 0
-
-// Should mobs not spawn within the viewing range of players?
-// 0 is disabled, otherwise it is the number of retries before giving up 
-// and spawning the mob within player-view anyway, unless the max (100) is used,
-// in which case the mob will not be spawned, and it'll be retried again in
-// 5 seconds.
-// NOTE: This has no effect on mobs that always spawn on the very same cell
-// (like ant eggs) except if you set it to the max.
-no_spawn_on_player: 5
 
 // Whether or not to spawn the mvp tomb.
 // See http://irowiki.org/wiki/MVP#Gravestone
@@ -150,7 +144,7 @@ max_extended_aspd: 198
 max_summoner_aspd: 198
 
 // Maximum walk speed rate (200 would be capped to twice the normal speed)
-max_walk_speed: 400
+max_walk_speed: 800
 
 // Maximum HPs depending on base level. Default values are:
 // Lv 99:  330000

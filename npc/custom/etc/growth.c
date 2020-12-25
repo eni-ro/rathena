@@ -135,7 +135,7 @@ OnInit:
 			.grow_rate[.@i*6+.@j] += .grow_rate[.@i*6+.@j-1];
 		}
 	}
-	.max_status = 250;
+	.max_status = 150;
 
 	.skup_chance = 750;
 	.sk_max = 999;

@@ -148,8 +148,8 @@ function	Job_Options	{
 	if( .@third_possible ) {
 		// Third Job change (displayed below rebirth)
 		Require_Level(.Req_Third[0], .Req_Third[1]);
-		Job_Options(.@job_opt, roclass(.@eac|EAJL_THIRD));
-	}
+			Job_Options(.@job_opt, roclass(.@eac|EAJL_THIRD));
+		}
 	 
 	if (.SecondExpanded && 
 	   (.@eac&EAJ_UPPERMASK) == EAJ_SUPER_NOVICE && // is Super Novice
@@ -182,8 +182,8 @@ function	Job_Options	{
 		switch(Class) {
 			case Job_Novice:
 				// First job change
-				Job_Options(.@job_opt,Job_Swordman,
-					Job_Mage, Job_Archer, Job_Acolyte, Job_Merchant, Job_Thief,
+				Job_Options(.@job_opt,Job_Swordman_High,
+					Job_Mage_High, Job_Archer_High, Job_Acolyte_High, Job_Merchant_High, Job_Thief_High,
 					Job_Super_Novice, Job_Taekwon, Job_Gunslinger, Job_Ninja);
 				if( .BabyNovice )
 					Job_Options(.@job_opt, Job_Baby);
@@ -220,8 +220,8 @@ function	Job_Options	{
 			   (.BabyClass && Is_First_Cls(.@eac&(~EAJL_BABY))) ) {	// Baby First Cls
 		// Player is First Class (not Novice)
 		// most jobs should have two options here  (2-1 and 2-2)
-		.@class1 = roclass(.@eac|EAJL_2_1); // 2-1
-		.@class2 = roclass(.@eac|EAJL_2_2); // 2-2
+			.@class1 = roclass(.@eac|EAJL_2_1); // 2-1
+			.@class2 = roclass(.@eac|EAJL_2_2); // 2-2
 		// dispbottom "Debug: Classes: class1 ("+.@class1+"), class2 ("+.@class2+")";
 		if(.LastJob && lastJob && (.@eac&EAJL_UPPER)) {
 			// Player is rebirth Cls and linear class changes are enforced
@@ -459,7 +459,7 @@ OnInit:
 	.ThirdClass = true;			// Enable third classes?
 	.RebirthClass = true;			// Enable rebirth classes?
 	.SecondExpanded = true;		// Enable new expanded second classes: Ex. Super Novice, Kagerou/Oboro, Rebellion?
-	.BabyNovice = true;	// Enable Baby novice classes? Disable it if you like player must have parent to get job baby.
+	.BabyNovice = false;	// Enable Baby novice classes? Disable it if you like player must have parent to get job baby.
 	.BabyClass = true;				// Enable Baby classes?
 	.BabyThird = true;				// Enable Baby third classes?
 	.BabyExpanded = true;			// Enable Baby Expanded classes: Ex. Baby Ninja, Baby Taekwon, etc.

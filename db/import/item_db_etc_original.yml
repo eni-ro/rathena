@@ -81,79 +81,28 @@
 #   EquipScript             Script to execute when the item is equipped. (Default: null)
 #   UnEquipScript           Script to execute when the item is unequipped or when a rental item expires. (Default: null)
 ###########################################################################
+# HEALING   2000000000
+# USABLE    2001000000
+# ETC   2002000000
+# ARMOR   2003000000
+# WEAPON    2004000000
+# CARD    2005000000
+# PETEGG    2006000000
+# PETARMOR    2007000000
+# AMMO    2008000000
+# DELAYCONSUME    2009000000
+# SHADOWGEAR    2010000000
+# CASH    2011000000
 
 Header:
   Type: ITEM_DB
   Version: 1
 
 Body:
-  - Id: 28643
-    AegisName: PorukkusBook
-    Name: 'ポルックスブック'
-    Type: Weapon
-    SubType: Book
-    Buy: 30000
-    Weight: 500
-    Attack: 10
-    Range: 1
-    Slots: 1
-    Jobs:
-      Priest: true
-      Sage: true
-      StarGladiator: true
-    Locations:
-      Right_Hand: true
-    WeaponLevel: 4
-    EquipLevelMin: 1
-    Refineable: true
+  - Id: 2005500000
+    AegisName: Move_Speed_Up
+    Name: Move Speed Up
+    Type: Card
     Script: |
-      bonus bAtk2,50+BaseLevel;
-      bonus bAspdRate,10;
-      set .@eac, eaclass();
-      if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
-        bonus bNoWeaponDamage,50;
-        bonus2 bSpDrainValueClass,Class_All,2;
-        bonus2 bSubClass,Class_Boss,10;
-        autobonus "{ bonus bAtk2,150; }",30,3000,BF_WEAPON;
-        .@r = getrefine();
-        if( .@r >= 7 ){
-          bonus2 bIgnoreDefRaceRate,RC_All,50;
-          if( .@r >= 9 ){
-            bonus2 bIgnoreDefRaceRate,RC_All,50;
-          }
-        }
-      }
-  - Id: 2000001
-    AegisName: Dashoes
-    Name: 'ダッシューズ'
-    Type: Armor
-    Buy: 30000
-    Weight: 100
-    Slots: 1
-    Locations:
-      Both_Accessory: true
-    Script: |
-      bonus bSpeedAddRate,1000;
-      bonus bFixedCastrate,-100;
-      bonus2 bHPDrainRate,1000,10;
-      bonus2 bSPDrainRate,1000,10;
-      bonus2 bSubRace,RC_All,100;
-      bonus bShortAtkRate,200;
-      bonus bLongAtkRate,200;
-      bonus bPerfectHitAddRate,100;
-      bonus bDefRatioAtkClass,Class_All;
-      bonus2 bAddClass,Class_All,500;
-      bonus2 bMagicAddClass,Class_All,500;
-      bonus2 bRegenPercentHP,100,100;
-      bonus2 bRegenPercentSP,100,100;
-      bonus bAllStats,200;
-      bonus bAtk2,999;
-      bonus bMatk,999;
-      bonus bAspd,100;
-      bonus bReduceDamageReturn,100;
-      bonus bMaxHP,90000;
-      bonus bMaxHPrate,100;
-      bonus2 bResEff,Eff_Confusion,10000;
-      bonus2 bResEff,Eff_Crystalize,10000;
-      bonus2 bResEff,Eff_Freeze,10000;
-      bonus2 bResEff,Eff_Stone,10000;
+      bonus bSpeedRate,100;
+

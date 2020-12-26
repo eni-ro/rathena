@@ -13,15 +13,20 @@ unordered_map<string, MyCSV> MyCSVDB::csv_db = unordered_map<string, MyCSV>();
 
 MyCSV::MyCSV()
 {
-    data = vector<vector<string>>();
 }
 
 bool MyCSV::Load(const string &path)
 {
     filepath = path;
+    dirty = false;
+    data.clear();
+
     ifstream ifs;
     ifs.open(filepath.c_str());
-    data.clear();
+    if(!ifs){
+        ShowError("Failed to open csv file : %s\n",path.c_str());
+        return false;
+    }
     while (!ifs.eof())
     {
         string line;
@@ -29,14 +34,13 @@ bool MyCSV::Load(const string &path)
         data.push_back(Split(line));
     }
     ifs.close();
-    dirty = false;
 
     return true;
 }
 
 MyCSV::~MyCSV()
 {
-    Flush();
+    //Flush();
 }
 
 int MyCSV::GetRows()
@@ -171,6 +175,10 @@ void MyCSV::Flush()
     }
     ofstream ofs;
     ofs.open(filepath.c_str());
+    if(!ofs){
+        ShowError("Failed to open csv file : %s\n",filepath.c_str());
+        return;
+    }
     data = vector<vector<string>>();
     for (vector<string> line : data)
     {
@@ -238,5 +246,8 @@ void MyCSVDB::Reload(const char *cfilepath)
         MyCSV tmp = MyCSV();
         csv_db[file] = tmp;
     }
+	else {
+		csv_db[file].Flush();
+	}
     csv_db[file].Load(file);
 }

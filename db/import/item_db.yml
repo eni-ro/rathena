@@ -500,4 +500,4 @@ Footer:
 # Original
   - Path: db/import/item_db_usable_original.yml
   - Path: db/import/item_db_equip_original.yml
-#  - Path: db/import/item_db_etc_original.yml
+  - Path: db/import/item_db_etc_original.yml

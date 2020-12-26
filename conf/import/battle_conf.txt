@@ -28,9 +28,9 @@ ammo_check_weapon: no
 // drops.conf
 //===================================
 // The rate the common items are dropped (Items that are in the ETC tab, besides card)
-item_rate_common: 5000
-item_rate_common_boss: 5000
-item_rate_common_mvp: 5000
+item_rate_common: 2000
+item_rate_common_boss: 2000
+item_rate_common_mvp: 2000
 
 // The rate healing items are dropped (items that restore HP or SP)
 item_rate_heal: 10000
@@ -38,14 +38,14 @@ item_rate_heal_boss: 10000
 item_rate_heal_mvp: 10000
 
 // The rate at which usable items (in the item tab) other then healing items are dropped.
-item_rate_use: 10000
-item_rate_use_boss: 10000
-item_rate_use_mvp: 10000
+item_rate_use: 5000
+item_rate_use_boss: 5000
+item_rate_use_mvp: 5000
 
 // The rate at which equipment is dropped.
-item_rate_equip: 5000
-item_rate_equip_boss: 5000
-item_rate_equip_mvp: 5000
+item_rate_equip: 3000
+item_rate_equip_boss: 3000
+item_rate_equip_mvp: 3000
 
 // The rate at which cards are dropped
 item_rate_card: 30000
@@ -62,6 +62,11 @@ item_rate_adddrop: 5000
 
 // Rate adjustment for Treasure Box drops (these override all other modifiers)
 item_rate_treasure: 5000
+
+// Does autoloot take into account player bonuses and penalties? (Note 1)
+// If RENEWAL_DROP, Bubble Gum, or any other modifiers are active autoloot
+// will take them into account.
+autoloot_adjust: 1
 
 //===================================
 // exp.conf
@@ -132,16 +137,16 @@ natural_heal_weight_rate: 50
 natural_heal_weight_rate_renewal: 90
 
 // Maximum atk speed. (Default 190, Highest allowed 199)
-max_aspd: 198
+max_aspd: 196
 
 // Same as max_aspd, but for 3rd classes. (Default 193, Highest allowed 199)
-max_third_aspd: 198
+max_third_aspd: 196
 
 // Max ASPD for extended class (Kagerou/Oboro and Rebellion). (Default 193, Highest allowed 199)
-max_extended_aspd: 198
+max_extended_aspd: 196
 
 // Max ASPD for Summoner Class (Doram). (Default 193, Highest allowed 199)
-max_summoner_aspd: 198
+max_summoner_aspd: 196
 
 // Maximum walk speed rate (200 would be capped to twice the normal speed)
 max_walk_speed: 800

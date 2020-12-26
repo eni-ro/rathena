@@ -3717,6 +3717,8 @@ bool status_calc_weight(struct map_session_data *sd, enum e_status_calc_weight_o
 			sd->max_weight += 15000;
 	}
 
+	sd->max_weight = sd->max_weight * 150 / 100;	//Original bonus because of max inventory size
+
 	// Update the client if the new weight calculations don't match
 	if (b_weight != sd->weight)
 		clif_updatestatus(sd, SP_WEIGHT);

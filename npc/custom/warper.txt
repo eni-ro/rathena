@@ -463,13 +463,15 @@ G8: Restrict("RE");
 // --------------------------------------------------
 	Instances:
 // --------------------------------------------------
-menu	"Bakonawa Lake",I1, "Bangungot Hospital 2F",I2, "Buwaya Cave",I3,
-		"Devil Tower",I4, "Eclage Interior",I5, "Endless Tower",I6,
-		"Faceworms Nest",I7, "Geffen Magic Tournament",I8, "Ghost Palace",I9,
-		"Hazy Forest",I10, "Horror Toy Factory",I11, "Malangdo Culvert",I12,
-		"Nidhoggur's Nest",I13, "Octopus Cave",I14, "Old Glast Heim",I15,
-		"Orc's Memory",I16, "Sarah and Fenrir",I17, "Sara Memory",I18,
-		"Sealed Shrine",I19, "Wolfchev's Laboratory",I20;
+menu	"バコナワの棲み処",I1, "Bangungot Hospital 2F",I2, "ブワヤの巣",I3,
+		"魔神の塔",I4, /*"Eclage Interior",I5,*/ "Endless Tower",I6,
+		"フェイスワームの巣",I7, "ゲフェン魔法大会",I8, "呪いの剣士",I9,
+		"Hazy Forest",I10, "ホラーおもちゃ工場",I11, "Malangdo Culvert",I12,
+		"ニーズヘッグの巣",I13, "暴窟王の洞窟",I14, "古のグラストヘイム",I15,
+		"Orc's Memory",I16, "フェンリルとサラ",I17, "サラの記憶",I18,
+		"封印された神殿",I19, "禁忌の研究所",I20,"チャールストン工場",I21,
+		"最後の部屋",I22,"ヴェルナー研究所中央室",I23,"悪夢のジターバグ",I24,
+		"ハートハンター軍事基地",I25,"ビオス島",I26,"モルスの洞窟",I27;
 
 I1: Restrict("RE");
 	Go("ma_scene01",172,175);
@@ -507,6 +509,20 @@ I18: Restrict("RE");
 I19: Go("monk_test",306,143);
 I20: Restrict("RE");
 	Go("lhz_dun04",148,269);
+I21: Restrict("RE");
+	Go("verus04",77,116);
+I22: Restrict("RE");
+	Go("un_myst",160,38);
+I23: Restrict("RE");
+	Go("slabw01",237,89);
+I24: Restrict("RE");
+	Go("moc_para01",27,92);
+I25: Restrict("RE");
+	Go("ein_fild04",279,333);
+I26: Restrict("RE");
+	Go("moro_cav",49,58);
+I27: Restrict("RE");
+	Go("moro_cav",59,63);
 
 // --------------------------------------------------
 	Special:

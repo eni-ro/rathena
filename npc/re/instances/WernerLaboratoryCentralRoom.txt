@@ -15,6 +15,70 @@
 slabw01,232,91,5	duplicate(dummy_cloaked_npc)	Skia#ep162_06	4_EP16_SKIA
 slabw01,233,92,3	duplicate(dummy_cloaked_npc)	Scared researcher#ep162	4_M_ALCHE_A
 
+slabw01,239,91,3	script	ハッピーチーター#ep162_04	4_M_PEPPERROTI,{
+	mes "[ハッピーチーター]";
+	mes "ねえねえ、ズルしてでも研究所中央室に入りたいよね？";
+	next;
+	switch(select("興味ないですね:入りたい！:ズルした過去を消したい")){
+		case 1:
+			mes "[ハッピーチーター]";
+			mes "いつでもおいで。";
+			close;
+		case 2:
+			break;
+		case 3:
+			mes "[ハッピーチーター]";
+			mes "悪いことした過去すら消したいとか、おぬしも悪よのう。";
+			terra_gloria_main = 0;
+			close;
+	}
+	terra_gloria_main = 25;
+	
+	if( checkquest(7743,PLAYTIME) == 2 ){
+		erasequest 7743;
+	}
+	switch( checkquest(7743,PLAYTIME) ) {
+	case -1:
+		if( checkquest(7742,HUNTING) == 2 ){
+		}
+		switch( checkquest(7742,HUNTING) ) {
+		case -1:
+			mes "[ハッピーチーター]";
+			mes "はい、これで入れるはずだよ。";
+			setquest 7742;// Sweeping the remnants
+			close;
+		case 0:
+		case 1:
+			mes "[ハッピーチーター]";
+			mes "はい、これで入れるはずだよ。";
+			close;
+		case 2:
+			erasequest 7742;// Sweeping the remnants
+			setquest 7743;// Sweeping the remnants (Standby)
+			getitem 25155,3;	// Swz_Honor_Token
+			getexp 200000,200000;
+
+			mes "[ハッピーチーター]";
+			mes "おっと、その前に報酬をあずかってるよ。";
+			close;
+		}
+		end;
+	case 0:
+	case 1:
+		mes "[ハッピーチーター]";
+		mes "CTが残っていて";
+		mes "まだ入れないみたい。";
+		close;
+	case 2:
+		mes "[ハッピーチーター]";
+		mes "CT明けたかな。";
+		mes "もう一度話してね。";
+		erasequest 7743;
+		close;
+	}
+	close;
+}
+
 // Werner Laboratory central room (solo instance)
 slabw01,236,91,3	script	Rookie#ep162_04	4_M_ROOKIE,{
 	if (terra_gloria_main == 20) {

@@ -83,7 +83,7 @@ mal_dun01,151,235,5	script	Starfish	551,{
 				close;
 			}
 			if (.@playtime == 2) erasequest 4197;
-			if (rentalcountitem(6442)) {
+			//if (rentalcountitem(6442)) {
 				if (instance_create(.@md_name$) < 0) {
 					mes "[Starfish]";
 					mes "Party name is... "+getpartyname(.@party_id)+".";
@@ -97,7 +97,7 @@ mal_dun01,151,235,5	script	Starfish	551,{
 				mes "Please catch that pervert octopus,";
 				mes "and come back with it sticked to the pick, hehe.";
 				close;
-			}
+			//}
 			mes "[Starfish]";
 			mes "Prepare a pick first,";
 			mes "so you can thread that octopus";
@@ -118,7 +118,7 @@ mal_dun01,153,237,5	script	Weird Entrance	844,{
 	next;
 	switch(select("Go in.:Stop.")) {
 	case 1:
-		if (rentalcountitem(6442)) {
+		//if (rentalcountitem(6442)) {
 			switch(instance_enter("Octopus Cave")) {
 			case IE_OTHER:
 				mes "[Starfish]";
@@ -143,7 +143,7 @@ mal_dun01,153,237,5	script	Weird Entrance	844,{
 				mes "Big trouble is waiting, if you go in now.";
 				close;
 			}
-		}
+		//}
 		mes "[Starfish]";
 		mes "You should definitely prepare";
 		mes "hunting stick if you want to";

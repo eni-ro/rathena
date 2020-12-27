@@ -870,6 +870,7 @@ OnMobDead:
 		mes "Lucile seems to be a machine.";
 		mes "I can hear mechanical sounds all of a sudden.";
 		specialeffect EF_LEVEL99_3;
+		sleep2 100;	//client crash counter measure
 		progressbar "000000",40;
 		if (is_party_leader() == true && 'devil_tower == 5) {
 			if (isbegin_quest(7572) == 0)

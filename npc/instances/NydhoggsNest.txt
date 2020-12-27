@@ -20,6 +20,28 @@
 //= 1.6 Added GM management NPCs. [Euphy]
 //============================================================ 
 
+nyd_dun02,91,199,3	script	ハッピーチーター#nyd_dun02	4_M_PEPPERROTI,{
+	mes "[ハッピーチーター]";
+	mes "ねえねえ、ズルしてでもニーズヘッグの巣に入りたいよね？";
+	next;
+	switch(select("興味ないですね:入りたい！:ズルした過去を消したい")){
+		case 1:
+			mes "[ハッピーチーター]";
+			mes "いつでもおいで。";
+			close;
+		case 2:
+			mes "[ハッピーチーター]";
+			mes "はい、これで入れるはずだよ。";
+			ins_nyd = 200;
+			close;
+		case 3:
+			mes "[ハッピーチーター]";
+			mes "悪いことした過去すら消したいとか、おぬしも悪よのう。";
+			ins_nyd = 0;
+			close;
+	}
+}
+
 nyd_dun02,100,201,3	script	Yggdrasil Gatekeeper	111,8,8,{
 	if (ins_nyd == 0) {
 		mes "A great stone gate stands before you. The sculpture of a terrible dragon spreads its powerful looking wings.";
@@ -97,7 +119,7 @@ nyd_dun02,100,201,3	script	Yggdrasil Gatekeeper	111,8,8,{
 		mes "As I put my hands on the stone gate, a voice sounded from the depth of my heart.";
 		next;
 		if (.@ins_nyd_check == -1 && .@ins_nyd_check2 == -1) {
-			if (!instance_check_party(.@party_id,2,70)) {
+			if (!instance_check_party(.@party_id,1,70)) {
 				mes "[Yggdrasil Gatekeeper]";
 				mes "Where are the other servants, so you can work together? Each servant cannot be admitted here individually...";
 				next;

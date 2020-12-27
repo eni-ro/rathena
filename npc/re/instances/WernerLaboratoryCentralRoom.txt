@@ -255,7 +255,18 @@ OnInit:
 // warps
 1@slw,187,170,0	warp	#slwwarp01	1,1,1@slw,71,32
 1@slw,71,77,0	warp	#slwwarp02	1,1,1@slw,54,134
-1@slw,55,150,0	warp	Emergency exit#exit_war	1,1,que_swat,155,58
+1@slw,55,150,0	script	Emergency exit#exit_war	45,1,1,{
+	end;
+OnTouch:
+	if (checkweight(2001000900,5) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
+	getitem 2001000900,5;
+	warp "que_swat",155,58;
+	close;
+}
 
 // Entrance - event type
 1@slw,187,25,0	script	#sl_evt01	HIDDEN_WARP_NPC,2,2,{
@@ -780,8 +791,13 @@ OnTouch:
 		mes "^4d4dffOnly the party leader can proceed with this event.^000000";
 		close;
 	}
-	if (checkweight(501,1) == 0) {
+	if (checkweight(1201,3) == 0) {
 		mes "- Cannot progress with quest because you have too many items in your possession. -";
+		close;
+	}
+	if (checkweight(2001000900,5) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
 		close;
 	}
 	.@seyren$ = instance_npcname("Seyren Windsor#seiren");
@@ -1080,6 +1096,7 @@ OnTouch:
 		setpcblock PCBLOCK_NPC, false;
 		specialeffect2 EF_SCREEN_QUAKE;
 		specialeffect2 EF_RAIN_PARTICLE2;
+		getitem 2001000900,5;
 		warp "que_swat",155,50;
 		end;
 	}

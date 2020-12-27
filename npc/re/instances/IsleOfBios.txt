@@ -347,6 +347,11 @@ OnMyMobDead:
 // zone 3
 // 1@dth3,64,74,5	script	Vrid#bios3	4_M_KNIGHT_BLACK,5,7,{// official
 1@dth3,64,74,5	script	Vrid#bios3	4_M_KNIGHT_BLACK,{
+	if (checkweight(2001000901,5) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	if ('reward == 1) {
 		mes "[Vrid]";
 		mes "I came by";
@@ -361,6 +366,7 @@ OnMyMobDead:
 			ep14_3_isle = 1;
 		if (checkquest(15007,PLAYTIME) == 0 || checkquest(15007,PLAYTIME) == 1)
 			setquest 15008;// Memorial Dungeon: Isle of Bios
+		getitem 2001000901,5;
 		warp "moro_cav",45,63;
 	}
 	end;

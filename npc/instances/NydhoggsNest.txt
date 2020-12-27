@@ -1978,6 +1978,11 @@ OnTimer180000:
 }
 
 2@nyd,202,324,5	script	World Tree Yggdrasil#2F	437,3,3,{
+	if (checkweight(2001000901,1) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "[World Tree Yggdrasil]";
 	mes "Thank you. You're the saviour of humans and the Laphine Tribe.";
 	next;
@@ -2005,6 +2010,7 @@ OnTimer180000:
 		// ins_nyd2 = 0;
 		set ins_nyd,203;
 		//setquest 3135;
+		getitem 2001000901,1;
 		warp "nyd_dun02",98,196;
 		end;
 	case 2:

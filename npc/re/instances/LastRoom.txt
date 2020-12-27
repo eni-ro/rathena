@@ -446,11 +446,17 @@ OnMyMobDead2:
 }
 
 1@uns,242,253,3	script	Verity#room4	4_F_BERRYTEA,{
+	if (checkweight(2001000900,5) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "[Verity]";
 	mes "Who am I?";
 	mes "Who am I...";
 	cutin "EP15_2_brt_6.bmp",2;
 	close2;
+	getitem 2001000900,5;
 	warp "un_bunker",299,162;
 	end;
 

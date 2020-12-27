@@ -436,9 +436,15 @@ OnEnable:
 	enablenpc instance_npcname("#cave_out");
 	end;
 OnTouch:
+	if (checkweight(2001000900,3) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "Would like to go out?";
 	next;
 	if(select("Yes!:No, I will stay.") == 1)
+		getitem 2001000900,3;	//MD_Reward_Box_1
 		warp "ma_fild02",315,315;
 	close;
 }

@@ -970,6 +970,12 @@ OnTimer28500:
 1@spa,210,28,0	script	Way out of Palace	WARPNPC,2,2,{
 	end;
 OnTouch_:
+	//if (checkweight(2001000901,1) == 0) {
+	if (checkweight(1201,2) == 0) {	//2種アイテムを受け取るために装備（ナイフ）でチェック
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "It is time to leave the Ghost Palace.";
 	mes "Everything is now complete";
 	mes "and will vanish..";
@@ -982,6 +988,7 @@ OnTouch_:
 		getexp 900000,500000;
 		getitem 6672,2;// Gray Shard
 	}
+	getitem 2001000901,1;
 	warp "dali02",46,129;
 	end;
 }

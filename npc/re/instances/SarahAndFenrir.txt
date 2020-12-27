@@ -705,7 +705,18 @@ OnTouch:
 }
 
 // Exit
-1@glast,376,303,0	warp2	#glast_move_05	2,2,dali02,91,140
+1@glast,376,303,0	script	#glast_move_05	45,2,2,{
+	end;
+OnTouch:
+	if (checkweight(2001000901,1) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
+	getitem 2001000901,1;
+	warp "dali02",91,140;
+	close;
+}
 
 // Fenrir bottom
 1@glast,216,48,0	script	#glast_event_5	HIDDEN_WARP_NPC,6,6,{

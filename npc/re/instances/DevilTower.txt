@@ -2111,6 +2111,12 @@ OnBossDead:
 	mes "Will stay here any longer?";
 	mes "I can send you back where and when you belong.";
 	next;
+	
+	if (checkweight(2001000901,1) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	if (select( "Get out of here.", "Take a look around." ) == 2) {
 		mes "[Loki]";
 		mes "It is unwise to linger where time is distorted.";
@@ -2119,6 +2125,7 @@ OnBossDead:
 	mes "[Loki]";
 	mes "Perhaps, our missions will ally us again in the future..";
 	close2;
+	getitem 2001000901,1;
 	warp "dali02",134,112;
 	end;
 

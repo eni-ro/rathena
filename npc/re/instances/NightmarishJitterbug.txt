@@ -221,8 +221,14 @@ moc_para01,29,95,5	script	Runane#sara	4_F_RUNAIN,{
 1@jtb,391,30,0	script	24 Door 1	WARPNPC,3,3,{
 	end;
 OnTouch_:
+	if (checkweight(2001000901,2) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	if (isbegin_quest(13181) == 1)
 		completequest 13181;
+	getitem 2001000901,2;
 	warp "moc_para01",30,88;
 	end;
 }

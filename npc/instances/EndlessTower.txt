@@ -2160,12 +2160,19 @@ OnMyMobDead:
 			break;
 		}
 	}
+
+	if (checkweight(2001000902,2) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "[Lost Souls]";
 	mes "I'd like to talk to you more, but I've... I've got to go now.";
 	next;
 	mes "[Lost Souls]";
 	mes "Farewell, young adventurer. I wish you good luck.";
 	close2;
+	getitem 2001000902,2;
 	warp "alberta",223,36;
 	end;
 

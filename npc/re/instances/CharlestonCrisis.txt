@@ -1673,6 +1673,12 @@ OnTimer300:
 		close3;
 	case 3:
 		if ('ep15_1_mcd01 == 17) {
+			//if (checkweight(2001000901,4) == 0) {
+			if (checkweight(1201,2) == 0) {	//2種アイテムを受け取るために装備（ナイフ）でチェック
+				mes "インベントリが一杯で報酬を受け取れません。";
+				mes "インベントリを整理して下さい。";
+				close;
+			}
 			mes "[Shalosh]";
 			mes "The noise stopped. I can send you back to where you came if you want.";
 			next;
@@ -1692,6 +1698,7 @@ OnTimer300:
 				completequest 13186;
 			}
 			close2;
+			getitem 2001000901,4;
 			getitem 6752,3;	// Charleston_Parts
 			cutin "",255;
 			warp "verus04",107,124;

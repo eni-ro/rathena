@@ -1628,6 +1628,11 @@ OnTimer10000:
 		warp 'map_name$[1],158,244;
 		end;
 	}
+	if (checkweight(2001000901,2) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "[Hugin]";
 	mes "Oops. I almost distorted the time gap. Come over here. We need to go out!";
 	next;
@@ -1642,6 +1647,7 @@ OnTimer10000:
 		close;
 	}
 	close2;
+	getitem 2001000901,2;
 	warp "glast_01",204,270;
 	end;
 }

@@ -1799,6 +1799,11 @@ OnStart:
 }
 
 1@xm_d,218,150,5	script	#exwp1	PORTAL,{
+	if (checkweight(2001000901,2) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "‐どうやら緊急用の脱出口が";
 	mes "　何かの拍子で作動したようです。";
 	mes "　この脱出口から";
@@ -1811,6 +1816,7 @@ OnStart:
 		close;
 	}
 	close2;
+	getitem 2001000901,2;
 	warp "xmas",233,300;
 	end;
 }

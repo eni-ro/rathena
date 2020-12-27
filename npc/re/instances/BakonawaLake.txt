@@ -499,7 +499,7 @@ OnMobSpawn:
 
 1@ma_b,62,52,4	script	タホー#Completed	541,{
 	disable_items;
-	if (checkweight(1201,1) == 0) {
+	if (checkweight(1201,2) == 0) {
 		mes "It seems you are carrying too many different kinds of items. Please try again after reducing it.";
 		close;
 	}
@@ -518,6 +518,12 @@ OnMobSpawn:
 		getexp 0,100000;
 		next;
 	}
+	if (checkweight(2001000900,6) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
+
 	mes "[タホー]";
 	mes "すごい戦いでしたね！";
 	mes "手下が残っていたら危険なので、";
@@ -526,6 +532,7 @@ OnMobSpawn:
 	mes "[タホー]";
 	mes "それじゃあロープで上に登りましょう!";
 	close2;
+	getitem 2001000900,6;
 	warp "ma_scene01",175,176;
 	end;
 OnInstanceInit:

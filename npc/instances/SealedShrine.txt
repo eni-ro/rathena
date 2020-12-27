@@ -1146,6 +1146,11 @@ OnInstanceInit:
 }
 
 2@cata,80,63,4	script	Ancient Hero's Soul#2F	411,{
+	if (checkweight(2001000901,1) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	cutin "ins_cata_champ_s",2;
 	if (checkquest(3041)>=0) erasequest 3041;
 	mes "[Ancient Hero's Soul]";
@@ -1167,6 +1172,7 @@ OnInstanceInit:
 		mes "If you leave, please say hello to Patrick for me.";
 		cutin "",255;
 		set 'ins_baphomet,0;
+		getitem 2001000901,1;
 		warp "monk_test",310,150;
 		close;
 	case 2:

@@ -2017,11 +2017,18 @@ OnInstanceInit:
 }
 
 1@face,215,159,4	script	Dimensional Device#6	PORTAL,{
+	if (checkweight(2001000902,1) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
 	mes "[Dimensional Device]";
 	mes "Your time is finished here. You may look arround or go leave. What do you want to do?";
 	next;
-	if (select("Stop:Return to Dimensional Gap") == 2)
+	if (select("Stop:Return to Dimensional Gap") == 2){
+		getitem 2001000902,1;
 		warp "dali",85,62;
+	}
 	end;
 
 OnInstanceInit:

@@ -1242,7 +1242,18 @@ OnInstanceInit:
 
 // Warps
 1@swat,169,295,0	warp	#wp_boss	2,2,1@swat,150,263
-1@swat,151,266,0	warp	#wp_out	2,2,ein_fild04,279,339
+1@swat,151,266,0	script	#wp_out	45,2,2,{
+	end;
+OnTouch:
+	if (checkweight(2001000901,1) == 0) {
+		mes "インベントリが一杯で報酬を受け取れません。";
+		mes "インベントリを整理して下さい。";
+		close;
+	}
+	getitem 2001000901,1;
+	warp "ein_fild04",279,339;
+	close;
+}
 
 
 // Entrance

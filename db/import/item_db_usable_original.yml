@@ -107,6 +107,7 @@ Body:
     Weight: 0
     Flags:
       NoConsume: true
+    Trade:
       NoSell: true
     Script: |
       itemskill "AL_TELEPORT",1;
@@ -118,6 +119,7 @@ Body:
     Weight: 0
     Flags:
       NoConsume: true
+    Trade:
       NoSell: true
     Script: |
       callfunc "F_CashPartyCall";
@@ -129,6 +131,7 @@ Body:
     Weight: 100
     Flags:
       NoConsume: true
+    Trade:
       NoSell: true
     Script: |
       itemskill "ALL_RESURRECTION",1;
@@ -141,6 +144,7 @@ Body:
     EquipLevelMin: 85
     Flags:
       NoConsume: true
+    Trade:
       NoSell: true
     Script: |
       sc_start SC_ASPDPOTION2,1800000,9;
@@ -152,6 +156,7 @@ Body:
     Weight: 0
     Flags:
       NoConsume: true
+    Trade:
       NoSell: true
     Script: |
       sc_start SC_EXTRACT_SALAMINE_JUICE,500000,10;
@@ -163,66 +168,246 @@ Body:
     Weight: 0
     Flags:
       NoConsume: true
+    Trade:
       NoSell: true
     Script: |
       sc_start SC_BOSSMAPINFO,600000,0;
+  - Id: 2001000900
+    AegisName: MD_Reward_Box_1
+    Name: '報酬箱 I'
+    Type: Usable
+    Buy: 1
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      if( checkitemblank() > 0 ){
+        delitem 2001000900,1;
+        getrandgroupitem(IG_MD_REWARD_BOX1),1;
+      }
+  - Id: 2001000901
+    AegisName: MD_Reward_Box_2
+    Name: '報酬箱 II'
+    Type: Usable
+    Buy: 1
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      if( checkitemblank() > 0 ){
+        delitem 2001000901,1;
+        getrandgroupitem(IG_MD_REWARD_BOX2),1;
+      }
+  - Id: 2001000902
+    AegisName: MD_Reward_Box_3
+    Name: '報酬箱 III'
+    Type: Usable
+    Buy: 1
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      if( checkitemblank() > 0 ){
+        delitem 2001000902,1;
+        getrandgroupitem(IG_MD_REWARD_BOX3),1;
+      }
   - Id: 2001001000
+    AegisName: ZENY_100000
+    Name: '100,000ゼニー貨幣'
+    Type: Usable
+    Buy: 100000
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoSell: true
+    Script: |
+      if( ZENY <= 2147483647 - 100000 ){
+        ZENY = ZENY + 100000;
+        delitem 2001001000,1;
+      }
+  - Id: 2001001001
+    AegisName: ZENY_1000000
+    Name: '1,000,000ゼニー貨幣'
+    Type: Usable
+    Buy: 1000000
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoSell: true
+    Script: |
+      if( ZENY <= 2147483647 - 1000000 ){
+        ZENY = ZENY + 1000000;
+        delitem 2001001001,1;
+      }
+  - Id: 2001001002
+    AegisName: ZENY_10000000
+    Name: '10,000,000ゼニー貨幣'
+    Type: Usable
+    Buy: 10000000
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoSell: true
+    Script: |
+      if( ZENY <= 2147483647 - 10000000 ){
+        ZENY = ZENY + 10000000;
+        delitem 2001001002,1;
+      }
+  - Id: 2001001003
+    AegisName: ZENY_100000000
+    Name: '100,000,000ゼニー貨幣'
+    Type: Usable
+    Buy: 100000000
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoSell: true
+    Script: |
+      if( ZENY <= 2147483647 - 100000000 ){
+        ZENY = ZENY + 100000000;
+        delitem 2001001003,1;
+      }
+  - Id: 2001001004
+    AegisName: ZENY_1000000000
+    Name: '1,000,000,000ゼニー貨幣'
+    Type: Usable
+    Buy: 1000000000
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Trade:
+      Override: 100
+      NoSell: true
+    Script: |
+      if( ZENY <= 2147483647 - 1000000000 ){
+        ZENY = ZENY + 1000000000;
+        delitem 2001001004,1;
+      }
+  - Id: 2001001010
     AegisName: CashPointTicket_10
     Name: 'キャッシュポイントチケット[10]'
     Type: Usable
     Buy: 1
     Weight: 0
-    Flags:
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
       NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
       #CASHPOINTS = #CASHPOINTS + 10;
-  - Id: 2001001001
+  - Id: 2001001011
     AegisName: CashPointTicket_100
     Name: 'キャッシュポイントチケット[100]'
     Type: Usable
     Buy: 1
     Weight: 0
-    Flags:
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
       NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
       #CASHPOINTS = #CASHPOINTS + 100;
-  - Id: 2001001002
+  - Id: 2001001012
     AegisName: CashPointTicket_1000
     Name: 'キャッシュポイントチケット[1,000]'
     Type: Usable
     Buy: 1
     Weight: 0
-    Flags:
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
       NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
       #CASHPOINTS = #CASHPOINTS + 1000;
-  - Id: 2001001003
+  - Id: 2001001013
     AegisName: CashPointTicket_10000
     Name: 'キャッシュポイントチケット[10,000]'
     Type: Usable
     Buy: 1
     Weight: 0
-    Flags:
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
       NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
       #CASHPOINTS = #CASHPOINTS + 10000;
-  - Id: 2001001004
+  - Id: 2001001014
     AegisName: CashPointTicket_100000
     Name: 'キャッシュポイントチケット[100,000]'
     Type: Usable
     Buy: 1
     Weight: 0
-    Flags:
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
       NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
       #CASHPOINTS = #CASHPOINTS + 100000;
-  - Id: 2001001005
+  - Id: 2001001015
     AegisName: CashPointTicket_1000000
     Name: 'キャッシュポイントチケット[1,000,000]'
     Type: Usable
     Buy: 1
     Weight: 0
-    Flags:
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
       NoSell: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
       #CASHPOINTS = #CASHPOINTS + 1000000;

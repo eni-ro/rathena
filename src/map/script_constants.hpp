@@ -5168,6 +5168,9 @@
 	export_constant(IG_SHADOW_CUBE_SHOES);
 	export_constant(IG_SHADOW_CUBE_PENDANT);
 	export_constant(IG_SHADOW_CUBE_EARRING);
+	export_constant(IG_MD_REWARD_BOX1);
+	export_constant(IG_MD_REWARD_BOX2);
+	export_constant(IG_MD_REWARD_BOX3);
 
 	/* unit stop walking */
 	export_constant(USW_NONE);

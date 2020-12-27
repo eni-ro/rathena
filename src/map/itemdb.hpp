@@ -750,6 +750,9 @@ enum e_random_item_group {
 	IG_SHADOW_CUBE_SHOES,
 	IG_SHADOW_CUBE_PENDANT,
 	IG_SHADOW_CUBE_EARRING,
+	IG_MD_REWARD_BOX1,
+	IG_MD_REWARD_BOX2,
+	IG_MD_REWARD_BOX3,
 };
 
 /// Enum for bound/sell restricted selling

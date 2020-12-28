@@ -55,6 +55,7 @@ venette,133,119,3	script	Super Stylist#super_stylist	10209,{
 							set .@hairstylemaxf,99;
 							set .@hairstylemaxm,94;
 						} else {
+							set .@hairstylemin,1;
 							set .@hairstylemaxf,6;
 							set .@hairstylemaxm,6;
 						}
@@ -69,11 +70,11 @@ venette,133,119,3	script	Super Stylist#super_stylist	10209,{
 						input .@hairstyle;
 						if (Sex) {
 							if (.@hairstyle < .@hairstylemin || .@hairstyle > .@hairstylemaxm) { 
-							set .@hairstyle,0; 
+							set .@hairstyle,1; 
 							}
 						} else {
 							if (.@hairstyle < .@hairstylemin || .@hairstyle > .@hairstylemaxf) { 
-							set .@hairstyle,0; 
+							set .@hairstyle,1; 
 							}
 						}
 						setlook LOOK_HAIR,.@hairstyle;

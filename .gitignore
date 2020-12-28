@@ -11,6 +11,7 @@ Thumbs.db
 
 # /
 /*_fifo
+/*.exe
 /*.exe.*
 /*.ilk
 /*.iobj
@@ -58,6 +59,8 @@ Thumbs.db
 #/conf/import
 #/conf/msg_conf/import
 conf/import/inter_conf_sql.txt
+conf/import/login_conf_user.txt
+conf/import/char_conf_user.txt
 conf/import/map_conf_user.txt
 
 # /lib

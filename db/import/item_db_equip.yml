@@ -147,6 +147,7 @@ Body:
       Right_Hand: true
     WeaponLevel: 4
     EquipLevelMin: 1
+    Refineable: true
     Trade:
       Override: 100
       NoDrop: true
@@ -171,6 +172,87 @@ Body:
           bonus2 bIgnoreMdefClassRate,Class_All,50;
           if( .@r >= 9 ){
             bonus2 bIgnoreMdefClassRate,Class_All,50;
+          }
+        }
+      }
+  - Id: 22233
+    AegisName: Scorpio_Shoes_J
+    Name: '天蝎宮のシューズ'
+    Type: Armor
+    Buy: 20
+    Weight: 400
+    Defense: 25
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bAspdRate,10;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_GUILLOTINE_CROSS ){
+        bonus bAtk,80;
+        bonus bFlee,50;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus2 bSkillAtk,"GC_ROLLINGCUTTER",500;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus2 bSkillDelay,"GC_DARKILLUSION",-1500;
+        }
+      }
+  - Id: 28047
+    AegisName: Scorpio_Katar_J
+    Name: '天蝎宮のカタール'
+    Type: Weapon
+    SubType: Katar
+    Weight: 1000
+    Attack: 100
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Right_Hand: true
+      Left_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bAspdRate,10;
+      bonus bBaseAtk,BaseLevel;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_GUILLOTINE_CROSS ){
+        bonus bFlee,50;
+        bonus2 bAddClass,Class_All,50;
+        bonus2 bSubClass,Class_Boss,50;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreDefClassRate,Class_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreDefClassRate,Class_All,50;
           }
         }
       }

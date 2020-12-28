@@ -38,58 +38,82 @@ Body:
     End: 20210131
     Rewards:
       - Day: 1
-        ItemId: 2001001003
+        #10,000,000ゼニー貨幣
+        ItemId: 2001001002
+        Amount: 1
       - Day: 2
-        ItemId: 22973
-        Amount: 5
+        #キャッシュポイントチケット[100,000]
+        ItemId: 2001001014
+        Amount: 1
       - Day: 3
-        ItemId: 22974
+        #報酬箱 II
+        ItemId: 2001000901
         Amount: 5
       - Day: 4
-        ItemId: 22975
-        Amount: 5
-      - Day: 5
-        ItemId: 22976
-        Amount: 5
-      - Day: 6
-        ItemId: 22977
-        Amount: 5
-      - Day: 7
-        ItemId: 22978
-        Amount: 5
-      - Day: 8
-        ItemId: 12516
-        Amount: 5
-      - Day: 9
-        ItemId: 23307
-        Amount: 5
-      - Day: 10
-        ItemId: 12610
-      - Day: 11
-        ItemId: 14533
-        Amount: 2
-      - Day: 12
-        ItemId: 23012
+        #濃縮エルニウムの箱
+        ItemId: 12920
         Amount: 3
+      - Day: 5
+        #濃縮オリデオコンの箱
+        ItemId: 12921
+        Amount: 3
+      - Day: 6
+        #バブルガム
+        ItemId: 12210
+        Amount: 10
+      - Day: 7
+        #報酬箱 III
+        ItemId: 2001000902
+        Amount: 2
+      - Day: 8
+        #キャッシュポイントチケット[100,000]
+        ItemId: 2001001014
+        Amount: 2
+      - Day: 9
+        #濃縮エルニウムの箱
+        ItemId: 12920
+        Amount: 3
+      - Day: 10
+        #濃縮オリデオコンの箱
+        ItemId: 12921
+        Amount: 3
+      - Day: 11
+        #報酬箱 II
+        ItemId: 2001000901
+        Amount: 5
+      - Day: 12
+        #+11 Weapon Refine Ticket
+        ItemId: 6238
+        Amount: 1
       - Day: 13
-        ItemId: 23048
+        #報酬箱 II
+        ItemId: 2001000901
         Amount: 5
       - Day: 14
-        ItemId: 12264
-        Amount: 5
+        #改良型濃縮エルニウムの箱
+        ItemId: 17105
+        Amount: 1
       - Day: 15
-        ItemId: 23046
+        #100,000,000ゼニー貨幣
+        ItemId: 2001001003
         Amount: 5
       - Day: 16
-        ItemId: 12515
+        #報酬箱 II
+        ItemId: 2001000901
         Amount: 5
       - Day: 17
-        ItemId: 12522
-        Amount: 5
+        #+11 Armor Refine Ticket
+        ItemId: 6239
+        Amount: 1
       - Day: 18
-        ItemId: 12523
+        #報酬箱 II
+        ItemId: 2001000901
         Amount: 5
       - Day: 19
-        ItemId: 6234
+        #改良型濃縮オリデオコンの箱
+        ItemId: 17104
+        Amount: 1
       - Day: 20
-        ItemId: 22845
+        #キャッシュポイントチケット[100,000]
+        ItemId: 2001001014
+        Amount: 5

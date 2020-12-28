@@ -256,3 +256,47 @@ Body:
           }
         }
       }
+  - Id: 28643
+    AegisName: PorukkusBook
+    Name: 'ポルックスブック'
+    Type: Weapon
+    SubType: Book
+    Buy: 30000
+    Weight: 500
+    Attack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAtk2,50+BaseLevel;
+      bonus bAspdRate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
+        bonus bNoWeaponDamage,50;
+        bonus2 bSpDrainValueClass,Class_All,2;
+        bonus2 bSubClass,Class_Boss,10;
+        autobonus "{ bonus bAtk2,150; }",30,3000,BF_WEAPON;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreDefRaceRate,RC_All,50;
+          }
+        }
+      }

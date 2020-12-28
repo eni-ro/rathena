@@ -32,6 +32,10 @@ payon_in01,18,132,3	script	Vestri#pay	826,{
 	callfunc "refinenew","Vestri",0;
 	end;
 }
+department,49,108,3	script	オーバー精錬#depa	826,{
+	callfunc "refinenew","オーバー精錬",0;
+	end;
+}
 
 //============================================================
 // +11 and above Refiner Function

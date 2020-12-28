@@ -1,5 +1,5 @@
 -	script	エンチャントNPC_A#-1	72,{
-	.@file$ = .itemdb$[strnpcinfo(2)];
+	.@file$ = .itemdb$[atoi(strnpcinfo(2))];
 
 	set @name$,	"[" + strnpcinfo(1) + "]";	//名前(NPC)
 
@@ -30,6 +30,11 @@
 			case 6://終わり
 				mes @name$;
 				mes "ありがとうございました","またのご利用をお待ちしております。";
+				break;
+			case 97://エラー
+				mes @name$;
+				mes "DB設定エラーです。";
+				mes "GMに報告して下さい。";
 				break;
 			case 98://エラー
 				mes @name$;
@@ -105,6 +110,11 @@
 	set .@name_id, csvread(.@file$, .@line, 2);
 	set .@part, csvread(.@file$, .@line, 3);
 	set .@cols,1;
+
+	if( getiteminfo(.@name_id,0) == -1 ){
+		my_message 97;
+		close;
+	}
 	my_message 2,"[<ITEM>"+getitemname(.@name_id)+"<INFO>"+.@name_id+"</INFO></ITEM>]";
 	while (1) {
 		set .@check_id[.@cols], csvread(.@file$, .@line, (.@cols * 2 + 2));
@@ -112,11 +122,22 @@
 			break;
 
 		set .@check_num[.@cols], csvread(.@file$, .@line, (.@cols * 2 + 3));
-		if (.@check_id[.@cols] < 0 ) 
-			my_message 3,"ゼニー",.@check_num[.@cols] + "z";
-
-		else 
-			my_message 3,"[<ITEM>"+getitemname(.@check_id[.@cols])+"<INFO>"+.@check_id[.@cols]+"</INFO></ITEM>]",.@check_num[.@cols] + "個";
+		switch( .@check_id[.@cols] ){
+			case -1:
+				my_message 3,"ゼニー",.@check_num[.@cols] + "z";
+				break;
+			case -2:
+				my_message 3,"キャッシュポイント",.@check_num[.@cols] + "ポイント";
+				break;
+			default:
+				if( getiteminfo(.@check_id[.@cols],0) == -1 ){
+					next;
+					my_message 97;
+					close;
+				}
+				my_message 3,"[<ITEM>"+getitemname(.@check_id[.@cols])+"<INFO>"+.@check_id[.@cols]+"</INFO></ITEM>]",.@check_num[.@cols] + "個";
+				break;
+		}
 
 		set .@cols,.@cols + 1;
 	}
@@ -132,11 +153,17 @@
 
 		if (!.@check_id[.@cols])
 			break;
-		if ( .@check_id[.@cols] == -1 ) 
-			set .@temp, (Zeny / .@check_num[.@cols] );
-		else {
-			set .@temp,callfunc ("Load_amount",.@check_id[.@cols]);
-			set .@temp,.@temp / .@check_num[.@cols];
+		switch ( .@check_id[.@cols] ){
+			case -1:
+				set .@temp, (Zeny / .@check_num[.@cols] );
+				break;
+			case -2:
+				set .@temp, (#CASHPOINTS / .@check_num[.@cols] );
+				break;
+			default:
+				set .@temp,callfunc ("Load_amount",.@check_id[.@cols]);
+				set .@temp,.@temp / .@check_num[.@cols];
+				break;
 		}
 
 		if ( .@temp < 1 )
@@ -192,13 +219,20 @@
 	while (1) {
 		if (!.@check_id[.@cols])
 			break;
-		if ( .@check_id[.@cols] == -1 ){
-			if(Zeny < .@check_num[.@cols])
-				set .@dammy,1;
-		} else {
-			set .@temp,callfunc ("Load_amount",.@check_id[.@cols]);
-			if(.@temp < .@check_num[.@cols])
-				set .@dammy,1;
+		switch ( .@check_id[.@cols] ){
+			case -1:
+				if(Zeny < .@check_num[.@cols])
+					set .@dammy,1;
+				break;
+			case -2:
+				if(#CASHPOINTS < .@check_num[.@cols])
+					set .@dammy,1;
+				break;
+			default:
+				set .@temp,callfunc ("Load_amount",.@check_id[.@cols]);
+				if(.@temp < .@check_num[.@cols])
+					set .@dammy,1;
+				break;
 		}
 		set .@cols,.@cols + 1;
 	}
@@ -218,19 +252,25 @@
     while (1) {
         if (!.@check_id[.@cols])
             break;
-        if ( .@check_id[.@cols] == -1 ){
-            set Zeny, Zeny - .@check_num[.@cols];
-        } else {
+        switch( .@check_id[.@cols] ){
+			case -1:
+				Zeny -= .@check_num[.@cols];
+				break;
+			case -2:
+				#CASHPOINTS -= .@check_num[.@cols];
+				break;
+			default:
 				set .@type,getiteminfo(.@check_id[.@cols],2);
 				if(.@type == IT_ARMOR || .@type == IT_WEAPON || .@type == IT_PETARMOR || .@type == IT_SHADOWGEAR){
-                for(set .@b,0;.@b < .@check_num[.@cols];set .@b,.@b + 1) {
-                    //set .@dammy,callfunc ("Load_inventorylist",.@check_id[.@cols],1);
-                    delitem .@check_id[.@cols],1;
-                }
-            } else {
-                //set .@dammy,callfunc ("Load_inventorylist",.@check_id[.@cols],.@check_num[.@cols]);
-                delitem .@check_id[.@cols],.@check_num[.@cols];
-            }
+		            for(set .@b,0;.@b < .@check_num[.@cols];set .@b,.@b + 1) {
+		                //set .@dammy,callfunc ("Load_inventorylist",.@check_id[.@cols],1);
+		                delitem .@check_id[.@cols],1;
+		            }
+	            } else {
+	                //set .@dammy,callfunc ("Load_inventorylist",.@check_id[.@cols],.@check_num[.@cols]);
+	                delitem .@check_id[.@cols],.@check_num[.@cols];
+	            }
+	         	break;
         }
         set .@cols,.@cols + 1;
     }
@@ -242,7 +282,7 @@
 
 	close;
 OnInterIfInitOnce:
-	.@dbid = strnpcinfo(2);
+	.@dbid = atoi(strnpcinfo(2));
 	if( .@dbid >= 0 ){
 		set .itemdb$[.@dbid],"npc/custom/merchants/" + strnpcinfo(3) + ".csv";
 		csvreload .itemdb$[.@dbid];

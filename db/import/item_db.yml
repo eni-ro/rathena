@@ -496,6 +496,7 @@ Footer:
   Imports:
 # Override
   - Path: db/import/item_db_usable.yml
+  - Path: db/import/item_db_equip.yml
   - Path: db/import/item_db_etc.yml
 # Original
   - Path: db/import/item_db_usable_original.yml

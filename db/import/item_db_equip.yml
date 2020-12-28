@@ -81,51 +81,96 @@
 #   EquipScript             Script to execute when the item is equipped. (Default: null)
 #   UnEquipScript           Script to execute when the item is unequipped or when a rental item expires. (Default: null)
 ###########################################################################
-# HEALING   2000000000
-# USABLE    2001000000
-# ETC   2002000000
-# ARMOR   2003000000
-# WEAPON    2004000000
-# CARD    2005000000
-# PETEGG    2006000000
-# PETARMOR    2007000000
-# AMMO    2008000000
-# DELAYCONSUME    2009000000
-# SHADOWGEAR    2010000000
-# CASH    2011000000
 
 Header:
   Type: ITEM_DB
   Version: 1
 
 Body:
-  - Id: 2005500000
-    AegisName: Shadow_Move_Speed_Up
-    Name: Move Speed Up
-    Type: Card
+  - Id: 19262
+    AegisName: Jirant_Circlet
+    Name: 'ŒÃ‘ã—´‚Ì•óŠ¥'
+    Type: Armor
+    Buy: 20
+    Weight: 600
+    Defense: 12
+    Slots: 1
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 130
+    Refineable: true
+    View: 1644
     Script: |
-      bonus bSpeedRate,100;
-  - Id: 2005500001
-    AegisName: Shadow_Reflection_Guard
-    Name: Reflection Guard
-    Type: Card
+      bonus bMdef,15;
+      .@r = getrefine();
+      bonus2 bResEff,Eff_Fear,.@r*10;
+      bonus2 bMagicAddClass,Class_All,.@r;
+      bonus bVariableCastrate,-.@r;
+      if( .@r >= 7 ){
+        bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",15;
+        bonus2 bSkillCooldown,"SO_PSYCHIC_WAVE",-1000;
+        if( .@r >= 9 ){
+          bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",15;
+          bonus2 bSkillCooldown,"SO_PSYCHIC_WAVE",-1000;
+          if( .@r >= 10 ){
+            .@b = (readparam(bInt)+readparam(bDex))/10;
+            bonus bInt,.@b;
+            bonus bDex,.@b;;
+          }
+        }
+      }
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
+        skill "HW_GANBANTEIN",1,1;
+      }
+
+  - Id: 26167
+    AegisName: Aquarius_Staff_J
+    Name: '•ó•r‹{‚ÌƒXƒ^ƒbƒt'
+    Type: Weapon
+    SubType: Staff
+    Weight: 500
+    Attack: 35
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
     Script: |
-      bonus bReduceDamageReturn,100;
-  - Id: 2005500002
-    AegisName: Shadow_Weapon_Perfection
-    Name: Weapon Perfection
-    Type: Card
-    Script: |
-      bonus bNoSizeFix;
-  - Id: 2005500003
-    AegisName: Shadow_Infinite_Gems
-    Name: Infinite Gems
-    Type: Card
-    Script: |
-      bonus bNoGemStone;
-  - Id: 2005500004
-    AegisName: Shadow_Infinite_Fuel
-    Name: Infinite Fuel
-    Type: Card
-    Script: |
-      bonus bNoMadoFuel;
+      bonus bUnbreakableWeapon;
+      bonus bMatk,50+BaseLevel;
+      bonus bAspdRate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_WARLOCK ){
+        bonus bAspdRate,10;
+        bonus bDelayrate,-10;
+        bonus2 bMagicAddClass,Class_All,25;
+        bonus2 bSkillAtk,"WL_HELLINFERNO",50;
+        bonus2 bSubRace,RC_DemiHuman,10;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreMdefClassRate,Class_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreMdefClassRate,Class_All,50;
+          }
+        }
+      }

@@ -224,6 +224,7 @@ Body:
     Weight: 1000
     Attack: 10
     Range: 1
+    Slots: 1
     Jobs:
       Assassin: true
     Locations:

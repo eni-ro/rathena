@@ -129,8 +129,9 @@ Body:
     Name: '•ó•r‹{‚ÌƒXƒ^ƒbƒt'
     Type: Weapon
     SubType: Staff
-    Weight: 500
-    Attack: 35
+    Weight: 300
+    Attack: 0
+    MagicAttack: 10
     Range: 1
     Slots: 1
     Jobs:
@@ -221,7 +222,7 @@ Body:
     Type: Weapon
     SubType: Katar
     Weight: 1000
-    Attack: 100
+    Attack: 10
     Range: 1
     Jobs:
       Assassin: true
@@ -242,7 +243,7 @@ Body:
     Script: |
       bonus bUnbreakableWeapon;
       bonus bAspdRate,10;
-      bonus bBaseAtk,BaseLevel;
+      bonus bBaseAtk,100+BaseLevel;
       set .@eac, eaclass();
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_GUILLOTINE_CROSS ){
         bonus bFlee,50;
@@ -288,7 +289,7 @@ Body:
       bonus bAspdRate,10;
       set .@eac, eaclass();
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
-        bonus bNoWeaponDamage,50;
+        bonus2 bAddClass,Class_All,50;
         bonus2 bSpDrainValueClass,Class_All,2;
         bonus2 bSubClass,Class_Boss,10;
         autobonus "{ bonus bAtk2,150; }",30,3000,BF_WEAPON;

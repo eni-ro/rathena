@@ -81,13 +81,130 @@
 #   EquipScript             Script to execute when the item is equipped. (Default: null)
 #   UnEquipScript           Script to execute when the item is unequipped or when a rental item expires. (Default: null)
 ###########################################################################
+# HEALING   2000000000
+# USABLE    2001000000
+# ETC   2002000000
+# ARMOR   2003000000
+# WEAPON    2004000000
+# CARD    2005000000
+# PETEGG    2006000000
+# PETARMOR    2007000000
+# AMMO    2008000000
+# DELAYCONSUME    2009000000
+# SHADOWGEAR    2010000000
+# CASH    2011000000
 
 Header:
   Type: ITEM_DB
   Version: 1
 
 Body:
-  - Id: 2000001
+#DAGGER   2004000000
+#1HSWORD  2004010000
+#2HSWORD  2004020000
+#1HSPEAR  2004030000
+#2HSPEAR  2004040000
+#1HAXE    2004050000
+#2HAXE    2004060000
+#MACE     2004070000
+#2HMACE   2004080000
+#STAFF    2004090000
+  - Id: 2004090000
+    AegisName: Newbie_Aquarius_Staff_J
+    Name: '初心者用宝瓶宮のスタッフ'
+    Type: Weapon
+    SubType: Staff
+    Weight: 150
+    Attack: 0
+    MagicAttack: 5
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,25+BaseLevel/2;
+      bonus bAspdRate,5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_WIZARD ){
+        bonus bAspdRate,5;
+        bonus bDelayrate,-5;
+        bonus2 bMagicAddClass,Class_All,15;
+        bonus2 bSkillAtk,"WL_HELLINFERNO",25;
+        bonus2 bSubRace,RC_DemiHuman,5;
+        bonus2 bIgnoreMdefClassRate,Class_All,50;
+      }
+  - Id: 2004150000
+    AegisName: Newbie_PorukkusBook
+    Name: '初心者用ポルックスブック'
+    Type: Weapon
+    SubType: Book
+    Buy: 30000
+    Weight: 250
+    Attack: 5
+    Range: 1
+    Slots: 1
+    Jobs:
+      Priest: true
+      Sage: true
+      StarGladiator: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bAtk2,25+BaseLevel/2;
+      bonus bAspdRate,5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_STAR_GLADIATOR ){
+        bonus2 bAddClass,Class_All,25;
+        bonus2 bSpDrainValueClass,Class_All,1;
+        bonus2 bSubClass,Class_Boss,5;
+        autobonus "{ bonus bAtk2,75; }",30,3000,BF_WEAPON;
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+      }
+  - Id: 2004160000
+    AegisName: Newbie_Scorpio_Katar_J
+    Name: '初心者用天蝎宮のカタール'
+    Type: Weapon
+    SubType: Katar
+    Weight: 500
+    Attack: 5
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Right_Hand: true
+      Left_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bAspdRate,5;
+      bonus bBaseAtk,50+BaseLevel/2;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_ASSASSIN ){
+        bonus bFlee,25;
+        bonus2 bAddClass,Class_All,25;
+        bonus2 bSubClass,Class_Boss,25;
+        bonus2 bIgnoreDefClassRate,Class_All,50;
+      }
+  - Id: 2003080000
     AegisName: GM_Accessory
     Name: 'GM専用装備'
     Type: Armor
@@ -123,3 +240,6 @@ Body:
         bonus2 bResEff,Eff_Freeze,10000;
         bonus2 bResEff,Eff_Stone,10000;
       }
+
+# ACC(R)     2003090000
+# ACC(L)     2003100000

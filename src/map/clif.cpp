@@ -21230,12 +21230,6 @@ void clif_parse_private_airship_request( int fd, struct map_session_data* sd ){
 		return;
 	}
 
-	// Delete the chosen item
-	if( pc_delitem( sd, idx, 1, 0, 0, LOG_TYPE_PRIVATE_AIRSHIP ) ){
-		clif_private_airship_response( sd, PRIVATEAIRSHIP_RETRY );
-		return;
-	}
-
 	// Warp the player to a random spot on the destination map
 	pc_setpos( sd, mapindex, 0, 0, CLR_TELEPORT );
 #endif

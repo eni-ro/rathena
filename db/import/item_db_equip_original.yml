@@ -93,12 +93,9 @@
 # DELAYCONSUME    2009000000
 # SHADOWGEAR    2010000000
 # CASH    2011000000
-
-Header:
-  Type: ITEM_DB
-  Version: 1
-
-Body:
+###########################################################################
+# Weapon
+###########################################################################
 #DAGGER   2004000000
 #1HSWORD  2004010000
 #2HSWORD  2004020000
@@ -109,6 +106,53 @@ Body:
 #MACE     2004070000
 #2HMACE   2004080000
 #STAFF    2004090000
+#2HSTAFF  2004100000
+#BOW      2004110000
+#KNUCKLE  2004120000
+#MUSICAL  2004130000
+#WHIP     2004140000
+#BOOK     2004150000
+#KATAR    2004160000
+#REVOLVER 2004170000
+#RIFLE    2004180000
+#GATLING  2004190000
+#SHOTGUN  2004200000
+#GRENADE  2004210000
+#HUUMA    2004220000
+###########################################################################
+# Normal Armor
+###########################################################################
+#HEAD_TOP 2003000000
+#HEAD_MID 2003010000
+#HEAD_BTM 2003020000
+#HEAD_CMB 2003030000
+#ARMOR    2003040000
+#SHIELD   2003050000
+#GARMENT  2003060000
+#SHOES    2003070000
+#ACC      2003080000
+#ACC(R)   2003090000
+#ACC(L)   2003100000
+###########################################################################
+# Shadow Armor
+###########################################################################
+#HEAD_TOP 2003200000
+#HEAD_MID 2003210000
+#HEAD_BTM 2003220000
+#HEAD_CMB 2003230000
+#ARMOR    2003240000
+#SHIELD   2003250000
+#GARMENT  2003260000
+#SHOES    2003270000
+#ACC      2003280000
+#ACC(R)   2003290000
+#ACC(L)   2003300000
+
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
   - Id: 2004090000
     AegisName: Newbie_Aquarius_Staff_J
     Name: '初心者用宝瓶宮のスタッフ'
@@ -145,6 +189,81 @@ Body:
         bonus2 bMagicAddClass,Class_All,15;
         bonus2 bSkillAtk,"WL_HELLINFERNO",25;
         bonus2 bSubRace,RC_DemiHuman,5;
+        bonus2 bIgnoreMdefClassRate,Class_All,50;
+      }
+  - Id: 2004100000
+    AegisName: Newbie_Virgo_Divine_Cross_J
+    Name: '初心者用処女宮のディバインクロス'
+    Type: Weapon
+    SubType: 2hStaff
+    Weight: 50
+    Attack: 0
+    MagicAttack: 5
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,25+BaseLevel/2;
+      bonus bAspdRate,5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_PRIEST ){
+        skill "ALL_ODINS_POWER",2,1;
+        bonus2 bMagicAddClass,Class_All,15;
+        bonus2 bSubClass,Class_Boss,25;
+        bonus bHealPower,15;
+        bonus2 bIgnoreMdefClassRate,Class_All,50;
+      }
+  - Id: 2004100001
+    AegisName: Newbie_Pisces_Staff_O_S_J
+    Name: '初心者用双魚宮のスタッフオブソウル'
+    Type: Weapon
+    SubType: 2hStaff
+    Weight: 150
+    Attack: 0
+    MagicAttack: 5
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,25+BaseLevel/2;
+      bonus bDelayrate,-5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_SAGE ){
+        bonus bAspdRate,5;
+        bonus2 bMagicAddClass,Class_All,15;
+        bonus2 bSkillAtk,"MG_FIREBOLT",50;
+        bonus2 bSkillAtk,"MG_COLDBOLT",50;
+        bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",50;
+        bonus2 bSkillAtk,"WZ_EARTHSPIKE",50;
+        bonus2 bSubEle,Ele_Fire,5;
+        bonus2 bSubEle,Ele_Water,5;
+        bonus2 bSubEle,Ele_Wind,5;
+        bonus2 bSubEle,Ele_Earth,5;
+        bonus2 bSubClass,Class_Boss,20;
         bonus2 bIgnoreMdefClassRate,Class_All,50;
       }
   - Id: 2004150000
@@ -241,6 +360,3 @@ Body:
         bonus2 bResEff,Eff_Freeze,10000;
         bonus2 bResEff,Eff_Stone,10000;
       }
-
-# ACC(R)     2003090000
-# ACC(L)     2003100000

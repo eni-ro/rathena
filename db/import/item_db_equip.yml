@@ -302,3 +302,106 @@ Body:
           }
         }
       }
+  - Id: 640002
+    AegisName: Virgo_Divine_Cross_J
+    Name: '処女宮のディバインクロス'
+    Type: Weapon
+    SubType: 2hStaff
+    Weight: 100
+    Attack: 0
+    MagicAttack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Monk: true
+      Priest: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,50+BaseLevel;
+      bonus bAspdRate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_ARCH_BISHOP ){
+        skill "ALL_ODINS_POWER",2,1;
+        bonus2 bMagicAddClass,Class_All,25;
+        bonus2 bSubClass,Class_Boss,50;
+        bonus bHealPower,30;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreMdefClassRate,Class_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreMdefClassRate,Class_All,50;
+          }
+        }
+      }
+  - Id: 640006
+    AegisName: Pisces_Staff_O_S_J
+    Name: '双魚宮のスタッフオブソウル'
+    Type: Weapon
+    SubType: 2hStaff
+    Weight: 300
+    Attack: 0
+    MagicAttack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Acolyte: true
+      Mage: true
+      Monk: true
+      Novice: true
+      Priest: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Wizard: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,50+BaseLevel;
+      bonus bDelayrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
+        bonus bAspdRate,10;
+        bonus2 bMagicAddClass,Class_All,25;
+        bonus2 bSkillAtk,"MG_FIREBOLT",100;
+        bonus2 bSkillAtk,"MG_COLDBOLT",100;
+        bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",100;
+        bonus2 bSkillAtk,"WZ_EARTHSPIKE",100;
+        bonus2 bSubEle,Ele_Fire,10;
+        bonus2 bSubEle,Ele_Water,10;
+        bonus2 bSubEle,Ele_Wind,10;
+        bonus2 bSubEle,Ele_Earth,10;
+        bonus2 bSubClass,Class_Boss,40;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreMdefClassRate,Class_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreMdefClassRate,Class_All,50;
+          }
+        }
+      }

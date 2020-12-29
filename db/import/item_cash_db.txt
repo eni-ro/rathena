@@ -62,3 +62,5 @@
 7,6233,100000 //+8 Armor Refine Ticket
 7,6232,1000000 //+9 Armor Refine Ticket
 7,6239,100000000 //+11 Armor Refine Ticket
+
+7,25464,1000   //World Tour Ticket

@@ -708,3 +708,5 @@ yuno_fild08	mapflag	privateairship_destination
 yuno_fild09	mapflag	privateairship_destination
 yuno_fild11	mapflag	privateairship_destination
 yuno_fild12	mapflag	privateairship_destination
+
+venette	mapflag	privateairship_source

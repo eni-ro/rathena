@@ -14,6 +14,14 @@ server_name: Vanilla Like Server
 start_point: venette.gat,127,125
 start_point_doram: venette.gat,127,125
 
+// Starting items for new characters
+// Max number of items is MAX_STARTITEM in char.cpp (default 32)
+// Format: <id>,<amount>,<position>{:<id>,<amount>,<position>...}
+// To auto-equip an item, include the position where it will be equipped; otherwise, use zero.
+// NOTE: For Doram, this requires client 20151001 or newer.
+start_items: 1201,1,2:2301,1,16:25464,1,0
+start_items_doram: 1681,1,2:2301,1,16:25464,1,0
+
 // Manage possible letters/symbol in the name of charater. Control character (0x00-0x1f) are never accepted. Possible values are:
 // NOTE: Applies to character, party and guild names.
 // 0: no restriction (default)

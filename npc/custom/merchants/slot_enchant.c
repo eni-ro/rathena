@@ -181,14 +181,12 @@
 			close;
 	}
 
-    //識別番号がエンチャ箇所なのでエンチャ箇所を取得する
     if(!getequipisequiped(.@part)){
         mes @name$;
         mes "何も装備してなわね。";
         mes "装備してからまた来てね。";
         close;
     }
-	
 	.@equip_id = getequipid(.@part);
 	.@refine = getequiprefinerycnt(.@part);
 	setarray .@card[0], getequipcardid(.@part,0), getequipcardid(.@part,1), getequipcardid(.@part,2), getequipcardid(.@part,3);

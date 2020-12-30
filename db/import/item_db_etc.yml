@@ -172,3 +172,99 @@ Body:
     Name: 'Z-CastFixedの設計図'
     Type: Etc
     Weight: 10
+  - Id: 25663
+    AegisName: M_M_Player
+    Name: '改造モジュール(Q-Player)'
+    Type: Card
+    Buy: 20
+    Weight: 10
+  - Id: 29511
+    AegisName: Improve_Orb_Player
+    Name: 'Q-Player'
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Script: |
+      .@v = 1+getrefine();
+      bonus2 bSubRace,RC_Player_Human,.@v;
+      bonus2 bSubRace,RC_Player_Doram,.@v;
+  - Id: 310270
+    AegisName: Improve_PowerBoost
+    Name: 'T-PowerBoost'
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Script: |
+      bonus bBaseAtk,50;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        .@rate = 10 + 5 * ( .@r - 7 );
+        .@t = 3000 + 1000 * ( .@r - 7 );
+        autobonus "{bonus bBaseAtk,100;}",.@rate,.@t,BF_WEAPON,"{ specialeffect2 EF_POTION_BERSERK; }";
+      }
+  - Id: 310271
+    AegisName: Improve_MagicBoost
+    Name: 'T-MagicBoost'
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Script: |
+      bonus bMatk,50;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        .@rate = 10 + 5 * ( .@r - 7 );
+        .@t = 3000 + 1000 * ( .@r - 7 );
+        autobonus "{bonus bMatk,100;}",.@r,.@t,BF_MAGIC,"{ specialeffect2 EF_POTION_BERSERK; }";
+      }
+  - Id: 310272
+    AegisName: Improve_Assault
+    Name: 'T-Assault'
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Script: |
+      bonus bCritAtkRate,10;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        .@rate = 10 + 5 * ( .@r - 7 );
+        .@t = 3000 + 1000 * ( .@r - 7 );
+        autobonus "{bonus bCritAtkRate,40;}",.@rate,.@t,BF_WEAPON,"{ specialeffect2 EF_POTION_BERSERK; }";
+      }
+  - Id: 310273
+    AegisName: Improve_Electricity
+    Name: 'T-Electricity'
+    Type: Card
+    Buy: 20
+    Weight: 10
+    Script: |
+      bonus3 bAutoSpell,"MG_THUNDERSTORM",6,50;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        .@rate = 50 + 10 * ( .@r - 7 );
+        .@t = 10000 + 1000 * ( .@r - 7 );
+        autobonus "{bonus3 bAutoSpell,\"SO_VARETYR_SPEAR\",10,250;}",.@rate,.@t,BF_WEAPON,"{ specialeffect2 EF_BULLSEYE; }";
+      }
+  - Id: 1000312
+    AegisName: M_M_PowerBoost
+    Name: '改造モジュール(T-PowerBoost)'
+    Type: Card
+    Buy: 20
+    Weight: 10
+  - Id: 1000313
+    AegisName: M_M_MagicBoost
+    Name: '改造モジュール(T-MagicBoost)'
+    Type: Card
+    Buy: 20
+    Weight: 10
+  - Id: 1000314
+    AegisName: M_M_Assault
+    Name: '改造モジュール(T-Assault)'
+    Type: Card
+    Buy: 20
+    Weight: 10
+  - Id: 1000315
+    AegisName: M_M_Electricity
+    Name: '改造モジュール(T-Electricity)'
+    Type: Card
+    Buy: 20
+    Weight: 10

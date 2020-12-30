@@ -302,6 +302,28 @@ Body:
           }
         }
       }
+  - Id: 460004
+    AegisName: Illusion_Shield_A
+    Name: 'イルシオンシールドI'
+    Type: Armor
+    Buy: 20
+    Weight: 1200
+    Defense: 95
+    Slots: 1
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 100
+    Refineable: true
+    View: 1
+    Script: |
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      if( BaseLevel >=170 ){
+        bonus2 bSubEle,Ele_Neutral,5;
+      }
+      .@n = getrefine()/3;
+      bonus bDef,50*.@n;
+      bonus bMdef,5*.@n;
   - Id: 640002
     AegisName: Virgo_Divine_Cross_J
     Name: '処女宮のディバインクロス'

@@ -93,6 +93,29 @@ OnInit:
 	next;
 	switch ( select(.menu$) ) {
 	case 1:
+		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
+			mes "[MVP Summoner]";
+			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
+			close;
+		} else if ( Zeny < .mvpcost ) {
+			mes "[MVP Summoner]";
+			mes "MVPの召喚に必要なゼニーが足りません。";
+			close;
+		}
+		else if( !.last_summon[atoi( strnpcinfo(2))]){
+			mes "[MVP Summoner]";
+			mes "召喚履歴が存在しません。";
+			close;
+		}
+		mes "[MVP Summoner]";
+		mes "準備はよろしいですか?";
+		close2;
+		if ( Zeny < .mvpcost ) end;
+		Zeny -= .mvpcost;
+		monster "this", 0, 0, "--ja--", .last_summon[atoi( strnpcinfo(2))], 1, strnpcinfo(3)+"::OnMobDead";
+		end;
+
+	case 2:
 		mes "[MVP Summoner]";
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "この部屋にモンスターがいる状態では回復はご利用戴けません。";
@@ -124,7 +147,7 @@ OnInit:
 		specialeffect2 EF_HEAL;
 		mes "回復しました。";
 		close;
-	case 2:
+	case 3:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "[MVP Summoner]";
 			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
@@ -147,9 +170,10 @@ OnInit:
 		close2;
 		if ( Zeny < .mvpcost ) end;
 		Zeny -= .mvpcost;
+		.last_summon[atoi( strnpcinfo(2))] = .mvpid[.@menu];
 		monster "this", 0, 0, "--ja--", .mvpid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
 		end;
-	case 3:
+	case 4:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "[MVP Summoner]";
 			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
@@ -172,9 +196,10 @@ OnInit:
 		close2;
 		if ( Zeny < .bosscost ) end;
 		Zeny -= .bosscost;
+		.last_summon[atoi( strnpcinfo(2))] = .bossid[.@menu];
 		monster "this", 0, 0, "--ja--", .bossid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
 		end;
-	case 4:
+	case 5:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) > 0 ) {
 			mes "[MVP Summoner]";
 			mes "この部屋にモンスターがいる状態ではサービスはご利用できません。";
@@ -183,14 +208,14 @@ OnInit:
 		close2;
 		callshop "MVP room#branch", 1;
 		end;
-	case 5:
+	case 6:
 		mes "[MVP Summoner]";
 		mes "この部屋から退出しますか?";
 		next;
 		if ( select( "はい:いいえ") == 1 )
 			warp .respawnmap$, .respawnx, .respawny;
 		close;
-	case 6:
+	case 7:
 		mes "[MVP Summoner]";
 		if ( getmapusers( strcharinfo(3) ) > 1 ) {
 			mes "この部屋にはまだ別のプレイヤーが残っています。 他のプレイヤーが退出したのをご確認してからこのオプションをご利用下さい。";
@@ -239,9 +264,9 @@ OnInit:
 	set .@menu[4], 0;	// Sell items (branches) On/Off (see shop below, before the mapflags)
 
 	// Respawn point when players leave the room
-	set .respawnmap$, "prontera";
-	set .respawnx, 150;
-	set .respawny, 174;
+	set .respawnmap$, "venette";
+	set .respawnx, 127;
+	set .respawny, 125;
 
 	setarray .mvpid[0],
 		1511,//	Amon Ra
@@ -325,7 +350,8 @@ OnInit:
 //	Config Ends ------------------------------------------------------------------------
 
 		if ( !.timeout ) set .timeout, 60;
-		.menu$ = ( .@menu[1] ? "回復する" : "" ) +":" ;
+		.menu$ = "再召喚する:",
+		.menu$ = .menu$ + ( .@menu[1] ? "回復する" : "" ) +":" ;
 		.menu$ = .menu$ + ( .@menu[2] ? "MVPを召喚する" : "" ) +":";
 		.menu$ = .menu$ + ( .@menu[3] ? "中ボスを召喚する" : "" ) +":";
 		.menu$ = .menu$ + ( .@menu[4] ? "枝を購入する" : "" ) +":";

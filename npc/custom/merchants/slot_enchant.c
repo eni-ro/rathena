@@ -280,7 +280,7 @@
     misceffect 610,0;
 
 	close;
-OnInterIfInitOnce:
+OnInit:
 	.@dbid = atoi(strnpcinfo(2));
 	if( .@dbid >= 0 ){
 		set .itemdb$[.@dbid],"npc/custom/merchants/" + strnpcinfo(3) + ".csv";

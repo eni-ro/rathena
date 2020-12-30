@@ -123,7 +123,6 @@ Body:
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
         skill "HW_GANBANTEIN",1,1;
       }
-
   - Id: 26167
     AegisName: Aquarius_Staff_J
     Name: '宝瓶宮のスタッフ'
@@ -259,7 +258,7 @@ Body:
         }
       }
   - Id: 28643
-    AegisName: PorukkusBook
+    AegisName: PolluxBook
     Name: 'ポルックスブック'
     Type: Weapon
     SubType: Book
@@ -302,6 +301,103 @@ Body:
           }
         }
       }
+  - Id: 32266
+    AegisName: Aquarius_Ring_J
+    Name: '宝瓶宮のリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus2 bSkillUseSP,"WL_EARTHSTRAIN",30;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_WARLOCK ){
+        bonus bAspdRate,5;
+        bonus2 bSkillAtk,"WL_EARTHSTRAIN",50;
+        bonus2 bSkillAtk,"WL_HELLINFERNO",50;
+        bonus2 bSkillDelay,"WL_EARTHSTRAIN",-300;
+        bonus2 bVariableCastrate,"WL_HELLINFERNO",-50;
+      }
+  - Id: 32267
+    AegisName: Scorpio_Ring_J
+    Name: '天蝎宮のリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bAddClass,Class_All,5;
+      bonus2 bSkillUseSP,"TF_BACKSLIDING",2;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_GUILLOTINE_CROSS ){
+        bonus bAspdRate,5;
+        bonus2 bAddClass,Class_All,5;
+        bonus bPerfectHitAddRate,35;
+      }
+  - Id: 32293
+    AegisName: PolluxRing
+    Name: 'ポルックスリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAllStats,5;
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bAddClass,Class_All,5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
+        bonus2 bAddClass,Class_All,5;
+        bonus bPerfectHitAddRate,35;
+        bonus2 bSkillAtk,"SG_SUN_WARM",100;
+        bonus2 bSkillAtk,"SG_MOON_WARM",100;
+        bonus2 bSkillAtk,"SG_STAR_WARM",100;
+      }
   - Id: 460004
     AegisName: Illusion_Shield_A
     Name: 'イルシオンシールドI'
@@ -324,6 +420,75 @@ Body:
       .@n = getrefine()/3;
       bonus bDef,50*.@n;
       bonus bMdef,5*.@n;
+  - Id: 490034
+    AegisName: Pisces_Ring_J
+    Name: '双魚宮のリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMaxSP,100;
+      bonus bDelayrate,-5;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus2 bSkillUseSP,"MG_FIREBOLT",5;
+      bonus2 bSkillUseSP,"MG_COLDBOLT",5;
+      bonus2 bSkillUseSP,"MG_LIGHTNINGBOLT",5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
+        bonus bAspdRate,10;
+        bonus bDelayrate,-5;
+        bonus2 bSkillAtk,"MG_FIREBOLT",50;
+        bonus2 bSkillAtk,"MG_COLDBOLT",50;
+        bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",50;
+        bonus2 bVariableCastrate,"MG_FIREBOLT",-50;
+        bonus2 bVariableCastrate,"MG_COLDBOLT",-50;
+        bonus2 bVariableCastrate,"MG_LIGHTNINGBOLT",-50;
+      }
+  - Id: 490010
+    AegisName: Virgo_Ring_J
+    Name: '処女宮のリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus3 bAddEff,Eff_Stun,5,ATF_MAGIC;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_ARCH_BISHOP ){
+        bonus bAspdRate,5;
+        bonus2 bMagicAddClass,Class_All,5;
+        bonus2 bVariableCastrate,"AB_JUDEX",-50;
+      }
   - Id: 640002
     AegisName: Virgo_Divine_Cross_J
     Name: '処女宮のディバインクロス'

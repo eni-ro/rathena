@@ -178,6 +178,40 @@ Body:
     Type: Card
     Buy: 20
     Weight: 10
+  - Id: 29012
+    AegisName: High_Level_J
+    Name: 'ハイレベル'
+    Type: Card
+    Weight: 0
+  - Id: 29243
+    AegisName: No_Cast_Cancel_J
+    Name: '詠唱妨害不可'
+    Type: Card
+    Weight: 0
+    Script: |
+      bonus bNoCastCancel2;
+  - Id: 29248
+    AegisName: Player_5_J
+    Name: 'プレイヤー耐性5'
+    Type: Card
+    Weight: 0
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,5;
+      bonus2 bSubRace,RC_Player_Doram,5;
+  - Id: 29371
+    AegisName: Release_Of_Magic_J
+    Name: '真理の解放'
+    Type: Card
+    Weight: 0
+    Script: |
+      autobonus "{bonus bFlee2,100;bonus2 bMagicAddClass,Class_Boss,100;}",10,10000,BF_MAGIC,"{ active_transform \"B_KATRINN\",10000; }";
+  - Id: 29372
+    AegisName: CastFixed_Delay50_J
+    Name: '固定詠唱時間 - 50%'
+    Type: Card
+    Weight: 0
+    Script: |
+      bonus bFixedCastrate,-50;
   - Id: 29511
     AegisName: Improve_Orb_Player
     Name: 'Q-Player'

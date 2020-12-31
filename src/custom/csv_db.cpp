@@ -225,7 +225,7 @@ string MyCSV::Join(const vector<string> &cols)
     return str;
 }
 
-MyCSV MyCSVDB::GetCSV(const char *cfilepath)
+MyCSV& MyCSVDB::GetCSV(const char *cfilepath)
 {
     string file = cfilepath;
     auto itr = csv_db.find(file);

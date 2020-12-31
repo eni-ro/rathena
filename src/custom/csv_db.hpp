@@ -34,7 +34,7 @@ namespace csv_script{
     class MyCSVDB
     {
     public:
-        static MyCSV GetCSV( const char *cfilepath );
+        static MyCSV& GetCSV( const char *cfilepath );
         static void Reload( const char *cfilepath );
     private:
         MyCSVDB(){}

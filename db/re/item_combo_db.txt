@@ -907,14 +907,8 @@
 15354:22008,{ bonus bLongAtkRate,5; .@r = getequiprefinerycnt(EQI_ARMOR) + getequiprefinerycnt(EQI_SHOES); if (.@r>=21) { bonus2 bIgnoreDefRaceRate,RC_Brute,20; bonus2 bIgnoreDefRaceRate,RC_Demon,20; } }
 15354:22117,{ bonus bLongAtkRate,5; .@r = getequiprefinerycnt(EQI_ARMOR) + getequiprefinerycnt(EQI_SHOES); if (.@r>=21) { bonus2 bIgnoreDefRaceRate,RC_Brute,20; bonus2 bIgnoreDefRaceRate,RC_Demon,20; } }
 15348:19366:20923:22192,{ bonus bVit,5; bonus bMaxSPrate,5; bonus bDef,5; bonus bMdef,15; bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Fire,10; bonus2 bSubEle,Ele_Wind,10; .@hp = 15; .@r[0] = getequiprefinerycnt(EQI_ARMOR); .@r[1] = getequiprefinerycnt(EQI_HEAD_TOP); .@r[2] = getequiprefinerycnt(EQI_GARMENT); .@r[3] = getequiprefinerycnt(EQI_SHOES); .@sum = .@r[0]+.@r[1]+.@r[2]+.@r[3]; if (.@r[0] >= 7 && .@r[1] >= 7 && .@r[2] >= 7 && .@r[3] >= 7) { .@hp += 10; } bonus bMaxHPrate,.@hp; if (.@sum >= 36) { bonus bFixedCast,-700; if (.@sum >= 40) { bonus bDelayrate,-20; } } }
-15376:22196,{ bonus2 bAddClass,Class_All,5; }
-15376:22197,{ bonus bMaxSPRate,5; }
-15376:20933,{ bonus bBaseAtk,50; }
-15376:20934,{ bonus bDelayrate,-10; }
-15377:20933,{ bonus bAspdRate,10; }
-15377:20934,{ bonus bMatk,50; }
-15377:22196,{ bonus bAspdRate,5; }
-15377:22197,{ bonus bMatkRate,5; }
+15376:20933,{ .@val=-10; if( BaseLevel >= 170 ){ .@val-=10; } bonus bVariableCastrate,.@val; bonus2 bSubEle,Ele_Neutral,5; }
+15377:20934,{ .@val=-10; if( BaseLevel >= 170 ){ .@val-=10; } bonus bDelayrate,.@val; bonus2 bSubEle,Ele_Neutral,5; }
 15388:15389,{ .@r = getequiprefinerycnt(EQI_ARMOR) + getequiprefinerycnt(EQI_GARMENT); bonus bMaxHPrate,5; bonus bMaxSPrate,5; if(.@r > 21){ bonus bDelayrate,-15; } }
 16065:20838,{ bonus bAspdRate,10; .@eq = getequiprefinerycnt(EQI_GARMENT); .@weapon = getequiprefinerycnt(EQI_HAND_R); if (.@eq >= 7 && .@weapon >= 7) { bonus2 bSkillAtk,"AB_DUPLELIGHT_MELEE",25; bonus2 bSkillAtk,"AB_DUPLELIGHT_MAGIC",25; } if ((.@eq + .@weapon) >= 18) { bonus bCritical,15; if ((.@eq + .@weapon) >= 22) { bonus bCritAtkRate,20; } } }
 18137:1752,{ bonus bLongAtkRate,25; }

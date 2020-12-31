@@ -59298,7 +59298,14 @@ Body:
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine(); bonus bBaseAtk,(100+10*(.@r/2)); if (.@r >= 7) { bonus bAspdRate,10; }
+      .@val = 3;
+      if( BaseLevel >= 170 ){
+        .@val += 2;
+      }
+      bonus bAgi,.@val;
+      bonus bVit,.@val;
+      bonus bLuk,.@val;
+      bonus bMaxHPrate,4*getrefine()/3;
   - Id: 15377
     AegisName: Illusion_Armor_B-type
     Name: 'イルシオンスーツII'
@@ -59311,7 +59318,14 @@ Body:
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine(); bonus bMatk,(100+10*(.@r/2)); if (.@r >= 7) { bonus bVariableCastrate,-10; }
+      .@val = 3;
+      if( BaseLevel >= 170 ){
+        .@val += 2;
+      }
+      bonus bStr,.@val;
+      bonus bInt,.@val;
+      bonus bDex,.@val;
+      bonus bMaxHPrate,4*getrefine()/3;
   - Id: 15378
     AegisName: Lava_Leather_Armor
     Name: 'ラーヴァレザーアーマー'
@@ -82973,7 +82987,12 @@ Body:
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine(); bonus bMaxHP,1000+(100*(.@r/2)); if (.@r >= 7) { bonus bAspdRate,5; }
+      .@val = 15;
+      if( BaseLevel>=170 ){
+        .@val += 5;
+      }
+      bonus2 bSubEle,Ele_Neutral,.@val;
+      bonus bMaxHPrate,2*getrefine();
   - Id: 20934
     AegisName: Illusion_Engine_wing_B-type
     Name: 'イルシオンウィングII'
@@ -82986,7 +83005,12 @@ Body:
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine(); bonus bMaxHP,1000+(100*(.@r/2)); if (.@r >= 7) { bonus bVariableCastrate,-5; }
+      .@val = 15;
+      if( BaseLevel>=170 ){
+        .@val += 5;
+      }
+      bonus2 bSubEle,Ele_Neutral,.@val;
+      bonus bMaxSPrate,2*getrefine();
   - Id: 20935
     AegisName: Lava_Leather_Manteau
     Name: 'ラーヴァレザーマント'
@@ -85935,7 +85959,15 @@ Body:
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine(); bonus bMaxSP,200+(20*(.@r/2)); if (.@r >= 7) { bonus bLongAtkRate,5; }
+      .@val = 10;
+      if( BaseLevel >= 170 ){
+        .@val += 5;
+      }
+      bonus bMaxHPrate,.@val;
+      bonus bMaxSPrate,.@val;
+      .@val = getrefine()/3;
+      bonus bDef,100*.@val;
+      bonus bMdef,10*.@val;
   - Id: 22197
     AegisName: Illusion_Leg_B-type
     Name: 'イルシオンレッグII'
@@ -85949,7 +85981,15 @@ Body:
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine(); bonus bMaxSP,200+(20*(.@r/2)); if (.@r >= 7) { bonus2 bMagicAtkEle,Ele_All,5; }
+      .@val = 10;
+      if( BaseLevel >= 170 ){
+        .@val += 5;
+      }
+      bonus bMaxHPrate,.@val;
+      bonus bMaxSPrate,.@val;
+      .@val = getrefine()/3*30;
+      bonus bBaseAtk,.@val;
+      bonus bMatk,.@val;
   - Id: 22198
     AegisName: Traveler_Shoes
     Name: 'トラベラーシューズ'
@@ -107831,6 +107871,8 @@ Body:
     EquipLevelMin: 130
     Script: |
       bonus2 bAddClass,Class_All,5;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus bDelayrate,-10;
   - Id: 32208
     AegisName: Illusion_Booster_L
     Name: 'イルシオンチップα-II'
@@ -107842,7 +107884,9 @@ Body:
       Left_Accessory: true
     EquipLevelMin: 130
     Script: |
-      bonus2 bAddClass,Class_All,5;
+      bonus2 bIgnoreDefRaceRate,RC_All,30;
+      bonus2 bIgnoreMdefRaceRate,RC_All,30;
+      bonus bDelayrate,-10;
   - Id: 32209
     AegisName: Illusion_Battle_chip_R
     Name: 'イルシオンチップβ-I'
@@ -107854,7 +107898,9 @@ Body:
       Right_Accessory: true
     EquipLevelMin: 130
     Script: |
-      bonus bMatkRate,5;
+      bonus2 bAddClass,Class_All,5;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus bVariableCastrate,-10;
   - Id: 32210
     AegisName: Illusion_Battle_chip_L
     Name: 'イルシオンチップβ-II'
@@ -107866,7 +107912,9 @@ Body:
       Left_Accessory: true
     EquipLevelMin: 130
     Script: |
-      bonus bMatkRate,5;
+      bonus2 bIgnoreDefRaceRate,RC_All,30;
+      bonus2 bIgnoreMdefRaceRate,RC_All,30;
+      bonus bVariableCastrate,-10;
   - Id: 32221
     AegisName: Time_Overload_Ring
     Name: Temporal Transcendence Ring

@@ -194,8 +194,8 @@
 			break;
 		case 4:
 			my_message 7;
-			getitem2 .@name_id,1,1,0,0,0,0,0,0,180;
-			break;
+			rentitem .@name_id,180;
+			close;
 		case 5:
 			close;
 	}

@@ -708,12 +708,13 @@ OnTouch:
 1@glast,376,303,0	script	#glast_move_05	45,2,2,{
 	end;
 OnTouch:
-	if (checkweight(2001000901,1) == 0) {
+	if (checkweight(2001000901,1,6919,5) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
 	}
 	getitem 2001000901,1;
+	getitem 6919,5;
 	warp "dali02",91,140;
 	close;
 }

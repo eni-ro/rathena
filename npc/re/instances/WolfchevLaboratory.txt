@@ -2074,7 +2074,7 @@ OnMyMobDead:
 		mes "^FF0000 Check up your inventory. You got too many items to carry out the quest. ^000000";
 		close;
 	}
-	if (checkweight(2001000900,5) == 0) {
+	if (checkweight(2001000900,5,6919,3) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
@@ -2146,6 +2146,7 @@ OnMyMobDead:
 			mes "I looked at Wolfchev again before leaving his lab. and I could feel that he was not obsessed anymore..";
 			close2;
 			getitem 2001000900,5;
+			getitem 6919,3;
 			warp "lhz_dun04", 147, 273;
 			end;
 		} else {
@@ -2168,6 +2169,7 @@ OnMyMobDead:
 			mes "Then I will send you out.";
 			close2;
 			getitem 2001000900,5;
+			getitem 6919,3;
 			warp "lhz_dun04", 147, 273;
 			end;
 		}
@@ -2206,6 +2208,7 @@ OnMyMobDead:
 		mes "Then I will send you out.";
 		close2;
 		getitem 2001000900,5;
+		getitem 6919,3;
 		warp "lhz_dun04", 147, 273;
 		end;
 	}

@@ -1471,7 +1471,7 @@ OnMyMobDead:
 	end;
 
 OnTouch:
-	if (checkweight(2001000900,6) == 0) {
+	if (checkweight(2001000900,6,6919,5) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
@@ -1483,6 +1483,7 @@ OnTouch:
 		set saramemory,5;
 	}
 	getitem 2001000900,6;
+	getitem 6919,5;
 	warp "dali",134,111;
 	end;
 

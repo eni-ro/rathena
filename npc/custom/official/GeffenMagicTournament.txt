@@ -1404,8 +1404,7 @@ OnInstanceInit:
 	if (checkquest(9308) != -1) {
 		switch(select("Leave the Arena and receive your reward:End Conversation")) {
 			case 1:
-				//if (checkweight(2001000901,2) == 0) {
-				if (checkweight(1201,2) == 0) {	//2種アイテムを受け取るために装備（ナイフ）でチェック
+				if (checkweight(2001000901,2,6919,10,6671,20) == 0) {
 					mes "インベントリが一杯で報酬を受け取れません。";
 					mes "インベントリを整理して下さい。";
 					close;
@@ -1444,6 +1443,7 @@ OnInstanceInit:
 				close2;
 				cutin "",255;
 				getitem 2001000901,2;
+				getitem 6919,10;
 				getitem 6671,'reward[getarraysize('reward[0]) - 1];
 				warp instance_mapname("1@gef"), 120,35;
 				end;

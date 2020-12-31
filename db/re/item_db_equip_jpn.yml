@@ -59290,12 +59290,12 @@ Body:
     AegisName: Illusion_Armor_A-type
     Name: 'イルシオンスーツI'
     Type: Armor
-    Weight: 1000
-    Defense: 105
-    Slots: 1
+    Weight: 1200
+    Defense: 150
+    Slots: 0
     Locations:
       Armor: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
       .@val = 3;
@@ -59310,9 +59310,9 @@ Body:
     AegisName: Illusion_Armor_B-type
     Name: 'イルシオンスーツII'
     Type: Armor
-    Weight: 1000
-    Defense: 105
-    Slots: 1
+    Weight: 1200
+    Defense: 150
+    Slots: 0
     Locations:
       Armor: true
     EquipLevelMin: 130
@@ -82979,12 +82979,12 @@ Body:
     AegisName: Illusion_Engine_wing_A-type
     Name: 'イルシオンウィングI'
     Type: Armor
-    Weight: 900
-    Defense: 50
-    Slots: 1
+    Weight: 1000
+    Defense: 60
+    Slots: 0
     Locations:
       Garment: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
       .@val = 15;
@@ -82997,12 +82997,12 @@ Body:
     AegisName: Illusion_Engine_wing_B-type
     Name: 'イルシオンウィングII'
     Type: Armor
-    Weight: 900
-    Defense: 50
-    Slots: 1
+    Weight: 1000
+    Defense: 60
+    Slots: 0
     Locations:
       Garment: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
       .@val = 15;
@@ -85951,12 +85951,12 @@ Body:
     Name: 'イルシオンレッグI'
     Type: Armor
     Buy: 20
-    Weight: 500
+    Weight: 600
     Defense: 20
-    Slots: 1
+    Slots: 0
     Locations:
       Shoes: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
       .@val = 10;
@@ -85973,12 +85973,12 @@ Body:
     Name: 'イルシオンレッグII'
     Type: Armor
     Buy: 20
-    Weight: 500
+    Weight: 600
     Defense: 20
-    Slots: 1
+    Slots: 0
     Locations:
       Shoes: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
       .@val = 10;
@@ -107865,10 +107865,10 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Right_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
       bonus2 bAddClass,Class_All,5;
       bonus2 bMagicAddClass,Class_All,5;
@@ -107879,10 +107879,10 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Left_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
       bonus2 bIgnoreDefRaceRate,RC_All,30;
       bonus2 bIgnoreMdefRaceRate,RC_All,30;
@@ -107893,10 +107893,10 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Right_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
       bonus2 bAddClass,Class_All,5;
       bonus2 bMagicAddClass,Class_All,5;
@@ -107907,10 +107907,10 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Left_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
       bonus2 bIgnoreDefRaceRate,RC_All,30;
       bonus2 bIgnoreMdefRaceRate,RC_All,30;

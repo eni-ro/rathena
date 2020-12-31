@@ -13,3 +13,5 @@
 29012:4375,{ if( getequiprefinerycnt(EQI_GARMENT) >= 9 ){ bonus bDex,10; bonus bFlee,5; bonus2 bSubEle,Ele_Neutral,5; }}
 29012:4226,{ if( getequiprefinerycnt(EQI_HAND_L) >= 9 ){ bonus bLuk,10; bonus2 bSubSize,Size_All,20; }}
 29012:4242,{ if( getequiprefinerycnt(EQI_ARMOR) >= 9 ){ bonus bVit,8; bonus2 bResEff,Eff_Freeze,10000; }}
+//Ù‚«‚ÌŒC
+22225:1631,{ .@r = getequiprefinerycnt(EQI_HAND_R); .@cast = -5*getskilllv("AB_ORATIO"); bonus2 bVariableCastrate,"AB_JUDEX",.@cast; bonus2 bVariableCastrate,"AB_ADORAMUS",.@cast; if (.@r >= 7) { .@magic = 30; if (.@r >= 9) { .@magic += 20; .@dmg = 20; } bonus2 bMagicAddRace,RC_Demon,.@magic; bonus2 bMagicAddRace,RC_Undead,.@magic; bonus2 bMagicAddEle,Ele_Undead,.@magic; bonus2 bMagicAddEle,Ele_Dark,.@magic; } bonus2 bSkillAtk,"AB_ADORAMUS",.@dmg + 10*(getskilllv("AB_LAUDAAGNUS")+getskilllv("AB_LAUDARAMUS")+getskilllv("AB_CLEARANCE")); }

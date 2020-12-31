@@ -123,6 +123,79 @@ Body:
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
         skill "HW_GANBANTEIN",1,1;
       }
+  - Id: 22225
+    AegisName: Shoes_of_Punishment_J
+    Name: '裁きの靴'
+    Type: Armor
+    Buy: 20
+    Weight: 500
+    Defense: 15
+    Slots: 1
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bMdef,15;
+      bonus bUnbreakableShoes;
+      bonus bMaxHPrate,3;
+      bonus bMaxSPrate,3;
+      bonus2 bMagicAddClass,Class_All,2;
+      bonus2 bMagicAddEle,Ele_Holy,2;
+      bonus2 bSkillAtk,"AB_JUDEX",30;
+      .@r = getrefine();
+      if (.@r>=5) {
+        bonus bMaxHPrate,7;
+        bonus bMaxSPrate,7;
+        bonus2 bMagicAddClass,Class_All,3;
+        bonus2 bMagicAddEle,Ele_Holy,3;
+        if (.@r>=7) {
+          bonus bMaxHPrate,10;
+          bonus bMaxSPrate,10;
+          bonus2 bMagicAddClass,Class_All,5;
+          bonus2 bMagicAddEle,Ele_Holy,5;
+        }
+      }
+  - Id: 22233
+    AegisName: Scorpio_Shoes_J
+    Name: '天蝎宮のシューズ'
+    Type: Armor
+    Buy: 20
+    Weight: 400
+    Defense: 25
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bAspdRate,10;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_GUILLOTINE_CROSS ){
+        bonus bAtk,80;
+        bonus bFlee,50;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus2 bSkillAtk,"GC_ROLLINGCUTTER",500;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus2 bSkillDelay,"GC_DARKILLUSION",-1500;
+        }
+      }
   - Id: 26167
     AegisName: Aquarius_Staff_J
     Name: '宝瓶宮のスタッフ'
@@ -173,46 +246,6 @@ Body:
           if( .@r >= 9 ){
             bonus2 bIgnoreMdefClassRate,Class_All,50;
           }
-        }
-      }
-  - Id: 22233
-    AegisName: Scorpio_Shoes_J
-    Name: '天蝎宮のシューズ'
-    Type: Armor
-    Buy: 20
-    Weight: 400
-    Defense: 25
-    Jobs:
-      All: true
-    Locations:
-      Shoes: true
-    EquipLevelMin: 1
-    Refineable: true
-    Trade:
-      Override: 100
-      NoDrop: true
-      NoTrade: true
-      NoCart: true
-      NoGuildStorage: true
-      NoMail: true
-      NoAuction: true
-    Script: |
-      bonus bUnbreakableShoes;
-      bonus bMdef,5;
-      bonus bBaseAtk,50;
-      bonus bAspdRate,10;
-      bonus bMaxHPrate,10;
-      bonus bMaxSPrate,10;
-      set .@eac, eaclass();
-      if(( .@eac & EAJ_THIRDMASK ) == EAJ_GUILLOTINE_CROSS ){
-        bonus bAtk,80;
-        bonus bFlee,50;
-        bonus bMaxHPrate,10;
-        bonus bMaxSPrate,10;
-        bonus2 bSkillAtk,"GC_ROLLINGCUTTER",500;
-        .@r = getrefine();
-        if( .@r >= 8 ){
-          bonus2 bSkillDelay,"GC_DARKILLUSION",-1500;
         }
       }
   - Id: 28047

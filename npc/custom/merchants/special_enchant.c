@@ -431,3 +431,6 @@ OnInit:
 }
 
 ven_in01,22,112,5	duplicate(SpecialEnchant#-1)	上段SPエンチャ#0::sp_enc_head_top	4_M_CATMAN1
+ven_in01,32,111,3	duplicate(SpecialEnchant#-1)	中段SPエンチャ#1::sp_enc_head_mid	4_M_CATMAN1
+ven_in01,30,109,3	duplicate(SpecialEnchant#-1)	鎧SPエンチャ#3::sp_enc_armor	4_M_CATMAN1
+ven_in01,22,108,5	duplicate(SpecialEnchant#-1)	肩SPエンチャ#4::sp_enc_garment	4_M_CATMAN1

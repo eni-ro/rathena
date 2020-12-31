@@ -3,3 +3,13 @@
 // Structure of Database:
 // ID:ID:ID:ID,{ Script }
 
+//鋭利,マタギの剣鉈
+29135:28491,{ bonus bHit,15; bonus bCriticalLong,10; }
+29136:28491,{ bonus bHit,15; bonus bCriticalLong,10; }
+
+//ハイレベル
+29012:4160,{ if( getequiprefinerycnt(EQI_SHOES) >= 9 ){ bonus bStr,8; bonus bMaxHPrate,5; bonus bMaxSPrate,5; }}
+29012:4159,{ if( getequiprefinerycnt(EQI_GARMENT) >= 9 ){ bonus bAgi,8; bonus2 bSubEle,Ele_Neutral,20; }}
+29012:4375,{ if( getequiprefinerycnt(EQI_GARMENT) >= 9 ){ bonus bDex,10; bonus bFlee,5; bonus2 bSubEle,Ele_Neutral,5; }}
+29012:4226,{ if( getequiprefinerycnt(EQI_HAND_L) >= 9 ){ bonus bLuk,10; bonus2 bSubSize,Size_All,20; }}
+29012:4242,{ if( getequiprefinerycnt(EQI_ARMOR) >= 9 ){ bonus bVit,8; bonus2 bResEff,Eff_Freeze,10000; }}

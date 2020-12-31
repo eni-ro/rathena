@@ -87,6 +87,24 @@ Header:
   Version: 1
 
 Body:
+  - Id: 4901
+    AegisName: Mdef7_J
+    Name: 'Mdef + 7'
+    Type: Card
+    Script: |
+      bonus bMdef,7;
+  - Id: 4949
+    AegisName: Skill_Delay_4_J
+    Name: 'スキルディレイ - 4%'
+    Type: Card
+    Script: |
+      bonus bDelayrate,-4;
+  - Id: 4950
+    AegisName: Skill_Delay_6_J
+    Name: 'スキルディレイ - 6%'
+    Type: Card
+    Script: |
+      bonus bDelayrate,-6;
   - Id: 25189
     AegisName: Reactor_A_Tolerance
     Name: 'A-Toleranceの設計図'
@@ -182,19 +200,91 @@ Body:
     AegisName: High_Level_J
     Name: 'ハイレベル'
     Type: Card
-    Weight: 0
+  - Id: 29135
+    AegisName: Sherp_Edge_1_J
+    Name: '鋭利1'
+    Type: Card
+    Script: |
+      bonus bCritical,3;
+      bonus bCritAtkRate,1;
+  - Id: 29136
+    AegisName: Sherp_Edge_2_J
+    Name: '鋭利2'
+    Type: Card
+    Script: |
+      bonus bCritical,6;
+      bonus bCritAtkRate,2;
+  - Id: 29137
+    AegisName: Sherp_Edge_3_J
+    Name: '鋭利3'
+    Type: Card
+    Script: |
+      bonus bCritical,9;
+      bonus bCritAtkRate,3;
+  - Id: 29138
+    AegisName: Sherp_Edge_4_J
+    Name: '鋭利4'
+    Type: Card
+    Script: |
+      bonus bCritical,12;
+      bonus bCritAtkRate,4;
+  - Id: 29139
+    AegisName: Sherp_Edge_5_J
+    Name: '鋭利5'
+    Type: Card
+    Script: |
+      bonus bCritical,15;
+      bonus bCritAtkRate,5;
+  - Id: 29240
+    AegisName: Hit_10_J
+    Name: 'Hit + 10'
+    Type: Card
+    Script: |
+      bonus bHit,10;
+  - Id: 29242
+    AegisName: Unbreakable_Armor_J
+    Name: '破壊不可(鎧)'
+    Type: Card
+    Script: |
+      bonus bUnbreakableArmor;
   - Id: 29243
     AegisName: No_Cast_Cancel_J
     Name: '詠唱妨害不可'
     Type: Card
-    Weight: 0
     Script: |
       bonus bNoCastCancel2;
+  - Id: 29244
+    AegisName: Player_1_J
+    Name: 'プレイヤー耐性1'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,1;
+      bonus2 bSubRace,RC_Player_Doram,1;
+  - Id: 29245
+    AegisName: Player_2_J
+    Name: 'プレイヤー耐性2'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,2;
+      bonus2 bSubRace,RC_Player_Doram,2;
+  - Id: 29246
+    AegisName: Player_3_J
+    Name: 'プレイヤー耐性3'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,3;
+      bonus2 bSubRace,RC_Player_Doram,3;
+  - Id: 29247
+    AegisName: Player_4_J
+    Name: 'プレイヤー耐性4'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,4;
+      bonus2 bSubRace,RC_Player_Doram,4;
   - Id: 29248
     AegisName: Player_5_J
     Name: 'プレイヤー耐性5'
     Type: Card
-    Weight: 0
     Script: |
       bonus2 bSubRace,RC_Player_Human,5;
       bonus2 bSubRace,RC_Player_Doram,5;
@@ -202,22 +292,30 @@ Body:
     AegisName: Release_Of_Magic_J
     Name: '真理の解放'
     Type: Card
-    Weight: 0
     Script: |
       autobonus "{bonus bFlee2,100;bonus2 bMagicAddClass,Class_Boss,100;}",10,10000,BF_MAGIC,"{ active_transform \"B_KATRINN\",10000; }";
   - Id: 29372
     AegisName: CastFixed_Delay50_J
     Name: '固定詠唱時間 - 50%'
     Type: Card
-    Weight: 0
     Script: |
       bonus bFixedCastrate,-50;
+  - Id: 29373
+    AegisName: Skill_Delay_15_J
+    Name: 'スキルディレイ - 15%'
+    Type: Card
+    Script: |
+      bonus bDelayrate,-15;
+  - Id: 29437
+    AegisName: Skill_Delay_8_J
+    Name: 'スキルディレイ - 8%'
+    Type: Card
+    Script: |
+      bonus bDelayrate,-8;
   - Id: 29511
     AegisName: Improve_Orb_Player
     Name: 'Q-Player'
     Type: Card
-    Buy: 20
-    Weight: 10
     Script: |
       .@v = 1+getrefine();
       bonus2 bSubRace,RC_Player_Human,.@v;
@@ -226,8 +324,6 @@ Body:
     AegisName: Improve_PowerBoost
     Name: 'T-PowerBoost'
     Type: Card
-    Buy: 20
-    Weight: 10
     Script: |
       bonus bBaseAtk,50;
       .@r = getrefine();
@@ -240,8 +336,6 @@ Body:
     AegisName: Improve_MagicBoost
     Name: 'T-MagicBoost'
     Type: Card
-    Buy: 20
-    Weight: 10
     Script: |
       bonus bMatk,50;
       .@r = getrefine();
@@ -254,8 +348,6 @@ Body:
     AegisName: Improve_Assault
     Name: 'T-Assault'
     Type: Card
-    Buy: 20
-    Weight: 10
     Script: |
       bonus bCritAtkRate,10;
       .@r = getrefine();
@@ -268,8 +360,6 @@ Body:
     AegisName: Improve_Electricity
     Name: 'T-Electricity'
     Type: Card
-    Buy: 20
-    Weight: 10
     Script: |
       bonus3 bAutoSpell,"MG_THUNDERSTORM",6,50;
       .@r = getrefine();

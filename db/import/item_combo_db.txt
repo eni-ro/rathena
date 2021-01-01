@@ -15,3 +15,13 @@
 29012:4242,{ if( getequiprefinerycnt(EQI_ARMOR) >= 9 ){ bonus bVit,8; bonus2 bResEff,Eff_Freeze,10000; }}
 //çŸÇ´ÇÃåC
 22225:1631,{ .@r = getequiprefinerycnt(EQI_HAND_R); .@cast = -5*getskilllv("AB_ORATIO"); bonus2 bVariableCastrate,"AB_JUDEX",.@cast; bonus2 bVariableCastrate,"AB_ADORAMUS",.@cast; if (.@r >= 7) { .@magic = 30; if (.@r >= 9) { .@magic += 20; .@dmg = 20; } bonus2 bMagicAddRace,RC_Demon,.@magic; bonus2 bMagicAddRace,RC_Undead,.@magic; bonus2 bMagicAddEle,Ele_Undead,.@magic; bonus2 bMagicAddEle,Ele_Dark,.@magic; } bonus2 bSkillAtk,"AB_ADORAMUS",.@dmg + 10*(getskilllv("AB_LAUDAAGNUS")+getskilllv("AB_LAUDARAMUS")+getskilllv("AB_CLEARANCE")); }
+//èàèóã{(AB)
+450015:480009:470014,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSubEle,Ele_All,20; bonus2 bResEff,Eff_Freeze,10000; }
+//ïÛïrã{(WL)
+15426:20972:22231,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bMagicAddEle,Ele_Earth,40; bonus2 bMagicAddEle,Ele_Dark,40; bonus2 bSubRace,RC_DemiHuman,15; }
+//ìVÂôã{(GX)
+15424:20976:22233,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSubEle,Ele_Fire,50; bonus2 bSubEle,Ele_Water,50; bonus2 bSubEle,Ele_Wind,50; bonus2 bSubEle,Ele_Earth,50; bonus2 bResEff,Eff_Freeze,10000; }
+//ëoãõã{(éM)
+450133:480041:470038,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSkillAtk,"MG_FIREBOLT",50; bonus2 bSkillAtk,"MG_COLDBOLT",50; bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",50; bonus2 bSkillAtk,"WZ_EARTHSPIKE",50; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Earth,20; bonus2 bResEff,Eff_Freeze,10000; }
+//É|ÉãÉbÉNÉX(åùêπ)
+20983:15447:2400,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus bNoSizeFix; bonus bPerfectHitAddRate,30; }

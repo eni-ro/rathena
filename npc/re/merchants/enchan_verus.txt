@@ -1475,3 +1475,8 @@ verus04,165,217,4	script	MARS_01#pa0829	4_SCR_MT_ROBOTS,{
 	getitem2 .@equip_id,1,1,.@equip_refine,0,.@card[0],.@card[1],.@card[2],.@card[3];
 	close;
 }
+
+ven_in01,90,110,3	duplicate(Grandpa picking up scrap iron)	Grandpa picking up scrap iron#depe	1_M_HOF
+ven_in01,93,110,3	duplicate(MARS_01#pa0829)	MARS_01#depe	4_SCR_MT_ROBOTS
+ven_in01,96,110,3	duplicate(PLUTO_09#pa0829)	PLUTO_09#depe	4_SCR_AT_ROBOTS
+ven_in01,96,116,3	duplicate(ハワード)	ハワード#depe	899

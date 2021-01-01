@@ -545,6 +545,8 @@ Body:
       Params: <map>
       Kill all monsters of the map (they drop)
   - Command: autoloot
+    Aliases:
+      - al
     Help: |
       Params: <on|off|#>
       Makes items go straight into your inventory.
@@ -952,9 +954,14 @@ Body:
   - Command: channel
     Aliases:
       - main
+  - Command: alootid
+    Aliases:
+      - autolootid
+      - alid
   - Command: autoloottype
     Aliases:
       - aloottype
+      - alt
   - Command: cloneequip
     Aliases:
       - eqclone

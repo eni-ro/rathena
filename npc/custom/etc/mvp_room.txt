@@ -112,7 +112,7 @@ OnInit:
 		close2;
 		if ( Zeny < .mvpcost ) end;
 		Zeny -= .mvpcost;
-		monster "this", 0, 0, "--ja--", .last_summon[atoi( strnpcinfo(2))], 1, strnpcinfo(3)+"::OnMobDead";
+		areamonster "this", 26, 26, 73, 73, "--ja--", .last_summon[atoi( strnpcinfo(2))], 1, strnpcinfo(3)+"::OnMobDead";
 		end;
 
 	case 2:
@@ -171,7 +171,7 @@ OnInit:
 		if ( Zeny < .mvpcost ) end;
 		Zeny -= .mvpcost;
 		.last_summon[atoi( strnpcinfo(2))] = .mvpid[.@menu];
-		monster "this", 0, 0, "--ja--", .mvpid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
+		areamonster "this", 26, 26, 73, 73, "--ja--", .mvpid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
 		end;
 	case 4:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
@@ -197,7 +197,7 @@ OnInit:
 		if ( Zeny < .bosscost ) end;
 		Zeny -= .bosscost;
 		.last_summon[atoi( strnpcinfo(2))] = .bossid[.@menu];
-		monster "this", 0, 0, "--ja--", .bossid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
+		areamonster "this", 26, 26, 73, 73, "--ja--", .bossid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
 		end;
 	case 5:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) > 0 ) {

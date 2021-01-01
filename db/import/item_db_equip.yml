@@ -123,6 +123,20 @@ Body:
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
         skill "HW_GANBANTEIN",1,1;
       }
+  - Id: 19499
+    AegisName: FortunetellinSealed_J
+    Name: '”ªŒT‚Ì••ô'
+    Type: Armor
+    Weight: 300
+    Defense: 0
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 70
+    View: 1901
+    Script: |
+      .@v = ( readparam(bInt) + readparam(bDex) ) / 50;
+      bonus bAspdRate,2*.@v;
+      bonus2 bMagicAddSize,Size_All,4*.@v;
   - Id: 22225
     AegisName: Shoes_of_Punishment_J
     Name: 'Ù‚«‚ÌŒC'

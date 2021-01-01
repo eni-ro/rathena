@@ -189,9 +189,13 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      if( checkitemblank() > 0 ){
+      if( checkweight( 1201, 2 )){
         delitem 2001000900,1;
         getrandgroupitem(IG_MD_REWARD_BOX1),1;
+        getrandgroupitem(IG_MD_REWARD_ORE1),1;
+      }
+      else{
+        message strcharinfo(0),"インベントリのアイテムが一杯で開くことができません。";
       }
   - Id: 2001000901
     AegisName: MD_Reward_Box_2
@@ -210,9 +214,13 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      if( checkitemblank() > 0 ){
+      if( checkweight( 1201, 2 )){
         delitem 2001000901,1;
         getrandgroupitem(IG_MD_REWARD_BOX2),1;
+        getrandgroupitem(IG_MD_REWARD_ORE2),1;
+      }
+      else{
+        message strcharinfo(0),"インベントリのアイテムが一杯で開くことができません。";
       }
   - Id: 2001000902
     AegisName: MD_Reward_Box_3
@@ -231,9 +239,14 @@ Body:
       NoMail: true
       NoAuction: true
     Script: |
-      if( checkitemblank() > 0 ){
+      if( checkweight( 1201, 2 )){
         delitem 2001000902,1;
         getrandgroupitem(IG_MD_REWARD_BOX3),1;
+        getrandgroupitem(IG_MD_REWARD_ORE3),1;
+        getrandgroupitem(IG_MD_REWARD_ORE3),1;
+      }
+      else{
+        message strcharinfo(0),"インベントリのアイテムが一杯で開くことができません。";
       }
   - Id: 2001001000
     AegisName: ZENY_100000

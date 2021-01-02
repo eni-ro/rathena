@@ -153,6 +153,37 @@ Header:
   Version: 1
 
 Body:
+  - Id: 2004020000
+    AegisName: Newbie_Libra_Krasnaya_J
+    Name: '初心者用天秤宮のクラスナヤ'
+    Type: Weapon
+    SubType: 2hSword
+    Weight: 3500
+    Attack: 5
+    Range: 1
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bBaseAtk,35+BaseLevel/2;
+      bonus bAspdRate,5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_KNIGHT ){
+        bonus bDelayrate,-5;
+        bonus2 bAddClass,Class_All,25;
+        bonus bLongAtkRate,15;
+        bonus2 bSkillUseSP,"LK_SPIRALPIERCE",8;
+        bonus2 bSubClass,Class_Boss,25;
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+      }
   - Id: 2004090000
     AegisName: Newbie_Aquarius_Staff_J
     Name: '初心者用宝瓶宮のスタッフ'
@@ -308,8 +339,7 @@ Body:
     Jobs:
       Assassin: true
     Locations:
-      Right_Hand: true
-      Left_Hand: true
+      Both_Hand: true
     WeaponLevel: 4
     EquipLevelMin: 1
     Refineable: true

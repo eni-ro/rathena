@@ -15,6 +15,8 @@
 29012:4242,{ if( getequiprefinerycnt(EQI_ARMOR) >= 9 ){ bonus bVit,8; bonus2 bResEff,Eff_Freeze,10000; }}
 //çŸÇ´ÇÃåC
 22225:1631,{ .@r = getequiprefinerycnt(EQI_HAND_R); .@cast = -5*getskilllv("AB_ORATIO"); bonus2 bVariableCastrate,"AB_JUDEX",.@cast; bonus2 bVariableCastrate,"AB_ADORAMUS",.@cast; if (.@r >= 7) { .@magic = 30; if (.@r >= 9) { .@magic += 20; .@dmg = 20; } bonus2 bMagicAddRace,RC_Demon,.@magic; bonus2 bMagicAddRace,RC_Undead,.@magic; bonus2 bMagicAddEle,Ele_Undead,.@magic; bonus2 bMagicAddEle,Ele_Dark,.@magic; } bonus2 bSkillAtk,"AB_ADORAMUS",.@dmg + 10*(getskilllv("AB_LAUDAAGNUS")+getskilllv("AB_LAUDARAMUS")+getskilllv("AB_CLEARANCE")); }
+//ìVîâã{(RK)
+15418:20970:22227,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSkillAtk,"LK_SPIRALPIERCE",150; bonus bNoSizeFix; }
 //èàèóã{(AB)
 450015:480009:470014,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSubEle,Ele_All,20; bonus2 bResEff,Eff_Freeze,10000; }
 //ïÛïrã{(WL)

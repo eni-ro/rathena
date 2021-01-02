@@ -87,6 +87,51 @@ Header:
   Version: 1
 
 Body:
+  - Id: 1150
+    AegisName: Libra_Krasnaya_J
+    Name: '天秤宮のクラスナヤ'
+    Type: Weapon
+    SubType: 2hSword
+    Weight: 3500
+    Attack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bBaseAtk,70+BaseLevel;
+      bonus bAspdRate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RUNE_KNIGHT ){
+        bonus bDelayrate,-10;
+        bonus2 bAddClass,Class_All,50;
+        bonus bLongAtkRate,25;
+        bonus2 bSkillUseSP,"LK_SPIRALPIERCE",15;
+        bonus2 bSubClass,Class_Boss,50;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreDefRaceRate,RC_All,50;
+          }
+        }
+      }
   - Id: 2400
     AegisName: Pollux_Shoes_J
     Name: 'ポルックスシューズ'
@@ -212,6 +257,41 @@ Body:
           bonus2 bSPRegenRate,50,5000;
         }
       }
+  - Id: 15418
+    AegisName: Libra_Mail_J
+    Name: '天秤宮のメイル'
+    Type: Armor
+    Weight: 1000
+    Defense: 100
+    Slots: 1
+    Locations:
+      Armor: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableArmor;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bMaxHP,1000;
+      bonus bDelayrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RUNE_KNIGHT ){
+        bonus bBaseAtk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus2 bSubClass,Class_Boss,5;
+        }
+      }
   - Id: 15424
     AegisName: Scorpio_Mail_J
     Name: '天蝎宮のメイル'
@@ -328,7 +408,7 @@ Body:
       Head_Top: true
     EquipLevelMin: 1
     Refineable: true
-    View: 2608
+    View: 2630
     Trade:
       Override: 100
       NoDrop: true
@@ -394,6 +474,65 @@ Body:
       set .@eac, eaclass();
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
         skill "HW_GANBANTEIN",1,1;
+      }
+  - Id: 19468
+    AegisName: Libra_Diadem_J
+    Name: '天秤宮のダイアデム'
+    Type: Armor
+    Weight: 100
+    Defense: 12
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    Refineable: true
+    View: 594
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableHelm;
+      bonus bMdef,15;
+      bonus bStr,10;
+      bonus bBaseAtk,50;
+      bonus bDelayrate,-20;
+      bonus2 bAddRace,RC_All,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RUNE_KNIGHT ){
+        bonus2 bSubClass,Class_Boss,20;
+        bonus bHPGainValue,500;
+        bonus bLongHPGainValue,500;
+        bonus bMagicHPGainValue,500;
+        bonus bSPGainValue,50;
+        bonus bLongSPGainValue,50;
+        bonus bMagicSPGainValue,50;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bAllStats,10;
+          bonus2 bHPRegenRate,500,5000;
+          bonus2 bSPRegenRate,50,5000;
+        }
+        autobonus2 "{ bonus2 bAddClass,Class_All,-50; bonus bLongAtkRate,-50; bonus2 bMagicAddClass,Class_All,-50; .@rate = 10; if( .@r >= 6 ){ .@rate += 5; if( .@r >= 8 ){ .@rate += 5; }} bonus4 bAutoSpellWhenHit,\"RK_MILLENNIUMSHIELD\",1,.@rate,0; }",1000,60000,"RK_MILLENNIUMSHIELD";
+        bonus2 bFixedCastrate,"RK_REFRESH",-100;
+        autobonus2 "{}",1000,1,"RK_REFRESH","{ itemheal 100,100; sc_end SC__ENERVATION; sc_end SC__GROOMY; sc_end SC__IGNORANCE; sc_end SC__LAZINESS; sc_end SC__UNLUCKY; sc_end SC__WEAKNESS; }";
+        autobonus2 "{ bonus bNoKnockback; }",1000,30000,"RK_CRUSHSTRIKE";
+        autobonus2 "{ bonus bStr,30; bonus bInt,-30; }",1000,300000,"RK_GIANTGROWTH";
+        autobonus2 "{ bonus2 bSPRegenRate,40,10000; }",1000,300000,"RK_ABUNDANCE";
+        autobonus2 "{ bonus bBaseAtk,10; bonus bAspdRate,10; }",1000,300000,"RK_FIGHTINGSPIRIT";
+        autobonus2 "{ bonus bShortWeaponDamageReturn,10; }",1000,300000,"RK_STONEHARDSKIN","{ heal -1000,0; }";
+        autobonus2 "{ bonus2 bHPRegenRate,500,10000; }",1000,300000,"RK_VITALITYACTIVATION";
+        .@v = 30;
+        if( .@r >= 6 ){
+          .@v += 20;
+          if( .@r >= 8 ){
+            .@v += 20;
+          }
+        }
+        bonus2 bSkillAtk,"RK_STORMBLAST",.@v;
       }
   - Id: 19471
     AegisName: Scorpio_Crown_J
@@ -492,6 +631,43 @@ Body:
       .@v = ( readparam(bInt) + readparam(bDex) ) / 50;
       bonus bAspdRate,2*.@v;
       bonus2 bMagicAddSize,Size_All,4*.@v;
+  - Id: 20970
+    AegisName: Libra_Manteau_J
+    Name: '天秤宮のマント'
+    Type: Armor
+    Weight: 300
+    Defense: 25
+    Locations:
+      Garment: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableGarment;
+      bonus bMdef,5;
+      bonus bBaseAtk,20;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus bDelayrate,-5;
+      bonus2 bSubEle,Ele_Neutral,20;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RUNE_KNIGHT ){
+        bonus bBaseAtk,30;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus2 bSubClass,Class_Boss,5;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bLongAtkRate,20;
+        }
+      }
   - Id: 20972
     AegisName: Aquarius_Manteau_J
     Name: '宝瓶宮のマント'
@@ -631,6 +807,46 @@ Body:
           bonus bMaxSPrate,10;
           bonus2 bMagicAddClass,Class_All,5;
           bonus2 bMagicAddEle,Ele_Holy,5;
+        }
+      }
+  - Id: 22227
+    AegisName: Libra_Shoes_J
+    Name: '天秤宮のシューズ'
+    Type: Armor
+    Weight: 400
+    Defense: 25
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus bDelayrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RUNE_KNIGHT ){
+        bonus bBaseAtk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus2 bSubClass,Class_Boss,5;
+        bonus2 bSkillVariableCast,"RK_DRAGONBREATH",-2000;
+        bonus2 bSkillVariableCast,"RK_DRAGONBREATH_WATER",-2000;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bFixedCastrate,-50;
         }
       }
   - Id: 22231
@@ -774,8 +990,7 @@ Body:
     Jobs:
       Assassin: true
     Locations:
-      Right_Hand: true
-      Left_Hand: true
+      Both_Hand: true
     WeaponLevel: 4
     EquipLevelMin: 1
     Refineable: true
@@ -846,6 +1061,40 @@ Body:
             bonus2 bIgnoreDefRaceRate,RC_All,50;
           }
         }
+      }
+  - Id: 32261
+    AegisName: Libra_Ring_J
+    Name: '天秤宮のリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bSkillUseSP,"RK_DRAGONBREATH",10;
+      bonus2 bSkillUseSP,"RK_DRAGONBREATH_WATER",10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RUNE_KNIGHT ){
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus bDelayrate,-10;
+        bonus2 bAddClass,Class_All,5;
+        bonus2 bSkillAtk,"LK_SPIRALPIERCE",100;
+        bonus2 bCastrate,"LK_SPIRALPIERCE",-50;
       }
   - Id: 32266
     AegisName: Aquarius_Ring_J

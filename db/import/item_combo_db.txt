@@ -23,6 +23,8 @@
 15426:20972:22231,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bMagicAddEle,Ele_Earth,40; bonus2 bMagicAddEle,Ele_Dark,40; bonus2 bSubRace,RC_DemiHuman,15; }
 //天蝎宮(GX)
 15424:20976:22233,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSubEle,Ele_Fire,50; bonus2 bSubEle,Ele_Water,50; bonus2 bSubEle,Ele_Wind,50; bonus2 bSubEle,Ele_Earth,50; bonus2 bResEff,Eff_Freeze,10000; }
+//人馬宮(連)
+450140:480050:470045,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus bDelayrate,-10; bonus2 bSubClass,Class_Boss,15; bonus2 bSkillUseSP,"RA_ARROWSTORM",20; }
 //双魚宮(皿)
 450133:480041:470038,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSkillAtk,"MG_FIREBOLT",50; bonus2 bSkillAtk,"MG_COLDBOLT",50; bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",50; bonus2 bSkillAtk,"WZ_EARTHSPIKE",50; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Earth,20; bonus2 bResEff,Eff_Freeze,10000; }
 //ポルックス(拳聖)

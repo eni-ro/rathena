@@ -257,6 +257,48 @@ Body:
           bonus2 bSPRegenRate,50,5000;
         }
       }
+  - Id: 5739
+    AegisName: Sagittarius_Crown_J
+    Name: '人馬宮の王冠'
+    Type: Armor
+    Weight: 100
+    Defense: 12
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    Refineable: true
+    View: 594
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableHelm;
+      bonus bMdef,15;
+      bonus bDex,10;
+      bonus bBaseAtk,50;
+      bonus bDelayrate,-20;
+      bonus2 bAddClass,Class_All,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RANGER ){
+        bonus2 bCastrate,"RA_ARROWSTORM",-100;
+        bonus bHPGainValue,500;
+        bonus bLongHPGainValue,500;
+        bonus bMagicHPGainValue,500;
+        bonus bSPGainValue,50;
+        bonus bLongSPGainValue,50;
+        bonus bMagicSPGainValue,50;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bAllStats,10;
+          bonus2 bHPRegenRate,500,5000;
+          bonus2 bSPRegenRate,50,5000;
+        }
+      }
   - Id: 15418
     AegisName: Libra_Mail_J
     Name: '天秤宮のメイル'
@@ -1268,6 +1310,41 @@ Body:
           bonus2 bMagicAddEle,Ele_Neutral,15;
         }
       }
+  - Id: 450140
+    AegisName: Sagittarius_Mail_J
+    Name: '人馬宮のメイル'
+    Type: Armor
+    Weight: 1000
+    Defense: 100
+    Slots: 1
+    Locations:
+      Armor: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableArmor;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bMaxHP,1000;
+      bonus bDelayrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RANGER ){
+        bonus bBaseAtk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bPerfectHitAddRate,20;
+        }
+      }
   - Id: 460004
     AegisName: Illusion_Shield_A
     Name: 'イルシオンシールドI'
@@ -1369,6 +1446,48 @@ Body:
           bonus2 bSubEle,Ele_Earth,20;
         }
       }
+  - Id: 470045
+    AegisName: Sagittarius_Shoes_J
+    Name: '人馬宮のシューズ'
+    Type: Armor
+    Weight: 400
+    Defense: 25
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus bDelayrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RANGER ){
+        bonus bBaseAtk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus bDelayrate,-10;
+        bonus2 bSubEle,Ele_Fire,15;
+        bonus2 bSubEle,Ele_Water,15;
+        bonus2 bSubEle,Ele_Wind,15;
+        bonus2 bSubEle,Ele_Earth,15;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bLongAtkRate,30;
+        }
+      }
   - Id: 480009
     AegisName: Virgo_Manteau_J
     Name: '処女宮のマント'
@@ -1443,6 +1562,74 @@ Body:
           bonus bAspdRate,20;
         }
       }
+  - Id: 480050
+    AegisName: Sagittarius_Manteau_J
+    Name: '人馬宮のマント'
+    Type: Armor
+    Weight: 300
+    Defense: 25
+    Locations:
+      Garment: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableGarment;
+      bonus bMdef,5;
+      bonus bBaseAtk,20;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus bDelayrate,-5;
+      bonus2 bSubEle,Ele_Neutral,20;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RANGER ){
+        bonus bBaseAtk,30;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus bLongAtkRate,30;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bPerfectHitAddRate,20;
+        }
+      }
+  - Id: 490010
+    AegisName: Virgo_Ring_J
+    Name: '処女宮のリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus3 bAddEff,Eff_Stun,5,ATF_MAGIC;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_ARCH_BISHOP ){
+        bonus bAspdRate,5;
+        bonus2 bMagicAddClass,Class_All,5;
+        bonus2 bCastrate,"AB_JUDEX",-50;
+      }
   - Id: 490034
     AegisName: Pisces_Ring_J
     Name: '双魚宮のリング'
@@ -1481,9 +1668,9 @@ Body:
         bonus2 bCastrate,"MG_COLDBOLT",-50;
         bonus2 bCastrate,"MG_LIGHTNINGBOLT",-50;
       }
-  - Id: 490010
-    AegisName: Virgo_Ring_J
-    Name: '処女宮のリング'
+  - Id: 490041
+    AegisName: Sagittarius_Ring_J
+    Name: '人馬宮のリング'
     Type: Armor
     Weight: 100
     Defense: 0
@@ -1504,13 +1691,17 @@ Body:
     Script: |
       bonus bAspdRate,5;
       bonus bMaxSP,100;
-      bonus2 bMagicAddClass,Class_All,5;
-      bonus3 bAddEff,Eff_Stun,5,ATF_MAGIC;
+      bonus2 bAddClass,Class_All,5;
+      bonus bSPGainValue,10;
+      bonus bLongSPGainValue,10;
       set .@eac, eaclass();
-      if(( .@eac & EAJ_THIRDMASK ) == EAJ_ARCH_BISHOP ){
-        bonus bAspdRate,5;
-        bonus2 bMagicAddClass,Class_All,5;
-        bonus2 bCastrate,"AB_JUDEX",-50;
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RANGER ){
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus bDelayrate,-10;
+        bonus2 bAddClass,Class_All,5;
+        bonus2 bSkillAtk,"RA_ARROWSTORM",30;
+        bonus bSPDrainValue,3;
       }
   - Id: 640002
     AegisName: Virgo_Divine_Cross_J
@@ -1612,6 +1803,50 @@ Body:
           bonus2 bIgnoreMdefClassRate,Class_All,50;
           if( .@r >= 9 ){
             bonus2 bIgnoreMdefClassRate,Class_All,50;
+          }
+        }
+      }
+  - Id: 700010
+    AegisName: Sagittarius_Hunter_Bow_J
+    Name: '人馬宮のハンターボウ'
+    Type: Weapon
+    SubType: Bow
+    Weight: 1500
+    Attack: 10
+    Range: 5
+    Slots: 1
+    Jobs:
+      Archer: true
+      BardDancer: true
+      Hunter: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bBaseAtk,70+BaseLevel;
+      bonus bAspdRate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_RANGER ){
+        bonus bDelayrate,-10;
+        bonus2 bAddClass,Class_All,50;
+        bonus bLongAtkRate,25;
+        bonus2 bSubClass,Class_Boss,50;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreDefClassRate,Class_Boss,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreDefClassRate,Class_Boss,50;
           }
         }
       }

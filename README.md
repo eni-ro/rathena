@@ -271,6 +271,9 @@
 SDE(Server Database Editor)を使って下さい。  
   1. ページ右上の緑ボタンの`Code`から`DownloadZIP`を選択し、サーバーのデータを全てダウンロードしておく
   2. [SDE](https://rathena.org/board/files/file/3269-server-database-editor/)をダウンロードしてインストール  
+  **Program Files（x86）以外にインストールすること**  
+  **Program Files（x86）にインストールした場合は、デスクトップ等のProgram Files外の別の場所にコピーするか、UACを無効にすること**  
+  **Program Files（x86）にインストールしてUACが有効な場合は、4の作業が実施できなくなります**  
   3. 起動して`Settings`の画面を開いて`Client encoding`と`Server encoding`に`Japanese`を指定  
   ![sdesetting1](https://user-images.githubusercontent.com/59181965/103186292-4ff33300-4903-11eb-8f9d-35f9a1e0f624.png)
   4. `Resource files or folders`にクライアントの`dataフォルダ(あれば)`、`Systemフォルダ`、`DATA.INI`に登録してあるgrfファイルを順番にドロップ  

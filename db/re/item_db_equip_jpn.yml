@@ -90289,7 +90289,7 @@ Body:
     EquipLevelMin: 1
     Refineable: true
     Script: |
-      bonus MaxSP,10+15*(getrefine()/2);
+      bonus bMaxSP,10+15*(getrefine()/2);
   - Id: 24381
     AegisName: S_Sentimental_Earring
     Name: Sentimental Shadow Earring

@@ -29,3 +29,11 @@
 450133:480041:470038,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSkillAtk,"MG_FIREBOLT",50; bonus2 bSkillAtk,"MG_COLDBOLT",50; bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",50; bonus2 bSkillAtk,"WZ_EARTHSPIKE",50; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Earth,20; bonus2 bResEff,Eff_Freeze,10000; }
 //ポルックス(拳聖)
 20983:15447:2400,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus bNoSizeFix; bonus bPerfectHitAddRate,30; }
+
+//名も無き剣士のブーツ
+22178:4352,{ skill "SM_MAGNUM",10; bonus2 bHPRegenRate,5000,10000; bonus2 bSPRegenRate,100,10000; .@r = getequiprefinerycnt(EQI_SHOES); if( BaseLevel <= 99 ){ bonus bStr,3*.@r; bonus bFlee,5*.@r; }else{ bonus bStr,10*.@r; bonus bFlee,15*.@r; }}
+//ガーデンオブエデン,フェアリーオブエデン
+20991:19272,{ bonus bMaxHPrate,50; bonus bSpeedAddRate,25; }
+20991:29371,{ bonus bAspdRate,10; bonus bDelayrate,-25; }
+20991:27087,{ bonus bInt,40; bonus bIntravision; if(( eaclass() & EAJ_THIRDMASK ) == EAJ_WARLOCK ){ bonus2 bSkillAtk,"WZ_SIGHTRASHER",6*getequiprefinerycnt(EQI_GARMENT); bonus5 bAutoSpellOnSkill,"WZ_SIGHTRASHER","MG_SIGHT",1,1000,0; }}
+19272:4365,{ bonus bCastrate,-100; bonus2 bSkillCooldown,"WL_TELEKINESIS_INTENSE",-120000; }

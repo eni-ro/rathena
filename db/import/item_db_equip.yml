@@ -819,6 +819,59 @@ Body:
           bonus bAtkRate,20;
         }
       }
+  - Id: 20991
+    AegisName: Fairy_Of_Eden_J
+    Name: 'フェアリーオブエデン'
+    Type: Armor
+    Weight: 400
+    Defense: 40
+    Locations:
+      Garment: true
+    EquipLevelMin: 100
+    Refineable: true
+    View: 95
+    Script: |
+      bonus bUnbreakableGarment;
+      bonus2 bSubClass,Class_Normal,5;
+      bonus2 bSubClass,Class_Boss,5;
+      bonus2 bSubRace,RC_Player_Human,5;
+      bonus2 bSubRace,RC_Player_Doram,5;
+      .@r = getrefine();
+      bonus bAspdRate,.@r;
+      bonus2 bMagicAddClass,Class_All,2*.@r;
+      if( .@r >= 6 ){
+        bonus bAllStats,10;
+        bonus bNoKnockback;
+        if( .@r >= 8 ){
+          skill "MG_ENERGYCOAT",1,1;
+          getskilllist();
+          .@idx = inarray( @skilllist_id, 157 ); /*MG_ENERGYCOAT*/
+          if(( .@idx >= 0 ) && ( @skilllist_flag[.@idx ] == 0)){
+            bonus bDef,300;
+            bonus bMdef,15;
+          }
+        }
+      }
+    UnEquipScript: |
+      sc_end SC_ENERGYCOAT;
+  - Id: 22178
+    AegisName: Anony_Sm_Shoes
+    Name: '名も無き剣士のブーツ'
+    Type: Armor
+    Weight: 1000
+    Defense: 18
+    Slots: 1
+    Locations:
+      Shoes: true
+    EquipLevelMin: 99
+    Refineable: true
+    Script: |
+      bonus2 bAddClass,Class_Boss,15;
+      .@r = getrefine();
+      bonus bBaseAtk,5*.@r;
+      bonus bAspdRate,.@r;
+      bonus bMaxHPrate,2*.@r;
+      bonus bMaxSPrate,2*.@r;
   - Id: 22225
     AegisName: Shoes_of_Punishment_J
     Name: '裁きの靴'

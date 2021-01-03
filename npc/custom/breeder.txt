@@ -22,14 +22,20 @@ venette,143,149,3	script	Universal Rental NPC	726,{
 	} else if (((eaclass()&EAJ_THIRDMASK)==EAJ_MECHANIC) && !checkcart() && getskilllv("MC_PUSHCART")) {
 		if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) {
 			if(select(" ~ Cart: ~ Mado")==1) setcart;
-			else setmadogear;
+			else{
+				if(select(" ~ Suit: ~ Robo")==1)setmadogear 1,MADO_SUIT;
+				else setmadogear 1,MADO_ROBOT;
+			} 
 		} else setcart;
 	} else if (!checkcart() && getskilllv("MC_PUSHCART")) setcart;
 	else if (!checkfalcon() && getskilllv("HT_FALCON") && !checkwug()) setfalcon;
 	else if (!checkriding() && !checkdragon() && getskilllv("KN_RIDING")) {
 		if ((eaclass()&EAJ_THIRDMASK)==EAJ_RUNE_KNIGHT) setdragon;
 		else setriding;
-	} else if (!checkmadogear() && getskilllv("NC_MADOLICENCE")) setmadogear;
+	} else if (!checkmadogear() && getskilllv("NC_MADOLICENCE")){
+		if(select(" ~ Suit: ~ Robo")==1)setmadogear 1,MADO_SUIT;
+		else setmadogear 1,MADO_ROBOT;
+	}
 	else {
 		message strcharinfo(0),"You do not meet requirements to rent.";
 		end;

@@ -129,3 +129,10 @@ Body:
     Type: Card
     Script: |
       bonus bNoMadoFuel;
+  - Id: 2005500005
+    AegisName: Shadow_OC_DC
+    Name: OverCharge/Discount
+    Type: Card
+    Script: |
+      skill "MC_OVERCHARGE",10,1;
+      skill "MC_DISCOUNT",10,1;

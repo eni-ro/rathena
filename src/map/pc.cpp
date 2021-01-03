@@ -4057,26 +4057,46 @@ void pc_bonus2(struct map_session_data *sd,int type,int type2,int val)
 		break;
 	case SP_HP_LOSS_RATE: // bonus2 bHPLossRate,n,t;
 		if(sd->state.lr_flag != 2) {
-			sd->hp_loss.value = type2;
-			sd->hp_loss.rate = val;
+			if( sd->hp_loss.rate != val ){
+				sd->hp_loss.value = type2;
+				sd->hp_loss.rate = val;
+			}
+			else{
+				sd->hp_loss.value += type2;
+			}
 		}
 		break;
 	case SP_HP_REGEN_RATE: // bonus2 bHPRegenRate,n,t;
 		if(sd->state.lr_flag != 2) {
-			sd->hp_regen.value = type2;
-			sd->hp_regen.rate = val;
+			if( sd->hp_regen.rate != val ){
+				sd->hp_regen.value = type2;
+				sd->hp_regen.rate = val;
+			}
+			else{
+				sd->hp_regen.value += type2;
+			}
 		}
 		break;
 	case SP_REGEN_PERCENT_HP: // bonus2 bRegenPercentHP,n,t;
 		if (sd->state.lr_flag != 2) {
-			sd->percent_hp_regen.value = type2;
-			sd->percent_hp_regen.rate = val;
+			if( sd->percent_hp_regen.rate != val ){
+				sd->percent_hp_regen.value = type2;
+				sd->percent_hp_regen.rate = val;
+			}
+			else{
+				sd->percent_hp_regen.value += type2;
+			}
 		}
 		break;
 	case SP_REGEN_PERCENT_SP: // bonus2 bRegenPercentSP,n,t;
 		if (sd->state.lr_flag != 2) {
-			sd->percent_sp_regen.value = type2;
-			sd->percent_sp_regen.rate = val;
+			if( sd->percent_sp_regen.rate != val ){
+				sd->percent_sp_regen.value = type2;
+				sd->percent_sp_regen.rate = val;
+			}
+			else{
+				sd->percent_sp_regen.value += type2;
+			}
 		}
 		break;
 	case SP_ADDRACE2: // bonus2 bAddRace2,mr,x;
@@ -4154,14 +4174,24 @@ void pc_bonus2(struct map_session_data *sd,int type,int type2,int val)
 		break;
 	case SP_SP_LOSS_RATE: // bonus2 bSPLossRate,n,t;
 		if(sd->state.lr_flag != 2) {
-			sd->sp_loss.value = type2;
-			sd->sp_loss.rate = val;
+			if( sd->sp_loss.rate != val ){
+				sd->sp_loss.value = type2;
+				sd->sp_loss.rate = val;
+			}
+			else{
+				sd->sp_loss.value += type2;
+			}
 		}
 		break;
 	case SP_SP_REGEN_RATE: // bonus2 bSPRegenRate,n,t;
 		if(sd->state.lr_flag != 2) {
-			sd->sp_regen.value = type2;
-			sd->sp_regen.rate = val;
+			if( sd->sp_regen.rate != val ){
+				sd->sp_regen.value = type2;
+				sd->sp_regen.rate = val;
+			}
+			else{
+				sd->sp_regen.value += type2;
+			}
 		}
 		break;
 	case SP_HP_DRAIN_VALUE_RACE: // bonus2 bHPDrainValueRace,r,n;

@@ -1150,7 +1150,7 @@ OnStart:
 			}
 			close2;
 			setpcblock PCBLOCK_NPC, true;
-			viewpoint 2,1,1,1,0xFFFFFF;
+			viewpoint 2,1,1,10,0xFFFFFF;
 			npctalk "作業員 : 人間はキミのことを怖がるけれど、キミちゃんは私たちの面倒をよくみてくれるよー。まるで生前のお爺さんみたいに。";
 			sleep2 3000;
 			npctalk "作業員 : よくキミちゃんに、お爺さんに作ってもらったってアクセサリーのリボンや傘を見せてもらったよー。";

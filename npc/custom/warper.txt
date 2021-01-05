@@ -124,7 +124,7 @@ function Restrict {
 }
 
 // --------------------------------------------------
-	Towns:
+	街:
 // --------------------------------------------------
 menu	"ベネット",T0,
 		"プロンテラ",T1, "アルベルタ",T2, "アルデバラン",T3, "天津",T4, "アユタヤ",T5,
@@ -186,19 +186,19 @@ T38: Go("verus04",115,243);
 T39: Go("harboro1",272,206);
 
 // --------------------------------------------------
-	Fields:
+	フィールド:
 // --------------------------------------------------
 @f = true;
-menu	"Amatsu Fields",F1, "Ayothaya Fields",F2, "Bifrost Fields", F3,
-    	"Brasilis Fields",F4, "Comodo Fields",F5, "Dewata Fields",F6,
-    	"Eclage Fields",F7, "Einbroch Fields",F8, "El Dicastes Fields",F9,
-    	"Geffen Fields",F10, "Kunlun Fields",F11, "Hugel Fields",F12,
-		"Lasagna Fields",F13, "Lighthalzen Fields",F14, "Luoyang Field",F15, 
-		"Lutie Field",F16, "Malaya Fields",F17, "Manuk Fields",F18, 
-		"Mjolnir Fields",F19, "Moscovia Fields",F20, "Niflheim Fields",F21, 
-		"Payon Forests",F22, "Prontera Fields",F23, "Rachel Fields",F24, 
-		"Sograt Deserts",F25, "Splendide Fields",F26, "Umbala Fields",F27, 
-		"Veins Fields",F28, "Juno Fields",F29;
+menu	"アマツフィールド",F1, "アユタヤフィールド",F2, "ビフロストフィールド", F3,
+    	"ブラジリスフィールド",F4, "コモドフィールド",F5, "デワタフィールド",F6,
+    	"エクラージュフィールド",F7, "アインブロックフィールド",F8, "エルディカスティスフィールド",F9,
+    	"ゲフェンフィールド",F10, "コンロンフィールド",F11, "ヒューゲルフィールド",F12,
+		"ラザニアフィールド",F13, "ライトハルゼンフィールド",F14, "洛陽フィールド",F15, 
+		"ルティエフィールド",F16, "マラヤフィールド",F17, "マヌクフィールド",F18, 
+		"ミョルニル山",F19, "モスコビアフィールド",F20, "ニヴルヘイムフィールド",F21, 
+		"フェイヨン迷いの森",F22, "プロンテラフィールド",F23, "ラヘルフィールド",F24, 
+		"ソグラト砂漠",F25, "スプレンディッドフィールド",F26, "ウンバラフィールド",F27, 
+		"ベインスフィールド",F28, "ジュノーフィールド",F29;
 
 F1: setarray @c[2],190,197;
 	Disp("Amatsu Field",1,1); Pick("ama_fild");
@@ -281,21 +281,21 @@ F29: Restrict("Pre-RE",5,10);
 	 Disp("Juno Field",1,12); Pick("yuno_fild");
 
 // --------------------------------------------------
-	Dungeons:
+	ダンジョン:
 // --------------------------------------------------
 @d = true;
-menu	"Abyss Lakes",D1, "Amatsu Dungeon",D2, "Anthell",D3,
-    	"Ayothaya Dungeon",D4, "Beach Dungeon",D5, "Bifrost Tower",D42,
-    	"Bio Labs",D6, "Brasilis Dungeon",D7, "Byalan Dungeon",D8, "Clock Tower",D9,
-    	"Coal Mines",D10, "Culvert",D11, "Cursed Abbey",D12, "Dewata Dungeon",D13,
-    	"Einbroch Dungeon",D14, "Gefenia",D15, "Geffen Dungeon",D16,
-    	"Glast Heim",D17, "Kunlun Dungeon",D18, "Hidden Dungeon",D19,
-    	"Ice Dungeon",D20, "Juperos",D21, "Kiel Dungeon",D22, "Lasagna Dungeon",D23,
-		"Luoyang Dungeon",D24, "Magma Dungeon",D25, "Malangdo Dungeon",D26,
-		"Moscovia Dungeon",D27, "Nidhogg's Dungeon",D28, "Odin Temple",D29,
-		"Orc Dungeon",D30, "Payon Dungeon",D31, "Pyramids",D32, "Rachel Sanctuary",D33,
-    	"Scaraba Hole",D34, "Sphinx",D35, "Sunken Ship",D36, "Thanatos Tower",D37,
-    	"Thor Volcano",D38, "Toy Factory",D39, "Turtle Dungeon",D40, "Umbala Dungeon",D41;
+menu	"アビスレイク",D1, "アマツダンジョン",D2, "アリ地獄",D3,
+    	"アユタヤ古代神社",D4, "コモドダンンジョン-西の洞窟-カル",D5, "ビフロストタワー",D42,
+    	"生体工学研究所 ",D6, "ブラジリスダンジョン",D7, "イズルード海底洞窟",D8, "時計塔",D9,
+    	"ミョルニル炭鉱",D10, "プロンテラ地下水路",D11, "修道院",D12, "クラカト火山/デワヤ",D13,
+    	"鉱山ダンジョン",D14, "ゲフェニア",D15, "ゲフェン地下Ｄ",D16,
+    	"グラストヘイム",D17, "コンロンダンジョン",D18, "龍之城Ｄ",D19,
+    	"氷の洞窟",D20, "ジュピロス",D21, "機械人形工場",D22, "ドラゴンの巣",D23,
+		"王家の墓",D24, "マグマＤ/ノーグロード",D25, "マラン島Ｄ",D26,
+		"モスコビアＤ",D27, "ニーズヘッグＤ",D28, "オーディン寺院",D29,
+		"オーク地下洞窟",D30, "フェイヨン地下洞窟",D31, "ピラミッドＤ",D32, "フレイヤ大神殿聖域",D33,
+    	"スカラバホール",D34, "スフィンクスＤ",D35, "沈没船",D36, "タナトスタワー",D37,
+    	"トール火山",D38, "おもちゃ工場Ｄ",D39, "タートルアイランドＤ",D40, "ウンバラＤ-木の大工の店",D41;
 
 D1: setarray @c[2],261,272,275,270,116,27;
 	Disp("Abyss Lakes",1,3); Pick("abyss_");

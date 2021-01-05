@@ -24,12 +24,12 @@ function Go; function Disp; function Pick; function Restrict;
 // --------------------------------------------------
 
 menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
-    	" ~ Towns",Towns,
-    	" ~ Fields",Fields,
-    	" ~ Dungeons",Dungeons,
-    	" ~ Guild Castles",Castles,
-    	" ~ Guild Dungeons",Guild_Dungeons,
-    	" ~ Instances",Instances,
+    	" ~ 街",Towns,
+    	" ~ フィールド",Fields,
+    	" ~ ダンジョン",Dungeons,
+    	" ~ GvG",Castles,
+    	" ~ ギルドダンジョン",Guild_Dungeons,
+    	" ~ MD",Instances,
     	" ~ Special Areas",Special;
 
 	if (lastwarp$ == "")
@@ -124,7 +124,7 @@ function Restrict {
 }
 
 // --------------------------------------------------
-	街:
+	Towns:
 // --------------------------------------------------
 menu	"ベネット",T0,
 		"プロンテラ",T1, "アルベルタ",T2, "アルデバラン",T3, "天津",T4, "アユタヤ",T5,
@@ -186,7 +186,7 @@ T38: Go("verus04",115,243);
 T39: Go("harboro1",272,206);
 
 // --------------------------------------------------
-	フィールド:
+	Fields:
 // --------------------------------------------------
 @f = true;
 menu	"アマツフィールド",F1, "アユタヤフィールド",F2, "ビフロストフィールド", F3,
@@ -281,7 +281,7 @@ F29: Restrict("Pre-RE",5,10);
 	 Disp("Juno Field",1,12); Pick("yuno_fild");
 
 // --------------------------------------------------
-	ダンジョン:
+	Dungeons:
 // --------------------------------------------------
 @d = true;
 menu	"アビスレイク",D1, "アマツダンジョン",D2, "アリ地獄",D3,

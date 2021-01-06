@@ -181,6 +181,17 @@
 	if (.@min < 1)
 		close;
 
+	//エラーが発生する衣装でログイン不可にならないように、一時的に衣装を着せる
+	setarray .@lookpos,
+		EQP_COSTUME_HEAD_TOP, LOOK_HEAD_TOP,
+		EQP_COSTUME_HEAD_MID, LOOK_HEAD_MID,
+		EQP_COSTUME_HEAD_LOW, LOOK_HEAD_BOTTOM,
+		EQP_COSTUME_GARMENT, LOOK_ROBE;
+	.@look = inarray( .@lookpos, getiteminfo( .@name_id, 5 ));
+	if( .@look != -1 ){
+		.@look = .@lookpos[ .@look + 1 ];
+		changelook .@look, getiteminfo( .@name_id, 11 );
+	}
 	my_message 5;
 	switch(select("１回交換","回数指定",.@min + "回(最大)交換","レンタル","やめる")){
 		case 1:

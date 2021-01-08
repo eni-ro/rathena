@@ -132,6 +132,54 @@ Body:
           }
         }
       }
+  - Id: 1335
+    AegisName: Cancer_Axe_J
+    Name: 'ãêäIã{ÇÃÉAÉbÉNÉX'
+    Type: Weapon
+    SubType: 1hAxe
+    Weight: 700
+    Attack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Assassin: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Novice: true
+      Swordman: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bBaseAtk,80+BaseLevel;
+      bonus bAspdRate,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_MECHANIC ){
+        bonus2 bAddClass,Class_All,50;
+        bonus bSPDrainValue,2;
+        bonus2 bSkillCooldown,"NC_AXETORNADO",-1000;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreDefRaceRate,RC_All,50;
+          }
+        }
+      }
   - Id: 2400
     AegisName: Pollux_Shoes_J
     Name: 'É|ÉãÉbÉNÉXÉVÉÖÅ[ÉY'
@@ -297,6 +345,41 @@ Body:
           bonus bAllStats,10;
           bonus2 bHPRegenRate,500,5000;
           bonus2 bSPRegenRate,50,5000;
+        }
+      }
+  - Id: 15412
+    AegisName: Cancer_Mail_J
+    Name: 'ãêäIã{ÇÃÉÅÉCÉã'
+    Type: Armor
+    Weight: 1000
+    Defense: 100
+    Slots: 1
+    Locations:
+      Armor: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableArmor;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bFlee,20;
+      bonus bMaxHP,1000;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_MECHANIC ){
+        bonus bBaseAtk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus2 bSubSkill,"NPC_CRITICALSLASH",100;
         }
       }
   - Id: 15418
@@ -517,6 +600,48 @@ Body:
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
         skill "HW_GANBANTEIN",1,1;
       }
+  - Id: 19449
+    AegisName: Cancer_Crown_J
+    Name: 'ãêäIã{ÇÃÉNÉâÉEÉì'
+    Type: Armor
+    Weight: 100
+    Defense: 12
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    Refineable: true
+    View: 561
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableHelm;
+      bonus bMdef,15;
+      bonus bStr,10;
+      bonus bBaseAtk,50;
+      bonus bHit,20;
+      bonus2 bAddRace,RC_All,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_MECHANIC ){
+        bonus bHPGainValue,500;
+        bonus bLongHPGainValue,500;
+        bonus bMagicHPGainValue,500;
+        bonus bSPGainValue,50;
+        bonus bLongSPGainValue,50;
+        bonus bMagicSPGainValue,50;
+        bonus2 bAddMonsterDropItem,748,16;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bAllStats,10;
+          bonus2 bHPRegenRate,500,5000;
+          bonus2 bSPRegenRate,50,5000;
+        }
+      }
   - Id: 19468
     AegisName: Libra_Diadem_J
     Name: 'ìVîâã{ÇÃÉ_ÉCÉAÉfÉÄ'
@@ -710,6 +835,42 @@ Body:
           bonus bLongAtkRate,20;
         }
       }
+  - Id: 20954
+    AegisName: Cancer_Manteau_J
+    Name: 'ãêäIã{ÇÃÉ}ÉìÉg'
+    Type: Armor
+    Weight: 300
+    Defense: 25
+    Locations:
+      Garment: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableGarment;
+      bonus bMdef,5;
+      bonus bBaseAtk,20;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus2 bSubEle,Ele_Neutral,20;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_MECHANIC ){
+        bonus bBaseAtk,30;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus bNoCastCancel;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bNoKnockback;
+        }
+      }
   - Id: 20972
     AegisName: Aquarius_Manteau_J
     Name: 'ïÛïrã{ÇÃÉ}ÉìÉg'
@@ -872,6 +1033,47 @@ Body:
       bonus bAspdRate,.@r;
       bonus bMaxHPrate,2*.@r;
       bonus bMaxSPrate,2*.@r;
+  - Id: 22216
+    AegisName: Cancer_Shoes_J
+    Name: 'ãêäIã{ÇÃÉVÉÖÅ[ÉY'
+    Type: Armor
+    Weight: 400
+    Defense: 25
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus2 bHPRegenRate,250,10000;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_MECHANIC ){
+        bonus bBaseAtk,80;
+        bonus bAspdRate,10;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus2 bSubEle,Ele_Fire,20;
+          bonus2 bSubEle,Ele_Water,20;
+          bonus2 bSubEle,Ele_Wind,20;
+          bonus2 bSubEle,Ele_Earth,20;
+        }
+      }
   - Id: 22225
     AegisName: Shoes_of_Punishment_J
     Name: 'çŸÇ´ÇÃåC'
@@ -1156,6 +1358,41 @@ Body:
             bonus2 bIgnoreDefRaceRate,RC_All,50;
           }
         }
+      }
+  - Id: 32253
+    AegisName: Cancer_Ring_J
+    Name: 'ãêäIã{ÇÃÉäÉìÉO'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bVit,5;
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bAddClass,Class_All,5;
+      bonus2 bSkillFixedCast,"NC_AXEBOOMERANG",-1500;
+      bonus2 bAddMonsterDropItem,731,28;
+      bonus2 bAddMonsterDropItem,732,12;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_MECHANIC ){
+        bonus bAspdRate,5;
+        bonus2 bAddClass,Class_All,5;
+        bonus2 bSkillAtk,"NC_AXETORNADO",50;
+        bonus2 bSkillAtk,"NC_AXEBOOMERANG",50;
       }
   - Id: 32261
     AegisName: Libra_Ring_J

@@ -31,7 +31,8 @@
 450133:480041:470038,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSkillAtk,"MG_FIREBOLT",50; bonus2 bSkillAtk,"MG_COLDBOLT",50; bonus2 bSkillAtk,"MG_LIGHTNINGBOLT",50; bonus2 bSkillAtk,"WZ_EARTHSPIKE",50; bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Wind,20; bonus2 bSubEle,Ele_Earth,20; bonus2 bResEff,Eff_Freeze,10000; }
 //ポルックス(星帝)
 20983:15447:2400,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus bNoSizeFix; bonus bPerfectHitAddRate,30; }
-
+//プロキオン(ソウルリーパー)
+15448:20984:22242,{ bonus bMaxHP,2000; bonus bMaxSP,200; bonus2 bSubEle,Ele_Fire,50; bonus2 bSubEle,Ele_Water,50; bonus2 bSubEle,Ele_Wind,50; bonus2 bSubEle,Ele_Earth,50; bonus2 bResEff,Eff_Freeze,10000; }
 //名も無き剣士のブーツ
 22178:4352,{ skill "SM_MAGNUM",10; bonus2 bHPRegenRate,5000,10000; bonus2 bSPRegenRate,100,10000; .@r = getequiprefinerycnt(EQI_SHOES); if( BaseLevel <= 99 ){ bonus bStr,3*.@r; bonus bFlee,5*.@r; }else{ bonus bStr,10*.@r; bonus bFlee,15*.@r; }}
 //ガーデンオブエデン,フェアリーオブエデン

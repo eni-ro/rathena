@@ -153,6 +153,54 @@ Header:
   Version: 1
 
 Body:
+  - Id: 2004000000
+    AegisName: Newbie_Procyon_Dagger_J
+    Name: '初心者用プロキオンダガー'
+    Type: Weapon
+    SubType: Dagger
+    Weight: 250
+    Attack: 0
+    MagicAttack: 5
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,25+BaseLevel/2;
+      bonus bCastrate,-5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_UPPERMASK ) == EAJ_SOUL_LINKER ){
+        bonus bAspdRate,5;
+        bonus2 bMagicAddClass,Class_All,15;
+        bonus2 bSubClass,Class_Boss,5;
+        bonus2 bMagicAddEle,Ele_Dark,15;
+        bonus2 bIgnoreMdefRaceRate,RC_All,50;
+      }
   - Id: 2004020000
     AegisName: Newbie_Libra_Krasnaya_J
     Name: '初心者用天秤宮のクラスナヤ'

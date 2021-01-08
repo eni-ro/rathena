@@ -523,6 +523,41 @@ Body:
           bonus2 bSubClass,Class_Boss,5;
         }
       }
+  - Id: 15448
+    AegisName: Procyon_Robe_J
+    Name: 'プロキオンローブ'
+    Type: Armor
+    Weight: 1000
+    Defense: 100
+    Slots: 1
+    Locations:
+      Armor: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableArmor;
+      bonus bMdef,5;
+      bonus bMatk,50;
+      bonus bMaxHP,1000;
+      bonus bCastrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bMatk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bNoKnockback;
+        }
+      }
   - Id: 15823
     AegisName: Pollux_Crown_J
     Name: 'ポルックスクラウン'
@@ -551,6 +586,48 @@ Body:
       bonus2 bAddRace,RC_All,10;
       set .@eac, eaclass();
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
+        bonus2 bSubClass,Class_Boss,20;
+        bonus bHPGainValue,500;
+        bonus bLongHPGainValue,500;
+        bonus bMagicHPGainValue,500;
+        bonus bSPGainValue,50;
+        bonus bLongSPGainValue,50;
+        bonus bMagicSPGainValue,50;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bAllStats,10;
+          bonus2 bHPRegenRate,500,5000;
+          bonus2 bSPRegenRate,50,5000;
+        }
+      }
+  - Id: 15824
+    AegisName: Procyon_Crown_J
+    Name: 'プロキオンクラウン'
+    Type: Armor
+    Weight: 100
+    Defense: 12
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 1
+    Refineable: true
+    View: 840
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableHelm;
+      bonus bMdef,15;
+      bonus bInt,10;
+      bonus bMatk,50;
+      bonus bCastrate,-10;
+      bonus2 bMagicAddRace,RC_All,10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
         bonus2 bSubClass,Class_Boss,20;
         bonus bHPGainValue,500;
         bonus bLongHPGainValue,500;
@@ -980,6 +1057,41 @@ Body:
           bonus bAtkRate,20;
         }
       }
+  - Id: 20984
+    AegisName: Procyon_Manteau_J
+    Name: 'プロキオンマント'
+    Type: Armor
+    Weight: 300
+    Defense: 25
+    Locations:
+      Garment: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableGarment;
+      bonus bMdef,5;
+      bonus bMatk,20;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus bCastrate,-10;
+      bonus2 bSubEle,Ele_Neutral,20;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bMatk,30;
+        bonus2 bSubEle,Ele_Neutral,20;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bAspdRate,20;
+        }
+      }
   - Id: 20991
     AegisName: Fairy_Of_Eden_J
     Name: 'フェアリーオブエデン'
@@ -1223,6 +1335,45 @@ Body:
           bonus2 bSkillCooldown,"GC_DARKILLUSION",-1500;
         }
       }
+  - Id: 22242
+    AegisName: Procyon_Shoes_J
+    Name: 'プロキオンシューズ'
+    Type: Armor
+    Weight: 400
+    Defense: 25
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,5;
+      bonus bMatk,50;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      bonus bCastrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bMatk,80;
+        bonus bMaxHPrate,10;
+        bonus bMaxSPrate,10;
+        bonus2 bMagicAddEle,Ele_Dark,30;
+        .@r = getrefine();
+        if( .@r >= 8 ){
+          bonus bNoCastCancel;
+          bonus bFixedCastrate,-60;
+        }
+      }
   - Id: 26167
     AegisName: Aquarius_Staff_J
     Name: '宝瓶宮のスタッフ'
@@ -1356,6 +1507,68 @@ Body:
           bonus2 bIgnoreDefRaceRate,RC_All,50;
           if( .@r >= 9 ){
             bonus2 bIgnoreDefRaceRate,RC_All,50;
+          }
+        }
+      }
+  - Id: 28784
+    AegisName: Procyon_Dagger_J
+    Name: 'プロキオンダガー'
+    Type: Weapon
+    SubType: Dagger
+    Weight: 500
+    Attack: 0
+    MagicAttack: 10
+    Range: 1
+    Slots: 1
+    Jobs:
+      Alchemist: true
+      Archer: true
+      Assassin: true
+      BardDancer: true
+      Blacksmith: true
+      Crusader: true
+      Hunter: true
+      KagerouOboro: true
+      Knight: true
+      Mage: true
+      Merchant: true
+      Ninja: true
+      Novice: true
+      Rogue: true
+      Sage: true
+      SoulLinker: true
+      SuperNovice: true
+      Swordman: true
+      Thief: true
+      Wizard: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bMatk,50+BaseLevel;
+      bonus bCastrate,-10;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bAspdRate,10;
+        bonus2 bMagicAddClass,Class_All,25;
+        bonus2 bSubClass,Class_Boss,10;
+        bonus2 bMagicAddEle,Ele_Dark,25;
+        .@r = getrefine();
+        if( .@r >= 7 ){
+          bonus2 bIgnoreMdefRaceRate,RC_All,50;
+          if( .@r >= 9 ){
+            bonus2 bIgnoreMdefRaceRate,RC_All,50;
           }
         }
       }
@@ -1524,6 +1737,36 @@ Body:
         bonus2 bSkillAtk,"SG_SUN_WARM",100;
         bonus2 bSkillAtk,"SG_MOON_WARM",100;
         bonus2 bSkillAtk,"SG_STAR_WARM",100;
+      }
+  - Id: 32294
+    AegisName: Procyon_Ring_J
+    Name: 'プロキオンリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bAspdRate,5;
+      bonus bMaxSP,100;
+      bonus2 bMagicAddClass,Class_All,5;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bAspdRate,5;
+        bonus2 bMagicAddClass,Class_All,5;
+        bonus bCastrate,-25;
       }
   - Id: 450015
     AegisName: Virgo_Mail_J

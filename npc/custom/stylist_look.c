@@ -134,9 +134,7 @@ function HasjROCostume {
 	changelook LOOK_BODY2,0;
 	changebase .@roc;
 	changelook LOOK_BODY2,.@body2;
-	debugmes sprintf("%d",.@current_eac);
 	if( HasjROCostume(roclass(.@current_eac & EAJ_THIRDMASK)) ){
-	debugmes sprintf("setlook %d",.@body2);
 		setlook LOOK_BODY2,.@body2;
 	}
 	set baselook, .@roc;

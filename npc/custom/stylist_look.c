@@ -25,7 +25,7 @@
 //= TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //============================================================
 
-venette,135,120,4	script	Dress Room#sc	1_F_SIGNZISK,{
+venette,135,120,4	script	クッキィちゃん	1_F_SIGNZISK,{
 function HasjROCostume;
 
 function HasjROCostume {
@@ -58,14 +58,13 @@ function HasjROCostume {
 	}
 	else{
 		setarray .@base_eac,
-			EAJ_NOVICE,
 			EAJ_SWORDMAN,
 			EAJ_MAGE,
 			EAJ_ARCHER,
 			EAJ_ACOLYTE,
 			EAJ_MERCHANT,
 			EAJ_THIEF,
-			EAJ_SUPER_NOVICE,
+			EAJ_NOVICE,
 			EAJ_TAEKWON,
 			EAJ_GUNSLINGER,
 			EAJ_NINJA;

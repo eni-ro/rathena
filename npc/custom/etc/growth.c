@@ -61,14 +61,14 @@ venette,141,151,3	script	怪しい生物	586,{
 OnNPCKillEvent:
 	//ステータスアップ処理(LV差変動)
 	.@lvdiff = strmobinfo(3,killedrid) - readparam(BaseLevel);
-	if( .@lvdiff <= -80 ){	//0.8%
-		.@glow_chance = 1000;
+	if( .@lvdiff <= -100 ){
+		.@glow_chance = 2000;
 	}
-	else if(.@lvdiff >= -20 ){	//1.9%
-		.@glow_chance = 1900;
+	else if(.@lvdiff >= -20 ){
+		.@glow_chance = 4000;
 	}
 	else{
-		.@glow_chance =  15 * .@lvdiff + 2200;
+		.@glow_chance =  25 * .@lvdiff + 4500;
 	}
 	if( getmonsterinfo( killedrid, MOB_MVPEXP )){
 		.@glow_chance *= 6;

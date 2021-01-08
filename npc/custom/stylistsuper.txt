@@ -46,8 +46,7 @@ venette,133,119,3	script	Super Stylist#super_stylist	10209,{
 				switch (select(
 					"Change Hairstyle",
 					"Change Hairdye",
-					"Change Cloth Color",
-					"Change Bodystyle"
+					"Change Cloth Color"
 				)) {
 					case 1:
 						set .@hairstylemin,getBattleFlag("min_hair_style");

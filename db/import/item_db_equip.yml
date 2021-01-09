@@ -2201,6 +2201,69 @@ Body:
         bonus2 bCastrate,"MG_COLDBOLT",-50;
         bonus2 bCastrate,"MG_LIGHTNINGBOLT",-50;
       }
+  - Id: 490037
+    AegisName: Dark_Ring_J
+    Name: 'ダークリング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bAgiDexStr,5;
+      bonus2 bAddClass,Class_All,5;
+      if( getskilllv("GC_CROSSIMPACT") >= 5 ){
+        bonus bDelayrate,-30;
+      }
+      if( getskilllv("GC_DARKCROW") >= 5 ){
+        bonus2 bSkillCooldown,"GC_DARKCROW",-25000;
+      }
+      .@sklv = getskilllv("GC_WEAPONCRUSH");
+      bonus bAgiDexStr,.@sklv ;
+      bonus bBaseAtk,40*.@sklv;
+      if( getskilllv("GC_CLOAKINGEXCEED") >= 5 ){
+        bonus bMaxSPrate,15;
+        bonus bAspd,2;
+      }
+  - Id: 490038
+    AegisName: Sixth_Sense_Ring
+    Name: '知覚増幅リング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bMdef,15;
+      bonus bInt,7;
+      bonus2 bMagicAddSize,Size_All,10;
+      bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",BaseLevel/5;
+      if( getskilllv("SO_CLOUD_KILL") >= 5 ){
+        bonus bCastrate,-15;
+        bonus bMagicHPGainValue,100;
+        bonus bMagicSPGainValue,10;
+      }
+      if( getskilllv("SO_PSYCHIC_WAVE") >= 5 ){
+        bonus bDelayrate,-30;
+      }
+      if( getskilllv("SO_STRIKING") >= 5 ){
+        bonus2 bMagicAtkEle,Ele_Fire,10;
+        bonus2 bMagicAtkEle,Ele_Water,10;
+        bonus2 bMagicAtkEle,Ele_Wind,10;
+        bonus2 bMagicAtkEle,Ele_Earth,10;
+      }
+      if( getskilllv("SO_VACUUM_EXTREME") >= 5 ){
+        bonus2 bSkillUseSP,"SO_PSYCHIC_WAVE",-20;
+        bonus2 bSkillCooldown,"SO_PSYCHIC_WAVE",-1000;
+      }
   - Id: 490041
     AegisName: Sagittarius_Ring_J
     Name: '人馬宮のリング'

@@ -1501,7 +1501,7 @@ Body:
         bonus2 bAddClass,Class_All,50;
         bonus2 bSpDrainValueClass,Class_All,2;
         bonus2 bSubClass,Class_Boss,10;
-        autobonus "{ bonus bAtk2,150; }",30,3000,BF_WEAPON;
+        autobonus "{ bonus bAtk2,150; }",30,3000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL;
         .@r = getrefine();
         if( .@r >= 7 ){
           bonus2 bIgnoreDefRaceRate,RC_All,50;

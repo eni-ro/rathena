@@ -437,7 +437,7 @@ Body:
         bonus2 bAddClass,Class_All,25;
         bonus2 bSpDrainValueClass,Class_All,1;
         bonus2 bSubClass,Class_Boss,5;
-        autobonus "{ bonus bAtk2,75; }",30,3000,BF_WEAPON;
+        autobonus "{ bonus bAtk2,75; }",30,3000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL;
         bonus2 bIgnoreDefRaceRate,RC_All,50;
       }
   - Id: 2004160000

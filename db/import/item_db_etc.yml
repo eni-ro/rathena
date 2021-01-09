@@ -392,6 +392,13 @@ Body:
     Type: Card
     Script: |
       bonus bDelayrate,-8;
+  - Id: 29474
+    AegisName: Strong_Arm_J
+    Name: '<„˜r>'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,5;
+      autobonus "{ bonus bBaseAtk,100; }",30,5000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_ENHANCE; }";
   - Id: 29511
     AegisName: Improve_Orb_Player
     Name: 'Q-Player'
@@ -422,7 +429,7 @@ Body:
       if( .@r >= 7 ){
         .@rate = 10 + 5 * ( .@r - 7 );
         .@t = 3000 + 1000 * ( .@r - 7 );
-        autobonus "{bonus bBaseAtk,100;}",.@rate,.@t,BF_WEAPON,"{ specialeffect2 EF_POTION_BERSERK; }";
+        autobonus "{bonus bBaseAtk,100;}",.@rate,.@t,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_POTION_BERSERK; }";
       }
   - Id: 310271
     AegisName: Improve_MagicBoost
@@ -446,7 +453,7 @@ Body:
       if( .@r >= 7 ){
         .@rate = 10 + 5 * ( .@r - 7 );
         .@t = 3000 + 1000 * ( .@r - 7 );
-        autobonus "{bonus bCritAtkRate,40;}",.@rate,.@t,BF_WEAPON,"{ specialeffect2 EF_POTION_BERSERK; }";
+        autobonus "{bonus bCritAtkRate,40;}",.@rate,.@t,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_POTION_BERSERK; }";
       }
   - Id: 310273
     AegisName: Improve_Electricity
@@ -458,7 +465,7 @@ Body:
       if( .@r >= 7 ){
         .@rate = 50 + 10 * ( .@r - 7 );
         .@t = 10000 + 1000 * ( .@r - 7 );
-        autobonus "{bonus3 bAutoSpell,\"SO_VARETYR_SPEAR\",10,250;}",.@rate,.@t,BF_WEAPON,"{ specialeffect2 EF_BULLSEYE; }";
+        autobonus "{bonus3 bAutoSpell,\"SO_VARETYR_SPEAR\",10,250;}",.@rate,.@t,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_BULLSEYE; }";
       }
   - Id: 1000312
     AegisName: M_M_PowerBoost

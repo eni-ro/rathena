@@ -2145,7 +2145,7 @@ if(illusion_vampire == 7){
 		"What kinds of ingredients do you need? I'll get them for you.";
 	next;
 	mes "[Bomi]",
-		"Thank you. I need ^0000FF10 Sticky Bloods from Matte Drainliars and 10 Mushroom Saps from Illusion Black Mushrooms^000000. Thank you for doing this for me.";
+		"Thank you. ^0000FF マットドレインリアーからべとべとする血を10個、蛍きのこからきのこの粘液が10個^000000必要です。 Thank you for doing this for me.";
 	
 	setpcblock PCBLOCK_ALL, 0;
 	// give quest
@@ -2168,7 +2168,7 @@ if(illusion_vampire == 8){
 			"This isn't enough.";
 		next;
 		mes "[Bomi]",
-			"I need ^0000FF10 Sticky Bloods from Matte Drainliars and 10 Mushroom Saps from Illusion Black Mushrooms^000000. Thank you for doing this for me.";
+			"^0000FF マットドレインリアーからべとべとする血を10個、蛍きのこからきのこの粘液が10個^000000必要です。 Thank you for doing this for me.";
 		setpcblock PCBLOCK_ALL, 0;
 		close;
 	}
@@ -2656,7 +2656,7 @@ if(illusion_vampire == 14){
 		if(.@q > -1){
 			if(10 > countitem(25269) || 10 > countitem(25268)){
 				mes "[Bomi]",
-					"Adventurer, did you forget what I asked? I need ^0000FF10 Sticky bloods from Matte Drainliars and 10 Mushroom Saps from Illusion Black Mushrooms^000000.",
+					"Adventurer, did you forget what I asked? ^0000FF マットドレインリアーからべとべとする血を10個、蛍きのこからきのこの粘液が10個^000000必要です。",
 					"Thank you.";
 				close;
 			}
@@ -2688,7 +2688,7 @@ if(illusion_vampire == 14){
 			getexp 500000,500000;
 			setpcblock PCBLOCK_ALL, 0;
 			$bomi_quest_temp++;
-			if($bomi_quest_temp >= 30){
+			//if($bomi_quest_temp >= 30){
 				$bomi_quest_temp = 0;
 				$illuvamp_bomiSpawned = true;
 				close2;
@@ -2705,7 +2705,7 @@ if(illusion_vampire == 14){
 				classchange HIDDEN_WARP_NPC,"Wizard#illuvamp",bc_self;
 				monster "gef_d01_i",81,135,"Bomi",3756,1,strnpcinfo(0)+"::OnSummonDrac";
 				end;
-			}
+			//}
 			dispbottom (30 - $bomi_quest_temp) + " Quests left until Bomi turns.";
 			close;
 		}
@@ -2726,7 +2726,7 @@ if(illusion_vampire == 14){
 				"Adventurer, weclome back. Could you help me today as usual?";
 			next;
 			mes "[Bomi]",
-				"I need ^0000FF10 Sticky bloods from Matte Drainliars and 10 Mushroom Saps from Illusion Black Mushrooms^000000.",
+				"^0000FF マットドレインリアーからべとべとする血を10個、蛍きのこからきのこの粘液が10個^000000必要です。",
 				"You can get them if you hunt at least 5 Matte Drainliars amd 5 Illusion Black Mushrooms.";
 			next;
 			mes "[Bomi]",
@@ -2762,7 +2762,7 @@ if(illusion_vampire == 14){
 		"But maybe that only happens to me. I'm a new vampire, and I'm weak. Dracula has lived for a long time, and he's anything but weak.";
 	next;
 	mes "[Bomi]",
-		"Anyway, I need ^0000FF10 Sticky bloods from Matte Drainliars and 10 Mushroom Saps from Illusion Black Mushrooms^000000.";
+		"Anyway, ^0000FF マットドレインリアーからべとべとする血を10個、蛍きのこからきのこの粘液が10個^000000必要です。";
 	next;
 	mes "[Bomi]",
 		"You can find them if you want at least 5 Matte Drainliars and 5 Illusion Black Mushrooms.";

@@ -180,6 +180,25 @@ Body:
           }
         }
       }
+  - Id: 1943
+    AegisName: Erhu
+    Name: '二胡'
+    Type: Weapon
+    View: 13
+    Buy: 20
+    Weight: 700
+    Attack: 50
+    Range: 1
+    Slots: 3
+    Jobs:
+      BardDancer: true
+    Classes:
+      All_Third: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 2
+    Refineable: true
   - Id: 2400
     AegisName: Pollux_Shoes_J
     Name: 'ポルックスシューズ'
@@ -642,6 +661,20 @@ Body:
           bonus2 bSPRegenRate,50,5000;
         }
       }
+  - Id: 18968
+    AegisName: Jinn_Marin_Balloon
+    Name: Jinn Marin Balloon
+    Type: Armor
+    View: 1133
+    Defense: 5
+    Locations:
+      Head_Low: true
+    Script: |
+      bonus bInt,1;
+      bonus bDex,1;
+      bonus bMaxHP,100;
+      bonus bBaseAtk,5;
+      bonus bMatk,5;
   - Id: 19262
     AegisName: Jirant_Circlet
     Name: '古代龍の宝冠'

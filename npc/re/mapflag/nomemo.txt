@@ -232,7 +232,10 @@ lasa_dun_q	mapflag	nomemo
 pay_d03_i	mapflag	nomemo
 
 // Illusion Geffen (Vampire)
+gef_d01_i	mapflag	nobranch
+gef_d01_i	mapflag	nopenalty
 gef_d01_i	mapflag	nomemo
+gef_d01_i	mapflag	loadevent
 
 // Illusion Ice (Frozen)
 ice_d03_i	mapflag	nomemo

@@ -155,6 +155,28 @@ Body:
     Name: 'S-Cri‚ÌİŒv}'
     Type: Etc
     Weight: 10
+  - Id: 25268
+    AegisName: Sticky_Blood
+    Name: '‚×‚Æ‚×‚Æ‚·‚éŒŒ'
+    Type: Etc
+    Buy: 36
+    Weight: 10
+    Classes:
+      All: false
+  - Id: 25269
+    AegisName: Mushroom_Sap
+    Name: '‚«‚Ì‚±‚Ì”S‰t'
+    Type: Etc
+    Buy: 36
+    Weight: 10
+    Classes:
+      All: false
+  - Id: 25270
+    AegisName: Wavy_Mane
+    Name: '—h‚ê‚é‚½‚Ä‚ª‚İ'
+    Type: Etc
+    Buy: 973
+    Weight: 10
   - Id: 25434
     AegisName: Reactor_Z_Knockback
     Name: 'Z-Knockback‚ÌİŒv}'

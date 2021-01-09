@@ -64,6 +64,7 @@
 	set .@row_max,csvgetrows(.@file$);
 	set .@row_num,1;
 	while (1) {
+		freeloop(1);
 		for( .@line=0; .@row_num < .@row_max; .@row_num++ ) {
 			.@temp = csvread(.@file$, .@row_num, 0);
 
@@ -81,7 +82,7 @@
 			.@menu_str$ = .@menu_str$ + .@type$[.@i] + ":";
 		}
 		.@menu_str$ = .@menu_str$ + "‚â‚ß‚é";
-
+		freeloop(0);
 		set @menu,select(.@menu_str$) - 1;
 		if (@menu == .@line)
 			close;
@@ -187,10 +188,12 @@
 		EQP_COSTUME_HEAD_MID, LOOK_HEAD_MID,
 		EQP_COSTUME_HEAD_LOW, LOOK_HEAD_BOTTOM,
 		EQP_COSTUME_GARMENT, LOOK_ROBE;
-	.@look = inarray( .@lookpos, getiteminfo( .@name_id, 5 ));
-	if( .@look != -1 ){
-		.@look = .@lookpos[ .@look + 1 ];
-		changelook .@look, getiteminfo( .@name_id, 11 );
+	.@equip_loc = getiteminfo( .@name_id, 5 );
+	for(.@i = 0; .@i <= getarraysize(.@lookpos); .@i += 2 ){
+		if( .@equip_loc & .@lookpos[ .@i ] ){
+			changelook .@lookpos[ .@i + 1 ], getiteminfo( .@name_id, 11 );
+			break;
+		}
 	}
 	my_message 5;
 	switch(select("‚P‰ñŒðŠ·","‰ñ”Žw’è",.@min + "‰ñ(Å‘å)ŒðŠ·","ƒŒƒ“ƒ^ƒ‹","‚â‚ß‚é")){

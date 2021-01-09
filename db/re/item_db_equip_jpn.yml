@@ -102248,7 +102248,7 @@ Body:
     Locations:
       Costume_Head_Mid: true
     EquipLevelMin: 1
-    View: 1500
+    View: 0
     Script: |
       hateffect(HAT_EF_BAKURETSU_HADOU,true); /* Need to confirm this */
     UnEquipScript: |

@@ -40,3 +40,5 @@
 20991:29371,{ bonus bAspdRate,10; bonus bDelayrate,-25; }
 20991:27087,{ bonus bInt,40; bonus bIntravision; if(( eaclass() & EAJ_THIRDMASK ) == EAJ_WARLOCK ){ bonus2 bSkillAtk,"WZ_SIGHTRASHER",6*getequiprefinerycnt(EQI_GARMENT); bonus5 bAutoSpellOnSkill,"WZ_SIGHTRASHER","MG_SIGHT",1,1000,0; }}
 19272:4365,{ bonus bCastrate,-100; bonus2 bSkillCooldown,"WL_TELEKINESIS_INTENSE",-120000; }
+//ƒjƒqƒc
+27397:4174,{ bonus2 bSubEle,Ele_Neutral,-15; }

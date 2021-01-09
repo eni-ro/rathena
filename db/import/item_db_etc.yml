@@ -196,6 +196,18 @@ Body:
     Type: Card
     Buy: 20
     Weight: 10
+  - Id: 27397
+    AegisName: Nichts_J
+    Name: 'ニヒツ'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,15;
+  - Id: 27398
+    AegisName: Dodge25_J
+    Name: '完全回避 + 25'
+    Type: Card
+    Script: |
+      bonus bFlee2,25;
   - Id: 29012
     AegisName: High_Level_J
     Name: 'ハイレベル'
@@ -235,6 +247,74 @@ Body:
     Script: |
       bonus bCritical,15;
       bonus bCritAtkRate,5;
+  - Id: 29212
+    AegisName: Hit_3_J
+    Name: 'Hit + 3'
+    Type: Card
+    Script: |
+      bonus bHit,3;
+  - Id: 29213
+    AegisName: Hit_6_J
+    Name: 'Hit + 6'
+    Type: Card
+    Script: |
+      bonus bHit,6;
+  - Id: 29214
+    AegisName: Burn_J
+    Name: 'バーン'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Fire,15;
+  - Id: 29215
+    AegisName: Gale_J
+    Name: 'ゲイル'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Wind,15;
+  - Id: 29216
+    AegisName: Flood_J
+    Name: 'フラッド'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Water,15;
+  - Id: 29217
+    AegisName: Clay_J
+    Name: 'クレイ'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Earth,15;
+  - Id: 29218
+    AegisName: Grudge_J
+    Name: 'グラッジ'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Ghost,15;
+  - Id: 29219
+    AegisName: Ua_J
+    Name: 'ウーア'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Undead,15;
+  - Id: 29220
+    AegisName: Venom_J
+    Name: 'ベノム'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Poison,15;
+  - Id: 29221
+    AegisName: Despair_J
+    Name: 'デスペリア'
+    Type: Card
+    Script: |
+      bonus2 bSubEle,Ele_Dark,15;
+  - Id: 29222
+    AegisName: Sacred_J
+    Name: 'セイクレッド'
+    Type: Card
+    Script: |
+      if( getskilllv("CR_TRUST") == 0 ){
+        bonus2 bSubEle,Ele_Holy,15;
+      }
   - Id: 29240
     AegisName: Hit_10_J
     Name: 'Hit + 10'
@@ -320,6 +400,18 @@ Body:
       .@v = 1+getrefine();
       bonus2 bSubRace,RC_Player_Human,.@v;
       bonus2 bSubRace,RC_Player_Doram,.@v;
+  - Id: 29593
+    AegisName: Anti_Freeze_J
+    Name: '凍結耐性'
+    Type: Card
+    Script: |
+      bonus2 bResEff,Eff_Freeze,10000;
+  - Id: 310269
+    AegisName: Anti_Stone_J
+    Name: '石化耐性'
+    Type: Card
+    Script: |
+      bonus2 bResEff,Eff_Stone,10000;
   - Id: 310270
     AegisName: Improve_PowerBoost
     Name: 'T-PowerBoost'

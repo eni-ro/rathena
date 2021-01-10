@@ -1550,6 +1550,28 @@ Body:
           }
         }
       }
+  - Id: 28429
+    AegisName: Alguien_Necklace
+    Name: 'アルクイエンのネックレス'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 20
+    Script: |
+      bonus2 bSkillUseSP,"NC_POWERSWING",-2;
+      bonus2 bSkillAtk,"MC_CARTREVOLUTION",BaseLevel;
+      bonus2 bSkillAtk,"NC_AXETORNADO",BaseLevel/3;
+      bonus2 bSkillAtk,"NC_POWERSWING",BaseLevel/5;
+      bonus2 bAddMonsterDropItem,529,2000;
+      bonus2 bAddMonsterDropItem,530,2000;
+      bonus2 bAddMonsterDropItem,573,150;
+      bonus2 bAddItemHealRate,529,100;
+      bonus2 bAddItemHealRate,530,100;
   - Id: 28643
     AegisName: PolluxBook
     Name: 'ポルックスブック'

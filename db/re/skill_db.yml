@@ -29835,34 +29835,34 @@ Body:
     Hit: Multi_Hit
     HitCount: -7
     Element: Dark
-    SplashArea: 3
+    SplashArea:
+      - Level: 1
+        Area: 3
+      - Level: 2
+        Area: 3
+      - Level: 3
+        Area: 3
+      - Level: 4
+        Area: 4
+      - Level: 5
+        Area: 4
+      - Level: 6
+        Area: 4
+      - Level: 7
+        Area: 5
+      - Level: 8
+        Area: 5
+      - Level: 9
+        Area: 5
+      - Level: 10
+        Area: 6
     CastCancel: true
-    CastTime: 3000
-    AfterCastActDelay: 500
+    CastTime: 2000
+    AfterCastActDelay: 1000
     Cooldown: 1000
     FixedCastTime: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 50
-        - Level: 2
-          Amount: 55
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 65
-        - Level: 5
-          Amount: 70
-        - Level: 6
-          Amount: 75
-        - Level: 7
-          Amount: 80
-        - Level: 8
-          Amount: 85
-        - Level: 9
-          Amount: 90
-        - Level: 10
-          Amount: 95
+      SpCost: 70
   - Id: 2601
     Name: SP_SOULCURSE
     Description: Soul Curse
@@ -29883,7 +29883,7 @@ Body:
     Cooldown: 5000
     FixedCastTime: 1000
     Requires:
-      SpCost: 70
+      SpCost: 50
       SpiritSphereCost: 3
   - Id: 2602
     Name: SP_SPA
@@ -29896,31 +29896,51 @@ Body:
     HitCount: 1
     Element: Endowed
     CastCancel: true
-    CastTime: 500
+    CastTime:
+      - Level: 1
+        Time: 100
+      - Level: 2
+        Time: 200
+      - Level: 3
+        Time: 300
+      - Level: 4
+        Time: 400
+      - Level: 5
+        Time: 500
+      - Level: 6
+        Time: 600
+      - Level: 7
+        Time: 700
+      - Level: 8
+        Time: 800
+      - Level: 9
+        Time: 900
+      - Level: 10
+        Time: 1000
     Duration1: 5000
-    FixedCastTime: 1000
+    FixedCastTime:
+      - Level: 1
+        Time: 100
+      - Level: 2
+        Time: 200
+      - Level: 3
+        Time: 300
+      - Level: 4
+        Time: 400
+      - Level: 5
+        Time: 500
+      - Level: 6
+        Time: 600
+      - Level: 7
+        Time: 700
+      - Level: 8
+        Time: 800
+      - Level: 9
+        Time: 900
+      - Level: 10
+        Time: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 52
-        - Level: 2
-          Amount: 56
-        - Level: 3
-          Amount: 60
-        - Level: 4
-          Amount: 64
-        - Level: 5
-          Amount: 68
-        - Level: 6
-          Amount: 72
-        - Level: 7
-          Amount: 76
-        - Level: 8
-          Amount: 80
-        - Level: 9
-          Amount: 84
-        - Level: 10
-          Amount: 88
+      SpCost: 30
       SpiritSphereCost:
         - Level: 1
           Amount: 1
@@ -29956,44 +29976,42 @@ Body:
     Element: Endowed
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 2
       - Level: 2
-        Area: 1
+        Area: 3
       - Level: 3
-        Area: 2
+        Area: 4
       - Level: 4
-        Area: 2
+        Area: 5
       - Level: 5
-        Area: 2
+        Area: 6
     CastCancel: true
-    CastTime: 500
-    AfterCastActDelay: 500
-    Duration1:
+    CastTime:
       - Level: 1
-        Time: 3000
+        Time: 200
       - Level: 2
-        Time: 4000
+        Time: 400
       - Level: 3
-        Time: 5000
+        Time: 600
       - Level: 4
-        Time: 6000
+        Time: 800
       - Level: 5
-        Time: 7000
+        Time: 1000
     Duration2: 5000
-    Cooldown: 3000
-    FixedCastTime: 1000
+    Cooldown: 1000
+    FixedCastTime:
+      - Level: 1
+        Time: 200
+      - Level: 2
+        Time: 400
+      - Level: 3
+        Time: 600
+      - Level: 4
+        Time: 800
+      - Level: 5
+        Time: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 18
-        - Level: 2
-          Amount: 20
-        - Level: 3
-          Amount: 22
-        - Level: 4
-          Amount: 24
-        - Level: 5
-          Amount: 26
+      SpCost: 50
       SpiritSphereCost: 1
   - Id: 2604
     Name: SP_SWHOO
@@ -30009,53 +30027,73 @@ Body:
     Element: Endowed
     SplashArea:
       - Level: 1
-        Area: 1
+        Area: 3
       - Level: 2
-        Area: 1
+        Area: 3
       - Level: 3
-        Area: 1
+        Area: 3
       - Level: 4
-        Area: 2
-      - Level: 5
-        Area: 2
-      - Level: 6
-        Area: 2
-      - Level: 7
-        Area: 3
-      - Level: 8
-        Area: 3
-      - Level: 9
-        Area: 3
-      - Level: 10
         Area: 4
+      - Level: 5
+        Area: 4
+      - Level: 6
+        Area: 4
+      - Level: 7
+        Area: 5
+      - Level: 8
+        Area: 5
+      - Level: 9
+        Area: 5
+      - Level: 10
+        Area: 6
     CastCancel: true
-    CastTime: 500
+    CastTime:
+      - Level: 1
+        Time: 100
+      - Level: 2
+        Time: 200
+      - Level: 3
+        Time: 300
+      - Level: 4
+        Time: 400
+      - Level: 5
+        Time: 500
+      - Level: 6
+        Time: 600
+      - Level: 7
+        Time: 700
+      - Level: 8
+        Time: 800
+      - Level: 9
+        Time: 900
+      - Level: 10
+        Time: 1000
     AfterCastActDelay: 500
     Duration1: 5000
     Cooldown: 2000
-    FixedCastTime: 1000
+    FixedCastTime:
+      - Level: 1
+        Time: 100
+      - Level: 2
+        Time: 200
+      - Level: 3
+        Time: 300
+      - Level: 4
+        Time: 400
+      - Level: 5
+        Time: 500
+      - Level: 6
+        Time: 600
+      - Level: 7
+        Time: 700
+      - Level: 8
+        Time: 800
+      - Level: 9
+        Time: 900
+      - Level: 10
+        Time: 1000
     Requires:
-      SpCost:
-        - Level: 1
-          Amount: 66
-        - Level: 2
-          Amount: 70
-        - Level: 3
-          Amount: 74
-        - Level: 4
-          Amount: 78
-        - Level: 5
-          Amount: 82
-        - Level: 6
-          Amount: 86
-        - Level: 7
-          Amount: 90
-        - Level: 8
-          Amount: 94
-        - Level: 9
-          Amount: 98
-        - Level: 10
-          Amount: 102
+      SpCost: 120
       SpiritSphereCost:
         - Level: 1
           Amount: 2

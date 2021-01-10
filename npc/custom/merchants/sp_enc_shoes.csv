@@ -1,0 +1,8 @@
+//ItemID,精錬値条件,slot(0-3),type,required item id,required item num,failure rate,failure handling,id1,rate1,id2,rate2,…
+//,,,typeは0=選択式、1=ランダム
+//,,,,,,failure rateは百分率
+//,,,,,,,failure handlingは0=何もしない、1=装備破壊、2=エンチャ対象箇所のみエンチャ消失、3=すべてエンチャ消失
+//,,,,,,,,,rate1以降は出現比率
+闇御津羽神靴
+22228,8,3,1,6962,30,0,0,4900,1,4817,1,29136,1,4810,1,4833,1,4814,1
+22228,9,2,1,6962,30,0,0,4876,1

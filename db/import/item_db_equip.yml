@@ -1157,6 +1157,7 @@ Body:
     Type: Armor
     Weight: 400
     Defense: 40
+    Slots: 1
     Locations:
       Garment: true
     EquipLevelMin: 100

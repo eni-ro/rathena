@@ -366,6 +366,32 @@ Body:
           bonus2 bSPRegenRate,50,5000;
         }
       }
+  - Id: 13340
+    AegisName: Huuma_Shower_Of_CherryBlossoms
+    Name: '風魔手裏剣・花吹雪'
+    Type: Weapon
+    SubType: Huuma
+    Weight: 2000
+    Attack: 250
+    MagicAttack: 180
+    Range: 1
+    Slots: 3
+    Jobs:
+      KagerouOboro: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 130
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      bonus bUnbreakableWeapon;
+      .@r = getrefine();
+      bonus bAspdRate,.@r;
+      if( .@r >= 9 ){
+        bonus bSPGainValue,20;
+        bonus bLongHPGainValue,20;
+      }
   - Id: 15412
     AegisName: Cancer_Mail_J
     Name: '巨蟹宮のメイル'
@@ -1368,6 +1394,29 @@ Body:
           bonus2 bSkillCooldown,"GC_DARKILLUSION",-1500;
         }
       }
+  - Id: 22234
+    AegisName: FrontiaBoots_J
+    Name: 'フロンティアブーツ'
+    Type: Armor
+    Weight: 500
+    Defense: 5
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      if( getrefine() < 7 )
+        .@b = 1;
+      else
+        .@b = 2;
+      bonus bBaseAtk,50*.@b;
+      bonus bMatk,50*.@b;
+      bonus bMaxHPrate,10*.@b;
+      bonus bMaxSPrate,10*.@b;
   - Id: 22242
     AegisName: Procyon_Shoes_J
     Name: 'プロキオンシューズ'
@@ -1673,6 +1722,41 @@ Body:
         bonus2 bAddClass,Class_All,5;
         bonus2 bSkillAtk,"LK_SPIRALPIERCE",100;
         bonus2 bCastrate,"LK_SPIRALPIERCE",-50;
+      }
+  - Id: 32262
+    AegisName: Ball_Of_RasenHuuma
+    Name: '螺旋風魔の宝珠'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bStr,5;
+      bonus bAgiVit,5;
+      bonus2 bAddClass,Class_All,5;
+      if( getskilllv("KG_KAGEMUSYA") >= 5 ){
+        .@b = BaseLevel / 4;
+        bonus2 bSkillAtk,"NJ_HUUMA",2*.@b ;
+        bonus2 bSkillAtk,"KO_HUUMARANKA",.@b ;
+      }
+      if( getskilllv("KO_KYOUGAKU") >= 5 ){
+        bonus2 bSkillUseSP,"KO_HUUMARANKA",10;
+        bonus2 bSkillCooldown,"KO_HUUMARANKA",-100;
+      }
+      if( getskilllv("KO_MUCHANAGE") >= 10 ){
+        bonus2 bHPDrainRate,1000,1;
+      }
+      if( getskilllv("KO_MEIKYOUSISUI") >= 5 ){
+        bonus bSPDrainValue,2;
+        bonus2 bSkillCooldown,"KO_IZAYOI",-25000;
+      }
+      if( getskilllv("KO_SETSUDAN") >= 5 ){
+        bonus2 bCastrate,"KO_HUUMARANKA",-50;
       }
   - Id: 32266
     AegisName: Aquarius_Ring_J

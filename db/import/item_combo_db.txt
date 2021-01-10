@@ -44,3 +44,5 @@
 27397:4174,{ bonus2 bSubEle,Ele_Neutral,-15; }
 //知覚増幅リング
 490038:29371,{ if(( eaclass() & EAJ_THIRDMASK ) == EAJ_SORCERER ){ bonus bIgnoreMDefRace,RC_All; }}
+//フロンティアブーツ,風魔手裏剣・花吹雪
+22234:13340,{ bonus2 bSkillCooldown,"KO_HUUMARANKA",-300; .@rw = getequiprefinerycnt(EQI_HAND_R); if( .@rw >= 7 && getequiprefinerycnt(EQI_SHOES) >= 7 ){ .@b = 30; if( .@rw >= 9 ){ .@b += 20; } bonus2 bSubClass,Class_Boss,.@b; }}

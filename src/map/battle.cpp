@@ -4657,7 +4657,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
 			break;
 		case KO_HUUMARANKA:
-			skillratio += 150 * skill_lv + sstatus->str + (sd ? pc_checkskill(sd,NJ_HUUMA) * 100 : 0);
+			skillratio += -100 + 150 * skill_lv + sstatus->str + (sd ? pc_checkskill(sd,NJ_HUUMA) * 100 : 0);
 			RE_LVL_DMOD(100);
 			if (sc && sc->data[SC_KAGEMUSYA])
 				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
@@ -6664,20 +6664,20 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 						break;
 					case SP_CURSEEXPLOSION:
 						if (tsc && tsc->data[SC_SOULCURSE])
-							skillratio += 2500 + 250 * skill_lv;
+							skillratio += -100 + 2500 + 250 * skill_lv;
 						else
-							skillratio += 2300 + 50 * skill_lv;
+							skillratio += -100 + 2300 + 50 * skill_lv;
 						RE_LVL_DMOD(100);
 						break;
 					case SP_SPA:
-						skillratio += 500 + 250 * skill_lv;
+						skillratio += -100 + 500 + 250 * skill_lv;
 						RE_LVL_DMOD(100);
 						break;
 					case SP_SHA:
-						skillratio += 2000 + 100 * skill_lv;
+						skillratio += -100 + 2000 + 100 * skill_lv;
 						break;
 					case SP_SWHOO:
-						skillratio += 1500 + 250 * skill_lv;
+						skillratio += -100 + 1500 + 250 * skill_lv;
 						RE_LVL_DMOD(100);
 						break;
 				}

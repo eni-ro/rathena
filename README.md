@@ -60,6 +60,8 @@
 |  | @al(@autoloot) |
 |  | @alid(@autolootid/@alootid) |
 |  | @alt(@autoloottype/@aloottype) |
+|  | @als(@autolootstack/@alootstack) |
+|  | @alp(@autolootprivate/@alootprivate) |
 |  | @autopot |
 | 転生 | 無し(※2) |
 | ステータス/スキルリセット | 合計5回まで可能 |

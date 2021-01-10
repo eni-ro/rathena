@@ -6515,6 +6515,46 @@ ACMD_FUNC(autoloottype)
 }
 
 /*==========================================
+ * @autolootstack
+ *------------------------------------------*/
+ACMD_FUNC(autolootstack)
+{
+	nullpo_retr(-1, sd);
+
+	if( sd->state.autolootprivate ){
+		sd->state.autolootprivate = 0;
+		clif_displaymessage(fd, msg_txt(sd,1549));
+	}
+	sd->state.autolootstack = ~sd->state.autolootstack;
+	if (sd->state.autolootstack) {
+		clif_displaymessage(fd, msg_txt(sd,1546));
+	}else
+		clif_displaymessage(fd, msg_txt(sd,1547));
+
+	return 0;
+}
+
+/*==========================================
+ * @autolootprivate
+ *------------------------------------------*/
+ACMD_FUNC(autolootprivate)
+{
+	nullpo_retr(-1, sd);
+
+	if( sd->state.autolootstack ){
+		sd->state.autolootstack = 0;
+		clif_displaymessage(fd, msg_txt(sd,1547));
+	}
+	sd->state.autolootprivate = ~sd->state.autolootprivate;
+	if (sd->state.autolootprivate) {
+		clif_displaymessage(fd, msg_txt(sd,1548));
+	}else
+		clif_displaymessage(fd, msg_txt(sd,1549));
+
+	return 0;
+}
+
+/*==========================================
  * It is made to rain.
  * No longer available, keeping here just in case it's back someday. [Ind]
  *------------------------------------------*/
@@ -10530,6 +10570,8 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(autoloot),
 		ACMD_DEF2("alootid", autolootitem),
 		ACMD_DEF(autoloottype),
+		ACMD_DEF(autolootstack),
+		ACMD_DEF(autolootprivate),
 		ACMD_DEF(mobinfo),
 		ACMD_DEF(exp),
 		ACMD_DEF(version),

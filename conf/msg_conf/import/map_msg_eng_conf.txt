@@ -1,0 +1,7 @@
+
+// @autolootstack
+1546: Autoloot Stack is now on.
+1547: Autoloot Stack is now off.
+// @autolootprivate
+1548: Autoloot Private is now on.
+1549: Autoloot Private is now off.

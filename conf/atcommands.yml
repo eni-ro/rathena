@@ -962,6 +962,14 @@ Body:
     Aliases:
       - aloottype
       - alt
+  - Command: autolootstack
+    Aliases:
+      - alootstack
+      - als
+  - Command: autolootprivate
+    Aliases:
+      - alootprivate
+      - alp
   - Command: cloneequip
     Aliases:
       - eqclone

@@ -11685,13 +11685,23 @@ bool pc_isautolooting(struct map_session_data *sd, t_itemid nameid)
 	if (sd->state.autoloottype && sd->state.autoloottype&(1<<itemdb_type(nameid)))
 		return true;
 
-	if (!sd->state.autolooting)
-		return false;
-
-	if (sd->state.autolooting)
+	if (sd->state.autolooting){
 		ARR_FIND(0, AUTOLOOTITEM_SIZE, i, sd->state.autolootid[i] == nameid);
+		if(i != AUTOLOOTITEM_SIZE)
+			return true;
+	}
+	if ((sd->state.autolootstack) || (sd->state.autolootprivate)){
+		for( auto item : sd->inventory.u.items_inventory ){
+			if(item.nameid == nameid){
+				if(sd->state.autolootstack)
+					return true;
+				else if( item.favorite == 1 )
+					return true;
+			}
+		}
+	}
 
-	return (i != AUTOLOOTITEM_SIZE);
+	return false;
 }
 
 /**

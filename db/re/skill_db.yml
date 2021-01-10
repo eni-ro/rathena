@@ -30661,37 +30661,98 @@ Body:
     TargetType: Attack
     DamageFlags:
       Splash: true
-    Range: 11
+    Range:
+      - Level: 1
+        Size: 10
+      - Level: 2
+        Size: 11
+      - Level: 3
+        Size: 12
+      - Level: 4
+        Size: 13
+      - Level: 5
+        Size: 14
+      - Level: 6
+        Size: 14
+      - Level: 7
+        Size: 14
+      - Level: 8
+        Size: 14
+      - Level: 9
+        Size: 14
+      - Level: 10
+        Size: 14
     Hit: Multi_Hit
     HitCount: -5
     Element: Weapon
     SplashArea: 3
-    CastTime: 1500
-    AfterCastActDelay: 500
-    Duration1: 100
-    Cooldown: 3000
+    CastTime:
+      - Level: 1
+        Time: 2000
+      - Level: 2
+        Time: 1800
+      - Level: 3
+        Time: 1600
+      - Level: 4
+        Time: 1400
+      - Level: 5
+        Time: 1400
+      - Level: 6
+        Time: 1400
+      - Level: 7
+        Time: 1400
+      - Level: 8
+        Time: 1400
+      - Level: 9
+        Time: 1400
+      - Level: 10
+        Time: 1400
+    AfterCastActDelay: 20
+    Duration1: 0
+    Cooldown: 500
+    FixedCastTime:
+      - Level: 1
+        Time: 1000
+      - Level: 2
+        Time: 1200
+      - Level: 3
+        Time: 1400
+      - Level: 4
+        Time: 1600
+      - Level: 5
+        Time: 1800
+      - Level: 6
+        Time: 1800
+      - Level: 7
+        Time: 1800
+      - Level: 8
+        Time: 1800
+      - Level: 9
+        Time: 1800
+      - Level: 10
+        Time: 1800
     Requires:
       SpCost:
         - Level: 1
-          Amount: 22
-        - Level: 2
           Amount: 24
-        - Level: 3
-          Amount: 26
-        - Level: 4
+        - Level: 2
           Amount: 28
-        - Level: 5
-          Amount: 30
-        - Level: 6
+        - Level: 3
           Amount: 32
-        - Level: 7
-          Amount: 34
-        - Level: 8
+        - Level: 4
           Amount: 36
-        - Level: 9
-          Amount: 38
-        - Level: 10
+        - Level: 5
           Amount: 40
+        - Level: 6
+          Amount: 44
+        - Level: 7
+          Amount: 48
+        - Level: 8
+          Amount: 52
+        - Level: 9
+          Amount: 56
+        - Level: 10
+          Amount: 60
       Weapon:
         Huuma: true
     Unit:

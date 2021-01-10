@@ -4657,7 +4657,7 @@ static int battle_calc_attack_skill_ratio(struct Damage* wd, struct block_list *
 				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;
 			break;
 		case KO_HUUMARANKA:
-			skillratio += -100 + 150 * skill_lv + sstatus->str + (sd ? pc_checkskill(sd,NJ_HUUMA) * 100 : 0);
+			skillratio += ( 150 * skill_lv + sstatus->str + (sd ? pc_checkskill(sd,NJ_HUUMA) * 100 : 0)) * status_get_lv(src) / 100;
 			RE_LVL_DMOD(100);
 			if (sc && sc->data[SC_KAGEMUSYA])
 				skillratio += skillratio * sc->data[SC_KAGEMUSYA]->val2 / 100;

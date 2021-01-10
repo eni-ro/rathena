@@ -65118,36 +65118,42 @@ Body:
     AegisName: Illusion_Armor_A-type
     Name: Illusion Armor A-type
     Type: Armor
-    Weight: 1000
-    Defense: 105
-    Slots: 1
+    Weight: 1200
+    Defense: 150
+    Slots: 0
     Locations:
       Armor: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
-      .@r = getrefine();
-      bonus bBaseAtk,(100+10*(.@r/2));
-      if (.@r >= 7) {
-         bonus bAspdRate,10;
+      .@val = 3;
+      if( BaseLevel >= 170 ){
+        .@val += 2;
       }
+      bonus bAgi,.@val;
+      bonus bVit,.@val;
+      bonus bLuk,.@val;
+      bonus bMaxHPrate,4*getrefine()/3;
   - Id: 15377
     AegisName: Illusion_Armor_B-type
     Name: Illusion Armor B-type
     Type: Armor
-    Weight: 1000
-    Defense: 105
-    Slots: 1
+    Weight: 1200
+    Defense: 150
+    Slots: 0
     Locations:
       Armor: true
     EquipLevelMin: 130
     Refineable: true
     Script: |
-      .@r = getrefine();
-      bonus bMatk,(100+10*(.@r/2));
-      if (.@r >= 7) {
-         bonus bVariableCastrate,-10;
+      .@val = 3;
+      if( BaseLevel >= 170 ){
+        .@val += 2;
       }
+      bonus bStr,.@val;
+      bonus bInt,.@val;
+      bonus bDex,.@val;
+      bonus bMaxHPrate,4*getrefine()/3;
   - Id: 15378
     AegisName: Lava_Leather_Armor
     Name: Lava Leather Armor
@@ -91543,36 +91549,38 @@ Body:
     AegisName: Illusion_Engine_wing_A-type
     Name: Illusion Engine wing A-type
     Type: Armor
-    Weight: 900
-    Defense: 50
-    Slots: 1
+    Weight: 1000
+    Defense: 60
+    Slots: 0
     Locations:
       Garment: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
-      .@r = getrefine();
-      bonus bMaxHP,1000+(100*(.@r/2));
-      if (.@r >= 7) {
-         bonus bAspdRate,5;
+      .@val = 15;
+      if( BaseLevel>=170 ){
+        .@val += 5;
       }
+      bonus2 bSubEle,Ele_Neutral,.@val;
+      bonus bMaxHPrate,2*getrefine();
   - Id: 20934
     AegisName: Illusion_Engine_wing_B-type
     Name: Illusion Engine wing B-type
     Type: Armor
-    Weight: 900
-    Defense: 50
-    Slots: 1
+    Weight: 1000
+    Defense: 60
+    Slots: 0
     Locations:
       Garment: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
-      .@r = getrefine();
-      bonus bMaxHP,1000+(100*(.@r/2));
-      if (.@r >= 7) {
-         bonus bVariableCastrate,-5;
+      .@val = 15;
+      if( BaseLevel>=170 ){
+        .@val += 5;
       }
+      bonus2 bSubEle,Ele_Neutral,.@val;
+      bonus bMaxSPrate,2*getrefine();
   - Id: 20935
     AegisName: Lava_Leather_Manteau
     Name: Lava Leather Manteau
@@ -95415,37 +95423,45 @@ Body:
     Name: Illusion Leg A-type
     Type: Armor
     Buy: 20
-    Weight: 500
+    Weight: 600
     Defense: 20
-    Slots: 1
+    Slots: 0
     Locations:
       Shoes: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
-      .@r = getrefine();
-      bonus bMaxSP,200+(20*(.@r/2));
-      if (.@r >= 7) {
-         bonus bLongAtkRate,5;
+      .@val = 10;
+      if( BaseLevel >= 170 ){
+        .@val += 5;
       }
+      bonus bMaxHPrate,.@val;
+      bonus bMaxSPrate,.@val;
+      .@val = getrefine()/3;
+      bonus bDef,100*.@val;
+      bonus bMdef,10*.@val;
   - Id: 22197
     AegisName: Illusion_Leg_B-type
     Name: Illusion Leg B-type
     Type: Armor
     Buy: 20
-    Weight: 500
+    Weight: 600
     Defense: 20
-    Slots: 1
+    Slots: 0
     Locations:
       Shoes: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
-      .@r = getrefine();
-      bonus bMaxSP,200+(20*(.@r/2));
-      if (.@r >= 7) {
-         bonus2 bMagicAtkEle,Ele_All,5;
+      .@val = 10;
+      if( BaseLevel >= 170 ){
+        .@val += 5;
       }
+      bonus bMaxHPrate,.@val;
+      bonus bMaxSPrate,.@val;
+      .@val = getrefine()/3*30;
+      bonus bBaseAtk,.@val;
+      bonus bMatk,.@val;
   - Id: 22198
     AegisName: Traveler_Shoes
     Name: Traveler Shoes
@@ -100805,7 +100821,7 @@ Body:
     EquipLevelMin: 1
     Refineable: true
     Script: |
-      bonus MaxSP,10+15*(getrefine()/2);
+      bonus bMaxSP,10+15*(getrefine()/2);
   - Id: 24381
     AegisName: S_Sentimental_Earring
     Name: Sentimental Shadow Earring
@@ -114095,7 +114111,7 @@ Body:
     Locations:
       Costume_Head_Mid: true
     EquipLevelMin: 1
-    View: 1500
+    View: 0
     Script: |
       hateffect(HAT_EF_BAKURETSU_HADOU,true);
       /* Need to confirm this */
@@ -115869,7 +115885,7 @@ Body:
     Locations:
       Costume_Head_Low: true
     EquipLevelMin: 1
-    View: 1665
+    View: 0
     Script: |
       hateffect(HAT_EF_C_FLUTTERBUTTERFLY_BL,true);
     UnEquipScript: |
@@ -119746,48 +119762,56 @@ Body:
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Right_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
       bonus2 bAddClass,Class_All,5;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus bDelayrate,-10;
   - Id: 32208
     AegisName: Illusion_Booster_L
     Name: Illusion Booster L
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Left_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
-      bonus2 bAddClass,Class_All,5;
+      bonus2 bIgnoreDefRaceRate,RC_All,30;
+      bonus2 bIgnoreMdefRaceRate,RC_All,30;
+      bonus bDelayrate,-10;
   - Id: 32209
     AegisName: Illusion_Battle_chip_R
     Name: Illusion Battle chip R
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Right_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
-      bonus bMatkRate,5;
+      bonus2 bAddClass,Class_All,5;
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus bVariableCastrate,-10;
   - Id: 32210
     AegisName: Illusion_Battle_chip_L
     Name: Illusion Battle chip L
     Type: Armor
     Buy: 20
     Weight: 100
-    Slots: 1
+    Slots: 0
     Locations:
       Left_Accessory: true
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Script: |
-      bonus bMatkRate,5;
+      bonus2 bIgnoreDefRaceRate,RC_All,30;
+      bonus2 bIgnoreMdefRaceRate,RC_All,30;
+      bonus bVariableCastrate,-10;
   - Id: 32221
     AegisName: Time_Overload_Ring
     Name: Temporal Transcendence Ring

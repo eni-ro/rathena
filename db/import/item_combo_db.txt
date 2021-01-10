@@ -46,3 +46,11 @@
 490038:29371,{ if(( eaclass() & EAJ_THIRDMASK ) == EAJ_SORCERER ){ bonus bIgnoreMDefRace,RC_All; }}
 //フロンティアブーツ,風魔手裏剣・花吹雪
 22234:13340,{ bonus2 bSkillCooldown,"KO_HUUMARANKA",-300; .@rw = getequiprefinerycnt(EQI_HAND_R); if( .@rw >= 7 && getequiprefinerycnt(EQI_SHOES) >= 7 ){ .@b = 30; if( .@rw >= 9 ){ .@b += 20; } bonus2 bSubClass,Class_Boss,.@b; }}
+//覚醒火雷大神靴
+470047:4131,{ skill "AL_HEAL",10,1; .@r = getequiprefinerycnt(EQI_SHOES); if( BaseLevel <= 99 ){ bonus bInt,3*.@r; bonus bMdef,5*.@r; } else{ bonus bInt,10*.@r; bonus bMdef,10*.@r; }}
+//スカルリング
+490102:29371,{ skill "MG_FIREWALL",10,1; bonus2 bIgnoreMdefRaceRate,RC_All,100; }
+//ゲフェニア 氷の魔道具
+490029:29371,{ bonus bNoGemStone; }
+//闇御津羽神靴
+22228:4876,{ bonus bInt,40; bonus bAspdRate,10; }

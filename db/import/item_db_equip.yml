@@ -1318,6 +1318,28 @@ Body:
           bonus bFixedCastrate,-50;
         }
       }
+  - Id: 22228
+    AegisName: Triad_God_Shoes_J_
+    Name: 'ˆÅŒä’Ã‰H_ŒC'
+    Type: Armor
+    Weight: 500
+    Defense: 15
+    Slots: 0
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bMdef,10;
+      bonus bUnbreakableShoes;
+      bonus2 bMagicAddClass,Class_Boss,15;
+      .@r = getrefine();
+      bonus bMatk,5*.@r;
+      bonus bAspdRate,.@r;
+      bonus2 bMagicAtkEle,Ele_Dark,3*.@r;
+      if( .@r >= 10 ){
+        bonus2 bMagicAtkEle,Ele_Dark,50;
+      }
   - Id: 22231
     AegisName: Aquarius_Shoes_J
     Name: '•ó•r‹{‚ÌƒVƒ…[ƒY'
@@ -2161,6 +2183,30 @@ Body:
           bonus bLongAtkRate,30;
         }
       }
+  - Id: 470047
+    AegisName: Awakening_HonoIkazuchi_Shoes_J
+    Name: 'ŠoÁ‰Î—‹‘å_ŒC'
+    Type: Armor
+    Weight: 1000
+    Defense: 18
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 99
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus2 bMagicAddClass,Class_Boss,15;
+      .@r = getrefine();
+      bonus bMatk,5*.@r;
+      .@b = 2 * .@r;
+      bonus bCastrate,-.@b;
+      bonus2 bMagicAddEle,Ele_Earth,.@b;
+      bonus2 bMagicAddEle,Ele_Ghost,.@b;
+      bonus2 bMagicAddEle,Ele_Neutral,.@b;
+      bonus2 bMagicAddEle,Ele_Undead,.@b;
   - Id: 480009
     AegisName: Virgo_Manteau_J
     Name: 'ˆ—‹{‚Ìƒ}ƒ“ƒg'
@@ -2303,6 +2349,37 @@ Body:
         bonus2 bMagicAddClass,Class_All,5;
         bonus2 bCastrate,"AB_JUDEX",-50;
       }
+  - Id: 490029
+    AegisName: Geffenia_Magictool_Ice_J
+    Name: 'ƒQƒtƒFƒjƒA •X‚Ì–‚“¹‹ï'
+    Type: Armor
+    Weight: 500
+    Defense: 2
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bMdef,10;
+      bonus2 bMagicAddSize,Size_All,10;
+      bonus2 bSkillAtk,"WZ_STORMGUST",BaseLevel/3*2;
+      if( getskilllv("WL_COMET") >= 5 ){
+        bonus2 bSkillUseSP,"WL_JACKFROST",-35;
+        bonus2 bFixedCastrate,"WL_JACKFROST",-100;
+      }
+      if( getskilllv("WL_JACKFROST") >= 5 ){
+        bonus2 bSkillAtk,"WL_COMET",50;
+        bonus2 bSkillUseSP,"WL_COMET",-100;
+      }
+      if( getskilllv("WL_STASIS") >= 5 ){
+        bonus2 bSkillAtk,"WL_FROSTMISTY",50;
+        bonus2 bSkillAtk,"WL_JACKFROST",50;
+      }
+      if( getskilllv("WL_RECOGNIZEDSPELL") >= 5 ){
+        bonus bDelayrate,-30;
+      }
   - Id: 490034
     AegisName: Pisces_Ring_J
     Name: '‘o‹›‹{‚ÌƒŠƒ“ƒO'
@@ -2438,6 +2515,42 @@ Body:
         bonus2 bAddClass,Class_All,5;
         bonus2 bSkillAtk,"RA_ARROWSTORM",30;
         bonus bSPDrainValue,3;
+      }
+  - Id: 490102
+    AegisName: Skull_Ring_J
+    Name: 'ƒXƒJƒ‹ƒŠƒ“ƒO'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bMdef,15;
+      bonus bInt,7;
+      bonus2 bMagicAddSize,Size_All,10;
+      bonus2 bSkillAtk,"SP_CURSEEXPLOSION",BaseLevel/7;
+      if( getskilllv("SP_SOULCOLLECT") >= 5 ){
+        bonus bAspdRate,15;
+        bonus bMagicHPGainValue,100;
+        bonus bMagicSPGainValue,10;
+      }
+      if( getskilllv("SP_SOULENERGY") >= 5 ){
+        bonus bDelayrate,-30;
+      }
+      if( getskilllv("SP_SOULREAPER") >= 5 ){
+        bonus2 bMagicAtkEle,Ele_Fire,10;
+        bonus2 bMagicAtkEle,Ele_Wind,10;
+        bonus2 bMagicAtkEle,Ele_Holy,10;
+        bonus2 bMagicAtkEle,Ele_Dark,10;
+        bonus2 bMagicAtkEle,Ele_Ghost,10;
+      }
+      if( getskilllv("SP_SOULCURSE") >= 5 ){
+        bonus2 bSkillUseSP,"SP_SOULEXPLOSION",-25;
+        bonus2 bSkillCooldown,"SP_SOULEXPLOSION",-500;
       }
   - Id: 640002
     AegisName: Virgo_Divine_Cross_J

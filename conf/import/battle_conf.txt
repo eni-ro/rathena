@@ -193,6 +193,12 @@ castrate_dex_scale: 150
 // How much (dex*2+int) does variable cast turns zero?
 vcast_stat_scale: 530
 
+// For RENEWAL_CAST (Note 2)
+// By default skill that has '-1' value for Fixed Casting Time will use 20% of cast time
+// as Fixed Casting Time, and the rest (80%) as Variable Casting Time.
+// Put it 0 to disable default Fixed Casting Time (just like 0 in the skill_db.yml).
+default_fixed_castrate: 0
+
 // Can't place unlimited land skills at the same time (Note 3)
 land_skill_limit: 20
 

@@ -579,6 +579,12 @@ Body:
     Type: Card
     Script: |
       bonus bAtkEle,Ele_Poison;
+  - Id: 310193
+    AegisName: NoKnockback_J
+    Name: 'ノックバック無効'
+    Type: Card
+    Script: |
+      bonus bNoKnockback;
   - Id: 310269
     AegisName: Anti_Stone_J
     Name: '石化耐性'
@@ -633,6 +639,18 @@ Body:
         .@t = 10000 + 1000 * ( .@r - 7 );
         autobonus "{bonus3 bAutoSpell,\"SO_VARETYR_SPEAR\",10,250;}",.@rate,.@t,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_BULLSEYE; }";
       }
+  - Id: 310336
+    AegisName: SightLv1_J
+    Name: 'サイトLv1'
+    Type: Card
+    Script: |
+      skill "MG_SIGHT",1;
+  - Id: 310337
+    AegisName: Clairvoyance_J
+    Name: '透視'
+    Type: Card
+    Script: |
+      bonus bIntravision;
   - Id: 1000312
     AegisName: M_M_PowerBoost
     Name: '改造モジュール(T-PowerBoost)'

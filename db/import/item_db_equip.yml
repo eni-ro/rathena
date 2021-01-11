@@ -1699,6 +1699,21 @@ Body:
           }
         }
       }
+  - Id: 28962
+    AegisName: Haurvatat
+    Name: 'ハルワタート'
+    Type: Armor
+    Weight: 600
+    Defense: 20
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShield;
+      bonus bMdef,10;
+      bonus2 bSubSize,Size_All,30;
+      bonus2 bSubEle,Ele_Neutral,10;
   - Id: 32253
     AegisName: Cancer_Ring_J
     Name: '巨蟹宮のリング'
@@ -2100,6 +2115,30 @@ Body:
           bonus5 bAutoSpell,"MG_SAFETYWALL",max(3,getskilllv("MG_SAFETYWALL")),50,BF_MAGIC,0;
         }
       }
+  - Id: 460003
+    AegisName: Feather_Shield
+    Name: 'フェザーシールド'
+    Type: Armor
+    Weight: 400
+    Defense: 150
+    Locations:
+      Left_Hand: true
+    Slots: 1
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      .@b = 4;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        .@b += 4;
+        bonus bBaseAtk,40;
+        bonus bMatk,40;
+        if( .@r >= 9 ){
+          .@b += 4;
+        }
+      }
+      bonus bAspdRate,.@b;
+      bonus bDelayrate,-.@b;
   - Id: 470038
     AegisName: Pisces_Shoes_J
     Name: '双魚宮のシューズ'

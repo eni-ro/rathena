@@ -61,3 +61,10 @@
 29590:4876,{ bonus bFixedCastrate,-70; }
 29591:4878,{ bonus bDef,500; bonus bMdef,50; }
 29592:4880,{ bonus bCritical,100; }
+//ハルワタート
+28962:4853,{ bonus2 bAddClass,Class_All,15; }
+28962:4854,{ bonus bAspdRate,15; }
+28962:4855,{ bonus bMaxHPrate,15; bonus bMaxSPrate,15; }
+28962:4856,{ bonus2 bMagicAddClass,Class_All,15; }
+28962:4857,{ bonus bLongAtkRate,15; }
+28962:4858,{ bonus bDelayrate,-15; }

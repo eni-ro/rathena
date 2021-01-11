@@ -68,3 +68,34 @@
 28962:4856,{ bonus2 bMagicAddClass,Class_All,15; }
 28962:4857,{ bonus bLongAtkRate,15; }
 28962:4858,{ bonus bDelayrate,-15; }
+//覚醒ローブ(ヒールピアス、テレポートピアスはiROのID)
+15157:28310:28311,{ bonus bCastrate,-10; bonus bFixedCastrate,-50; }
+15157:4119,{ bonus2 bResEff,Eff_Freeze,10000; }
+15157:18613,{ skill "WL_HELLINFERNO",3; .@r = getequiprefinerycnt(EQI_ARMOR); bonus bMatk,7*.@r; bonus bAspdRate,.@r; }
+//時魔術師のローブ
+15193:22000,{ bonus bMaxHPrate,20; }
+15193:22001,{ bonus bMaxHPrate,20; }
+15193:22002,{ bonus bMaxHPrate,20; }
+15193:22003,{ bonus bMaxHPrate,20; }
+15193:22004,{ bonus bMaxHPrate,20; }
+15193:22005,{ bonus bMaxHPrate,20; }
+15193:22006,{ bonus bMaxHPrate,20; }
+15193:22007,{ bonus bMaxHPrate,20; }
+15193:22008,{ bonus bMaxHPrate,20; }
+15193:22009,{ bonus bMaxHPrate,20; }
+15193:22010,{ bonus bMaxHPrate,20; }
+15193:22011,{ bonus bMaxHPrate,20; }
+//超越者のローブ
+15194:4456,{ bonus2 bResEff,Eff_Freeze,10000; bonus bMagicHPGainValue,200; bonus bMagicSPGainValue,20; }
+15194:22000,{ bonus bMaxHPrate,20; }
+15194:22001,{ bonus bMaxHPrate,20; }
+15194:22002,{ bonus bMaxHPrate,20; }
+15194:22003,{ bonus bMaxHPrate,20; }
+15194:22004,{ bonus bMaxHPrate,20; }
+15194:22005,{ bonus bMaxHPrate,20; }
+15194:22006,{ bonus bMaxHPrate,20; }
+15194:22007,{ bonus bMaxHPrate,20; }
+15194:22008,{ bonus bMaxHPrate,20; }
+15194:22009,{ bonus bMaxHPrate,20; }
+15194:22010,{ bonus bMaxHPrate,20; }
+15194:22011,{ bonus bMaxHPrate,20; }

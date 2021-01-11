@@ -392,6 +392,68 @@ Body:
         bonus bSPGainValue,20;
         bonus bLongHPGainValue,20;
       }
+  - Id: 15157
+    AegisName: Awakening_Robe_J
+    Name: 'äoê¡ÉçÅ[Éu'
+    Type: Armor
+    Weight: 800
+    Defense: 35
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bDelayrate,-10;
+      bonus bNoCastCancel;
+      .@r = getrefine();
+      bonus bMatk,15*.@r;
+      bonus2 bMagicAtkEle,Ele_Dark,2*.@r;
+  - Id: 15193
+    AegisName: Time_Wizard_Robe_J
+    Name: 'éûñÇèpétÇÃÉçÅ[Éu'
+    Type: Armor
+    Weight: 800
+    Defense: 35
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bMatk,30;
+      bonus bCastrate,-5;
+      autobonus "{ bonus bInt,3*getequiprefinerycnt(EQI_ARMOR); }",10,10000,BF_MAGIC,"{ specialeffect2 EF_ENHANCE; }";
+  - Id: 15194
+    AegisName: Transcender_Robe_J
+    Name: 'í¥âzé“ÇÃÉçÅ[Éu'
+    Type: Armor
+    Weight: 800
+    Defense: 35
+    Slots: 1
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Armor: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bMatk,60;
+      bonus bCastrate,-5;
+      bonus bNoCastCancel;
+      .@r = getrefine();
+      bonus bInt,3*.@r;
+      bonus2 bMagicAtkEle,Ele_Ghost,2*.@r;
   - Id: 15412
     AegisName: Cancer_Mail_J
     Name: 'ãêäIã{ÇÃÉÅÉCÉã'

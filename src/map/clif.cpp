@@ -10167,7 +10167,7 @@ void clif_viewequip_ack( struct map_session_data* sd, struct map_session_data* t
 
 	safestrncpy( packet.characterName, tsd->status.name, NAME_LENGTH );
 
-	packet.job = tsd->status.class_;
+	packet.job = tsd->vd.class_;
 	packet.head = tsd->vd.hair_style;
 	packet.accessory = tsd->vd.head_bottom;
 	packet.accessory2 = tsd->vd.head_mid;

@@ -54,3 +54,10 @@
 490029:29371,{ bonus bNoGemStone; }
 //ˆÅŒä’Ã‰H_ŒC
 22228:4876,{ bonus bInt,40; bonus bAspdRate,10; }
+//”’‚Ì‹Rm’cƒGƒ“ƒ`ƒƒƒ“ƒg
+29587:4877,{ bonus bFlee,150; }
+29588:4875,{ bonus bPerfectHitAddRate,30; }
+29589:4879,{ bonus bDelayrate,-30; }
+29590:4876,{ bonus bFixedCastrate,-70; }
+29591:4878,{ bonus bDef,500; bonus bMdef,50; }
+29592:4880,{ bonus bCritical,100; }

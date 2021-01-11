@@ -2552,6 +2552,50 @@ Body:
         bonus2 bSkillUseSP,"SP_SOULEXPLOSION",-25;
         bonus2 bSkillCooldown,"SP_SOULEXPLOSION",-500;
       }
+  - Id: 510031
+    AegisName: Rotten_Garden_knife
+    Name: '朽ちたガーデンナイフ'
+    Type: Weapon
+    SubType: Staff
+    Weight: 400
+    Attack: 100
+    MagicAttack: 200
+    Range: 1
+    Slots: 1
+    Jobs:
+      SoulLinker: true
+    Classes:
+      All_Third: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      skill "MG_SAFETYWALL",min(10,.@r),1;
+      bonus bAspdRate,2*.@r;
+  - Id: 550017
+    AegisName: WhiteknightFox
+    Name: '白の騎士団の猫じゃらし'
+    Type: Weapon
+    SubType: Staff
+    Weight: 400
+    Attack: 360
+    MagicAttack: 160
+    Range: 1
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus bDelayrate,-20;
+      bonus bAspdRate,2*getrefine();
   - Id: 640002
     AegisName: Virgo_Divine_Cross_J
     Name: '処女宮のディバインクロス'

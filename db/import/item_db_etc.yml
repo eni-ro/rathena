@@ -390,6 +390,36 @@ Body:
     Script: |
       bonus2 bSubRace,RC_Player_Human,5;
       bonus2 bSubRace,RC_Player_Doram,5;
+  - Id: 29366
+    AegisName: Assault_Attack_1_J
+    Name: '‹­Œ‚1'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,2*getrefine();
+  - Id: 29367
+    AegisName: Assault_Attack_2_J
+    Name: '‹­Œ‚2'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,4*getrefine();
+  - Id: 29368
+    AegisName: Assault_Attack_3_J
+    Name: '‹­Œ‚3'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,6*getrefine();
+  - Id: 29369
+    AegisName: Assault_Attack_4_J
+    Name: '‹­Œ‚4'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,8*getrefine();
+  - Id: 29370
+    AegisName: Assault_Attack_5_J
+    Name: '‹­Œ‚5'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,10*getrefine();
   - Id: 29371
     AegisName: Release_Of_Magic_J
     Name: '^—‚Ì‰ğ•ú'
@@ -414,6 +444,36 @@ Body:
     Type: Card
     Script: |
       bonus bDelayrate,-8;
+  - Id: 29445
+    AegisName: Amplification_1_J
+    Name: '‘•1'
+    Type: Card
+    Script: |
+      bonus2 bMagicAddClass,Class_All,getrefine();
+  - Id: 29446
+    AegisName: Amplification_2_J
+    Name: '‘•2'
+    Type: Card
+    Script: |
+      bonus2 bMagicAddClass,Class_All,2*getrefine();
+  - Id: 29447
+    AegisName: Amplification_3_J
+    Name: '‘•3'
+    Type: Card
+    Script: |
+      bonus2 bMagicAddClass,Class_All,3*getrefine();
+  - Id: 29448
+    AegisName: Amplification_4_J
+    Name: '‘•4'
+    Type: Card
+    Script: |
+      bonus2 bMagicAddClass,Class_All,4*getrefine();
+  - Id: 29449
+    AegisName: Amplification_5_J
+    Name: '‘•5'
+    Type: Card
+    Script: |
+      bonus2 bMagicAddClass,Class_All,5*getrefine();
   - Id: 29474
     AegisName: Strong_Arm_J
     Name: '<„˜r>'
@@ -429,12 +489,96 @@ Body:
       .@v = 1+getrefine();
       bonus2 bSubRace,RC_Player_Human,.@v;
       bonus2 bSubRace,RC_Player_Doram,.@v;
+  - Id: 29587
+    AegisName: Flash_J
+    Name: '‘MŒõ'
+    Type: Card
+    Script: |
+      bonus bFlee2,getrefine();
+  - Id: 29588
+    AegisName: Strong_J
+    Name: '‹­„'
+    Type: Card
+    Script: |
+      bonus2 bAddClass,Class_All,7*getrefine();
+  - Id: 29589
+    AegisName: Sky_Bow_J
+    Name: '“V‹|'
+    Type: Card
+    Script: |
+      bonus bLongAtkRate,7*getrefine();
+  - Id: 29590
+    AegisName: New_Calendar_J
+    Name: 'V—ï'
+    Type: Card
+    Script: |
+      bonus2 bMagicAddRace,RC_All,7*getrefine();
+  - Id: 29591
+    AegisName: Rigid_J
+    Name: '„‘Ì'
+    Type: Card
+    Script: |
+      bonus bMaxHPrate,5*getrefine();
+  - Id: 29592
+    AegisName: White_Cloud_J
+    Name: '”’‰_'
+    Type: Card
+    Script: |
+      bonus bCritAtkRate,7*getrefine();
   - Id: 29593
     AegisName: Anti_Freeze_J
     Name: '“€Œ‹‘Ï«'
     Type: Card
     Script: |
       bonus2 bResEff,Eff_Freeze,10000;
+  - Id: 29690
+    AegisName: Weapon_Fire
+    Name: '‰Î‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Fire;
+  - Id: 29691
+    AegisName: Weapon_Water
+    Name: '…‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Water;
+  - Id: 29692
+    AegisName: Weapon_Wind
+    Name: '•—‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+  - Id: 29693
+    AegisName: Weapon_Earth
+    Name: '’n‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Earth;
+  - Id: 29694
+    AegisName: Weapon_Saint
+    Name: '¹‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+  - Id: 29695
+    AegisName: Weapon_Darkness
+    Name: 'ˆÅ‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Dark;
+  - Id: 29696
+    AegisName: Weapon_Ghost
+    Name: '”O‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Ghost;
+  - Id: 29697
+    AegisName: Weapon_Poison
+    Name: '“Å‘®«•t—^(•Ší)'
+    Type: Card
+    Script: |
+      bonus bAtkEle,Ele_Poison;
   - Id: 310269
     AegisName: Anti_Stone_J
     Name: 'Î‰»‘Ï«'

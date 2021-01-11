@@ -136,3 +136,15 @@ Body:
     Script: |
       skill "MC_OVERCHARGE",10,1;
       skill "MC_DISCOUNT",10,1;
+  - Id: 2005500006
+    AegisName: CastFixed_Delay70_J
+    Name: 'ŒÅ’è‰r¥ŠÔ - 70%'
+    Type: Card
+    Script: |
+      bonus bFixedCastrate,-70;
+  - Id: 2005500007
+    AegisName: CastFixed_Delay100_J
+    Name: 'ŒÅ’è‰r¥ŠÔ - 100%'
+    Type: Card
+    Script: |
+      bonus bFixedCastrate,-100;

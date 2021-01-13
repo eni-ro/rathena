@@ -7375,10 +7375,11 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 		}
 	}
 
-	if (sd && sd->bonus.reduce_damage_return != 0) {
-		rdamage -= rdamage * sd->bonus.reduce_damage_return / 100;
-		if (rdamage < 1)
-			rdamage = 1;
+	struct map_session_data* srcd = BL_CAST(BL_PC, src);
+	if (srcd && srcd->bonus.reduce_damage_return != 0) {
+		rdamage -= rdamage * srcd->bonus.reduce_damage_return / 100;
+		if (rdamage < 0)
+			rdamage = 0;
 	}
 
 	if (ssc) {

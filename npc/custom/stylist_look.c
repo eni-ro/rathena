@@ -70,7 +70,7 @@ function HasjROCostume {
 			EAJ_NINJA;
 	}
 	.@size = getarraysize( .@base_eac );
-	.@menu$ = "今のまま";
+	.@menu$ = "今のまま:元の姿に戻す";
 	for( .@i = 0; .@i < .@size; .@i++ ){
 		.@menu$ += ":" + jobname(roclass(.@base_eac[.@i]))+"系列";
 	}
@@ -79,16 +79,37 @@ function HasjROCostume {
 	mes "特別なエステで理想のボディを手に入れてみる？";
 	mes "どんなのが理想か言ってみて！";
 	next;
-	.@sel = select( .@menu$ ) - 2;
-	if( .@sel < 0 ){
+	.@sel = select( .@menu$ ) - 3;
+	if( .@sel < -1 ){
 		mes "[クッキィちゃん]";
 		mes "イメチェンしたくなったら来てね。";
 		close;
 	}
+	else if( .@sel == -1 ){
+		.@body2 = 0;
+		if( HasjROCostume(roclass(.@current_eac & EAJ_THIRDMASK)) ){
+			mes "[クッキィちゃん]";
+			mes "元々どっちだったっけ？";
+			next;
+			if(select("通常:セカコス") == 2){
+				.@body2 = 1;
+			}
+		}
+		mes "[クッキィちゃん]";
+		mes "それではいきます";
+		mes "まじかるエステ！","ピアノマッサージ！！";
+		next;
+		specialeffect2 EF_FLASHER;
+		setlook LOOK_BODY2,0;
+		changebase .@current_eac;
+		setlook LOOK_BODY2,.@body2;
+		baselook=0;
+		close;
+	}
 	.@beaj = .@base_eac[ .@sel ];
 	setarray .@upper,0,
-		EAJL_2_1, EAJL_2_1 | EAJL_UPPER, EAJL_2_1 | EAJL_THIRD,
-		EAJL_2_2, EAJL_2_2 | EAJL_UPPER, EAJL_2_2 | EAJL_THIRD;
+		EAJL_2_1, EAJL_2_1 | EAJL_UPPER, EAJL_2_1 | EAJL_UPPER | EAJL_THIRD,
+		EAJL_2_2, EAJL_2_2 | EAJL_UPPER, EAJL_2_2 | EAJL_UPPER | EAJL_THIRD;
 	.@sizeupper = getarraysize(.@upper);
 	setarray .@opt,0,EAJL_BABY;
 	.@sizeopt = getarraysize(.@opt);

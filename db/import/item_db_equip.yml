@@ -2201,6 +2201,116 @@ Body:
       }
       bonus bAspdRate,.@b;
       bonus bDelayrate,-.@b;
+  - Id: 470008
+    AegisName: Fluffy_DandelionShoes_J
+    Name: 'ふわふわタンポポシューズ'
+    Type: Armor
+    Weight: 1000
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@hpmp = 3;
+      .@sdelay=0;
+      bonus bMaxHPrate,3;
+      bonus bMaxSPrate,3;
+      if( getskilllv("SU_SPIRITOFLAND") >= 1 ){
+        if( getskilllv("SU_CN_POWDERING") >= 5 ){
+          bonus2 bResEff,Eff_Curse,10000;
+        }
+        bonus2 bSkillUseSP,"SU_CN_METEOR",50;
+        if( getskilllv("SU_CN_METEOR") >= 5 ){
+          bonus2 bSkillAtk,"SU_SV_STEMSPEAR",20;
+        }
+        if( getskilllv("SU_NYANGGRASS") >= 5 ){
+          bonus bMatk,50;
+        }
+        if( getskilllv("SU_SV_STEMSPEAR") >= 5 ){
+          bonus bSpeedAddRate,20;
+        }
+        if( getskilllv("SU_SV_ROOTTWIST") >= 5 ){
+          bonus bMatk,50;
+        }
+      }
+      bonus bSpeedAddRate,5*getskilllv("SU_CHATTERING");
+      if( getskilllv("SU_NYANGGRASS") >= 5 ){
+        bonus2 bIgnoreMdefRaceRate,RC_All,100;
+      }
+      bonus2 bSkillAtk,"SU_CN_METEOR",15*getskilllv("SU_MEOWMEOW");
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@hpmp += 7;
+        .@sdelay-=10;
+        if( .@r >= 7 ){
+          .@hpmp += 10;
+          .@sdelay-=10;
+        }
+      }
+      bonus bMaxHPrate,@hpmp;
+      bonus bMaxSPrate,@hpmp;
+      bonus bDelayrate,.@sdelay;
+  - Id: 470009
+    AegisName: Fluffy_DandelionShoes2_J
+    Name: 'ふわふわタンポポシューズ'
+    Type: Armor
+    Weight: 1000
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@hpmp = 3;
+      .@sdelay=0;
+      bonus bMaxHPrate,3;
+      bonus bMaxSPrate,3;
+      if( getskilllv("SU_SPIRITOFLAND") >= 1 ){
+        if( getskilllv("SU_CN_POWDERING") >= 5 ){
+          bonus2 bResEff,Eff_Curse,10000;
+        }
+        bonus2 bSkillUseSP,"SU_CN_METEOR",50;
+        if( getskilllv("SU_CN_METEOR") >= 5 ){
+          bonus2 bSkillAtk,"SU_SV_STEMSPEAR",20;
+        }
+        if( getskilllv("SU_NYANGGRASS") >= 5 ){
+          bonus bMatk,50;
+        }
+        if( getskilllv("SU_SV_STEMSPEAR") >= 5 ){
+          bonus bSpeedAddRate,20;
+        }
+        if( getskilllv("SU_SV_ROOTTWIST") >= 5 ){
+          bonus bMatk,50;
+        }
+      }
+      bonus bSpeedAddRate,5*getskilllv("SU_CHATTERING");
+      if( getskilllv("SU_NYANGGRASS") >= 5 ){
+        bonus2 bIgnoreMdefRaceRate,RC_All,100;
+      }
+      bonus2 bSkillAtk,"SU_CN_METEOR",15*getskilllv("SU_MEOWMEOW");
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@hpmp += 7;
+        .@sdelay-=10;
+        if( .@r >= 7 ){
+          .@hpmp += 10;
+          .@sdelay-=10;
+        }
+      }
+      bonus bMaxHPrate,@hpmp;
+      bonus bMaxSPrate,@hpmp;
+      bonus bDelayrate,.@sdelay;
   - Id: 470038
     AegisName: Pisces_Shoes_J
     Name: '双魚宮のシューズ'
@@ -2308,6 +2418,102 @@ Body:
       bonus2 bMagicAddEle,Ele_Ghost,.@b;
       bonus2 bMagicAddEle,Ele_Neutral,.@b;
       bonus2 bMagicAddEle,Ele_Undead,.@b;
+  - Id: 470025
+    AegisName: Pretty_Pig_Shoes_J
+    Name: 'ぷりちーウリボウシューズ'
+    Type: Armor
+    Weight: 1000
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@hpmp = 3;
+      .@sdelay=0;
+      bonus bMaxHPrate,3;
+      bonus bMaxSPrate,3;
+      if( getskilllv("SU_SPIRITOFLIFE") >= 1 ){
+        bonus bBaseAtk,100;
+        autobonus "{ .@b = min( Hp/1000, 100 ); bonus2 bSkillAtk,\"SU_PICKYPECK\",.@b; bonus2 bSkillAtk,\"SU_SCAROFTAROU\",.@b; bonus2 bSkillAtk,\"SU_LUNATICCARROTBEAT\",.@b; bonus2 bSkillAtk,\"SU_SVG_SPIRIT\",.@b; }",80,15000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_ENHANCE; }";
+      }
+      bonus bAspdRate,5*getskilllv("SU_HISS");
+      if( getskilllv("SU_POWEROFFLOCK") >= 5 ){
+        bonus bPerfectHitAddRate,50;
+        bonus bDelayrate,-50;
+      }
+      .@b = -5*getskilllv("SU_SVG_SPIRIT");
+      bonus2 bCastrate,"SU_PICKYPECK",.@b;
+      bonus2 bCastrate,"SU_ARCLOUSEDASH",.@b;
+      bonus2 bCastrate,"SU_LUNATICCARROTBEAT",.@b;
+      bonus2 bCastrate,"SU_HISS",.@b;
+      bonus2 bCastrate,"SU_POWEROFFLOCK",.@b;
+      bonus2 bCastrate,"SU_SVG_SPIRIT",.@b;
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@hpmp += 7;
+        .@sdelay-=10;
+        if( .@r >= 7 ){
+          .@hpmp += 10;
+          .@sdelay-=10;
+        }
+      }
+      bonus bMaxHPrate,@hpmp;
+      bonus bMaxSPrate,@hpmp;
+      bonus bDelayrate,.@sdelay;
+  - Id: 470026
+    AegisName: Pretty_Pig_Shoes2_J
+    Name: 'ぷりちーウリボウシューズ'
+    Type: Armor
+    Weight: 1000
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@hpmp = 3;
+      .@sdelay=0;
+      bonus bMaxHPrate,3;
+      bonus bMaxSPrate,3;
+      if( getskilllv("SU_SPIRITOFLIFE") >= 1 ){
+        bonus bBaseAtk,100;
+        autobonus "{ .@b = min( Hp/1000, 100 ); bonus2 bSkillAtk,\"SU_PICKYPECK\",.@b; bonus2 bSkillAtk,\"SU_SCAROFTAROU\",.@b; bonus2 bSkillAtk,\"SU_LUNATICCARROTBEAT\",.@b; bonus2 bSkillAtk,\"SU_SVG_SPIRIT\",.@b; }",80,15000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_ENHANCE; }";
+      }
+      bonus bAspdRate,5*getskilllv("SU_HISS");
+      if( getskilllv("SU_POWEROFFLOCK") >= 5 ){
+        bonus bPerfectHitAddRate,50;
+        bonus bDelayrate,-50;
+      }
+      .@b = -5*getskilllv("SU_SVG_SPIRIT");
+      bonus2 bCastrate,"SU_PICKYPECK",.@b;
+      bonus2 bCastrate,"SU_ARCLOUSEDASH",.@b;
+      bonus2 bCastrate,"SU_LUNATICCARROTBEAT",.@b;
+      bonus2 bCastrate,"SU_HISS",.@b;
+      bonus2 bCastrate,"SU_POWEROFFLOCK",.@b;
+      bonus2 bCastrate,"SU_SVG_SPIRIT",.@b;
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@hpmp += 7;
+        .@sdelay-=10;
+        if( .@r >= 7 ){
+          .@hpmp += 10;
+          .@sdelay-=10;
+        }
+      }
+      bonus bMaxHPrate,@hpmp;
+      bonus bMaxSPrate,@hpmp;
+      bonus bDelayrate,.@sdelay;
   - Id: 480009
     AegisName: Virgo_Manteau_J
     Name: '処女宮のマント'

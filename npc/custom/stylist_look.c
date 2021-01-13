@@ -101,7 +101,7 @@ function HasjROCostume {
 		next;
 		specialeffect2 EF_FLASHER;
 		setlook LOOK_BODY2,0;
-		changebase .@current_eac;
+		changebase roclass(.@current_eac);
 		setlook LOOK_BODY2,.@body2;
 		baselook=0;
 		close;

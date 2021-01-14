@@ -481,6 +481,12 @@ Body:
     Script: |
       bonus2 bAddClass,Class_All,5;
       autobonus "{ bonus bBaseAtk,100; }",30,5000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_ENHANCE; }";
+  - Id: 29509
+    AegisName: Hero_J
+    Name: '<‹Œ†>'
+    Type: Card
+    Script: |
+      autobonus "{ bonus bFlee2,100; bonus2 bAddClass,Class_Boss,100; }",10,10000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_ENHANCE; }";
   - Id: 29511
     AegisName: Improve_Orb_Player
     Name: 'Q-Player'

@@ -7375,13 +7375,6 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 		}
 	}
 
-	struct map_session_data* srcd = BL_CAST(BL_PC, src);
-	if (srcd && srcd->bonus.reduce_damage_return != 0) {
-		rdamage -= rdamage * srcd->bonus.reduce_damage_return / 100;
-		if (rdamage < 0)
-			rdamage = 0;
-	}
-
 	if (ssc) {
 		if (ssc->data[SC_INSPIRATION]) {
 			rdamage += damage / 100;
@@ -7398,6 +7391,13 @@ int64 battle_calc_return_damage(struct block_list* bl, struct block_list *src, i
 	if (sc) {
 		if (sc->data[SC_MAXPAIN])
 			rdamage = damage * sc->data[SC_MAXPAIN]->val1 * 10 / 100;
+	}
+
+	struct map_session_data* srcd = BL_CAST(BL_PC, src);
+	if (srcd && srcd->bonus.reduce_damage_return != 0) {
+		rdamage -= rdamage * srcd->bonus.reduce_damage_return / 100;
+		if (rdamage < 0)
+			rdamage = 0;
 	}
 
 	return cap_value(min(rdamage,max_damage),INT_MIN,INT_MAX);

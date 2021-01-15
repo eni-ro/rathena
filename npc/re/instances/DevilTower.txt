@@ -500,6 +500,18 @@ OnTimer26000:
 			mes "Sorry, please request again if you run out.";
 			if ('devil_tower == 1)
 				getitem 7641,1;// Medical_Cure_Box
+			if( 'SPPED_CURE == 0 ){
+				next;
+				mes "[Healer Fama]";
+				mes "あれ、あなたはもしかして少ない道具で多くの患者を治療できるという、あの伝説の看護師さん？";
+				next;
+				if( select("そうです:人違いです") == 1 ){
+					'SPPED_CURE = 1;
+				}
+				else{
+					'SPPED_CURE = -1;
+				}
+			}
 			close;
 		}
 		mes "[Healer Fama]";
@@ -530,9 +542,13 @@ OnTimer26000:
 	mes "You administer the first-aid-kit to the soldier.";
 	next;
 	specialeffect EF_SPHERE;
-	progressbar "000000",10;
+	if( 'SPPED_CURE != 1 ){
+		progressbar "000000",10;
+	}
 	if ('devil_tower == 1) {
-		delitem 7641,1;
+		if( 'SPPED_CURE != 1 ){
+			delitem 7641,1;
+		}
 		specialeffect EF_ENTRY;
 		disablenpc instance_npcname( strnpcinfo(0) );
 		enablenpc instance_npcname( strnpcinfo(1) + "#" + replacestr( strnpcinfo(2), "_1", "" ) );
@@ -540,6 +556,9 @@ OnTimer26000:
 		mes "It worked.";
 		'heal_count++;
 		if ('heal_count == 7) {
+			if( 'SPPED_CURE == 1 ){
+				delitem 7641,1;
+			}
 			'devil_tower = 2;
 			npctalk "Healer Fama: Assassins?!", instance_npcname("Healer Fama#feima");
 			enablenpc instance_npcname("Lucile#tnm01");

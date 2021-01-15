@@ -1350,32 +1350,41 @@ OnTouch_:
 	.@n$ = "[ Geffen Academy Master ]";
 	if ('GMT_1QUE < 11) {
 		cutin "acamaster_a.bmp",2;
-		mes .@n$,
-		"Ladies and gentlemen!",
-		"Welcome to the Geffen Magic",
-		"Tournament!";
+		mes .@n$;
+		mes "あなたは他人の話を聞くタイプ？";
 		next;
-		mes .@n$,
-		"Today a champion will be crowned.";
-		next;
-		mes .@n$,
-		"There are 2 divisions this year",
-		"divided into Group A and B.",
-		"The winner of each group will face",
-		"each other for the championship",
-		"match.";
-		next;
-		mes .@n$,
-		"I am the MC of Group A.",
-		"Geffen Academy Master~!",
-		"Archmage Zanzibar Hellmod";
-		next;
-		mes .@n$,
-		"I am honored to be this year's MC.",
-		"Now, it's time for the matches to begin.";
-		next;
-		mes .@n$,
-		"Ahem...";
+		if( select("全然聞かないタイプ:聞くタイプ") == 1 ){
+			'BATTLE_ONLY = 1;
+		}
+		else{
+			'BATTLE_ONLY = 0;
+			mes .@n$,
+			"Ladies and gentlemen!",
+			"Welcome to the Geffen Magic",
+			"Tournament!";
+			next;
+			mes .@n$,
+			"Today a champion will be crowned.";
+			next;
+			mes .@n$,
+			"There are 2 divisions this year",
+			"divided into Group A and B.",
+			"The winner of each group will face",
+			"each other for the championship",
+			"match.";
+			next;
+			mes .@n$,
+			"I am the MC of Group A.",
+			"Geffen Academy Master~!",
+			"Archmage Zanzibar Hellmod";
+			next;
+			mes .@n$,
+			"I am honored to be this year's MC.",
+			"Now, it's time for the matches to begin.";
+			next;
+			mes .@n$,
+			"Ahem...";
+		}
 		close2;
 		cutin "acamaster_a.bmp", 255;
 		hideonnpc "Geffen Academy Master";
@@ -1552,6 +1561,7 @@ OnStart:
 		detachrid;
 	}
 
+	if( 'BATTLE_ONLY == 0 ){
 	switch ('GMT_1QUE) {
 		case 11:
 			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
@@ -1836,12 +1846,95 @@ OnStart:
 			npctalk "The Blue Wizard! Fenris Fenrir~!!";
 			end;
 	}
+	}
+	else{
+	
+	switch ('GMT_1QUE) {
+		case 11:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			enablenpc instance_npcname("Arhi#1");
+			donpcevent instance_npcname("Arhi#1")+"::OnActivate";
+			end;
+		case 12:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Dio Anemos#1")+"::OnActivate";
+			end;
+		case 13:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			if ('GMTQuest == 1) {
+				donpcevent instance_npcname("Geffen Gangster#n1")+"::OnActivate";
+			} else if ('GMTQuest == 2) {
+				donpcevent instance_npcname("Geffen Bully#n1")+"::OnActivate";
+			} else {
+				donpcevent instance_npcname("Geffen Shoplifter#n1")+"::OnActivate";
+			}
+			end;
+		case 14:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Faymont#1")+"::OnActivate";
+			end;
+		case 15:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Ordre#1")+"::OnActivate";
+			end;
+		case 16:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Blut Hase#1")+"::OnActivate";
+			end;
+		case 17:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Kuro Akuma#1")+"::OnActivate";
+			end;
+		case 18:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Ifodes#1")+"::OnActivate";
+			end;
+		case 19:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Licheniyes#1")+"::OnActivate";
+			end;
+		case 20:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Odoric#1")+"::OnActivate";
+			end;
+		case 21:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Ju#1")+"::OnActivate";
+			end;
+		case 22:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			if ('half) {
+				donpcevent instance_npcname("Dwigh#1")+"::OnActivate";
+			}	else {
+				donpcevent instance_npcname("Fay Kanavian#1")+"::OnActivate";
+				}
+			end;
+		case 23:
+			donpcevent instance_npcname("#Talkcontrol")+"::OnStart";
+			donpcevent instance_npcname("#FireworksControl")+"::OnStart";
+			donpcevent instance_npcname("Fenrir#f")+"::OnActivate";
+			end;
+	}
+	}
 
 OnTalk1:
 	showscript "Geffen Academy Master : Let's get it on!",getnpcid(0,instance_npcname(strnpcinfo(0)));
 	end;
 	
 OnTalk2:
+	if( 'BATTLE_ONLY == 0 ){
 	if ('GMT_1QUE == 22) {
 		npctalk "The final match of Group A is finished~! Congratulations "+'charname$+"!"; 
 	}
@@ -1892,6 +1985,7 @@ OnTalk2:
 		sleep 1000;
 		break;
 	}
+	}
 	hideoffnpc instance_npcname("Tournament Guide#gefMT");
 	hideoffnpc instance_npcname("Geffen Academy Master");
 	hideoffnpc instance_npcname("Tournament Healer#1");
@@ -1901,11 +1995,13 @@ OnTalk3:
 	npctalk "The Final Round has started! Let's get it on!";
 	end;
 OnTalk4:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "The Final Match of this year's Geffen Magic Tournament is finished~!";
 	sleep 3000;
 	npctalk "Everyone! Thank you for supporting the Geffen Magic Tournament~!!";
 	sleep 3000;
 	npctalk "This year's Geffen Magic Tournament Champion is "+'charname$+"~!!";
+	}
 	donpcevent instance_npcname("#FireworksControl")+"::OnWin";
 	end;
 
@@ -2497,6 +2593,7 @@ end;
 
 OnActivate:
 	enablenpc instance_npcname("Arhi#1");
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "The first match always makes me nervous~!";
 	sleep 2000;
 	npctalk "Can I win?";
@@ -2509,11 +2606,13 @@ OnActivate:
 	sleep 3000;
 	npctalk "Just relax~!";
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Arhi#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Ah... I lost the first match...";
 	sleep 3000;
@@ -2525,6 +2624,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "Sob...";
 	sleep 1000;	
+	}
 	hideonnpc instance_npcname("Arhi#1");
 	sleep 1000;
 	movenpc instance_npcname("Arhi#z1_0et"),145,125;
@@ -2552,6 +2652,7 @@ OnVictory:
 end;
 
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Second round huh...";
 	sleep 2000;
 	npctalk "You look like a weak competitor.";
@@ -2565,11 +2666,13 @@ OnActivate:
 	npctalk "Okay then let's start!";
 	sleep 2000;
 	npctalk "Boring...",instance_npcname("Loki#a2");
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Dio Anemos#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Oh my god....";
 	sleep 2000;
@@ -2583,6 +2686,7 @@ OnDefeat:
 	sleep 2000;
 	npctalk "Ahhhh! Why?...";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Dio Anemos#1");
 	sleep 1000;
 	movenpc instance_npcname("Dio Anemos#z1_0et"),91,117;
@@ -2609,6 +2713,7 @@ OnVictory:
 end;
 
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Hmmm, you're that kid from before...";
 	sleep 3000;
 	npctalk "I've got a lesson to teach you!";
@@ -2621,11 +2726,13 @@ OnActivate:
 	sleep 3000;
 	npctalk "Prepare to die!";
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Geffen Gangster#n1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "I was defeated! This doesn't make any sense!";
 	sleep 2000;
@@ -2639,6 +2746,7 @@ OnDefeat:
 	sleep 2000;
 	npctalk "I'll have to go to see the Kafra gal' in Prontera hu-hu-hu...";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Geffen Gangster#n1");
 	sleep 1000;
 	disablenpc instance_npcname("Geffen Gangster#n1");
@@ -2663,6 +2771,7 @@ OnVictory:
 end;
 
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Just you wait, you'll be immediately disabled!";
 	sleep 3000;
 	npctalk "I will beat you down today!";
@@ -2675,11 +2784,13 @@ OnActivate:
 	sleep 3000;
 	npctalk "You're dead!";
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Geffen Bully#n1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "I can't believe you beat me...";
 	sleep 3000;
@@ -2691,6 +2802,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "Ah! Ahhh!! It can't be!!!";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Geffen Bully#n1");
 	sleep 1000;
 	disablenpc instance_npcname("Geffen Bully#n1");
@@ -2716,6 +2828,7 @@ OnVictory:
 end;
 
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "There are so many people gathered here.";
 	sleep 3000;
 	npctalk "I thought there'd be something good to steal here";
@@ -2728,11 +2841,13 @@ OnActivate:
 	sleep 2000;
 	npctalk "Well~! Let's win anyway!";
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Geffen Shoplifter#n1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Oh my god... I was defeated.";
 	sleep 2000;
@@ -2746,6 +2861,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "Fine, I'm outta here!";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Geffen Shoplifter#n1");
 	sleep 1000;
 	disablenpc instance_npcname("Geffen Shoplifter#n1");
@@ -2771,6 +2887,7 @@ end;
 
 OnActivate:
 	enablenpc instance_npcname("Faymont#1");
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Well would you look at that... this competitor seems...";
 	sleep 2000;
 	npctalk "Like he's just gotten lucky up until now!";
@@ -2784,11 +2901,13 @@ OnActivate:
 	npctalk "Maybe if I finish this quickly, I can buy that new headdress...";
 	npctalk "Come on!", instance_npcname("Prontera Spectator#a1");
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Faymont#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "How could... How could I lose?!...";
 	sleep 2000;
@@ -2802,6 +2921,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "I can't show my face around here any longer...";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Faymont#1");
 	sleep 1000;
 	movenpc instance_npcname("Faymont#z1_0et"),53,90;
@@ -2828,6 +2948,7 @@ end;
 
 OnActivate:
 	enablenpc instance_npcname("Ordre#1");
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "One! Two! One! Two!";
 	sleep 2000;
 	npctalk "Let's climb the ladder one step at a time!";
@@ -2843,11 +2964,13 @@ OnActivate:
 	npctalk "Shall we begin?";
 	npctalk "What? Is this really the level of competition?",instance_npcname("Chaos#a2");
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Ordre#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Defeated...";
 	sleep 2000;
@@ -2861,6 +2984,7 @@ OnDefeat:
 	sleep 2000;
 	npctalk "Let's go.";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Ordre#1");
 	sleep 1000;
 	movenpc instance_npcname("Ordre#z1_0et"),85,68;
@@ -2887,6 +3011,7 @@ OnVictory:
 end;
 
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "You've gotten this far.";
 	sleep 2000;
 	npctalk "I imagine by now the rest of the competitors are quite strong";
@@ -2903,11 +3028,13 @@ OnActivate:
 	sleep 1000;
 	donpcevent instance_npcname("#Talkcontrol")+"::OnRndtalk";
 	sleep 1000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Blut Hase#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "I will not lose!";
 	sleep 1000;
@@ -2921,6 +3048,7 @@ OnDefeat:
 	sleep 2000;
 	npctalk "Next time I will be the winner!";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Blut Hase#1");
 	sleep 1000;
 	movenpc instance_npcname("Blut Hase#z1_0et"),111,62;
@@ -2945,6 +3073,7 @@ OnVictory:
 1@ge_st,114,50,4	script	Kuro Akuma#1	675,{
 end;
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Finally the 7th game has started ~!";
 	sleep 2000;
 	npctalk "You've never met anyone as evil as me ~!";
@@ -2957,6 +3086,7 @@ OnActivate:
 	sleep 3000;
 	npctalk "I will destroy you if I must~!";
 	sleep 1000;
+	}
 	donpcevent instance_npcname("#Talkcontrol")+"::OnRndtalk";
 	sleep 1000;
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
@@ -2964,6 +3094,7 @@ OnActivate:
 
 OnDefeat:
 	hideoffnpc instance_npcname("Kuro Akuma#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Oh my god...";
 	sleep 3000;
@@ -2975,6 +3106,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "I can't lose! I'll have my revenge!";
 	sleep 2000;
+	}
 	hideonnpc instance_npcname("Kuro Akuma#1");
 	sleep 1000;
 	movenpc instance_npcname("Kuro Akuma#z1_0et"),104,42;
@@ -3000,6 +3132,7 @@ OnVictory:
 1@ge_st,114,50,4	script	Ifodes#1	676,{
 end;
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "At long last, the 8th game has started.";
 	sleep 3000;
 	npctalk "No one can pierce my defenses!";
@@ -3012,6 +3145,7 @@ OnActivate:
 	sleep 2000;
 	npctalk "Shall we start?";
 	sleep 1000;
+	}
 	donpcevent instance_npcname("#Talkcontrol")+"::OnRndtalk";
 	sleep 1000;
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
@@ -3019,6 +3153,7 @@ OnActivate:
 
 OnDefeat:
 	hideoffnpc instance_npcname("Ifodes#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "I will not lose this tournament!";
 	sleep 3000;
@@ -3030,6 +3165,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "Arrgggh!";
 	sleep 2000;
+	}
 	hideonnpc instance_npcname("Ifodes#1");
 	sleep 1000;
 	movenpc instance_npcname("Ifodes#z1_0et"),115,66;
@@ -3053,6 +3189,7 @@ OnVictory:
 1@ge_st,114,50,4	script	Licheniyes#1	677,{
 end;
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Ho ho ho~!!";
 	sleep 3000;
 	npctalk "The competitor of the 9th match looks scary~!";
@@ -3068,11 +3205,13 @@ OnActivate:
 	npctalk "good horror players ...", instance_npcname("Payon Spectator#a1");
 	sleep 1000;
 	npctalk "Do not be afraid ah, dark horse contestant!", instance_npcname("Prontera Spectator#a1");
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Licheniyes#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "You try to beat me with cruelty, a lady like me...";
 	sleep 3000;
@@ -3084,6 +3223,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "I will destroy you with little effort!";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Licheniyes#1");
 	sleep 1000;
 	movenpc instance_npcname("Licheniyes#z1_0et"),137,53;
@@ -3109,6 +3249,7 @@ OnVictory:
 1@ge_st,114,50,4	script	Odoric#1	678,{
 end;
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Lu lu~ What a fun tournament!";
 	sleep 3000;
 	npctalk "Dance~ Dance~ Bewitching dance~!";
@@ -3123,11 +3264,13 @@ OnActivate:
 	sleep 1000;
 	npctalk "How beautiful!", instance_npcname("Veins Spectator#a1");
 	sleep 1000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Odoric#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Sob...";
 	sleep 3000;
@@ -3141,6 +3284,7 @@ OnDefeat:
 	sleep 2000;
 	npctalk "I have to leave~!";
 	sleep 1000;
+	}
 	hideonnpc instance_npcname("Odoric#1");
 	sleep 1000;
 	movenpc instance_npcname("Odoric#z1_0et"),158,63;
@@ -3166,6 +3310,7 @@ OnVictory:
 1@ge_st,114,50,4	script	Ju#1	679,{
 end;
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Another match has started...";
 	sleep 3000;
 	npctalk "A real battle is a serious matter...";
@@ -3179,11 +3324,13 @@ OnActivate:
 	npctalk "I will make sure to handle them as fast as possible.";
 	sleep 3000;
 	npctalk "My heart is beating so fast! I'm so nervous!",instance_npcname("Lydia#a2");
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Ju#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Sob... defeated...";
 	sleep 3000;
@@ -3197,6 +3344,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "You better not lose after defeating me!";
 	sleep 2000;
+	}
 	hideonnpc instance_npcname("Ju#1");
 	sleep 1000;
 	movenpc	instance_npcname("Ju#z1_0et"),178,91;
@@ -3222,6 +3370,7 @@ OnVictory:
 1@ge_st,114,50,4	script	Dwigh#1	680,{
 end;
 OnActivate:
+	if( 'BATTLE_ONLY == 0 ){
 	npctalk "Semi-Finals huh...";
 	sleep 2000;
 	npctalk "I can see the end...";
@@ -3241,7 +3390,9 @@ OnActivate:
 	sleep 2000;
 	npctalk "I can't lose in front of my students!";
 	sleep 2000;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "Ahh!~ Go teacher~!!",instance_npcname("Magic Academy Student#5");
 	sleep 1000;
@@ -3250,10 +3401,12 @@ OnActivate:
 	npctalk "If she can't do it~!!",instance_npcname("Magic Academy Student#4");
 	npctalk "No one can~!!",instance_npcname("Magic Academy Student#1");
 	npctalk "Teacher~!!",instance_npcname("Magic Academy Student#5");
+	}
 	end;
 
 OnDefeat:
 	hideoffnpc instance_npcname("Dwigh#1");
+	if( 'BATTLE_ONLY == 0 ){
 	sleep 1000;
 	npctalk "If I had just won one more game, I could have been in the finals...";
 	sleep 3000;
@@ -3265,6 +3418,7 @@ OnDefeat:
 	sleep 3000;
 	npctalk "According to my students, Fenrir's strength should still be above me, I wish you luck.";
 	sleep 2000;
+	}
 	hideonnpc instance_npcname("Dwigh#1");
 	sleep 1000;
 	movenpc instance_npcname("Dwigh#z1_0et"),120,98;
@@ -3300,6 +3454,7 @@ OnDefeat:
 	end;
 
 OnTalk1:
+	if( 'BATTLE_ONLY == 0 ){
     cutin "paycana_a", 2;
     npctalk "You~ I've never heard about you before~!";
     sleep2 4000;
@@ -3316,10 +3471,12 @@ OnTalk1:
     npctalk "Once this match starts, you will see his full power!";
     sleep2 2000;
     cutin "", 255;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnTalk2:
+	if( 'BATTLE_ONLY == 0 ){
     cutin "paycana_b ", 2;
     npctalk "I actually lost...";
     sleep2 3000;
@@ -3332,6 +3489,7 @@ OnTalk2:
     npctalk "I wanted to fight her so bad!";
     sleep2 2000;
     cutin "", 255;
+	}
 	hideonnpc instance_npcname("Fay Kanavian#1");
 	sleep 1000;
 	movenpc instance_npcname("Fay Kanavian#z1_0et"),117,72;
@@ -3393,6 +3551,7 @@ OnDefeat:
     end;
 
 OnTalk1:
+	if( 'BATTLE_ONLY == 0 ){
     cutin "fenrir_b", 1;
     npctalk "The final match...";
     sleep2 1000;
@@ -3413,10 +3572,12 @@ OnTalk1:
 	sleep2 2000;
     npctalk "Then, should we start the final match?";
     cutin "", 255;
+	}
 	donpcevent instance_npcname("#GMTcontroller")+"::OnStart";
 	end;
 
 OnTalk2:
+	if( 'BATTLE_ONLY == 0 ){
     cutin "fenrir_a", 1;
     npctalk "Uh... I am defeated.";
     sleep2 2000;
@@ -3431,6 +3592,7 @@ OnTalk2:
     npctalk "However, next time, I won't lose!";
     sleep2 2000;
     cutin "", 255;
+    }
 	if (checkquest(9307) != -1)
 		changequest 9307,9308;
     warp instance_mapname("1@ge_st"), 109,50;

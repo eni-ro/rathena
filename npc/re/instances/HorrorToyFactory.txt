@@ -433,9 +433,11 @@ xmas,233,305,4	script	Factory Dimension Telep	PORTAL,{
 		mes "心の準備が出来たら声をかけて下さい。";
 		close;
 	case 2:
+		'SKIP_TALK=0;
 		donpcevent instance_npcname("キャサリンゼータ#01") + "::OnStart";
 		close;
 	case 3:
+		'SKIP_TALK=1;
 		donpcevent instance_npcname("キャサリンゼータ#01") + "::OnStart2";
 		close;
 	}
@@ -816,6 +818,7 @@ OnMyMobDead:
 			donpcevent instance_npcname("キャサリンゼータ#21") + "::OnStart";
 			close;
 		case 3:
+			'SKIP_TALK=1;
 			viewpoint 1,155,98,1,0xFF8000;
 			viewpoint 1,130,72,2,0xFF8000;
 			viewpoint 1,134,34,3,0xFF8000;
@@ -866,8 +869,8 @@ S_Skip:
 		npctalk "キャサリンゼータ : 何かあったら、ご連絡します。それでは、私は何か手がかりがないか、ほかの場所をあたってみますね。";
 		sleep 5000;
 		npctalk "キャサリンゼータ : あ、あと……包装済みのボックスはもう必要ないはずです。そのままでは怪しまれるので、この後忘れずに作業服に着替えておいてください。";
+		sleep 6000;
 	}
-	sleep 6000;
 	disablenpc instance_npcname("キャサリンゼータ#21");
 	enablenpc instance_npcname("職員用の衣服ボックス#4");
 	donpcevent instance_npcname("#fac2ct") + "::OnStart";
@@ -950,7 +953,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,1,0xFFFFFF;
 			npctalk "作業員 : 人形職人……？　あ！　あの爺さんか！　この工場の創業者で人形職人だったな。";
 			sleep2 3000;
@@ -973,7 +978,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,2,0xFFFFFF;
 			npctalk "作業員 : 職人のお爺ちゃんをキミちゃんが殺したって噂があるの？　それについてはまったくの出鱈目よ。";
 			sleep2 3000;
@@ -995,7 +1002,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,3,0xFFFFFF;
 			npctalk "作業員 : 人形職人の爺さんは、この工場の創業者でもあり、腕利きの人形職人でねえ。";
 			sleep2 3000;
@@ -1015,7 +1024,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,4,0xFFFFFF;
 			npctalk "作業員 : キミと人形職人のお爺さんを私が最後に見たのは、休憩室だったかな。";
 			sleep2 3000;
@@ -1038,7 +1049,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,5,0xFFFFFF;
 			npctalk "作業員 : うーん、記憶が定かじゃないんだけど……。";
 			sleep2 3000;
@@ -1060,7 +1073,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,6,0xFFFFFF;
 			npctalk "作業員 : 以前は、観光客が大勢訪れる街だったんだ。爺さんも、嬉しそうだったな。";
 			sleep2 3000;
@@ -1080,7 +1095,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,7,0xFFFFFF;
 			npctalk "作業員 : 爺ちゃんが生きてたころ、たまに赤い服の人間を見かけたなあ。";
 			sleep2 3000;
@@ -1101,7 +1118,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,8,0xFFFFFF;
 			npctalk "作業員 : キミ、見なくなった。あの変な人間、キミと話してるのみたの最後。";
 			sleep2 3000;
@@ -1126,7 +1145,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,9,0xFFFFFF;
 			npctalk "作業員 : お爺様のことですか……？　キミが完成し、目を開けた瞬間、心臓病によって天に召されたようです。";
 			sleep2 3000;
@@ -1149,7 +1170,9 @@ OnStart:
 				close;
 			}
 			close2;
+			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
+			}
 			viewpoint 2,1,1,10,0xFFFFFF;
 			npctalk "作業員 : 人間はキミのことを怖がるけれど、キミちゃんは私たちの面倒をよくみてくれるよー。まるで生前のお爺さんみたいに。";
 			sleep2 3000;
@@ -1253,6 +1276,8 @@ OnTouch_:
 OnStart:
 	.@antonio$ = instance_npcname("アンソニ#1");
 	.@santa$ = instance_npcname("囚われたサンタ#3");
+	
+	if('SKIP_TALK==0){
 	sleep 3000;
 	npctalk "アンソニ : よく聞けよ爺さん。俺はこの工場が気に入っているんだ。", .@antonio$;
 	sleep 3000;
@@ -1282,7 +1307,9 @@ OnStart:
 	sleep 4000;
 	npctalk "アンソニ : おっと、そこの人間。配送用のおもちゃに手を出さなければ、俺様は人間でも邪険にしないぜ。誰かと違って、心が広いからな。", .@antonio$;
 	sleep 4000;
+	}
 	disablenpc .@antonio$;
+	if('SKIP_TALK==0){
 	sleep 2000;
 	npctalk "囚われたサンタ : ああ……サンタクロースは……子供たちの未来は……どうなってしまうのだ……。", .@santa$;
 	sleep 4000;
@@ -1296,6 +1323,7 @@ OnStart:
 	sleep 4000;
 	npctalk "囚われたサンタ : 私がなんとかできれば良いのだが、サンタクロース同士は契約の関係上、手を出せないんだ……。", .@santa$;
 	sleep 4000;
+	}
 	npctalk "囚われたサンタ : アンソニは第3工場のどこかにいると思う。すまないが、子供たちやこの工場の未来を頼む……！", .@santa$;
 
 	disablenpc instance_npcname("#bgm04");
@@ -1440,6 +1468,7 @@ OnTouch:
 
 OnStart:
 	.@kimi$ = instance_npcname("セリーヌ・キミ#0");
+	if('SKIP_TALK==0){
 	sleep 2000;
 	npctalk "キャサリンゼータ : キミ！　私の話を聞いて。私とこの人は、ここを荒らすために来たわけではない！　あなたと話がしたいの。";
 	sleep 3000;
@@ -1493,6 +1522,7 @@ OnStart:
 	sleep 3000;
 	npctalk "キャサリンゼータ : 工場の空気もおかしい……。冒険者様！　私はキミを止めるための手がかりがないか探してきます！";
 	sleep 3000;
+	}
 	disablenpc instance_npcname("キャサリンゼータ#5");
 	sleep 2000;
 	disablenpc .@kimi$;
@@ -1770,6 +1800,7 @@ OnTouch_:
 1@xm_d,218,145,5	script	キャサリンゼータ#6	4_F_SKULL06GIRL,{
 	end;
 OnStart:
+	if('SKIP_TALK==0){
 	sleep 1000;
 	npctalk "キャサリンゼータ : ……ここまでくれば大丈夫なはずです。";
 	sleep 3000;
@@ -1791,6 +1822,7 @@ OnStart:
 	sleep 3000;
 	npctalk "キャサリンゼータ : ……いつかキミにも、お爺さんやみんなの気持ちをちゃんと届けられたらいいな。";
 	sleep 3000;
+	}
 	npctalk "キャサリンゼータ : 非常口を開放しました。お礼も置いておきましたので、非常口から外に出て下さいね。";
 	sleep 3000;
 	disablenpc instance_npcname("キャサリンゼータ#6");

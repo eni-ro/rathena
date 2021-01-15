@@ -585,6 +585,76 @@ Body:
     Type: Card
     Script: |
       bonus bAtkEle,Ele_Poison;
+  - Id: 29716
+    AegisName: SJ_SUN_J
+    Name: '太陽'
+    Type: Card
+    Script: |
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
+        bonus bWeaponAtkRate,10;
+        bonus2 bCastrate,"SJ_PROMINENCEKICK",-50;
+        bonus2 bSkillAtk,"SJ_SOLARBURST",50;
+      }
+  - Id: 29717
+    AegisName: SJ_MOON_J
+    Name: '月'
+    Type: Card
+    Script: |
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
+        bonus bMaxHPrate,20;
+        bonus2 bCastrate,"SJ_NEWMOONKICK",-50;
+        bonus2 bSkillAtk,"SJ_FULLMOONKICK",50;
+      }
+  - Id: 29718
+    AegisName: SJ_STAR_J
+    Name: '星'
+    Type: Card
+    Script: |
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_STAR_EMPEROR ){
+        bonus bAspdRate,10;
+        bonus2 bAddEffWhenHit,Eff_Stun,300;
+        bonus2 bSkillAtk,"SJ_FALLINGSTAR",50;
+      }
+  - Id: 29719
+    AegisName: SP_ES_J
+    Name: 'エス'
+    Type: Card
+    Script: |
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bMatk,50;
+        .@b = BaseLevel/10;
+        bonus2 bSkillAtk,"SP_SHA",.@b;
+        bonus2 bSkillAtk,"SP_SPA",.@b;
+        bonus2 bSkillAtk,"SP_SWHOO",.@b;
+      }
+  - Id: 29720
+    AegisName: SP_CURSE_J
+    Name: '死霊'
+    Type: Card
+    Script: |
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus bMatk,50;
+        .@b = BaseLevel/10;
+        bonus2 bSkillAtk,"SP_CURSEEXPLOSION",.@b;
+      }
+  - Id: 29721
+    AegisName: SP_SOUL_J
+    Name: '魂'
+    Type: Card
+    Script: |
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SOUL_REAPER ){
+        bonus2 bSubRace,RC_Player_Human,3;
+        bonus2 bSubRace,RC_Player_Doram,3;
+        skill "SA_DISPELL",5;
+        bonus bMaxHP,50*BaseLevel;
+        bonus bMaxSP,5*BaseLevel;
+      }
   - Id: 310193
     AegisName: NoKnockback_J
     Name: 'ノックバック無効'

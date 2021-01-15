@@ -1,0 +1,9 @@
+//ItemID,精錬値条件,slot(0-3),type,required item id,required item num,failure rate,failure handling,id1,rate1,id2,rate2,…
+//,,,typeは0=選択式、1=ランダム
+//,,,,,,failure rateは百分率
+//,,,,,,,failure handlingは0=何もしない、1=装備破壊、2=エンチャ対象箇所のみエンチャ消失、3=すべてエンチャ消失
+//,,,,,,,,,rate1以降は出現比率
+ポルックスリング
+32293,0,3,0,616,1,0,0,29716,0,29717,0,29718,0
+プロキオンリング
+32294,0,3,0,616,1,0,0,29719,0,29720,0,29721,0

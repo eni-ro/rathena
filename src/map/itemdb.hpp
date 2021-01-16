@@ -755,7 +755,8 @@ enum e_random_item_group {
 	IG_MD_REWARD_BOX3,
 	IG_MD_REWARD_ORE1,
 	IG_MD_REWARD_ORE2,
-	IG_MD_REWARD_ORE3
+	IG_MD_REWARD_ORE3,
+	IG_DRAG_ORE
 };
 
 /// Enum for bound/sell restricted selling

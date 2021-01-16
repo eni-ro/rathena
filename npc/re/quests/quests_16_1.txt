@@ -2286,10 +2286,17 @@ prt_lib_q,95,92,3	script	ハッピーチーター#prt_lib_q	4_M_PEPPERROTI,{
 		case 2:
 			mes "[ハッピーチーター]";
 			mes "おっと、その前に報酬をあずかってるよ。";
+			if (checkweight(2001000900,6,2001000910,1,6919,10) == 0) {
+				next;
+				mes "[ハッピーチーター]";
+				mes "荷物が一杯だね。";
+				close;
+			}
 			setquest 7706;// Nillem Is Not Almighty
 			erasequest 7705;// Hope You Cannot Let Go
 			getitem 6919,10;// Honor Token
 			getitem 2001000900,6;
+			getitem 2001000910,1;
 			getexp 400000,400000;
 			close;
 	}

@@ -99,6 +99,36 @@ Header:
   Version: 1
 
 Body:
+  - Id: 2002000000
+    AegisName: Drag_Stone_Fragment
+    Name: '—´–¬Î‚ÌŒ‡•Ğ'
+    Type: Etc
+    Weight: 0
+  - Id: 2002000001
+    AegisName: Drag_Stone
+    Name: '—´–¬Î'
+    Type: Etc
+    Weight: 0
+  - Id: 2002000002
+    AegisName: Drag_Crystal_Fragment
+    Name: '—´–¬Œ‹»‚ÌŒ‡•Ğ'
+    Type: Etc
+    Weight: 0
+  - Id: 2002000003
+    AegisName: Drag_Crystal
+    Name: '—´–¬Œ‹»'
+    Type: Etc
+    Weight: 0
+  - Id: 2002000004
+    AegisName: Shiny_Drag_Crystal_Fragment
+    Name: '‹P‚­—´–¬Œ‹»‚ÌŒ‡•Ğ'
+    Type: Etc
+    Weight: 0
+  - Id: 2002000005
+    AegisName: Shiny_Drag_Crystal
+    Name: '‹P‚­—´–¬Œ‹»'
+    Type: Etc
+    Weight: 0
   - Id: 2005500000
     AegisName: Shadow_Move_Speed_Up
     Name: Move Speed Up

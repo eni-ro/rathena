@@ -248,6 +248,21 @@ Body:
       else{
         message strcharinfo(0),"インベントリのアイテムが一杯で開くことができません。";
       }
+  - Id: 2001000910
+    AegisName: Old_Drag_Ore
+    Name: '古びた鉱石'
+    Type: Usable
+    Weight: 0
+    Flags:
+      NoConsume: true
+    Script: |
+      if( checkweight( 1201, 1 )){
+        delitem 2001000910,1;
+        getrandgroupitem(IG_DRAG_ORE),1;
+      }
+      else{
+        message strcharinfo(0),"インベントリのアイテムが一杯で開くことができません。";
+      }
   - Id: 2001001000
     AegisName: ZENY_100000
     Name: '100,000ゼニー貨幣'

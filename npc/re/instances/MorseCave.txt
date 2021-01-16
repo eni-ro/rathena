@@ -1387,7 +1387,7 @@ OnTouch:
 1@rev,39,53,0	duplicate(#RZ Move_5a)	#RZ Move_16a	WARPNPC,10,10
 
 1@rev,112,56,3	script	#RZ Move_17a	PORTAL,{
-	if (checkweight(2001000901,3,6919,5) == 0) {
+	if (checkweight(2001000901,3,2001000910,1,6919,5) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
@@ -1399,6 +1399,7 @@ OnTouch:
 	mes "- Teleporting... -";
 	close2;
 	getitem 2001000901,3;
+	getitem 2001000910,1;
 	getitem 6919,5;
 	warp "moro_cav",59,63;
 	end;

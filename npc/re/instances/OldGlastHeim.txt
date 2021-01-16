@@ -1628,7 +1628,7 @@ OnTimer10000:
 		warp 'map_name$[1],158,244;
 		end;
 	}
-	if (checkweight(2001000901,2,6919,7) == 0) {
+	if (checkweight(2001000901,2,2001000910,1,6919,7) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
@@ -1648,6 +1648,7 @@ OnTimer10000:
 	}
 	close2;
 	getitem 2001000901,2;
+	getitem 2001000910,1;
 	getitem 6919,7;
 	warp "glast_01",204,270;
 	end;

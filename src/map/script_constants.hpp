@@ -5175,6 +5175,7 @@
 	export_constant(IG_MD_REWARD_ORE1);
 	export_constant(IG_MD_REWARD_ORE2);
 	export_constant(IG_MD_REWARD_ORE3);
+	export_constant(IG_DRAG_ORE);
 
 	/* unit stop walking */
 	export_constant(USW_NONE);

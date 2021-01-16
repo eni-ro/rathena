@@ -1245,15 +1245,17 @@ OnInstanceInit:
 1@swat,151,266,0	script	#wp_out	45,2,2,{
 	end;
 OnTouch:
-	if (checkweight(2001000901,1,6919,8) == 0) {
+	if (checkweight(2001000901,1,2001000910,1,6919,8) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
 	}
+	close2;
 	getitem 2001000901,1;
+	getitem 2001000910,1;
 	getitem 6919,8;
 	warp "ein_fild04",279,339;
-	close;
+	end;
 }
 
 

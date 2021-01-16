@@ -667,7 +667,7 @@ OnInstanceInit:
 	disablenpc instance_npcname(strnpcinfo(0));
 	end;
 OnTouch:
-	if (checkweight(2001000900,6,6919,4) == 0) {
+	if (checkweight(2001000900,6,2001000910,1,6919,4) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
@@ -675,11 +675,13 @@ OnTouch:
 	mes "Do you want to go out from the octopus dungeon?";
 	next;
 	if(select("No!:Yes!") == 2){
+		close2;
 		getitem 2001000900,6;
+		getitem 2001000910,1;
 		getitem 6919,4;
 		warp "mal_dun01",153,233;
 	}
-	close;
+	end;
 }
 1@cash,198,82,0	duplicate(oct_exit_1)	oct_exit_2	45,2,2
 // This is never enabled in the official script.

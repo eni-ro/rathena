@@ -861,12 +861,13 @@ OnEnable:
 	end;
 
 OnTouch_:
-	if (checkweight(2001000901,1) == 0) {
+	if (checkweight(2001000901,1,2001000910,1) == 0) {
 		mes "インベントリが一杯で報酬を受け取れません。";
 		mes "インベントリを整理して下さい。";
 		close;
 	}
 	getitem 2001000901,1;
+	getitem 2001000910,1;
 	warp "gef_fild10",240,197;
 	end;
 }

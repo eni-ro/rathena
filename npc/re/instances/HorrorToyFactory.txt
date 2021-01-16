@@ -274,7 +274,6 @@ xmas,237,303,3	script	キャサリンゼータ	4_F_SKULL06GIRL,{
 		setquest 12330;// Skull-faced Girl
 		close;
 	case 1:
-		mes "[キャサリンゼータ]";
 		mes "お待たせしました。";
 		mes "準備ができました。";
 		mes "冒険者様もよろしいでしょうか？";
@@ -953,10 +952,9 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,1,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : 人形職人……？　あ！　あの爺さんか！　この工場の創業者で人形職人だったな。";
 			sleep2 3000;
 			npctalk "作業員 : ここにいるおもちゃはみんな、あの爺さんの手で生み出されたといっても過言じゃない。無論、俺もね。";
@@ -964,6 +962,8 @@ OnStart:
 			npctalk "作業員 : 中でも、キミちゃんはあの人の最高傑作ともいえるできらしい。爺さんがそう手紙に書いてたのみたよ。";
 			sleep2 3000;
 			npctalk "作業員 : というかあの爺さんのこと忘れてた……？　あれ……？";
+			sleep2 3000;
+			}
 			break;
 		case 2:
 			mes "[作業員]";
@@ -978,10 +978,9 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,2,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : 職人のお爺ちゃんをキミちゃんが殺したって噂があるの？　それについてはまったくの出鱈目よ。";
 			sleep2 3000;
 			npctalk "作業員 : 職人のお爺ちゃんは、わたし達の生みの親だもの。殺すなんてありえないわ。";
@@ -989,6 +988,8 @@ OnStart:
 			npctalk "作業員 : ……キミちゃん、もしかしたらその嘘を真にうけたりしてないかな。あの子、純粋だから……。";
 			sleep2 3000;
 			npctalk "作業員 : あ、こうしちゃいられない。私も職人のお爺ちゃんに会いに行こう。";
+			sleep2 3000;
+			}
 			break;
 		case 3:
 			mes "[作業員]";
@@ -1002,15 +1003,16 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,3,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : 人形職人の爺さんは、この工場の創業者でもあり、腕利きの人形職人でねえ。";
 			sleep2 3000;
 			npctalk "作業員 : 中でも作品のうちの一つである、動く球体関節人形は大人気だった。";
 			sleep2 3000;
 			npctalk "作業員 : そういやあ、自分も稼働するのやめたはずなのに。ボケたかなあ……。";
+			sleep2 3000;
+			}
 			break;
 		case 4:
 			mes "[作業員]";
@@ -1024,10 +1026,9 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,4,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : キミと人形職人のお爺さんを私が最後に見たのは、休憩室だったかな。";
 			sleep2 3000;
 			npctalk "作業員 : そういえば最近、休憩室から誰かと誰かの話し声が聞こえるのよね。";
@@ -1035,6 +1036,8 @@ OnStart:
 			npctalk "作業員 : 人形職人のお爺さんはいないのに、誰なんだか。";
 			sleep2 3000;
 			npctalk "作業員 : ……あれ？　人形職人のお爺さんのこと忘れてた！　いけない！";
+			sleep2 3000;
+			}
 			break;
 		case 5:
 			mes "[作業員]";
@@ -1049,10 +1052,9 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,5,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : うーん、記憶が定かじゃないんだけど……。";
 			sleep2 3000;
 			npctalk "作業員 : 誰かにお爺さんについて、記憶のメモリーを改竄された可能性があるんだ。";
@@ -1060,6 +1062,8 @@ OnStart:
 			npctalk "作業員 : 人間……なんだろうか？　変な笑い声が印象に残ってるけど、よくおぼえてないや。";
 			sleep2 3000;
 			npctalk "作業員 : でもおかげで、あのお爺さんを思い出せてよかった。ありがとう。";
+			sleep2 3000;
+			}
 			break;
 		case 6:
 			mes "[作業員]";
@@ -1073,15 +1077,16 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,6,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : 以前は、観光客が大勢訪れる街だったんだ。爺さんも、嬉しそうだったな。";
 			sleep2 3000;
 			npctalk "作業員 : ところがある日を境に、詳しい理由はわからないんだけど、観光客も少なくなっていき、この有様だよ。";
 			sleep2 3000;
 			npctalk "作業員 : さて、爺さんもいないし、このままだと寂しいから、いくとしようかな。";
+			sleep2 3000;
+			}
 			break;
 		case 7:
 			mes "[作業員]";
@@ -1095,10 +1100,9 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,7,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : 爺ちゃんが生きてたころ、たまに赤い服の人間を見かけたなあ。";
 			sleep2 3000;
 			npctalk "作業員 : 爺ちゃんの知り合いなのか、詳細までは知らないんだけどね。";
@@ -1106,6 +1110,8 @@ OnStart:
 			npctalk "作業員 : 後はよく手紙を書いてたよ。誰に書いてたかは知らないけど。";
 			sleep2 3000;
 			npctalk "作業員 : 手紙かあ。……僕も爺ちゃんに、手紙を書こうかな。";
+			sleep2 3000;
+			}
 			break;
 		case 8:
 			mes "[作業員]";
@@ -1118,15 +1124,16 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,8,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : キミ、見なくなった。あの変な人間、キミと話してるのみたの最後。";
 			sleep2 3000;
 			npctalk "作業員 : おもちゃもいた。でもおもちゃの様子変だった。なにかあった？　おじいさん、なんでいない？";
 			sleep2 3000;
 			npctalk "作業員 : 私、おじいさん探してくる。いってくる。";
+			sleep2 3000;
+			}
 			break;
 		case 9:
 			mes "[作業員]";
@@ -1145,10 +1152,9 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,9,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : お爺様のことですか……？　キミが完成し、目を開けた瞬間、心臓病によって天に召されたようです。";
 			sleep2 3000;
 			npctalk "作業員 : キミはどうも、自分の顔を見てお爺様は亡くなったものと思っているようですが……。";
@@ -1156,6 +1162,8 @@ OnStart:
 			npctalk "作業員 : ただ、どういう結果であれ、キミは最後にお爺様と会えたのですから。";
 			sleep2 3000;
 			npctalk "作業員 : え？　今からでも遅くない……ですか。……会えるでしょうか。私も……。";
+			sleep2 3000;
+			}
 			break;
 		case 10:
 			mes "[作業員]";
@@ -1170,18 +1178,18 @@ OnStart:
 				close;
 			}
 			close2;
-			if('SKIP_TALK==0){
 			setpcblock PCBLOCK_NPC, true;
-			}
 			viewpoint 2,1,1,10,0xFFFFFF;
+			if('SKIP_TALK==0){
 			npctalk "作業員 : 人間はキミのことを怖がるけれど、キミちゃんは私たちの面倒をよくみてくれるよー。まるで生前のお爺さんみたいに。";
 			sleep2 3000;
 			npctalk "作業員 : よくキミちゃんに、お爺さんに作ってもらったってアクセサリーのリボンや傘を見せてもらったよー。";
 			sleep2 3000;
 			npctalk "作業員 : ところでお爺さん、どこにいるのかなー……。";
+			sleep2 3000;
+			}
 			break;
 		}
-		sleep2 3000;
 		disablenpc instance_npcname( strnpcinfo(0) );
 		if ('worker[.@num] == 0) {
 			'worker[.@num] = 1;

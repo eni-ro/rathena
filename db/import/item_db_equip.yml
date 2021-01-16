@@ -2007,6 +2007,57 @@ Body:
         bonus2 bMagicAddClass,Class_All,5;
         bonus bCastrate,-25;
       }
+  - Id: 400060
+    AegisName: Shiny_Nyan_Nyan_Crown_J
+    Name: 'ぴかぴかニャンニャンクラウン'
+    Type: Armor
+    Weight: 1000
+    Defense: 18
+    Slots: 0
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 100
+    Refineable: true
+    View: 328
+    Script: |
+      bonus bMdef,15;
+      bonus bDelayrate,-10;
+      bonus2 bSkillAtk,"SU_CN_METEOR",10;
+      bonus2 bSkillAtk,"SU_SV_STEMSPEAR",10;
+      if( getskilllv("SU_SPIRITOFLAND") ){
+        .@sklv = -4 * ( getskilllv("SU_CN_POWDERING") + getskilllv("SU_CN_METEOR") + getskilllv("SU_NYANGGRASS") + getskilllv("SU_SV_STEMSPEAR") + getskilllv("SU_SV_ROOTTWIST"));
+        bonus2 bCastrate,"SU_CN_METEOR",.@sklv;
+        bonus2 bCastrate,"SU_SV_STEMSPEAR",.@sklv;
+      }
+      bonus bAspdRate,3*getskilllv("SU_CHATTERING");
+      if( getskilllv("SU_NYANGGRASS") >= 5 ){
+        bonus bDelayrate,-20;
+      }
+      if( getskilllv("SU_MEOWMEOW") >= 5 ){
+        bonus2 bMagicAddClass,Class_Boss,25;
+      }
+      .@r = getrefine();
+      bonus bHPGainValue,30*.@r;
+      bonus bLongHPGainValue,30*.@r;
+      bonus bMagicHPGainValue,30*.@r;
+      bonus bSPGainValue,3*.@r;
+      bonus bLongSPGainValue,3*.@r;
+      bonus bMagicSPGainValue,3*.@r;
+      if( .@r >= 7 ){
+        bonus2 bCastrate,"SU_STOOP",-50;
+        bonus2 bCastrate,"SU_LOPE",-50;
+        bonus2 bSkillAtk,"SU_CN_METEOR",15;
+        bonus2 bSkillAtk,"SU_SV_STEMSPEAR",15;
+        if( .@r >= 9 ){
+          bonus2 bCastrate,"SU_STOOP",-50;
+          bonus2 bCastrate,"SU_LOPE",-50;
+          bonus2 bSkillAtk,"SU_CN_METEOR",25;
+          bonus2 bSkillAtk,"SU_SV_STEMSPEAR",25;
+          if( .@r >= 10 ){
+            autobonus "{ bonus bUseSPrate,-100; }",30,20000,BF_MAGIC,"{ specialeffect2 EF_ENHANCE; }";
+          }
+        }
+      }
   - Id: 450015
     AegisName: Virgo_Mail_J
     Name: '処女宮のメイル'
@@ -2625,6 +2676,50 @@ Body:
           bonus bPerfectHitAddRate,20;
         }
       }
+  - Id: 480075
+    AegisName: Baby_Boar_Bib_J
+    Name: 'よちよちウリボウスタイ'
+    Type: Armor
+    Weight: 100
+    Defense: 12
+    Locations:
+      Garment: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableGarment;
+      .@mhp = 5;
+      .@acb = -10;
+      bonus2 bSubRace,RC_Player_Human,5;
+      bonus2 bSubRace,RC_Player_Doram,5;
+      bonus bAspdRate,2*getskilllv("SU_HISS");
+      .@sklv = getskilllv("SU_POWEROFFLOCK");
+      bonus2 bAddSize,Size_All,2*.@sklv;
+      bonus bPerfectHitAddRate,4*.@sklv;
+      .@adb = 15*getskilllv("SU_SVG_SPIRIT");
+      bonus2 bSkillAtk,"SU_PICKYPECK",.@adb;
+      bonus2 bSkillAtk,"SU_SCAROFTAROU",.@adb;
+      bonus2 bSkillAtk,"SU_LUNATICCARROTBEAT",.@adb;
+      bonus2 bSkillAtk,"SU_SVG_SPIRIT",.@adb;
+      if( getskilllv("SU_SPIRITOFLIFE") > 0 ){
+        bonus2 bSkillCooldown,"SU_LUNATICCARROTBEAT",-200;
+      }
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@mhp += 5;
+        .@acb -= 20;
+        if( .@r >= 7 ){
+          .@mhp += 10;
+          .@acb -= 20;
+        }
+      }
+      bonus bMaxHPrate,.@mhp;
+      bonus2 bCastrate,"SU_PICKYPECK",.@acb;
+      bonus2 bCastrate,"SU_ARCLOUSEDASH",.@acb;
+      bonus2 bCastrate,"SU_LUNATICCARROTBEAT",.@acb;
+      bonus2 bCastrate,"SU_HISS",.@acb;
+      bonus2 bCastrate,"SU_POWEROFFLOCK",.@acb;
+      bonus2 bCastrate,"SU_SVG_SPIRIT",.@acb;
   - Id: 490010
     AegisName: Virgo_Ring_J
     Name: '処女宮のリング'

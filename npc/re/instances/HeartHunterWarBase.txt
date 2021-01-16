@@ -1250,7 +1250,6 @@ OnTouch:
 		mes "インベントリを整理して下さい。";
 		close;
 	}
-	close2;
 	getitem 2001000901,1;
 	getitem 2001000910,1;
 	getitem 6919,8;

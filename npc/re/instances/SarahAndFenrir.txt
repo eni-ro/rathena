@@ -717,7 +717,7 @@ OnTouch:
 	getitem 2001000910,1;
 	getitem 6919,5;
 	warp "dali02",91,140;
-	close;
+	end;
 }
 
 // Fenrir bottom

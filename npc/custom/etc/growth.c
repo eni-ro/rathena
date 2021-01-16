@@ -73,6 +73,7 @@ OnNPCKillEvent:
 	if( getmonsterinfo( killedrid, MOB_MVPEXP )){
 		.@glow_chance *= 6;
 	}
+	.@glow_chance *= 3;	//一時ボーナス
 	if( rand(100000) < .@glow_chance ){
 		//StatusUp
 		.@indx = grow_type * 6;
@@ -84,7 +85,7 @@ OnNPCKillEvent:
 			}
 		}
 		if( readparam( .grow_status_prm[.@type] ) < .max_status ){
-			statusup .grow_status_prm[.@type];
+			statusup2 .grow_status_prm[.@type],1;
 			unittalk getcharid(3),.grow_status_msg$[.@type],bc_self;
 			specialeffect2 371;
 		}

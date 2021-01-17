@@ -2157,6 +2157,319 @@ Body:
         bonus2 bSkillAtk,"NC_AXETORNADO",50;
         bonus2 bSkillAtk,"NC_AXEBOOMERANG",50;
       }
+  - Id: 28580
+    AegisName: Horse_Mackerel_Amulet_J
+    Name: 'アジのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bCastrate,-5;
+      bonus bDelayrate,-5;
+      skill "AL_HEAL",3;
+      skill "AL_BLESSING",3;
+      bonus bHealPower,10;
+  - Id: 28581
+    AegisName: Luxury_Horse_Mackerel_Amulet_J
+    Name: '高級アジのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bCastrate,-10;
+      bonus bDelayrate,-10;
+      skill "AL_HEAL",5;
+      skill "AL_BLESSING",5;
+      bonus bHealPower,20;
+  - Id: 28582
+    AegisName: Special_Horse_Mackerel_Amulet_J
+    Name: '特選アジのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bCastrate,-15;
+      bonus bDelayrate,-15;
+      bonus bUseSPrate,-5;
+      skill "AL_HEAL",10;
+      skill "AL_BLESSING",10;
+      bonus bHealPower,BaseLevel/10*2;
+  - Id: 28583
+    AegisName: Leaf_Amulet_J
+    Name: '葉のお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus bCastrate,-5;
+      bonus bDelayrate,-5;
+      bonus2 bSkillAtk,"SU_CN_METEOR",5;
+      bonus2 bCastrate,"SU_CN_METEOR",-10;
+  - Id: 28584
+    AegisName: Luxury_Leaf_Amulet_J
+    Name: '高級葉のお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bMagicAddClass,Class_All,5;
+      bonus bCastrate,-10;
+      bonus bDelayrate,-10;
+      bonus2 bSkillAtk,"SU_CN_METEOR",10;
+      bonus2 bCastrate,"SU_CN_METEOR",-20;
+  - Id: 28585
+    AegisName: Special_Leaf_Amulet_J
+    Name: '特選葉のお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bMagicAddClass,Class_All,10;
+      bonus bCastrate,-15;
+      bonus bDelayrate,-15;
+      .@b = BaseLevel / 10;
+      bonus2 bSkillAtk,"SU_CN_METEOR",.@b;
+      bonus2 bCastrate,"SU_CN_METEOR",-3*.@b;
+  - Id: 28586
+    AegisName: Rabbit_Amulet_J
+    Name: 'ウサギのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddClass,Class_All,5;
+      bonus bCastrate,-5;
+      bonus bDelayrate,-5;
+      bonus2 bSkillAtk,"SU_LUNATICCARROTBEAT",5;
+      bonus2 bCastrate,"SU_LUNATICCARROTBEAT",-10;
+  - Id: 28587
+    AegisName: Luxury_Rabbit_Amulet_J
+    Name: '高級ウサギのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 1
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddClass,Class_All,5;
+      bonus bCastrate,-10;
+      bonus bDelayrate,-10;
+      bonus2 bSkillAtk,"SU_LUNATICCARROTBEAT",10;
+      bonus2 bCastrate,"SU_LUNATICCARROTBEAT",-20;
+  - Id: 28588
+    AegisName: Special_Rabbit_Amulet_J
+    Name: '特選ウサギのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddClass,Class_All,10;
+      bonus bCastrate,-15;
+      bonus bDelayrate,-15;
+      .@b = BaseLevel / 10;
+      bonus2 bSkillAtk,"SU_LUNATICCARROTBEAT",.@b;
+      bonus2 bCastrate,"SU_LUNATICCARROTBEAT",-3*.@b;
+  - Id: 28589
+    AegisName: Shining_Twig_Charm_J
+    Name: '光る枝のお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bMagicAddClass,Class_All,10;
+      bonus bAspdRate,10;
+      bonus2 bCastrate,"SU_SV_STEMSPEAR",-50;
+      bonus2 bSkillUseSP,"SU_SV_STEMSPEAR",10;
+  - Id: 28590
+    AegisName: Fresh_Tuna_Amulet_J
+    Name: '新鮮なマグロのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bFlee2,5;
+      skill "AL_HEAL",10;
+      bonus bHealPower,20;
+      bonus2 bSkillUseSP,"SU_TUNABELLY",20;
+      bonus2 bSkillUseSP,"SU_TUNAPARTY",20;
+  - Id: 28591
+    AegisName: Plump_Earthworm_Amulet_J
+    Name: 'ぽっちゃりミミズのお守り'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus2 bAddClass,Class_All,10;
+      bonus bAspdRate,10;
+      bonus2 bCastrate,"SU_PICKYPECK",-50;
+      bonus2 bSkillUseSP,"SU_PICKYPECK",10;
   - Id: 32261
     AegisName: Libra_Ring_J
     Name: '天秤宮のリング'

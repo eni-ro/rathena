@@ -2078,6 +2078,35 @@ Body:
           }
         }
       }
+  - Id: 28948
+    AegisName: Doram_Shield_J
+    Name: 'ドラムシールド'
+    Type: Armor
+    Weight: 100
+    Defense: 120
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Left_Hand: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      .@subs = 15;
+      .@r = getrefine();
+      if( .@r >= 8 ){
+        .@subs += 10;
+      }
+      bonus2 bSubSize,Size_All,.@subs;
   - Id: 28962
     AegisName: Haurvatat
     Name: 'ハルワタート'

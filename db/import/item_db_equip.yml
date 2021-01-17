@@ -1858,6 +1858,63 @@ Body:
           bonus bFixedCastrate,-60;
         }
       }
+  - Id: 26131
+    AegisName: Dragonfly_Magical_Fox_Tail_J
+    Name: 'ƒgƒ“ƒ{‚ª‚Æ‚Ü‚Á‚½–‚—Í‚Ì”L‚¶‚á‚ç‚µ'
+    Type: Weapon
+    SubType: Staff
+    Weight: 400
+    Attack: 120
+    MagicAttack: 180
+    Range: 1
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bMatk,6*.@r;
+      bonus bInt,.@r;
+      if( .@r >= 7 ){
+        bonus2 bMagicAddClass,Class_All,10;
+        if( .@r >= 8 ){
+          bonus2 bMagicAddClass,Class_All,20;
+          bonus bCastrate,-10;
+          bonus bDelayrate,-10;
+        }
+      }
+  - Id: 26136
+    AegisName: Elaborate_Fox_Tail_Model_J
+    Name: '¸I‚È”L‚¶‚á‚ç‚µ‚Ì–ÍŒ^'
+    Type: Weapon
+    SubType: Staff
+    Weight: 400
+    Attack: 180
+    Range: 1
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      .@r = getrefine();
+      bonus bBaseAtk,6*.@r;
+      bonus bDex,.@r;
+      if( .@r >= 7 ){
+        bonus2 bAddClass,Class_All,20;
+        if( .@r >= 8 ){
+          bonus2 bAddClass,Class_All,40;
+          bonus bCastrate,-10;
+          bonus bDelayrate,-10;
+        }
+      }
   - Id: 26167
     AegisName: Aquarius_Staff_J
     Name: '•ó•r‹{‚ÌƒXƒ^ƒbƒt'

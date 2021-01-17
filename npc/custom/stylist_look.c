@@ -107,11 +107,13 @@ function HasjROCostume {
 		close;
 	}
 	.@beaj = .@base_eac[ .@sel ];
-	setarray .@upper,0,
-		EAJL_2_1, EAJL_2_1 | EAJL_UPPER, EAJL_2_1 | EAJL_UPPER | EAJL_THIRD,
-		EAJL_2_2, EAJL_2_2 | EAJL_UPPER, EAJL_2_2 | EAJL_UPPER | EAJL_THIRD;
+	setarray .@upper,0,EAJL_2_1,EAJL_2_2;
 	.@sizeupper = getarraysize(.@upper);
-	setarray .@opt,0,EAJL_BABY;
+	setarray	.@opt,0,	//2-*
+				EAJL_BABY,	//2-*(Baby)
+				EAJL_UPPER,	//Trans 2-*
+				EAJL_UPPER | EAJL_THIRD,	//Trans 3-*
+				EAJL_THIRD | EAJL_BABY;	//3-*(Baby)
 	.@sizeopt = getarraysize(.@opt);
 
 	.@num = 0;

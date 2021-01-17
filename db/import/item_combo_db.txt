@@ -99,3 +99,9 @@
 15194:22009,{ bonus bMaxHPrate,20; }
 15194:22010,{ bonus bMaxHPrate,20; }
 15194:22011,{ bonus bMaxHPrate,20; }
+//ドラムセット
+15275:20915:22185,{ bonus2 bHPRegenRate,100,5000; bonus2 bSPRegenRate,5,5000; }
+//高級ドラムセット
+15276:20916:22186,{ bonus2 bHPRegenRate,1000,5000; bonus2 bSPRegenRate,10,5000; }
+//特選ドラムセット
+15277:20917:22187,{ bonus2 bHPRegenRate,1500,5000; bonus2 bSPRegenRate,15,5000; }

@@ -489,6 +489,113 @@ Body:
           bonus2 bSubSkill,"NPC_CRITICALSLASH",100;
         }
       }
+  - Id: 15275
+    AegisName: Dram_Suit_J
+    Name: 'ドラムスーツ'
+    Type: Armor
+    Weight: 100
+    Defense: 80
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bMaxHPrate,5;
+      bonus bMaxSPrate,5;
+      .@r = getrefine();
+      bonus bBaseAtk,5*.@r;
+      bonus bMatk,5*.@r;
+  - Id: 15276
+    AegisName: Luxury_Dram_Suit_J
+    Name: '高級ドラムスーツ'
+    Type: Armor
+    Weight: 100
+    Defense: 100
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      .@r = getrefine();
+      bonus bBaseAtk,10*.@r;
+      bonus bMatk,10*.@r;
+      if( .@r >= 7 ){
+        bonus bAspdRate,5;
+        if( .@r >= 8 ){
+          bonus bDelayrate,-5;
+          if( .@r >= 9 ){
+            bonus bFlee2,5;
+          }
+        }
+      }
+  - Id: 15277
+    AegisName: Special_Dram_Suit_J
+    Name: '特選ドラムスーツ'
+    Type: Armor
+    Weight: 100
+    Defense: 120
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Armor: true
+    EquipLevelMin: 100
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bMaxHPrate,15;
+      bonus bMaxSPrate,15;
+      bonus2 bSubRace,RC_Player_Human,7;
+      bonus2 bSubRace,RC_Player_Doram,7;
+      bonus2 bCastrate,"SU_STOOP",-50;
+      .@r = getrefine();
+      bonus bBaseAtk,15*.@r;
+      bonus bMatk,15*.@r;
+      if( .@r >= 7 ){
+        bonus bAspdRate,10;
+        if( .@r >= 8 ){
+          bonus bDelayrate,-10;
+          if( .@r >= 9 ){
+            bonus bFlee2,5;
+            bonus2 bCastrate,"SU_STOOP",-50;
+          }
+        }
+      }
+      bonus bUnbreakableArmor;
   - Id: 15418
     AegisName: Libra_Mail_J
     Name: '天秤宮のメイル'
@@ -996,6 +1103,110 @@ Body:
       .@v = ( readparam(bInt) + readparam(bDex) ) / 50;
       bonus bAspdRate,2*.@v;
       bonus2 bMagicAddSize,Size_All,4*.@v;
+  - Id: 20915
+    AegisName: Dram_Cape_J
+    Name: 'ドラムケープ'
+    Type: Armor
+    Weight: 100
+    Defense: 20
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Garment: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bBaseAtk,20;
+      bonus bMatk,20;
+      .@r = getrefine();
+      bonus bMaxHPrate,.@r;
+      bonus bMaxSPrate,.@r;
+  - Id: 20916
+    AegisName: Luxury_Dram_Cape_J
+    Name: '高級ドラムケープ'
+    Type: Armor
+    Weight: 100
+    Defense: 25
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Garment: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bBaseAtk,30;
+      bonus bMatk,30;
+      .@r = getrefine();
+      bonus bMaxHPrate,.@r;
+      bonus bMaxSPrate,.@r;
+      if( .@r >= 7 ){
+        bonus bAspdRate,5;
+        if( .@r >= 8 ){
+          bonus bCastrate,-5;
+          if( .@r >= 9 ){
+            bonus bFlee2,15;
+          }
+        }
+      }
+  - Id: 20917
+    AegisName: Special_Dram_Cape_J
+    Name: '特選ドラムケープ'
+    Type: Armor
+    Weight: 100
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Garment: true
+    EquipLevelMin: 100
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bBaseAtk,50;
+      bonus bMatk,50;
+      bonus2 bSubRace,RC_Player_Human,5;
+      bonus2 bSubRace,RC_Player_Doram,5;
+      .@r = getrefine();
+      bonus bMaxHPrate,2*.@r;
+      bonus bMaxSPrate,2*.@r;
+      if( .@r >= 7 ){
+        bonus bAspdRate,15;
+        if( .@r >= 8 ){
+          bonus bCastrate,-10;
+          if( .@r >= 9 ){
+            bonus bFlee2,20;
+          }
+        }
+      }
   - Id: 20970
     AegisName: Libra_Manteau_J
     Name: '天秤宮のマント'
@@ -1267,6 +1478,112 @@ Body:
       bonus bAspdRate,.@r;
       bonus bMaxHPrate,2*.@r;
       bonus bMaxSPrate,2*.@r;
+  - Id: 22185
+    AegisName: Dram_Shoes_J
+    Name: 'ドラムシューズ'
+    Type: Armor
+    Weight: 100
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,10;
+      .@r = getrefine();
+      bonus bBaseAtk,5*.@r;
+      bonus bMatk,5*.@r;
+  - Id: 22186
+    AegisName: Luxury_Dram_Shoes_J
+    Name: '高級ドラムシューズ'
+    Type: Armor
+    Weight: 100
+    Defense: 30
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 1
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bMaxHPrate,15;
+      bonus bMaxSPrate,15;
+      .@r = getrefine();
+      bonus bBaseAtk,10*.@r;
+      bonus bMatk,10*.@r;
+      if( .@r >= 7 ){
+        bonus bAspdRate,5;
+        if( .@r >= 8 ){
+          bonus bCastrate,-10;
+          if( .@r >= 9 ){
+            bonus bFlee2,5;
+          }
+        }
+      }
+  - Id: 22187
+    AegisName: Special_Dram_Shoes_J
+    Name: '特選ドラムシューズ'
+    Type: Armor
+    Weight: 100
+    Defense: 35
+    Slots: 1
+    Jobs:
+      Summoner: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bMdef,5;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      bonus2 bSubRace,RC_Player_Human,5;
+      bonus2 bSubRace,RC_Player_Doram,5;
+      bonus2 bCastrate,"SU_LOPE",-50;
+      .@r = getrefine();
+      bonus bBaseAtk,15*.@r;
+      bonus bMatk,15*.@r;
+      if( .@r >= 7 ){
+        bonus bAspdRate,10;
+        if( .@r >= 8 ){
+          bonus bCastrate,-15;
+          if( .@r >= 9 ){
+            bonus bFlee2,5;
+            bonus2 bCastrate,"SU_LOPE",-50;
+          }
+        }
+      }
   - Id: 22216
     AegisName: Cancer_Shoes_J
     Name: '巨蟹宮のシューズ'

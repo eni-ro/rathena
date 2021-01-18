@@ -52,20 +52,21 @@ ven_in01,89,87,5	script	ローブマニア	4_M_ROKI,{ //4_SYS_MSG
 	close;
 
 L_ENCHANT:
+	.@part = EQI_ARMOR;
 	.@refine = getequiprefinerycnt(.@part);
 	setarray .@card[0], getequipcardid(.@part,0), getequipcardid(.@part,1), getequipcardid(.@part,2), getequipcardid(.@part,3);
 
-	if(( getequipid(EQI_ARMOR) != .@iid ) || ( getequiprefinerycnt(EQI_ARMOR) < 9 ) || ( .@card[3] != 0 )){
+	if(( getequipid(.@part) != .@iid ) || ( getequiprefinerycnt(.@part) < 9 ) || ( .@card[3] != 0 )){
 		mes "[ローブマニア]";
 		mes "エンチャントして欲しければ、+9以上の"+getitemname(.@iid)+"を装備してまた来なさい。";
 		close;
 	}
 	for( .@i = 0; .@i < MAX_ITEM_RDM_OPT; .@i++ ){
-		.@randopt_id[.@i] = getequiprandomoption( EQI_ARMOR, .@i, ROA_ID );
-		.@randopt_val[.@i] = getequiprandomoption( EQI_ARMOR, .@i, ROA_VALUE );
-		.@randopt_param[.@i] = getequiprandomoption( EQI_ARMOR, .@i, ROA_PARAM );
+		.@randopt_id[.@i] = getequiprandomoption( .@part, .@i, ROA_ID );
+		.@randopt_val[.@i] = getequiprandomoption( .@part, .@i, ROA_VALUE );
+		.@randopt_param[.@i] = getequiprandomoption( .@part, .@i, ROA_PARAM );
 	}
-	delequip EQI_ARMOR;
+	delequip .@part;
 	getitem3 .@iid,1,1,.@refine,0,.@card[0],.@card[1],.@card[2],4876,.@randopt_id[0],.@randopt_val[0],.@randopt_param[0];
 	specialeffect EF_LORD;
 

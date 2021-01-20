@@ -2968,6 +2968,86 @@ Body:
       }
       bonus bAspdRate,.@b;
       bonus bDelayrate,-.@b;
+  - Id: 470006
+    AegisName: Sniping_Shoes_J
+    Name: 'スナイピングシューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@hpsp = 3;
+      skill "PR_GLORIA",1;
+      bonus bDelayrate,-8*getskilllv("RA_UNLIMIT");
+      bonus2 bAddSize,Size_All,5*getskilllv("RA_WUGRIDER");
+      if( getskilllv("RA_AIMEDBOLT") >= 10 ){
+        bonus bCritAtkRate,25;
+        bonus bNoSizeFix;
+      }
+      if( getskilllv("RA_ELECTRICSHOCKER") >= 5 ){
+        bonus bAllStats,10;
+        bonus2 bSkillUseSP,"RA_CAMOUFLAGE",20;
+      }
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@hpsp += 7;
+        .@ldmg = 5;
+        if( .@r >= 7 ){
+          .@hpsp += 10;
+          .@ldmg += 5;
+        }
+        bonus bLongAtkRate,.@ldmg;
+      }
+      bonus bMaxHPrate,.@hpsp;
+      bonus bMaxSPrate,.@hpsp;
+  - Id: 470007
+    AegisName: Sniping_Shoes_J_
+    Name: 'スナイピングシューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@hpsp = 3;
+      skill "PR_GLORIA",1;
+      bonus bDelayrate,-8*getskilllv("RA_UNLIMIT");
+      bonus2 bAddSize,Size_All,5*getskilllv("RA_WUGRIDER");
+      if( getskilllv("RA_AIMEDBOLT") >= 10 ){
+        bonus bCritAtkRate,25;
+        bonus bNoSizeFix;
+      }
+      if( getskilllv("RA_ELECTRICSHOCKER") >= 5 ){
+        bonus bAllStats,10;
+        bonus2 bSkillUseSP,"RA_CAMOUFLAGE",20;
+      }
+      .@r = getrefine();
+      if( .@r >= 5 ){
+        .@hpsp += 7;
+        .@ldmg = 5;
+        if( .@r >= 7 ){
+          .@hpsp += 10;
+          .@ldmg += 5;
+        }
+        bonus bLongAtkRate,.@ldmg;
+      }
+      bonus bMaxHPrate,.@hpsp;
+      bonus bMaxSPrate,.@hpsp;
   - Id: 470008
     AegisName: Fluffy_DandelionShoes_J
     Name: 'ふわふわタンポポシューズ'

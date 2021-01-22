@@ -87,6 +87,7 @@ OnInit:
 }
 
 -	script	MVP Summoner	-1,{
+	function InputSummonNum;
 	mes "[MVP Summoner]";
 	mes "残り時間: " + callfunc( "Time2Str", .renttime[ atoi( strnpcinfo(2) ) ] + .timeout * 60 );
 	mes "こんにちは、いかがなさいますか?";
@@ -112,7 +113,7 @@ OnInit:
 		close2;
 		if ( Zeny < .mvpcost ) end;
 		Zeny -= .mvpcost;
-		areamonster "this", 26, 26, 73, 73, "--ja--", .last_summon[atoi( strnpcinfo(2))], 1, strnpcinfo(3)+"::OnMobDead";
+		areamonster "this", 26, 26, 73, 73, "--ja--", .last_summon[atoi( strnpcinfo(2))], .summon_num, strnpcinfo(3)+"::OnMobDead";
 		end;
 
 	case 2:
@@ -152,52 +153,58 @@ OnInit:
 			mes "[MVP Summoner]";
 			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
 			close;
-		} else if ( .mvpcost ) {
+		}
+		else if ( .mvpcost ) {
 			mes "[MVP Summoner]";
 			mes "MVPの召喚料金は "+ callfunc( "F_InsertComma", .mvpcost ) +" ゼニーになります。";
 			next;
 			set .@menu, select(.mvpid_menu$) -1;
+			.summon_num = InputSummonNum();
 			mes "[MVP Summoner]";
-			if ( Zeny < .mvpcost ) {
+			if ( Zeny < .mvpcost * .summon_num ) {
 				mes "MVPの召喚に必要なゼニーが足りません。";
 				close;
 			}
 		} else {
 			set .@menu, select(.mvpid_menu$) -1;
+			.summon_num = InputSummonNum();
 			mes "[MVP Summoner]";
 		}
 		mes "準備はよろしいですか?";
 		close2;
-		if ( Zeny < .mvpcost ) end;
+		if ( Zeny < .mvpcost * .summon_num ) end;
 		Zeny -= .mvpcost;
 		.last_summon[atoi( strnpcinfo(2))] = .mvpid[.@menu];
-		areamonster "this", 26, 26, 73, 73, "--ja--", .mvpid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
+		areamonster "this", 26, 26, 73, 73, "--ja--", .mvpid[.@menu], .summon_num, strnpcinfo(3)+"::OnMobDead";
 		end;
 	case 4:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "[MVP Summoner]";
 			mes "この部屋にモンスターがいる状態では別のモンスターは召喚できません。";
 			close;
-		} else if ( .bosscost ) {
+		}
+		else if ( .bosscost ) {
 			mes "[MVP Summoner]";
 			mes "中ボスの召喚料金は "+ callfunc( "F_InsertComma", .bosscost ) +" ゼニーになります。";
 			next;
 			set .@menu, select(.bossid_menu$) -1;
+			.summon_num = InputSummonNum();
 			mes "[MVP Summoner]";
-			if ( Zeny < .bosscost ) {
+			if ( Zeny < .bosscost * .summon_num ) {
 				mes "中ボスの召喚に必要なゼニーが足りません。";
 				close;
 			}
 		} else {
 			set .@menu, select(.bossid_menu$) -1;
+			.summon_num = InputSummonNum();
 			mes "[MVP Summoner]";
 		}
 		mes "準備はよろしいですか?";
 		close2;
-		if ( Zeny < .bosscost ) end;
+		if ( Zeny < .bosscost * .summon_num ) end;
 		Zeny -= .bosscost;
 		.last_summon[atoi( strnpcinfo(2))] = .bossid[.@menu];
-		areamonster "this", 26, 26, 73, 73, "--ja--", .bossid[.@menu], 1, strnpcinfo(3)+"::OnMobDead";
+		areamonster "this", 26, 26, 73, 73, "--ja--", .bossid[.@menu], .summon_num, strnpcinfo(3)+"::OnMobDead";
 		end;
 	case 5:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) > 0 ) {
@@ -230,8 +237,20 @@ OnInit:
 		end;
 	}
 	close;
-
+	function InputSummonNum {
+		mes "[MVP Summoner]";
+		mes "何体召喚しますか？";
+		mes sprintf("最大%d体まで同時に召喚できます。",.max_summon);
+		next;
+		if( input(.@num,1,.max_summon) != 0 ){
+			mes "[MVP Summoner]";
+			mes sprintf("1～%d体の間で指定して下さい。",.max_summon);
+			close;
+		}
+		return .@num;
+	}
 OnMobDead:
+	getitem 1000103,5;	//バルミールチケット
 	end;
 
 OnEnterMap:
@@ -256,6 +275,7 @@ OnInit:
 	set .rentcost, 0;	// Zeny cost for renting a room (0 = free)
 	set .mvpcost, 0;	// Zeny cost to summon an MVP (0 = free)
 	set .bosscost, 0;	// Zeny cost to summon a boss monster (0 = free)
+	set .max_summon,5;
 
 	//	Options setting inside MVP room
 	set .@menu[1], 1;	// Turn Heal option On/Off

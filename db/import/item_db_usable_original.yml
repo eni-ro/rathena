@@ -255,6 +255,8 @@ Body:
     Weight: 0
     Flags:
       NoConsume: true
+    Trade:
+      NoSell: true
     Script: |
       if( checkweight( 1201, 1 )){
         delitem 2001000910,1;

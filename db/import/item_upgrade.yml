@@ -37,3 +37,197 @@
 Header:
   Type: ITEM_UPGRADE_DB
   Version: 1
+
+Body:
+  - Item: Sin_Type1_J
+    TargetItem:
+      - Item: aegis_600008
+      - Item: aegis_500008
+      - Item: aegis_500007
+      - Item: aegis_630003
+      - Item: aegis_530002
+      - Item: aegis_520002
+      - Item: aegis_640005
+      - Item: aegis_550009
+      - Item: aegis_550008
+      - Item: aegis_610006
+      - Item: aegis_510009
+      - Item: aegis_510008
+      - Item: aegis_560004
+      - Item: aegis_590006
+      - Item: aegis_700008
+      - Item: aegis_700007
+      - Item: aegis_700009
+      - Item: aegis_580005
+      - Item: aegis_570005
+      - Item: aegis_540004
+      - Item: aegis_540005
+      - Item: aegis_650003
+      - Item: aegis_810000
+      - Item: aegis_820000
+      - Item: aegis_830001
+      - Item: aegis_840000
+    Result: |
+      callfunc("F_Lapine_Sin_Type1_J", .@opts[0], .@vals[0], .@opts[1], .@vals[1]);
+      .@params[0] = 0;
+      getitem3(@last_lapine_id,1,1,@last_lapine_refine,0,@last_lapine_card1,@last_lapine_card2,@last_lapine_card3,@last_lapine_card4,.@opts,.@vals,.@params);
+  - Item: Sin_Type2_J
+    TargetItem:
+      - Item: aegis_600008
+      - Item: aegis_500008
+      - Item: aegis_500007
+      - Item: aegis_630003
+      - Item: aegis_530002
+      - Item: aegis_520002
+      - Item: aegis_640005
+      - Item: aegis_550009
+      - Item: aegis_550008
+      - Item: aegis_610006
+      - Item: aegis_510009
+      - Item: aegis_510008
+      - Item: aegis_560004
+      - Item: aegis_590006
+      - Item: aegis_700008
+      - Item: aegis_700007
+      - Item: aegis_700009
+      - Item: aegis_580005
+      - Item: aegis_570005
+      - Item: aegis_540004
+      - Item: aegis_540005
+      - Item: aegis_650003
+      - Item: aegis_810000
+      - Item: aegis_820000
+      - Item: aegis_830001
+      - Item: aegis_840000
+    Result: |
+      callfunc("F_Lapine_Sin_Type2_J", .@opts[0], .@vals[0], .@opts[1], .@vals[1]);
+      .@params[0] = 0;
+      getitem3(@last_lapine_id,1,1,@last_lapine_refine,0,@last_lapine_card1,@last_lapine_card2,@last_lapine_card3,@last_lapine_card4,.@opts,.@vals,.@params);
+  - Item: Sin_Type3_J
+    TargetItem:
+      - Item: aegis_600008
+      - Item: aegis_500008
+      - Item: aegis_500007
+      - Item: aegis_630003
+      - Item: aegis_530002
+      - Item: aegis_520002
+      - Item: aegis_640005
+      - Item: aegis_550009
+      - Item: aegis_550008
+      - Item: aegis_610006
+      - Item: aegis_510009
+      - Item: aegis_510008
+      - Item: aegis_560004
+      - Item: aegis_590006
+      - Item: aegis_700008
+      - Item: aegis_700007
+      - Item: aegis_700009
+      - Item: aegis_580005
+      - Item: aegis_570005
+      - Item: aegis_540004
+      - Item: aegis_540005
+      - Item: aegis_650003
+      - Item: aegis_810000
+      - Item: aegis_820000
+      - Item: aegis_830001
+      - Item: aegis_840000
+    Result: |
+      callfunc("F_Lapine_Sin_Type3_J", .@opts[0], .@vals[0], .@opts[1], .@vals[1]);
+      .@params[0] = 0;
+      getitem3(@last_lapine_id,1,1,@last_lapine_refine,0,@last_lapine_card1,@last_lapine_card2,@last_lapine_card3,@last_lapine_card4,.@opts,.@vals,.@params);
+  - Item: Sin_Type4_J
+    TargetItem:
+      - Item: aegis_600008
+      - Item: aegis_500008
+      - Item: aegis_500007
+      - Item: aegis_630003
+      - Item: aegis_530002
+      - Item: aegis_520002
+      - Item: aegis_640005
+      - Item: aegis_550009
+      - Item: aegis_550008
+      - Item: aegis_610006
+      - Item: aegis_510009
+      - Item: aegis_510008
+      - Item: aegis_560004
+      - Item: aegis_590006
+      - Item: aegis_700008
+      - Item: aegis_700007
+      - Item: aegis_700009
+      - Item: aegis_580005
+      - Item: aegis_570005
+      - Item: aegis_540004
+      - Item: aegis_540005
+      - Item: aegis_650003
+      - Item: aegis_810000
+      - Item: aegis_820000
+      - Item: aegis_830001
+      - Item: aegis_840000
+    Result: |
+      callfunc("F_Lapine_Sin_Type4_J", .@opts[0], .@vals[0], .@opts[1], .@vals[1]);
+      .@params[0] = 0;
+      getitem3(@last_lapine_id,1,1,@last_lapine_refine,0,@last_lapine_card1,@last_lapine_card2,@last_lapine_card3,@last_lapine_card4,.@opts,.@vals,.@params);
+  - Item: Sin_Type5_J
+    TargetItem:
+      - Item: aegis_600008
+      - Item: aegis_500008
+      - Item: aegis_500007
+      - Item: aegis_630003
+      - Item: aegis_530002
+      - Item: aegis_520002
+      - Item: aegis_640005
+      - Item: aegis_550009
+      - Item: aegis_550008
+      - Item: aegis_610006
+      - Item: aegis_510009
+      - Item: aegis_510008
+      - Item: aegis_560004
+      - Item: aegis_590006
+      - Item: aegis_700008
+      - Item: aegis_700007
+      - Item: aegis_700009
+      - Item: aegis_580005
+      - Item: aegis_570005
+      - Item: aegis_540004
+      - Item: aegis_540005
+      - Item: aegis_650003
+      - Item: aegis_810000
+      - Item: aegis_820000
+      - Item: aegis_830001
+      - Item: aegis_840000
+    Result: |
+      callfunc("F_Lapine_Sin_Type5_J", .@opts[0], .@vals[0], .@opts[1], .@vals[1]);
+      .@params[0] = 0;
+      getitem3(@last_lapine_id,1,1,@last_lapine_refine,0,@last_lapine_card1,@last_lapine_card2,@last_lapine_card3,@last_lapine_card4,.@opts,.@vals,.@params);
+  - Item: Sin_Type6_J
+    TargetItem:
+      - Item: aegis_600008
+      - Item: aegis_500008
+      - Item: aegis_500007
+      - Item: aegis_630003
+      - Item: aegis_530002
+      - Item: aegis_520002
+      - Item: aegis_640005
+      - Item: aegis_550009
+      - Item: aegis_550008
+      - Item: aegis_610006
+      - Item: aegis_510009
+      - Item: aegis_510008
+      - Item: aegis_560004
+      - Item: aegis_590006
+      - Item: aegis_700008
+      - Item: aegis_700007
+      - Item: aegis_700009
+      - Item: aegis_580005
+      - Item: aegis_570005
+      - Item: aegis_540004
+      - Item: aegis_540005
+      - Item: aegis_650003
+      - Item: aegis_810000
+      - Item: aegis_820000
+      - Item: aegis_830001
+      - Item: aegis_840000
+    Result: |
+      callfunc("F_Lapine_Sin_Type6_J", .@opts[0], .@vals[0], .@opts[1], .@vals[1]);
+      .@params[0] = 0;
+      getitem3(@last_lapine_id,1,1,@last_lapine_refine,0,@last_lapine_card1,@last_lapine_card2,@last_lapine_card3,@last_lapine_card4,.@opts,.@vals,.@params);

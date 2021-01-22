@@ -135,3 +135,45 @@ Body:
     Weight: 10
     Script: |
       getrandgroupitem(IG_SHADOW_CUBE_EARRING),1;
+  - Id: 100164
+    AegisName: Sin_Type1_J
+    Name: '大罪武器改造装置(Type1)'
+    Type: Delayconsume
+    Weight: 10
+    Script: |
+      upgradeui 100164;
+  - Id: 100165
+    AegisName: Sin_Type2_J
+    Name: '大罪武器改造装置(Type2)'
+    Type: Delayconsume
+    Weight: 10
+    Script: |
+      upgradeui 100165;
+  - Id: 100166
+    AegisName: Sin_Type3_J
+    Name: '大罪武器改造装置(Type3)'
+    Type: Delayconsume
+    Weight: 10
+    Script: |
+      upgradeui 100166;
+  - Id: 100167
+    AegisName: Sin_Type4_J
+    Name: '大罪武器改造装置(Type4)'
+    Type: Delayconsume
+    Weight: 10
+    Script: |
+      upgradeui 100167;
+  - Id: 100168
+    AegisName: Sin_Type5_J
+    Name: '大罪武器改造装置(Type5)'
+    Type: Delayconsume
+    Weight: 10
+    Script: |
+      upgradeui 100168;
+  - Id: 100169
+    AegisName: Sin_Type6_J
+    Name: '大罪武器改造装置(Type6)'
+    Type: Delayconsume
+    Weight: 10
+    Script: |
+      upgradeui 100169;

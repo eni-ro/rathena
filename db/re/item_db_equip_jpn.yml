@@ -106346,30 +106346,29 @@ Body:
     Type: Weapon
     SubType: Staff
     Buy: 20
-    Weight: 900
-    Attack: 80
-    MagicAttack: 175
+    Weight: 300
+    Attack: 60
+    MagicAttack: 180
     Range: 1
-    Slots: 2
+    Slots: 0
     Locations:
       Right_Hand: true
     WeaponLevel: 4
-    EquipLevelMin: 130
+    EquipLevelMin: 150
     Refineable: true
     Script: |
-      .@r = getrefine();
       bonus bUnbreakableWeapon;
-      bonus2 bMagicAddEle,Ele_Neutral,5;
-      bonus2 bMagicAddEle,Ele_Earth,5;
-      if (.@r >= 7) {
-         bonus bVariableCastrate,-7;
-         if (.@r >= 9) {
-            autobonus "{ bonus2 bMagicAtkEle,Ele_Fire,30; }",5,10000,BF_MAGIC;
-            /* unknown rate */
-            if (.@r >= 11) {
-               bonus bDelayrate,-10;
-            }
-         }
+      bonus2 bMagicAddClass,Class_All,20;
+      bonus2 bSkillAtk,"WL_HELLINFERNO",BaseLevel;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus2 bMagicAddClass,Class_All,10;
+        if( .@r >= 9 ){
+          bonus2 bMagicAddClass,Class_All,10;
+          if( .@r >= 10 ){
+            bonus2 bIgnoreMdefRaceRate,RC_All,100;
+          }
+        }
       }
   - Id: 26154
     AegisName: SoulWeight

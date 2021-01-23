@@ -502,4 +502,5 @@ Body:
         bonus2 bResEff,Eff_Crystalize,10000;
         bonus2 bResEff,Eff_Freeze,10000;
         bonus2 bResEff,Eff_Stone,10000;
+        bonus bDelayrate,-100;
       }

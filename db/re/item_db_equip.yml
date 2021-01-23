@@ -127811,10 +127811,11 @@ Body:
     Name: Sloth Text
     Type: Weapon
     SubType: Book
-    Weight: 500
-    Attack: 210
+    Weight: 800
+    Attack: 120
+    MagicAttack: 140
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
       StarGladiator: true
     Classes:
@@ -127822,21 +127823,24 @@ Body:
     Locations:
       Right_Hand: true
     WeaponLevel: 4
-    EquipLevelMin: 150
+    EquipLevelMin: 165
     Refineable: true
     Script: |
-      .@r = getrefine();
       bonus bUnbreakableWeapon;
-      bonus2 bSkillAtk,"SJ_NEWMOONKICK",10;
-      bonus bBaseAtk,12*(.@r/3);
-      if (.@r>=7) {
-         bonus2 bSkillAtk,"SJ_NEWMOONKICK",15;
-      }
-      if (.@r>=9) {
-         bonus bAspdRate,10;
-      }
-      if (.@r>=11) {
-         bonus2 bSkillAtk,"SJ_FULLMOONKICK",25;
+      bonus2 bAddClass,Class_All,110;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus2 bSkillAtk,"SG_SUN_WARM",50;
+        bonus2 bSkillAtk,"SG_MOON_WARM",50;
+        bonus2 bSkillAtk,"SG_STAR_WARM",50;
+        if( .@r >= 9 ){
+          bonus2 bSkillAtk,"SG_SUN_WARM",50;
+          bonus2 bSkillAtk,"SG_MOON_WARM",50;
+          bonus2 bSkillAtk,"SG_STAR_WARM",50;
+          if( .@r >= 10 ){
+            bonus bDefRatioAtkClass,Class_All;
+          }
+        }
       }
   - Id: 540005
     AegisName: aegis_540005
@@ -130462,35 +130466,31 @@ Body:
     Name: Wrath Wheel
     Type: Weapon
     SubType: Huuma
-    Weight: 1800
-    Attack: 320
+    Weight: 1500
+    Attack: 150
+    MagicAttack: 160
     Range: 1
-    Slots: 2
+    Slots: 0
     Jobs:
       KagerouOboro: true
-      Ninja: true
     Locations:
       Right_Hand: true
       Left_Hand: true
     WeaponLevel: 4
-    EquipLevelMin: 150
+    EquipLevelMin: 165
     Script: |
-      .@r = getrefine();
-      bonus bAtkEle,Ele_Wind;
       bonus bUnbreakableWeapon;
-      bonus2 bSkillAtk,"KO_HUUMARANKA",15;
-      bonus bVariableCastrate,-2*(.@r/3);
-      bonus bBaseAtk,6*(.@r/3);
-      if (.@r>=7) {
-         bonus2 bSkillAtk,"KO_JYUMONJIKIRI",15;
-      }
-      if (.@r>=9) {
-         bonus2 bSkillCooldown,"KO_JYUMONJIKIRI",-1000;
-         bonus2 bSkillCooldown,"KO_HUUMARANKA",-2000;
-      }
-      if (.@r>=11) {
-         bonus2 bSkillAtk,"KO_HUUMARANKA",20;
-         bonus2 bSkillAtk,"KO_JYUMONJIKIRI",20;
+      bonus2 bAddClass,Class_All,110;
+      bonus2 bSubClass,Class_Boss,40;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus2 bSkillCooldown,"KO_HUUMARANKA",-300;
+        if( .@r >= 9 ){
+          bonus2 bSkillAtk,"KO_HUUMARANKA",50;
+          if( .@r >= 10 ){
+            bonus bNoSizeFix;
+          }
+        }
       }
   - Id: 650004
     AegisName: Up_Humma_Clear

@@ -1967,6 +1967,36 @@ Body:
           }
         }
       }
+  - Id: 26169
+    AegisName: Psychic_Spear_Rod_J
+    Name: サイキックスピアロッド
+    Type: Weapon
+    SubType: Staff
+    Weight: 300
+    Attack: 60
+    MagicAttack: 180
+    Range: 1
+    Slots: 1
+    Jobs:
+      Sage: true
+    Classes:
+      All_Third: true
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 100
+    Refineable: true
+    Trade:
+      Override: 100
+      NoDrop: true
+      NoTrade: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      bonus bUnbreakableWeapon;
+      bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",30;
   - Id: 28047
     AegisName: Scorpio_Katar_J
     Name: '天蝎宮のカタール'

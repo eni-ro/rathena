@@ -130,7 +130,9 @@
 470034:4875,{ bonus bStr,40; bonus bMaxHPrate,40; }
 470035:4875,{ bonus bStr,40; bonus bMaxHPrate,40; }
 //幻滅の思念体シューズ
+470058:26169,{ bonus2 bSkillAtk,"SO_CLOUD_KILL",BaseLevel*2; bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",BaseLevel/5*2; }
 470058:4876,{ bonus bInt,40; bonus bMaxSPrate,40; }
+470059:26169,{ bonus2 bSkillAtk,"SO_CLOUD_KILL",BaseLevel*2; bonus2 bSkillAtk,"SO_PSYCHIC_WAVE",BaseLevel/5*2; }
 470059:4876,{ bonus bInt,40; bonus bMaxSPrate,40; }
 //無気力の思念体シューズ
 470062:4875,{ bonus bStr,40; bonus bAspdRate,15; }

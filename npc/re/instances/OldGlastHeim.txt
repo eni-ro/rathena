@@ -180,6 +180,12 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 		cutin "gl_barmund2",2;
 		close3;
 	}
+	mes "ザー、、、","ザザザー、、、","時空のゆがみで声が聴き取りづらい","貴方が取った行動は？";
+	next;
+	if( select("聴き取るのを諦めた:耳をすませた") == 1 ){
+		'TALK_SKIP = 1;
+	}
+	if( 'TALK_SKIP == 0 ){
 	.@account_id = getcharid(3);
 	.@player_name$ = strcharinfo(0);
 	mes "[Varmundt]";
@@ -219,8 +225,9 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 	mes "[Varmundt]";
 	mes "Hurry! Report to Sir. Heinrich about Himelmez. I must check the defense barrier here!";
 	npctalk "Varmundt: Hurry! Report to Sir. Heinrich about Himelmez. I must check the defense barrier here!";
-	close2;
 	cutin "",255;
+	}
+	close2;
 	disablenpc instance_npcname("Varmundt#0");
 	enablenpc instance_npcname("Heinrich#1");
 	enablenpc instance_npcname("Varmundt#1");
@@ -320,6 +327,7 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 	}
 	.@account_id = getcharid(3);
 	.@player_name$ = strcharinfo(0);
+	if( 'TALK_SKIP == 0 ){
 	cutin "gl_heinrich2",2;
 	select("Sir Heinrich. Varmundt...");
 	mes "[" + .@player_name$ + "]";
@@ -368,6 +376,7 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 	mes "We cannot risk moving the heart just because some stranger says so.";
 	npctalk "Heinrich: We cannot risk moving the heart just because some stranger says so.";
 	close2;
+	}
 	disablenpc instance_npcname("Heinrich#1");
 	enablenpc instance_npcname("Heinrich#2");
 	enablenpc instance_npcname("Himelmez#1");
@@ -387,7 +396,14 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 	end;
 OnEnable:
 	mapannounce 'map_name$[0], "????'s: Muahahahaha~!", bc_map,0xFFFF00,FW_NORMAL,18;
+	if( 'TALK_SKIP == 0 ){
 	initnpctimer;
+	}
+	else{
+		setnpctimer 92000-1;
+		startnpctimer;
+		disablenpc instance_npcname("Himelmez#1");
+	}
 	'npc_himelmez1$ = instance_npcname("Himelmez#1");
 	'npc_varmundt1$ = instance_npcname("Varmundt#1");
 	'npc_heinrich2$ = instance_npcname("Heinrich#2");
@@ -565,6 +581,9 @@ OnTimer112000:
 	disablenpc 'npc_heinrich2$;
 	enablenpc 'npc_heinrich3$;
 	killmonster 'map_name$[0], instance_npcname("#talkinstance1") + "::OnMyMobDead";
+	if( 'TALK_SKIP == 1 ){
+		setnpctimer 147500-1;
+	}
 	end;
 OnTimer112500:
 	npctalk "Heinrich: I killed my own men...", 'npc_heinrich3$;
@@ -652,6 +671,7 @@ OnMyMobDead:
 	mes "[Altar boy Domun]";
 	mes "Save me! Save me!!!";
 	npctalk "Save me! Save me!!!";
+	if( 'TALK_SKIP == 0 ){
 	next;
 	select("Hold on! Are you the only survivor?");
 	mes "[" + .@player_name$ + "]";
@@ -683,6 +703,7 @@ OnMyMobDead:
 	mes "[Altar boy Domun]";
 	mes "Ok, I... I'll try.";
 	npctalk "Altar boy Domun: Ok, I... I'll try.";
+	}
 	disablenpc instance_npcname("Altar boy Domun#1");
 	donpcevent instance_npcname("#ghmemorialmob02") + "::OnStart";
 	close;
@@ -731,6 +752,7 @@ OnMyMobDead:
 	mes "Die!! You shall die!!!";
 	npctalk "Holgren the Destroyer: Die!! You shall die!!!";
 	specialeffect EF_CRASHEARTH;
+	if( 'TALK_SKIP == 0 ){
 	next;
 	select("Relax! I'm not a monster!");
 	mes "[" + .@player_name$ + "]";
@@ -758,6 +780,7 @@ OnMyMobDead:
 	mes "[Holgren the Destroyer]";
 	mes "It's ok. You've already done enough. I can help myself. Good luck to you too.";
 	npctalk "Holgren the Destroyer: It's ok. You've already done enough. I can help myself. Good luck to you too.";
+	}
 	disablenpc instance_npcname("Holgren the Destroyer#1");
 	donpcevent instance_npcname("#ghmemorialmob03") + "::OnEnable";
 	close;
@@ -888,7 +911,13 @@ OnTimer5000:
 	end;
 OnTouch_:
 	disablenpc instance_npcname("#Mimelon");
+	if( 'TALK_SKIP == 0 ){
 	initnpctimer;
+	}
+	else{
+		setnpctimer 28000 - 1;
+		startnpctimer;
+	}
 	'npc_himelmez2$ = instance_npcname("Himelmez#2");
 	'npc_heinrich4$ = instance_npcname("Heinrich#4");
 	end;
@@ -991,7 +1020,14 @@ OnEffect:
 	end;
 OnTouch_:
 	disablenpc instance_npcname("#Servanton");
+	if( 'TALK_SKIP == 0 ){
 	initnpctimer;
+	}
+	else{
+		disablenpc instance_npcname("#Servanton_effect");
+		setnpctimer 69000 - 1;
+		startnpctimer;
+	}
 	'npc_heinrich$ = instance_npcname("Heinrich#21");
 	'npc_varmundt$ = instance_npcname("Varmundt#21");
 	end;
@@ -1336,8 +1372,16 @@ OnTouch:
 	end;
 OnTouch_:
 	disablenpc instance_npcname("Himelmez#22");
+	if( 'TALK_SKIP == 0 ){
 	enablenpc instance_npcname("Himelmez#23");
 	initnpctimer;
+	}
+	else{
+		setnpctimer 80000 - 1;
+		startnpctimer;
+		disablenpc instance_npcname("Heinrich#23");
+		disablenpc instance_npcname("Varmundt#23");
+	}
 	'npc_himelmez$ = instance_npcname("Himelmez#23");
 	'npc_gerhalt$ = instance_npcname("Gerhalt#23");
 	'npc_heinrich$ = instance_npcname("Heinrich#23");

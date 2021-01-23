@@ -10702,7 +10702,8 @@ Body:
       DropEffect: CLIENT
     Script: |
       bonus bMatkRate,(readparam(bDex)>=110)?14:7;
-      bonus5 bAutoSpellWhenHit,"SA_LANDPROTECTOR",5,70,BF_MAGIC,0;
+      if(!isequipped(29724))
+        bonus5 bAutoSpellWhenHit,"SA_LANDPROTECTOR",5,70,BF_MAGIC,0;
   - Id: 4562
     AegisName: Champion_Card
     Name: Champion Chen Card
@@ -10716,7 +10717,8 @@ Body:
       DropEffect: CLIENT
     Script: |
       bonus2 bAddClass,Class_All,(readparam(bAgi)>=110)?14:7;
-      bonus5 bAutoSpellWhenHit,"MO_INVESTIGATE",5,70,BF_WEAPON,1;
+      if(!isequipped(29724))
+        bonus5 bAutoSpellWhenHit,"MO_INVESTIGATE",5,70,BF_WEAPON,1;
   - Id: 4563
     AegisName: Creator_Card
     Name: Creator Flamel Card
@@ -10730,7 +10732,8 @@ Body:
       DropEffect: CLIENT
     Script: |
       bonus bCritical,(readparam(bStr)>=110)?40:20;
-      bonus5 bAutoSpellWhenHit,"AM_ACIDTERROR",5,70,BF_WEAPON,1;
+      if(!isequipped(29724))
+        bonus5 bAutoSpellWhenHit,"AM_ACIDTERROR",5,70,BF_WEAPON,1;
   - Id: 4564
     AegisName: Stalker_Card
     Name: Stalker Gertie Card
@@ -10744,7 +10747,8 @@ Body:
       DropEffect: CLIENT
     Script: |
       bonus bHit,(readparam(bLuk)>=110)?40:20;
-      bonus5 bAutoSpellWhenHit,"ST_FULLSTRIP",1,70,BF_WEAPON,1;
+      if(!isequipped(29724))
+        bonus5 bAutoSpellWhenHit,"ST_FULLSTRIP",1,70,BF_WEAPON,1;
   - Id: 4565
     AegisName: Paladin_Card
     Name: Paladin Randel Card
@@ -10758,7 +10762,8 @@ Body:
       DropEffect: CLIENT
     Script: |
       bonus bMaxHPrate,(readparam(bInt)>=110)?20:10;
-      bonus5 bAutoSpellWhenHit,"CR_GRANDCROSS",10,70,BF_WEAPON,0;
+      if(!isequipped(29724))
+        bonus5 bAutoSpellWhenHit,"CR_GRANDCROSS",10,70,BF_WEAPON,0;
   - Id: 4566
     AegisName: Gypsy_Card
     Name: Gypsy Trentini Card

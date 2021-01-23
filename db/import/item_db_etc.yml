@@ -438,6 +438,41 @@ Body:
     Type: Card
     Script: |
       bonus bDelayrate,-15;
+  - Id: 29375
+    AegisName: Player_6_J
+    Name: 'プレイヤー耐性6'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,6;
+      bonus2 bSubRace,RC_Player_Doram,6;
+  - Id: 29376
+    AegisName: Player_7_J
+    Name: 'プレイヤー耐性7'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,7;
+      bonus2 bSubRace,RC_Player_Doram,7;
+  - Id: 29377
+    AegisName: Player_8_J
+    Name: 'プレイヤー耐性8'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,8;
+      bonus2 bSubRace,RC_Player_Doram,8;
+  - Id: 29378
+    AegisName: Player_9_J
+    Name: 'プレイヤー耐性9'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,9;
+      bonus2 bSubRace,RC_Player_Doram,9;
+  - Id: 29379
+    AegisName: Player_10_J
+    Name: 'プレイヤー耐性10'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,10;
+      bonus2 bSubRace,RC_Player_Doram,10;
   - Id: 29437
     AegisName: Skill_Delay_8_J
     Name: 'スキルディレイ - 8%'
@@ -655,6 +690,13 @@ Body:
         bonus bMaxHP,50*BaseLevel;
         bonus bMaxSP,5*BaseLevel;
       }
+  - Id: 29724
+    AegisName: Murderous_Grudge_J
+    Name: '殺意の怨念'
+    Type: Card
+    Script: |
+      bonus bMaxHPrate,15;
+      bonus bMaxSPrate,15;
   - Id: 310193
     AegisName: NoKnockback_J
     Name: 'ノックバック無効'

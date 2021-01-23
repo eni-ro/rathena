@@ -105,3 +105,44 @@
 15276:20916:22186,{ bonus2 bHPRegenRate,1000,5000; bonus2 bSPRegenRate,10,5000; }
 //特選ドラムセット
 15277:20917:22187,{ bonus2 bHPRegenRate,1500,5000; bonus2 bSPRegenRate,15,5000; }
+//殺意の怨念
+29724:4352,{ bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus2 bHPRegenRate,5000,10000; bonus2 bSPRegenRate,100,10000; }
+29724:4359,{ bonus2 bSubEle,Ele_Water,50; bonus2 bSubEle,Ele_Earth,50; skill "AS_ENCHANTPOISON",10; }
+29724:4365,{ bonus bMatk,100; skill "HW_GANBANTEIN",1; }
+29724:4357,{ bonus bBaseAtk,100; skill "LK_CONCENTRATION",1; }
+29724:4367,{ bonus2 bAddClass,Class_Boss,25; skill "SN_SIGHT",10,1; }
+29724:4361,{ bonus2 bAddClass,Class_Boss,25; skill "WS_MELTDOWN",10; }
+29724:4363,{ bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; skill "HP_ASSUMPTIO",5; }
+29724:4560,{ bonus bFlee,50; bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; if( readparam(bVit) >= 110 ){ bonus bFlee,50; } }
+29724:4563,{ bonus bCritical,50; bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; if( readparam(bStr) >= 110 ){ bonus bCritical,50; } }
+29724:4564,{ bonus bHit,50; bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; if( readparam(bLuk) >= 110 ){ bonus bHit,50; } }
+29724:4561,{ bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; bonus2 bMagicAddClass,Class_All,7; if( readparam(bDex) >= 110 ){ bonus2 bMagicAddClass,Class_All,7; } }
+29724:4562,{ bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; bonus2 bAddClass,Class_All,7; if( readparam(bAgi) >= 110 ){ bonus2 bAddClass,Class_All,7; } }
+29724:4566,{ bonus bFlee,50; bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; if( readparam(bVit) >= 110 ){ bonus bFlee,50; } }
+29724:4565,{ bonus bMaxHPrate,60; bonus2 bResEff,Eff_Freeze,10000; if( readparam(bInt) >= 110 ){ bonus bMaxHPrate,10; } }
+//29724:27059,{ bonus bNoGemStone; bonus2 bSubEle,Ele_Neutral,50; }
+//29724:27062,{ bonus bDelayrate,-10; bonus2 bSubEle,Ele_Neutral,50; }
+//29724:27058,{ bonus bAspd,2; bonus2 bSubEle,Ele_Neutral,50; }
+//不調和の思念体シューズ
+470030:4879,{ bonus bDex,40; bonus bDelayrate,-20; }
+470031:4879,{ bonus bDex,40; bonus bDelayrate,-20; }
+//背徳の思念体シューズ
+470034:4875,{ bonus bStr,40; bonus bMaxHPrate,40; }
+470035:4875,{ bonus bStr,40; bonus bMaxHPrate,40; }
+//幻滅の思念体シューズ
+470058:4876,{ bonus bInt,40; bonus bMaxSPrate,40; }
+470059:4876,{ bonus bInt,40; bonus bMaxSPrate,40; }
+//無気力の思念体シューズ
+470062:4875,{ bonus bStr,40; bonus bAspdRate,15; }
+470063:4875,{ bonus bStr,40; bonus bAspdRate,15; }
+//優柔不断の思念体シューズ
+470078:4879,{ bonus bDex,40; bonus bPerfectHitAddRate,25; }
+470078:4876,{ bonus bInt,40; bonus2 bMagicAtkEle,Ele_Neutral,15; }
+470079:4879,{ bonus bDex,40; bonus bPerfectHitAddRate,25; }
+470079:4876,{ bonus bInt,40; bonus2 bMagicAtkEle,Ele_Neutral,15; }
+//傲慢の思念体シューズ
+470080:4875,{ bonus bStr,40; bonus bMaxHPrate,40; }
+470081:4875,{ bonus bStr,40; bonus bMaxHPrate,40; }
+//再生の思念体シューズ
+470082:4875,{ bonus bFlee,100; bonus bNoSizeFix; }
+470083:4875,{ bonus bFlee,100; bonus bNoSizeFix; }

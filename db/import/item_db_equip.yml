@@ -3158,6 +3158,390 @@ Body:
       bonus bMaxHPrate,@hpmp;
       bonus bMaxSPrate,@hpmp;
       bonus bDelayrate,.@sdelay;
+  - Id: 470030
+    AegisName: Discord_Particles_Shoes_J
+    Name: '不調和の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bFlee,50;
+        if( .@r >= 9 ){
+          bonus bFlee,50;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470031
+    AegisName: Discord_Particles_Shoes_J_
+    Name: '不調和の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bFlee,50;
+        if( .@r >= 9 ){
+          bonus bFlee,50;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470034
+    AegisName: Virtue_Particles_Shoes_J
+    Name: '背徳の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bFlee,50;
+        if( .@r >= 9 ){
+          bonus bFlee,50;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470035
+    AegisName: Virtue_Particles_Shoes_J_
+    Name: '背徳の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bFlee,50;
+        if( .@r >= 9 ){
+          bonus bFlee,50;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470058
+    AegisName: Disillusion_P_Shoes_J
+    Name: '幻滅の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bMaxHPrate,10;
+        if( .@r >= 9 ){
+          bonus bMaxHPrate,10;
+          bonus2 bIgnoreMdefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470059
+    AegisName: Disillusion_P_Shoes_J_
+    Name: '幻滅の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bMaxHPrate,10;
+        if( .@r >= 9 ){
+          bonus bMaxHPrate,10;
+          bonus2 bIgnoreMdefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470062
+    AegisName: Lethargy_P_Shoes_J
+    Name: '無気力の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      bonus2 bSkillAtk,"MO_TRIPLEATTACK",5*BaseLevel;
+      bonus2 bSkillAtk,"MO_CHAINCOMBO",10*BaseLevel;
+      bonus2 bSkillAtk,"MO_COMBOFINISH",10*BaseLevel;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        if( .@r >= 9 ){
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470063
+    AegisName: Lethargy_P_Shoes_J_
+    Name: '無気力の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      bonus2 bSkillAtk,"MO_TRIPLEATTACK",5*BaseLevel;
+      bonus2 bSkillAtk,"MO_CHAINCOMBO",10*BaseLevel;
+      bonus2 bSkillAtk,"MO_COMBOFINISH",10*BaseLevel;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        if( .@r >= 9 ){
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470078
+    AegisName: Indecisive_P_Shoes_J
+    Name: '優柔不断の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bInt,15;
+        bonus bDex,15;
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        bonus2 bIgnoreMdefRaceRate,RC_All,50;
+        if( .@r >= 9 ){
+          bonus bInt,15;
+          bonus bDex,15;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+          bonus2 bIgnoreMdefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470079
+    AegisName: Indecisive_P_Shoes_J_
+    Name: '優柔不断の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bInt,15;
+        bonus bDex,15;
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        bonus2 bIgnoreMdefRaceRate,RC_All,50;
+        if( .@r >= 9 ){
+          bonus bInt,15;
+          bonus bDex,15;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+          bonus2 bIgnoreMdefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470080
+    AegisName: Arrogance_P_Shoes_J
+    Name: '傲慢の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bDef,150;
+        bonus bMdef,15;
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        if( .@r >= 9 ){
+          bonus bDef,150;
+          bonus bMdef,15;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470081
+    AegisName: Arrogance_P_Shoes_J_
+    Name: '傲慢の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bDef,150;
+        bonus bMdef,15;
+        bonus2 bIgnoreDefRaceRate,RC_All,50;
+        if( .@r >= 9 ){
+          bonus bDef,150;
+          bonus bMdef,15;
+          bonus2 bIgnoreDefRaceRate,RC_All,50;
+        }
+      }
+  - Id: 470082
+    AegisName: Regeneration_P_Shoes_J
+    Name: '再生の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 0
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      bonus2 bCastrate,"ASC_METEORASSAULT",-100;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bAspdRate,10;
+        bonus bDelayrate,-15;
+        if( .@r >= 9 ){
+          bonus bAspdRate,10;
+          bonus bDelayrate,-15;
+        }
+      }
+  - Id: 470083
+    AegisName: Regeneration_P_Shoes_J_
+    Name: '再生の思念体シューズ'
+    Type: Armor
+    Weight: 200
+    Defense: 12
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Shoes: true
+    EquipLevelMin: 100
+    Refineable: true
+    Script: |
+      bonus bUnbreakableShoes;
+      bonus bMdef,10;
+      bonus bMaxHPrate,20;
+      bonus bMaxSPrate,20;
+      bonus2 bCastrate,"ASC_METEORASSAULT",-100;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus bAspdRate,10;
+        bonus bDelayrate,-15;
+        if( .@r >= 9 ){
+          bonus bAspdRate,10;
+          bonus bDelayrate,-15;
+        }
+      }
   - Id: 470038
     AegisName: Pisces_Shoes_J
     Name: '双魚宮のシューズ'

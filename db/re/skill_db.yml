@@ -29860,7 +29860,6 @@ Body:
     CastTime: 2000
     AfterCastActDelay: 1000
     Cooldown: 1000
-    FixedCastTime: 1000
     Requires:
       SpCost: 70
   - Id: 2601
@@ -29875,7 +29874,17 @@ Body:
     Range: 9
     Hit: Single
     HitCount: 1
-    SplashArea: 3
+    SplashArea:
+      - Level: 1
+        Area: 2
+      - Level: 2
+        Area: 3
+      - Level: 3
+        Area: 4
+      - Level: 4
+        Area: 5
+      - Level: 5
+        Area: 6
     CastCancel: true
     CastTime: 1000
     AfterCastActDelay: 500
@@ -29884,7 +29893,17 @@ Body:
     FixedCastTime: 1000
     Requires:
       SpCost: 50
-      SpiritSphereCost: 3
+      SpiritSphereCost:
+        - Level: 1
+          Amount: 1
+        - Level: 2
+          Amount: 2
+        - Level: 3
+          Amount: 3
+        - Level: 4
+          Amount: 4
+        - Level: 5
+          Amount: 5
   - Id: 2602
     Name: SP_SPA
     Description: Espa
@@ -30267,7 +30286,7 @@ Body:
           Amount: 48
         - Level: 5
           Amount: 50
-      SpiritSphereCost: 2
+      SpiritSphereCost: 1
   - Id: 2608
     Name: SP_SOULREVOLVE
     Description: Soul Revolution

@@ -148,3 +148,5 @@
 //再生の思念体シューズ
 470082:4875,{ bonus bFlee,100; bonus bNoSizeFix; }
 470083:4875,{ bonus bFlee,100; bonus bNoSizeFix; }
+//ファントムオブマスカレード
+19497:4399,{ .@r = getequiprefinerycnt(EQI_HEAD_TOP); bonus bBaseAtk,.@r*.@r*4; }

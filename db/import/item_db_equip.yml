@@ -905,6 +905,31 @@ Body:
       if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
         skill "HW_GANBANTEIN",1,1;
       }
+  - Id: 19497
+    AegisName: Phantom_Of_Masquerade_J
+    Name: 'ファントムオブマスカレード'
+    Type: Armor
+    Weight: 500
+    Defense: 12
+    Slots: 1
+    Locations:
+      Head_Top: true
+    EquipLevelMin: 100
+    Refineable: true
+    View: 1899
+    Script: |
+      bonus bStr,5;
+      bonus bAgi,5;
+      bonus2 bAddRace,RC_All,10;
+      bonus2 bResEff,Eff_Stone,5000;
+      .@r = getrefine();
+      if( .@r >= 7 ){
+        bonus2 bAddRace,RC_All,15;
+        bonus bDelayrate,-20;
+        if( .@r >= 9 ){
+          bonus bDefRatioAtkClass,Class_All;
+        }
+      }
   - Id: 19449
     AegisName: Cancer_Crown_J
     Name: '巨蟹宮のクラウン'
@@ -2804,6 +2829,20 @@ Body:
           }
         }
       }
+  - Id: 420006
+    AegisName: Vassalage_Necklace_J
+    Name: '隷属の首輪'
+    Type: Armor
+    Weight: 300
+    Defense: 0
+    Locations:
+      Head_Low: true
+    EquipLevelMin: 70
+    View: 2018
+    Script: |
+      .@v = ( readparam(bStr) + readparam(bLuk) ) / 50;
+      bonus2 bAddSize,Size_All,4*.@v;
+      bonus bPerfectHitAddRate,5*.@v;
   - Id: 450015
     AegisName: Virgo_Mail_J
     Name: '処女宮のメイル'

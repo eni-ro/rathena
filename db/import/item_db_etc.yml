@@ -337,6 +337,24 @@ Body:
       if( getskilllv("CR_TRUST") == 0 ){
         bonus2 bSubEle,Ele_Holy,15;
       }
+  - Id: 29236
+    AegisName: Dodge2_J
+    Name: '完全回避 + 2'
+    Type: Card
+    Script: |
+      bonus bFlee2,2;
+  - Id: 29237
+    AegisName: Flee_5_J
+    Name: 'Flee + 5'
+    Type: Card
+    Script: |
+      bonus bFlee,5;
+  - Id: 29238
+    AegisName: Flee_10_J
+    Name: 'Flee + 10'
+    Type: Card
+    Script: |
+      bonus bFlee,10;
   - Id: 29240
     AegisName: Hit_10_J
     Name: 'Hit + 10'
@@ -572,6 +590,18 @@ Body:
     Type: Card
     Script: |
       bonus2 bResEff,Eff_Freeze,10000;
+  - Id: 29649
+    AegisName: IgnoreDef_50
+    Name: 'Def50%無視'
+    Type: Card
+    Script: |
+      bonus2 bIgnoreDefClassRate,Class_All,50;
+  - Id: 29650
+    AegisName: IgnoreMdef_50
+    Name: 'Mdef50%無視'
+    Type: Card
+    Script: |
+      bonus2 bIgnoreMdefClassRate,Class_All,50;
   - Id: 29690
     AegisName: Weapon_Fire
     Name: '火属性付与(武器)'
@@ -697,6 +727,12 @@ Body:
     Script: |
       bonus bMaxHPrate,15;
       bonus bMaxSPrate,15;
+  - Id: 310012
+    AegisName: Destrudo_J
+    Name: '死の欲動'
+    Type: Card
+    Script: |
+      autobonus "{ bonus bFlee,150; bonus bDelayrate,-100; }",10,10000,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ active_transform \"B_EREMES\",10000; }";
   - Id: 310193
     AegisName: NoKnockback_J
     Name: 'ノックバック無効'

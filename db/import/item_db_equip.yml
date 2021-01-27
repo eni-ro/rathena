@@ -2063,6 +2063,30 @@ Body:
           }
         }
       }
+  - Id: 28394
+    AegisName: Spirit_King's_Ring_J
+    Name: '精霊王の指輪'
+    Type: Armor
+    Weight: 200
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 50
+    Script: |
+      bonus bVit,5;
+      bonus bDelayrate,-5;
+      bonus2 bSkillCooldown,"SO_EARTHGRAVE",-2000;
+      bonus2 bSkillCooldown,"SO_DIAMONDDUST",-2000;
+      bonus2 bSkillVariableCast,"SO_VARETYR_SPEAR",-1500;
+      bonus2 bSkillCooldown,"SO_VARETYR_SPEAR",-500;
+      bonus2 bVariableCastrate,"SO_WARMER",-50;
+      bonus2 bFixedCastrate,"SO_WARMER",-50;
+      bonus2 bSkillVariableCast,"SO_WARMER",-15000;
+      bonus2 bSkillAtk,"SO_EARTHGRAVE",BaseLevel/8;
+      bonus2 bSkillAtk,"SO_DIAMONDDUST",BaseLevel/8;
   - Id: 28429
     AegisName: Alguien_Necklace
     Name: 'アルクイエンのネックレス'
@@ -4167,6 +4191,41 @@ Body:
         bonus2 bSkillAtk,"RA_ARROWSTORM",30;
         bonus bSPDrainValue,3;
       }
+  - Id: 490079
+    AegisName: Soul_Expansion_Ring_J
+    Name: '精神拡張リング'
+    Type: Armor
+    Weight: 100
+    Defense: 0
+    Slots: 1
+    Jobs:
+      All: true
+    Locations:
+      Both_Accessory: true
+    EquipLevelMin: 100
+    Script: |
+      bonus bMdef,15;
+      bonus bInt,7;
+      bonus2 bMagicAddSize,Size_All,10;
+      bonus2 bSkillAtk,"WL_SOULEXPANSION",BaseLevel/7;
+      if( getskilllv("WL_STASIS") >= 5 ){
+        bonus2 bMagicAtkEle,Ele_Dark,10;
+        bonus2 bMagicAtkEle,Ele_Ghost,10;
+        bonus2 bMagicAtkEle,Ele_Neutral,10;
+      }
+      if( getskilllv("WL_TELEKINESIS_INTENSE") >= 5 ){
+        bonus2 bSkillCooldown,"WL_TELEKINESIS_INTENSE",-75000;
+      }
+      if( getskilllv("WL_HELLINFERNO") >= 5 ){
+        bonus bAspdRate,15;
+        bonus bMagicHPGainValue,100;
+        bonus bMagicSPGainValue,10;
+      }
+      if( getskilllv("WL_RECOGNIZEDSPELL") >= 5 ){
+        bonus bDelayrate,-30;
+      }
+    UnEquipScript: |
+      sc_end SC_TELEKINESIS_INTENSE;
   - Id: 490102
     AegisName: Skull_Ring_J
     Name: 'スカルリング'

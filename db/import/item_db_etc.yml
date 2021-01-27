@@ -793,6 +793,19 @@ Body:
         .@t = 10000 + 1000 * ( .@r - 7 );
         autobonus "{bonus3 bAutoSpell,\"SO_VARETYR_SPEAR\",10,250;}",.@rate,.@t,BF_SHORT|BF_LONG|BF_WEAPON|BF_NORMAL|BF_SKILL,"{ specialeffect2 EF_BULLSEYE; }";
       }
+  - Id: 310312
+    AegisName: Potential_Sorcerer_J
+    Name: '潜在解放(ソーサラー)'
+    Type: Card
+    Script: |
+      bonus2 bSubRace,RC_Player_Human,12;
+      bonus2 bSubRace,RC_Player_Doram,12;
+      bonus bRestartFullRecover;
+      set .@eac, eaclass();
+      if(( .@eac & EAJ_THIRDMASK ) == EAJ_SORCERER ){
+        bonus2 bSkillCooldown,"SO_VARETYR_SPEAR",-1000;
+        bonus2 bSkillAtk,"SO_VARETYR_SPEAR",50;
+      }
   - Id: 310336
     AegisName: SightLv1_J
     Name: 'サイトLv1'

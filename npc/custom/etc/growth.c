@@ -73,7 +73,7 @@ OnNPCKillEvent:
 	if( getmonsterinfo( killedrid, MOB_MVPEXP )){
 		.@glow_chance *= 6;
 	}
-	.@glow_chance *= 3;	//一時ボーナス
+	.@glow_chance *= 2;	//一時ボーナス
 	if( rand(100000) < .@glow_chance ){
 		//StatusUp
 		.@indx = grow_type * 6;
@@ -88,6 +88,14 @@ OnNPCKillEvent:
 			statusup2 .grow_status_prm[.@type],1;
 			unittalk getcharid(3),.grow_status_msg$[.@type],bc_self;
 			specialeffect2 371;
+		}
+		else{
+			.@point = min( .status_point_get, .status_point_max - StatusPoint );
+			if( .@point > 0 ){
+				StatusPoint = StatusPoint + .@point;
+				unittalk getcharid(3),"ステータスポイントを取得した",bc_self;
+				specialeffect2 371;
+			}
 		}
 	}
 	//スキルアップ処理(確率固定)
@@ -140,5 +148,7 @@ OnInit:
 
 	.skup_chance = 750;
 	.sk_max = 999;
+	.status_point_max = 99999;
+	.status_point_get = 50;
 	.gain_skill_point_msg$ = "ジョブへの理解が深まった";
 }

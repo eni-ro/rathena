@@ -36628,11 +36628,14 @@ Body:
     Buy: 20
     Weight: 10
     Locations:
-      Armor: true
+      Shoes: true
     Flags:
       DropEffect: CLIENT
     Script: |
-      skill "PA_PRESSURE",4;
+      bonus2 bMagicAddClass,Class_All,10;
+      bonus2 bMagicAddRace,RC_Brute,50;
+      bonus2 bMagicAddRace,RC_Demon,50;
+      bonus bMaxSPrate,-50;
   - Id: 27082
     AegisName: Angry_Nine_Tail_Card
     Name: '怒りの九尾狐カード'
@@ -36715,12 +36718,12 @@ Body:
     Buy: 20
     Weight: 10
     Locations:
-      Right_Hand: true
+      Garment: true
     Flags:
       DropEffect: CLIENT
     Script: |
-      bonus bMatk,25;
-      autobonus "{ bonus bNoCastCancel; }",5,5000,BF_MAGIC,"{ showscript \"This is the truth!\"; }";
+      bonus2 bMagicAtkEle,Ele_Ghost,50;
+      bonus2 bSubEle,Ele_Ghost,70;
   - Id: 27088
     AegisName: Fury_Hero_Card
     Name: '狂乱した冒険者カード'

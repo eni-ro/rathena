@@ -34,13 +34,13 @@ Header:
   Version: 1
 
 Body:
-  - Start: 20210120
-    End: 20210228
+  - Start: 20210221
+    End: 20210331
     Rewards:
       - Day: 1
         #100,000,000ゼニー貨幣
         ItemId: 2001001003
-        Amount: 1
+        Amount: 2
       - Day: 2
         #バブルガム
         ItemId: 12210
@@ -48,15 +48,15 @@ Body:
       - Day: 3
         #古びた鉱石
         ItemId: 2001000910
-        Amount: 5
+        Amount: 10
       - Day: 4
         #報酬箱 III
         ItemId: 2001000902
-        Amount: 3
+        Amount: 10
       - Day: 5
         #キャッシュポイントチケット[100,000]
         ItemId: 2001001014
-        Amount: 1
+        Amount: 2
       - Day: 6
         #+11 Armor Refine Ticket
         ItemId: 6239
@@ -64,11 +64,11 @@ Body:
       - Day: 7
         #報酬箱 II
         ItemId: 2001000901
-        Amount: 10
+        Amount: 20
       - Day: 8
         #100,000,000ゼニー貨幣
         ItemId: 2001001003
-        Amount: 1
+        Amount: 2
       - Day: 9
         #バブルガム
         ItemId: 12210
@@ -76,15 +76,15 @@ Body:
       - Day: 10
         #古びた鉱石
         ItemId: 2001000910
-        Amount: 5
+        Amount: 10
       - Day: 11
         #報酬箱 III
         ItemId: 2001000902
-        Amount: 3
+        Amount: 10
       - Day: 12
         #キャッシュポイントチケット[100,000]
         ItemId: 2001001014
-        Amount: 1
+        Amount: 2
       - Day: 13
         #+11 Weapon Refine Ticket
         ItemId: 6238
@@ -92,11 +92,11 @@ Body:
       - Day: 14
         #報酬箱 II
         ItemId: 2001000901
-        Amount: 10
+        Amount: 20
       - Day: 15
         #100,000,000ゼニー貨幣
         ItemId: 2001001003
-        Amount: 1
+        Amount: 2
       - Day: 16
         #バブルガム
         ItemId: 12210
@@ -104,16 +104,16 @@ Body:
       - Day: 17
         #古びた鉱石
         ItemId: 2001000910
-        Amount: 5
+        Amount: 10
       - Day: 18
         #報酬箱 III
         ItemId: 2001000902
-        Amount: 3
+        Amount: 10
       - Day: 19
         #キャッシュポイントチケット[100,000]
         ItemId: 2001001014
-        Amount: 1
+        Amount: 2
       - Day: 20
         #輝く龍脈結晶
         ItemId: 2002000005
-        Amount: 3
+        Amount: 6
